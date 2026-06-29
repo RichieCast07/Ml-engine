@@ -12,6 +12,7 @@ from app.clustering import entrenar_clusters
 from app.data_loader import cargar_destinos
 from app.knapsack import resolver_mochila
 from app.schemas import ParametrosViajeIn
+from app.texto_utils import normalizar
 
 BONUS_INTERES_PRINCIPAL = 3.0
 BONUS_CATEGORIA_COMPLEMENTARIA = 1.5
@@ -50,10 +51,10 @@ def _filtrar_destinos(interes, destino_texto, complementarias):
     destinos = entrenar_clusters()
 
     if destino_texto:
-        patron = destino_texto.lower()
+        patron = normalizar(destino_texto)
         destinos = destinos[
-            destinos["municipio"].str.lower().str.contains(patron)
-            | destinos["nombre"].str.lower().str.contains(patron)
+            destinos["municipio"].apply(normalizar).str.contains(patron)
+            | destinos["nombre"].apply(normalizar).str.contains(patron)
         ]
 
     if interes:
@@ -68,12 +69,12 @@ def _filtrar_restaurantes(comida_texto, destino_texto):
     restaurantes = df[df["tipo"] == "restaurante"]
 
     if comida_texto:
-        patron = comida_texto.lower()
-        restaurantes = restaurantes[restaurantes["tipo_comida"].str.lower().str.contains(patron)]
+        patron = normalizar(comida_texto)
+        restaurantes = restaurantes[restaurantes["tipo_comida"].apply(normalizar).str.contains(patron)]
 
     if destino_texto:
-        patron = destino_texto.lower()
-        coincide_municipio = restaurantes["municipio"].str.lower().str.contains(patron)
+        patron = normalizar(destino_texto)
+        coincide_municipio = restaurantes["municipio"].apply(normalizar).str.contains(patron)
         if coincide_municipio.any():
             restaurantes = restaurantes[coincide_municipio]
 
