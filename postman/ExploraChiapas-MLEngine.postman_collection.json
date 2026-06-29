@@ -1,0 +1,182 @@
+{
+  "info": {
+    "name": "ExploraChiapas - Motor ML (Capa 2)",
+    "description": "Pruebas directas del microservicio de mineria de datos no supervisada: clustering K-Means, reglas de asociacion Apriori y optimizacion de mochila, sin pasar por la Capa 1 (NLP).",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    { "key": "baseUrl", "value": "http://localhost:8001" }
+  ],
+  "item": [
+    {
+      "name": "Health Check",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": { "raw": "{{baseUrl}}/health", "host": ["{{baseUrl}}"], "path": ["health"] }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test('Status code is 200', function () { pm.response.to.have.status(200); });",
+              "pm.test('status is ok', function () { pm.expect(pm.response.json().status).to.eql('ok'); });"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Recomendar - caso completo (Suchiapa, gastronomia)",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"destino\": \"Suchiapa\",\n  \"interes\": \"gastronomia\",\n  \"comida\": \"carne asada\",\n  \"personas\": 2,\n  \"presupuesto\": 500,\n  \"tiempo\": \"medio dia\"\n}"
+        },
+        "url": { "raw": "{{baseUrl}}/recomendar", "host": ["{{baseUrl}}"], "path": ["recomendar"] }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test('Status code is 200', function () { pm.response.to.have.status(200); });",
+              "const body = pm.response.json();",
+              "pm.test('Responde con itinerario no vacio', function () {",
+              "    pm.expect(body.itinerario.length).to.be.greaterThan(0);",
+              "});",
+              "pm.test('No excede el presupuesto declarado', function () {",
+              "    pm.expect(body.costo_total).to.be.at.most(500);",
+              "});",
+              "pm.test('Cada actividad tiene su cluster o tipo_comida segun corresponda', function () {",
+              "    body.itinerario.forEach(act => {",
+              "        if (act.tipo === 'destino') pm.expect(act.cluster_afluencia).to.not.be.null;",
+              "    });",
+              "});",
+              "pm.environment.set('ultimaInferenciaId', body.id);"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Recomendar - bonus por potencial_oculto (aventura)",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"interes\": \"aventura\",\n  \"personas\": 2,\n  \"presupuesto\": 1500,\n  \"tiempo\": \"1 dia\"\n}"
+        },
+        "url": { "raw": "{{baseUrl}}/recomendar", "host": ["{{baseUrl}}"], "path": ["recomendar"] }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test('Status code is 200', function () { pm.response.to.have.status(200); });",
+              "const body = pm.response.json();",
+              "pm.test('Se aplico al menos una regla de asociacion', function () {",
+              "    pm.expect(body.reglas_asociacion_aplicadas.length).to.be.greaterThan(0);",
+              "});",
+              "pm.test('El resumen de clusters incluye potencial_oculto entre los candidatos', function () {",
+              "    pm.expect(Object.keys(body.resumen_clusters_candidatos)).to.include('potencial_oculto');",
+              "});"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Recomendar - interes fuera del catalogo (422)",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"interes\": \"playa\",\n  \"personas\": 2\n}"
+        },
+        "url": { "raw": "{{baseUrl}}/recomendar", "host": ["{{baseUrl}}"], "path": ["recomendar"] }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test('Status code is 422 (categoria invalida)', function () { pm.response.to.have.status(422); });"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Historial - listar",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": { "raw": "{{baseUrl}}/historial?limite=5", "host": ["{{baseUrl}}"], "path": ["historial"], "query": [{ "key": "limite", "value": "5" }] }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test('Status code is 200', function () { pm.response.to.have.status(200); });",
+              "pm.test('Devuelve una lista', function () { pm.expect(pm.response.json()).to.be.an('array'); });"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Historial - detalle existente",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": { "raw": "{{baseUrl}}/historial/{{ultimaInferenciaId}}", "host": ["{{baseUrl}}"], "path": ["historial", "{{ultimaInferenciaId}}"] }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test('Status code is 200', function () { pm.response.to.have.status(200); });",
+              "pm.test('El id coincide con el solicitado', function () {",
+              "    pm.expect(String(pm.response.json().id)).to.eql(pm.environment.get('ultimaInferenciaId').toString());",
+              "});"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Historial - detalle inexistente (404)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": { "raw": "{{baseUrl}}/historial/999999", "host": ["{{baseUrl}}"], "path": ["historial", "999999"] }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test('Status code is 404', function () { pm.response.to.have.status(404); });"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}
