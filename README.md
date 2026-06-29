@@ -61,6 +61,26 @@ Swagger / OpenAPI: `http://localhost:8001/docs`
   tiene usuarios reales. Sustituir por el historial real de itinerarios en
   cuanto exista.
 
+## Evidencia de desarrollo
+
+`notebooks/entrenamiento_y_evaluacion.ipynb` documenta el entrenamiento y
+evaluacion de K-Means (metodo del codo + silhouette para justificar
+`k=3`, silhouette final 0.513) y Apriori (reglas descubiertas con su
+soporte/confianza), ademas de un ejemplo end-to-end real usando
+`generar_recomendacion()`. Importa directamente los modulos de `app/`, asi
+que los resultados son los mismos que devuelve la API, no una reimplementacion
+aparte.
+
+Para volver a ejecutarlo:
+
+```bash
+pip install -r requirements-dev.txt
+python -m ipykernel install --user --name explorachiapas-ml --display-name "ExploraChiapas ML"
+jupyter nbconvert --to notebook --execute --inplace --ExecutePreprocessor.kernel_name=explorachiapas-ml notebooks/entrenamiento_y_evaluacion.ipynb
+```
+
+O abrirlo interactivamente con `jupyter lab` / `jupyter notebook` y correrlo celda por celda.
+
 ## Notas de diseño
 
 - El cluster `potencial_oculto` recibe un bonus de score y el `saturado` una
