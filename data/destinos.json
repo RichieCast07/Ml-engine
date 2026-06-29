@@ -1,0 +1,52 @@
+[
+  {"id": 1, "nombre": "Cañón del Sumidero (mirador y lancha)", "tipo": "destino", "municipio": "Chiapa de Corzo", "categoria": "naturaleza", "costo_estimado": 250, "tiempo_horas": 3, "nivel_afluencia": 16000},
+  {"id": 2, "nombre": "Cascadas de Agua Azul", "tipo": "destino", "municipio": "Palenque", "categoria": "naturaleza", "costo_estimado": 80, "tiempo_horas": 3, "nivel_afluencia": 14500},
+  {"id": 3, "nombre": "Cascadas El Chiflón", "tipo": "destino", "municipio": "Tzimol", "categoria": "naturaleza", "costo_estimado": 60, "tiempo_horas": 3, "nivel_afluencia": 6200},
+  {"id": 4, "nombre": "Lagos de Montebello", "tipo": "destino", "municipio": "La Trinitaria", "categoria": "naturaleza", "costo_estimado": 50, "tiempo_horas": 4, "nivel_afluencia": 4100},
+  {"id": 5, "nombre": "Cascada El Aguacero", "tipo": "destino", "municipio": "Ocozocoautla", "categoria": "naturaleza", "costo_estimado": 40, "tiempo_horas": 4, "nivel_afluencia": 900},
+
+  {"id": 6, "nombre": "Zona Arqueológica de Palenque", "tipo": "destino", "municipio": "Palenque", "categoria": "cultura", "costo_estimado": 95, "tiempo_horas": 4, "nivel_afluencia": 17000},
+  {"id": 7, "nombre": "Centro Histórico de San Cristóbal de las Casas", "tipo": "destino", "municipio": "San Cristóbal de las Casas", "categoria": "cultura", "costo_estimado": 0, "tiempo_horas": 3, "nivel_afluencia": 18500},
+  {"id": 8, "nombre": "Zona Arqueológica de Bonampak", "tipo": "destino", "municipio": "Ocosingo", "categoria": "cultura", "costo_estimado": 80, "tiempo_horas": 3, "nivel_afluencia": 1300},
+  {"id": 9, "nombre": "Museo Na Bolom", "tipo": "destino", "municipio": "San Cristóbal de las Casas", "categoria": "cultura", "costo_estimado": 50, "tiempo_horas": 2, "nivel_afluencia": 1100},
+  {"id": 10, "nombre": "Pueblo de Chiapa de Corzo (centro y malecón)", "tipo": "destino", "municipio": "Chiapa de Corzo", "categoria": "cultura", "costo_estimado": 0, "tiempo_horas": 2, "nivel_afluencia": 5400},
+
+  {"id": 11, "nombre": "Mercado y pasillo gastronómico de San Cristóbal", "tipo": "destino", "municipio": "San Cristóbal de las Casas", "categoria": "gastronomia", "costo_estimado": 150, "tiempo_horas": 2, "nivel_afluencia": 9800},
+  {"id": 12, "nombre": "Ruta del café en Pueblo Nuevo Solistahuacán", "tipo": "destino", "municipio": "Pueblo Nuevo Solistahuacán", "categoria": "gastronomia", "costo_estimado": 180, "tiempo_horas": 3, "nivel_afluencia": 700},
+  {"id": 13, "nombre": "Plaza gastronómica de Tuxtla Gutiérrez", "tipo": "destino", "municipio": "Tuxtla Gutiérrez", "categoria": "gastronomia", "costo_estimado": 130, "tiempo_horas": 2, "nivel_afluencia": 7600},
+  {"id": 14, "nombre": "Cocina tradicional en Suchiapa", "tipo": "destino", "municipio": "Suchiapa", "categoria": "gastronomia", "costo_estimado": 100, "tiempo_horas": 2, "nivel_afluencia": 850},
+
+  {"id": 15, "nombre": "Tirolesas y rappel en El Aguacero", "tipo": "destino", "municipio": "Ocozocoautla", "categoria": "aventura", "costo_estimado": 350, "tiempo_horas": 4, "nivel_afluencia": 1200},
+  {"id": 16, "nombre": "Rafting en Río Santo Domingo", "tipo": "destino", "municipio": "Soyaló", "categoria": "aventura", "costo_estimado": 450, "tiempo_horas": 5, "nivel_afluencia": 600},
+  {"id": 17, "nombre": "Kayak en Lagos de Montebello", "tipo": "destino", "municipio": "La Trinitaria", "categoria": "aventura", "costo_estimado": 200, "tiempo_horas": 3, "nivel_afluencia": 1800},
+  {"id": 18, "nombre": "Senderismo en El Arcotete", "tipo": "destino", "municipio": "San Cristóbal de las Casas", "categoria": "aventura", "costo_estimado": 70, "tiempo_horas": 3, "nivel_afluencia": 2400},
+
+  {"id": 19, "nombre": "Zoológico Miguel Álvarez del Toro (ZooMAT)", "tipo": "destino", "municipio": "Tuxtla Gutiérrez", "categoria": "familiar", "costo_estimado": 40, "tiempo_horas": 3, "nivel_afluencia": 11200},
+  {"id": 20, "nombre": "Parque Ecoturístico Las Nubes", "tipo": "destino", "municipio": "La Independencia", "categoria": "familiar", "costo_estimado": 50, "tiempo_horas": 4, "nivel_afluencia": 1500},
+  {"id": 21, "nombre": "Parque de la Marimba", "tipo": "destino", "municipio": "Tuxtla Gutiérrez", "categoria": "familiar", "costo_estimado": 0, "tiempo_horas": 2, "nivel_afluencia": 8700},
+  {"id": 22, "nombre": "Balneario Las Cascadas", "tipo": "destino", "municipio": "Berriozábal", "categoria": "familiar", "costo_estimado": 60, "tiempo_horas": 4, "nivel_afluencia": 2200},
+
+  {"id": 23, "nombre": "Temazcal y spa tradicional", "tipo": "destino", "municipio": "San Cristóbal de las Casas", "categoria": "descanso", "costo_estimado": 400, "tiempo_horas": 2, "nivel_afluencia": 1900},
+  {"id": 24, "nombre": "Jardín Botánico Dr. Faustino Miranda", "tipo": "destino", "municipio": "Tuxtla Gutiérrez", "categoria": "descanso", "costo_estimado": 20, "tiempo_horas": 2, "nivel_afluencia": 1300},
+  {"id": 25, "nombre": "Hacienda San Agustín", "tipo": "destino", "municipio": "Comitán de Domínguez", "categoria": "descanso", "costo_estimado": 300, "tiempo_horas": 3, "nivel_afluencia": 950},
+  {"id": 26, "nombre": "Balneario Agua Azul zona de descanso", "tipo": "destino", "municipio": "Palenque", "categoria": "descanso", "costo_estimado": 80, "tiempo_horas": 3, "nivel_afluencia": 5200},
+
+  {"id": 27, "nombre": "Mirador del Cañón del Sumidero (Ceiba/La Coyota)", "tipo": "destino", "municipio": "Tuxtla Gutiérrez", "categoria": "fotografia", "costo_estimado": 30, "tiempo_horas": 2, "nivel_afluencia": 4300},
+  {"id": 28, "nombre": "Andador turístico de San Cristóbal (Real de Guadalupe)", "tipo": "destino", "municipio": "San Cristóbal de las Casas", "categoria": "fotografia", "costo_estimado": 0, "tiempo_horas": 2, "nivel_afluencia": 13800},
+  {"id": 29, "nombre": "Mirador de Cascadas El Chiflón", "tipo": "destino", "municipio": "Tzimol", "categoria": "fotografia", "costo_estimado": 60, "tiempo_horas": 2, "nivel_afluencia": 5900},
+  {"id": 30, "nombre": "Iglesia de Santo Domingo y mercado de textiles", "tipo": "destino", "municipio": "San Cristóbal de las Casas", "categoria": "fotografia", "costo_estimado": 0, "tiempo_horas": 1, "nivel_afluencia": 9100},
+
+  {"id": 31, "nombre": "Fiesta Grande de Chiapa de Corzo", "tipo": "destino", "municipio": "Chiapa de Corzo", "categoria": "eventos", "costo_estimado": 100, "tiempo_horas": 5, "nivel_afluencia": 12500},
+  {"id": 32, "nombre": "Feria Internacional Tuxtla (FENIT)", "tipo": "destino", "municipio": "Tuxtla Gutiérrez", "categoria": "eventos", "costo_estimado": 80, "tiempo_horas": 4, "nivel_afluencia": 9300},
+  {"id": 33, "nombre": "Festival Cervantino Barroco", "tipo": "destino", "municipio": "San Cristóbal de las Casas", "categoria": "eventos", "costo_estimado": 150, "tiempo_horas": 3, "nivel_afluencia": 2600},
+  {"id": 34, "nombre": "Festival del Café de Pueblo Nuevo Solistahuacán", "tipo": "destino", "municipio": "Pueblo Nuevo Solistahuacán", "categoria": "eventos", "costo_estimado": 90, "tiempo_horas": 3, "nivel_afluencia": 650},
+
+  {"id": 35, "nombre": "Restaurante Tradicional Chiapaneco El Fogón", "tipo": "restaurante", "municipio": "San Cristóbal de las Casas", "tipo_comida": "comida tradicional chiapaneca", "costo_estimado": 180, "tiempo_horas": 1, "nivel_afluencia": 6000},
+  {"id": 36, "nombre": "Asadero La Brasa Chiapaneca", "tipo": "restaurante", "municipio": "Tuxtla Gutiérrez", "tipo_comida": "carne asada", "costo_estimado": 200, "tiempo_horas": 1, "nivel_afluencia": 5200},
+  {"id": 37, "nombre": "Marisquería El Manglar", "tipo": "restaurante", "municipio": "Tuxtla Gutiérrez", "tipo_comida": "mariscos", "costo_estimado": 220, "tiempo_horas": 1, "nivel_afluencia": 3100},
+  {"id": 38, "nombre": "Antojitos Doña Tere", "tipo": "restaurante", "municipio": "Suchiapa", "tipo_comida": "antojitos", "costo_estimado": 70, "tiempo_horas": 1, "nivel_afluencia": 2400},
+  {"id": 39, "nombre": "Café y Postres La Cafetalera", "tipo": "restaurante", "municipio": "San Cristóbal de las Casas", "tipo_comida": "cafe y postres", "costo_estimado": 90, "tiempo_horas": 1, "nivel_afluencia": 4700},
+  {"id": 40, "nombre": "Cocina de Autor Raíces de Chiapas", "tipo": "restaurante", "municipio": "Tuxtla Gutiérrez", "tipo_comida": "comida tradicional chiapaneca", "costo_estimado": 350, "tiempo_horas": 2, "nivel_afluencia": 1800},
+  {"id": 41, "nombre": "Asados El Establo", "tipo": "restaurante", "municipio": "Chiapa de Corzo", "tipo_comida": "carne asada", "costo_estimado": 190, "tiempo_horas": 1, "nivel_afluencia": 2900},
+  {"id": 42, "nombre": "Comedor Familiar Suchiapa", "tipo": "restaurante", "municipio": "Suchiapa", "tipo_comida": "comida tradicional chiapaneca", "costo_estimado": 85, "tiempo_horas": 1, "nivel_afluencia": 1500}
+]
