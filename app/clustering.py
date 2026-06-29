@@ -7,7 +7,6 @@ proyecto.
 
 from functools import lru_cache
 
-import numpy as np
 import pandas as pd
 from sklearn.cluster import KMeans
 from sklearn.preprocessing import StandardScaler
@@ -30,20 +29,23 @@ def entrenar_clusters() -> pd.DataFrame:
     kmeans = KMeans(n_clusters=N_CLUSTERS, random_state=42, n_init=10)
     destinos["cluster"] = kmeans.fit_predict(X_scaled)
 
-    # Ordena las etiquetas de cluster por afluencia promedio ascendente,
-    # asi el cluster con menor afluencia siempre se llama "potencial_oculto"
-    # y el de mayor afluencia siempre "saturado", sin importar el id interno
-    # que K-Means les haya asignado en esta corrida.
-    orden_clusters = (
-        destinos.groupby("cluster")["nivel_afluencia"]
-        .mean()
-        .sort_values()
-        .index.tolist()
+    # K-Means numera los clusters de forma arbitraria (0, 1, 2...), asi que
+    # hay que averiguar cual cluster tiene mas afluencia en promedio para
+    # asignarle el nombre correcto ("saturado", "moderado", "potencial_oculto").
+    afluencia_promedio_por_cluster = {}
+    for cluster_id in sorted(destinos["cluster"].unique()):
+        destinos_del_cluster = destinos[destinos["cluster"] == cluster_id]
+        afluencia_promedio_por_cluster[cluster_id] = destinos_del_cluster["nivel_afluencia"].mean()
+
+    clusters_ordenados_por_afluencia = sorted(
+        afluencia_promedio_por_cluster,
+        key=lambda cluster_id: afluencia_promedio_por_cluster[cluster_id],
     )
-    mapa_etiquetas = {
-        cluster_id: ETIQUETAS_POR_AFLUENCIA[posicion]
-        for posicion, cluster_id in enumerate(orden_clusters)
-    }
+
+    mapa_etiquetas = {}
+    for posicion, cluster_id in enumerate(clusters_ordenados_por_afluencia):
+        mapa_etiquetas[cluster_id] = ETIQUETAS_POR_AFLUENCIA[posicion]
+
     destinos["cluster_afluencia"] = destinos["cluster"].map(mapa_etiquetas)
 
     return destinos.drop(columns=["cluster"])
@@ -51,16 +53,16 @@ def entrenar_clusters() -> pd.DataFrame:
 
 def resumen_clusters() -> dict:
     destinos = entrenar_clusters()
-    resumen = (
-        destinos.groupby("cluster_afluencia")
-        .agg(
-            n_destinos=("id", "count"),
-            afluencia_promedio=("nivel_afluencia", "mean"),
-            costo_promedio=("costo_estimado", "mean"),
-        )
-        .round(1)
-        .to_dict(orient="index")
-    )
+
+    resumen = {}
+    for etiqueta in destinos["cluster_afluencia"].unique():
+        grupo = destinos[destinos["cluster_afluencia"] == etiqueta]
+        resumen[etiqueta] = {
+            "n_destinos": len(grupo),
+            "afluencia_promedio": round(grupo["nivel_afluencia"].mean(), 1),
+            "costo_promedio": round(grupo["costo_estimado"].mean(), 1),
+        }
+
     return resumen
 
 

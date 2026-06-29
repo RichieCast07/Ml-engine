@@ -19,7 +19,6 @@ BONUS_CATEGORIA_COMPLEMENTARIA = 1.5
 BONUS_POTENCIAL_OCULTO = 2.0
 PENALIZACION_SATURADO = 1.0
 BONUS_COMIDA_COINCIDE = 3.0
-PRESUPUESTO_SIN_LIMITE_FACTOR = 1.0  # si no hay presupuesto, no se restringe
 
 
 def horas_desde_texto(tiempo: str | None) -> float:
@@ -152,21 +151,27 @@ def generar_recomendacion(params: ParametrosViajeIn) -> dict:
     candidatos, resumen_clusters_candidatos, complementarias_info = _construir_candidatos(params)
 
     tiempo_disponible = horas_desde_texto(params.tiempo)
-    presupuesto_disponible = (
-        params.presupuesto
-        if params.presupuesto is not None
-        else sum(c["costo_total_grupo"] for c in candidatos) * PRESUPUESTO_SIN_LIMITE_FACTOR
-    )
+
+    if params.presupuesto is not None:
+        presupuesto_disponible = params.presupuesto
+    else:
+        # sin presupuesto declarado, no restringimos: se permite gastar
+        # como maximo lo que suman todos los candidatos filtrados
+        presupuesto_disponible = sum(c["costo_total_grupo"] for c in candidatos)
 
     itinerario = resolver_mochila(candidatos, presupuesto_disponible, tiempo_disponible)
 
     for item in itinerario:
         item.pop("valor", None)
 
-    reglas_aplicadas = [
-        f"{params.interes} -> {c['categoria']} (confianza {c['confianza']}, soporte {c['soporte']})"
-        for c in complementarias_info
-    ] if params.interes else []
+    reglas_aplicadas = []
+    if params.interes:
+        for complementaria in complementarias_info:
+            texto_regla = (
+                f"{params.interes} -> {complementaria['categoria']} "
+                f"(confianza {complementaria['confianza']}, soporte {complementaria['soporte']})"
+            )
+            reglas_aplicadas.append(texto_regla)
 
     return {
         "parametros_entrada": params,
