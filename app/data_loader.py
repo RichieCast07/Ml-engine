@@ -1,4 +1,4 @@
-import json
+import csv
 from functools import lru_cache
 from pathlib import Path
 
@@ -9,10 +9,23 @@ DATA_DIR = Path(__file__).resolve().parent.parent / "data"
 
 @lru_cache(maxsize=1)
 def cargar_destinos() -> pd.DataFrame:
-    raw = json.loads((DATA_DIR / "destinos.json").read_text(encoding="utf-8"))
-    return pd.DataFrame(raw)
+    ruta_csv = DATA_DIR / "destinos.csv"
+    df = pd.read_csv(ruta_csv, encoding="utf-8", dtype={"id": int}, low_memory=False)
+    df["categoria"] = df["categoria"].fillna("").astype(str)
+    df["tipo_comida"] = df["tipo_comida"].fillna("").astype(str)
+    df["categoria"] = df["categoria"].replace("", None)
+    df["tipo_comida"] = df["tipo_comida"].replace("", None)
+    return df
 
 
 @lru_cache(maxsize=1)
 def cargar_historial_visitas() -> list[list[str]]:
-    return json.loads((DATA_DIR / "historial_visitas.json").read_text(encoding="utf-8"))
+    ruta_csv = DATA_DIR / "historial_visitas.csv"
+    transacciones = []
+    with open(ruta_csv, encoding="utf-8", newline="") as f:
+        reader = csv.DictReader(f)
+        for fila in reader:
+            cats = [c.strip() for c in fila["categorias"].split("|") if c.strip()]
+            if cats:
+                transacciones.append(cats)
+    return transacciones

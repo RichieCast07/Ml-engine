@@ -8,6 +8,11 @@ total sin exceder ni el presupuesto ni el tiempo disponible.
 # discretizar el tiempo disponible en la tabla de programacion dinamica.
 PASOS_POR_HORA = 2
 
+# Escala monetaria: 1 unidad de presupuesto = ESCALA_COSTO pesos.
+# Con presupuestos tipicos de 500-5000 pesos esto reduce la dimension C
+# de 5000 celdas a 500, achicando la tabla DP 10x y evitando OOM.
+ESCALA_COSTO = 10
+
 
 def resolver_mochila(
     items: list[dict],
@@ -18,10 +23,10 @@ def resolver_mochila(
         return []
 
     n = len(items)
-    capacidad_costo = max(int(round(presupuesto_max)), 0)
+    capacidad_costo = max(int(round(presupuesto_max / ESCALA_COSTO)), 0)
     capacidad_tiempo = max(int(round(tiempo_max_horas * PASOS_POR_HORA)), 0)
 
-    pesos_costo = [max(int(round(it["costo_total_grupo"])), 0) for it in items]
+    pesos_costo = [max(int(round(it["costo_total_grupo"] / ESCALA_COSTO)), 0) for it in items]
     pesos_tiempo = [max(int(round(it["tiempo_horas"] * PASOS_POR_HORA)), 0) for it in items]
     valores = [it["valor"] for it in items]
 

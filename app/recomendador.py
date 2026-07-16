@@ -20,6 +20,23 @@ BONUS_POTENCIAL_OCULTO = 2.0
 PENALIZACION_SATURADO = 1.0
 BONUS_COMIDA_COINCIDE = 3.0
 
+# Con 400k registros un filtro amplio puede generar decenas de miles de
+# candidatos. La mochila 0/1 tiene complejidad O(n × C × T) en memoria,
+# por lo que con n=80k, C=1500 y T=16 la tabla requiere ~2 mil millones
+# de celdas (>15 GB RAM). Limitamos a los mejores N candidatos por score
+# antes de ejecutar el DP para mantener la memoria en niveles manejables
+# (500 × 500 × 16 ≈ 4M celdas ≈ 32 MB con la escala de costos).
+MAX_CANDIDATOS_KNAPSACK = 500
+
+# Presupuesto por default cuando el usuario no lo especifica (pesos MXN).
+# Se elige 2000 como valor tipico de una excursion de un dia en Chiapas.
+PRESUPUESTO_DEFAULT = 2000.0
+
+# Techo absoluto de presupuesto que se pasa a la mochila. La restriccion de
+# tiempo limita de todas formas cuantos lugares se pueden visitar en un dia,
+# por lo que valores mayores no cambian el resultado pero si la memoria usada.
+MAX_PRESUPUESTO_DP = 5000.0
+
 
 def horas_desde_texto(tiempo: str | None) -> float:
     """Heuristica simple para convertir frases libres ('medio dia', '2 dias',
@@ -144,6 +161,9 @@ def _construir_candidatos(params: ParametrosViajeIn) -> tuple[list[dict], dict[s
             }
         )
 
+    candidatos.sort(key=lambda c: c["valor"], reverse=True)
+    candidatos = candidatos[:MAX_CANDIDATOS_KNAPSACK]
+
     return candidatos, resumen_clusters_candidatos, complementarias_info
 
 
@@ -153,11 +173,9 @@ def generar_recomendacion(params: ParametrosViajeIn) -> dict:
     tiempo_disponible = horas_desde_texto(params.tiempo)
 
     if params.presupuesto is not None:
-        presupuesto_disponible = params.presupuesto
+        presupuesto_disponible = min(params.presupuesto, MAX_PRESUPUESTO_DP)
     else:
-        # sin presupuesto declarado, no restringimos: se permite gastar
-        # como maximo lo que suman todos los candidatos filtrados
-        presupuesto_disponible = sum(c["costo_total_grupo"] for c in candidatos)
+        presupuesto_disponible = PRESUPUESTO_DEFAULT
 
     itinerario = resolver_mochila(candidatos, presupuesto_disponible, tiempo_disponible)
 
