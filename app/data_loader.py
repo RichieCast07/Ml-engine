@@ -12,9 +12,7 @@ def cargar_destinos() -> pd.DataFrame:
     ruta_csv = DATA_DIR / "destinos.csv"
     df = pd.read_csv(ruta_csv, encoding="utf-8", dtype={"id": int}, low_memory=False)
     df["categoria"] = df["categoria"].fillna("").astype(str)
-    df["tipo_comida"] = df["tipo_comida"].fillna("").astype(str)
     df["categoria"] = df["categoria"].replace("", None)
-    df["tipo_comida"] = df["tipo_comida"].replace("", None)
     return df
 
 

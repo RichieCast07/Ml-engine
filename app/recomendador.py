@@ -18,7 +18,6 @@ BONUS_INTERES_PRINCIPAL = 3.0
 BONUS_CATEGORIA_COMPLEMENTARIA = 1.5
 BONUS_POTENCIAL_OCULTO = 2.0
 PENALIZACION_SATURADO = 1.0
-BONUS_COMIDA_COINCIDE = 3.0
 
 # Con 400k registros un filtro amplio puede generar decenas de miles de
 # candidatos. La mochila 0/1 tiene complejidad O(n × C × T) en memoria,
@@ -84,10 +83,6 @@ def _filtrar_restaurantes(comida_texto, destino_texto):
     df = cargar_destinos()
     restaurantes = df[df["tipo"] == "restaurante"]
 
-    if comida_texto:
-        patron = normalizar(comida_texto)
-        restaurantes = restaurantes[restaurantes["tipo_comida"].apply(normalizar).str.contains(patron)]
-
     if destino_texto:
         patron = normalizar(destino_texto)
         coincide_municipio = restaurantes["municipio"].apply(normalizar).str.contains(patron)
@@ -129,7 +124,6 @@ def _construir_candidatos(params: ParametrosViajeIn) -> tuple[list[dict], dict[s
                 "tipo": "destino",
                 "municipio": fila["municipio"],
                 "categoria": fila["categoria"],
-                "tipo_comida": None,
                 "costo_estimado": float(fila["costo_estimado"]),
                 "costo_total_grupo": float(fila["costo_estimado"]) * personas,
                 "tiempo_horas": float(fila["tiempo_horas"]),
@@ -141,9 +135,6 @@ def _construir_candidatos(params: ParametrosViajeIn) -> tuple[list[dict], dict[s
 
     for _, fila in restaurantes.iterrows():
         valor = 1.0
-        if params.comida and params.comida.lower() in str(fila["tipo_comida"]).lower():
-            valor += BONUS_COMIDA_COINCIDE
-
         candidatos.append(
             {
                 "id": int(fila["id"]),
@@ -151,7 +142,6 @@ def _construir_candidatos(params: ParametrosViajeIn) -> tuple[list[dict], dict[s
                 "tipo": "restaurante",
                 "municipio": fila["municipio"],
                 "categoria": None,
-                "tipo_comida": fila["tipo_comida"],
                 "costo_estimado": float(fila["costo_estimado"]),
                 "costo_total_grupo": float(fila["costo_estimado"]) * personas,
                 "tiempo_horas": float(fila["tiempo_horas"]),

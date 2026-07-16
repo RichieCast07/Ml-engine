@@ -26,7 +26,6 @@ class ActividadOut(BaseModel):
     tipo: Literal["destino", "restaurante"]
     municipio: str
     categoria: Optional[str] = None
-    tipo_comida: Optional[str] = None
     costo_estimado: float
     costo_total_grupo: float
     tiempo_horas: float

@@ -286,7 +286,6 @@ def generar_destinos():
                 "tipo": "destino",
                 "municipio": municipio,
                 "categoria": categoria,
-                "tipo_comida": "",
                 "costo_estimado": costo,
                 "tiempo_horas": tiempo,
                 "nivel_afluencia": afluencia,
@@ -317,7 +316,6 @@ def generar_restaurantes(id_inicio):
             "tipo": "restaurante",
             "municipio": municipio,
             "categoria": "",
-            "tipo_comida": tipo_comida,
             "costo_estimado": costo,
             "tiempo_horas": 1,
             "nivel_afluencia": afluencia,
@@ -370,7 +368,7 @@ def generar_historial():
 # ─── Escritura de archivos ────────────────────────────────────────────────────
 
 CAMPOS = ["id", "nombre", "tipo", "municipio", "categoria",
-          "tipo_comida", "costo_estimado", "tiempo_horas", "nivel_afluencia"]
+          "costo_estimado", "tiempo_horas", "nivel_afluencia"]
 
 
 def guardar_destinos_csv(destinos, restaurantes):
