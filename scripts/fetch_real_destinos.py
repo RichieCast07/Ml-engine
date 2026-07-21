@@ -238,14 +238,28 @@ def main() -> None:
             r = requests.post(servidor, data={"data": OVERPASS_QUERY},
                               headers=headers, timeout=200)
             r.raise_for_status()
-            elementos = r.json().get("elements", [])
+            datos = r.json()
+            elementos = datos.get("elements", [])
+            # Debug: mostrar si hay remarks del servidor
+            if datos.get("remark"):
+                print(f"  Aviso del servidor: {datos['remark']}")
             print(f"  OK — {len(elementos)} elementos descargados")
+            if elementos:
+                break
+            # Si 0 resultados, probar con query mínima de prueba
+            print("  0 elementos — probando query de prueba...")
+            test_q = '[out:json][timeout:30];\nnode["natural"="waterfall"]["name"](14.53,-94.24,17.88,-90.37);\nout tags;'
+            r2 = requests.post(servidor, data={"data": test_q}, headers=headers, timeout=60)
+            test_datos = r2.json()
+            print(f"  Query de prueba: {len(test_datos.get('elements', []))} cascadas encontradas")
+            print(f"  Respuesta raw (primeros 300 chars): {r2.text[:300]}")
             break
         except Exception as e:
             print(f"  Fallo ({e}), probando siguiente servidor...")
             time.sleep(3)
     if not elementos:
-        print("ERROR: No se pudo conectar a ningún servidor Overpass.")
+        print("ERROR: No se pudo obtener datos de Overpass.")
+        print("Revisa la salida de la query de prueba arriba.")
         return
     print(f"  {len(elementos)} elementos OSM descargados")
 
