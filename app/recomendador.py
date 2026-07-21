@@ -35,8 +35,54 @@ try:
 except Exception as _e:
     print(f"[recomendador] ERROR cargando fotos_categorias: {_e}")
 
+_FOTOS_TIPO_PATH = Path(__file__).resolve().parent.parent / "data" / "fotos_por_tipo.json"
+_FOTOS_POR_TIPO: dict = {}
 
-def _get_foto(categoria: str | None, dest_id: int) -> str | None:
+try:
+    with open(_FOTOS_TIPO_PATH, encoding="utf-8") as _f:
+        _FOTOS_POR_TIPO = json.load(_f)
+    print(f"[recomendador] fotos_por_tipo cargadas: {list(_FOTOS_POR_TIPO.keys())}")
+except Exception as _e:
+    print(f"[recomendador] ERROR cargando fotos_por_tipo: {_e}")
+
+# Palabras clave en el nombre del destino → tipo de foto temática
+_TIPO_KEYWORDS: list[tuple[str, list[str]]] = [
+    ("cenote",       ["cenote"]),
+    ("cascada",      ["cascada", "catarata", "velo"]),
+    ("rio",          ["rio ", "río ", "arroyo", "manantial", "nacimiento", "corriente"]),
+    ("laguna",       ["laguna", "lago ", "embalse", "presa "]),
+    ("cueva",        ["cueva", "caverna", "gruta", "tunel", "túnel", "sotano", "sótano"]),
+    ("barranca",     ["barranca", "cañon", "cañón", "canon "]),
+    ("mirador",      ["mirador", "panoram", "vista "]),
+    ("cerro",        ["cerro", "sierra", "monte ", "volcan", "volcán", "pico ", "cumbre"]),
+    ("arqueologico", ["zona arqueol", "ruinas", "piramide", "pirámide", "prehispan", "maya", "zona maya"]),
+    ("sendero",      ["sendero", "senda ", "camino ecol", "vereda", "ruta ecol"]),
+    ("bosque",       ["bosque", "selva", "reserva", "ecologico", "ecológico"]),
+    ("parque",       ["parque", "jardin", "jardín", "plaza", "zócalo", "zocalo"]),
+    ("playa",        ["playa", "costa "]),
+    ("reserva",      ["reserva biolog", "area natural", "area proteg"]),
+]
+
+
+def _tipo_desde_nombre(nombre: str) -> str | None:
+    n = normalizar(nombre)
+    for tipo, keywords in _TIPO_KEYWORDS:
+        for kw in keywords:
+            if kw in n:
+                return tipo
+    return None
+
+
+def _get_foto(categoria: str | None, dest_id: int, nombre: str = "", foto_csv: str = "") -> str | None:
+    # Foto real (Google Places) guardada en el CSV → máxima prioridad
+    if foto_csv and foto_csv.strip():
+        return foto_csv.strip()
+    # Foto temática por tipo de lugar (cascada, cueva, etc.)
+    tipo = _tipo_desde_nombre(nombre) if nombre else None
+    if tipo and tipo in _FOTOS_POR_TIPO:
+        fotos = _FOTOS_POR_TIPO[tipo]
+        return fotos[dest_id % len(fotos)]
+    # Fallback: foto por categoría
     fotos = _FOTOS_CATEGORIAS.get(categoria) if categoria else None
     if not fotos:
         return None
@@ -165,7 +211,7 @@ def _construir_candidatos(params: ParametrosViajeIn) -> tuple[list[dict], dict[s
                 "cluster_afluencia": fila["cluster_afluencia"],
                 "lat": coords.get("lat"),
                 "lng": coords.get("lng"),
-                "foto_principal": _get_foto(categoria_dest, int(fila["id"])),
+                "foto_principal": _get_foto(categoria_dest, int(fila["id"]), str(fila["nombre"]), str(fila.get("foto_url", ""))),
                 "valor": valor,
             }
         )
@@ -188,7 +234,7 @@ def _construir_candidatos(params: ParametrosViajeIn) -> tuple[list[dict], dict[s
                 "cluster_afluencia": None,
                 "lat": coords.get("lat"),
                 "lng": coords.get("lng"),
-                "foto_principal": _get_foto("restaurante", int(fila["id"])),
+                "foto_principal": _get_foto("restaurante", int(fila["id"]), str(fila["nombre"]), str(fila.get("foto_url", ""))),
                 "valor": valor,
             }
         )

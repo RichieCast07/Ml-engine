@@ -1,0 +1,81 @@
+{
+  "rio": [
+    "https://images.unsplash.com/photo-1504893524553-b855bce32c67?w=800&q=80",
+    "https://images.unsplash.com/photo-1559827291-72f4e6e1c85b?w=800&q=80",
+    "https://images.unsplash.com/photo-1551632436-cbf8dd35adfa?w=800&q=80",
+    "https://images.unsplash.com/photo-1501854140801-50d01698950b?w=800&q=80"
+  ],
+  "cascada": [
+    "https://images.unsplash.com/photo-1511300636408-a63a89df3482?w=800&q=80",
+    "https://images.unsplash.com/photo-1434394354979-a235cd36269d?w=800&q=80",
+    "https://images.unsplash.com/photo-1486870591958-9b9d0d1dda99?w=800&q=80",
+    "https://images.unsplash.com/photo-1578328819058-b69f3a3b0f6b?w=800&q=80"
+  ],
+  "laguna": [
+    "https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=800&q=80",
+    "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=800&q=80",
+    "https://images.unsplash.com/photo-1439853949212-36589f9effae?w=800&q=80",
+    "https://images.unsplash.com/photo-1548777123-e216912df7d8?w=800&q=80"
+  ],
+  "cueva": [
+    "https://images.unsplash.com/photo-1520962922320-2038eebab146?w=800&q=80",
+    "https://images.unsplash.com/photo-1565008576549-57569a49371d?w=800&q=80",
+    "https://images.unsplash.com/photo-1519331379826-f10be5486c6f?w=800&q=80",
+    "https://images.unsplash.com/photo-1588392382834-a891154bca4d?w=800&q=80"
+  ],
+  "bosque": [
+    "https://images.unsplash.com/photo-1448375240586-882707db888b?w=800&q=80",
+    "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&q=80",
+    "https://images.unsplash.com/photo-1425913397330-cf8af2ff40a1?w=800&q=80",
+    "https://images.unsplash.com/photo-1518623489648-a173ef7824f3?w=800&q=80"
+  ],
+  "sendero": [
+    "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&q=80",
+    "https://images.unsplash.com/photo-1551632811-561732d1e306?w=800&q=80",
+    "https://images.unsplash.com/photo-1483728642387-6c3bdd6c93e5?w=800&q=80",
+    "https://images.unsplash.com/photo-1502803702468-1e8debf41fbf?w=800&q=80"
+  ],
+  "mirador": [
+    "https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=800&q=80",
+    "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=800&q=80",
+    "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80",
+    "https://images.unsplash.com/photo-1433086966358-54859d0ed716?w=800&q=80"
+  ],
+  "cerro": [
+    "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80",
+    "https://images.unsplash.com/photo-1454496522488-7a8e488e8606?w=800&q=80",
+    "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&q=80",
+    "https://images.unsplash.com/photo-1472214103451-9374bd1c798e?w=800&q=80"
+  ],
+  "arqueologico": [
+    "https://images.unsplash.com/photo-1518638150340-f706e86654de?w=800&q=80",
+    "https://images.unsplash.com/photo-1547036967-23d11aacaee0?w=800&q=80",
+    "https://images.unsplash.com/photo-1585468274952-66591eb14165?w=800&q=80",
+    "https://images.unsplash.com/photo-1508766917616-d22f3f1eea14?w=800&q=80"
+  ],
+  "barranca": [
+    "https://images.unsplash.com/photo-1474044159687-1ee9f3a51722?w=800&q=80",
+    "https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=800&q=80",
+    "https://images.unsplash.com/photo-1490682143684-14369e18dce8?w=800&q=80"
+  ],
+  "parque": [
+    "https://images.unsplash.com/photo-1553481187-be93c21490a9?w=800&q=80",
+    "https://images.unsplash.com/photo-1519331379826-f10be5486c6f?w=800&q=80",
+    "https://images.unsplash.com/photo-1468359601543-843bfaef291a?w=800&q=80"
+  ],
+  "cenote": [
+    "https://images.unsplash.com/photo-1552083375-1447ce886485?w=800&q=80",
+    "https://images.unsplash.com/photo-1504893524553-b855bce32c67?w=800&q=80",
+    "https://images.unsplash.com/photo-1519331379826-f10be5486c6f?w=800&q=80"
+  ],
+  "playa": [
+    "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80",
+    "https://images.unsplash.com/photo-1506953823976-52e1fdc0149a?w=800&q=80",
+    "https://images.unsplash.com/photo-1519046904884-53103b34b206?w=800&q=80"
+  ],
+  "reserva": [
+    "https://images.unsplash.com/photo-1448375240586-882707db888b?w=800&q=80",
+    "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&q=80",
+    "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=800&q=80"
+  ]
+}
