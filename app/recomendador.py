@@ -19,13 +19,10 @@ BONUS_CATEGORIA_COMPLEMENTARIA = 1.5
 BONUS_POTENCIAL_OCULTO = 2.0
 PENALIZACION_SATURADO = 1.0
 
-# Con 400k registros un filtro amplio puede generar decenas de miles de
-# candidatos. La mochila 0/1 tiene complejidad O(n × C × T) en memoria,
-# por lo que con n=80k, C=1500 y T=16 la tabla requiere ~2 mil millones
-# de celdas (>15 GB RAM). Limitamos a los mejores N candidatos por score
-# antes de ejecutar el DP para mantener la memoria en niveles manejables
-# (500 × 500 × 16 ≈ 4M celdas ≈ 32 MB con la escala de costos).
-MAX_CANDIDATOS_KNAPSACK = 500
+# Los candidatos ya vienen ordenados por score descendente; los primeros
+# 150 cubren todos los destinos relevantes. Con n=150, C=500, T=16 la
+# tabla DP numpy ocupa ~5 MB y se resuelve en <200 ms.
+MAX_CANDIDATOS_KNAPSACK = 150
 
 # Presupuesto por default cuando el usuario no lo especifica (pesos MXN).
 # Se elige 2000 como valor tipico de una excursion de un dia en Chiapas.
