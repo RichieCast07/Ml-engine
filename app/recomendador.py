@@ -5,7 +5,9 @@ optimizacion de mochila. Toma los parametros que entrega la Capa 1 (NLP) y
 devuelve un itinerario concreto basado solo en datos reales del catalogo.
 """
 
+import json
 import re
+from pathlib import Path
 
 from app.asociacion import categorias_complementarias
 from app.clustering import entrenar_clusters
@@ -13,6 +15,15 @@ from app.data_loader import cargar_destinos
 from app.knapsack import resolver_mochila
 from app.schemas import ParametrosViajeIn
 from app.texto_utils import normalizar
+
+_COORDS_PATH = Path(__file__).resolve().parent.parent / "data" / "municipio_coords.json"
+_MUNICIPIO_COORDS: dict = {}
+
+try:
+    with open(_COORDS_PATH, encoding="utf-8") as _f:
+        _MUNICIPIO_COORDS = json.load(_f)
+except Exception:
+    pass
 
 BONUS_INTERES_PRINCIPAL = 3.0
 BONUS_CATEGORIA_COMPLEMENTARIA = 1.5
@@ -114,36 +125,44 @@ def _construir_candidatos(params: ParametrosViajeIn) -> tuple[list[dict], dict[s
         elif fila["cluster_afluencia"] == "saturado":
             valor -= PENALIZACION_SATURADO
 
+        municipio = fila["municipio"]
+        coords = _MUNICIPIO_COORDS.get(municipio, {})
         candidatos.append(
             {
                 "id": int(fila["id"]),
                 "nombre": fila["nombre"],
                 "tipo": "destino",
-                "municipio": fila["municipio"],
+                "municipio": municipio,
                 "categoria": fila["categoria"],
                 "costo_estimado": float(fila["costo_estimado"]),
                 "costo_total_grupo": float(fila["costo_estimado"]) * personas,
                 "tiempo_horas": float(fila["tiempo_horas"]),
                 "nivel_afluencia": int(fila["nivel_afluencia"]),
                 "cluster_afluencia": fila["cluster_afluencia"],
+                "lat": coords.get("lat"),
+                "lng": coords.get("lng"),
                 "valor": valor,
             }
         )
 
     for _, fila in restaurantes.iterrows():
         valor = 1.0
+        municipio = fila["municipio"]
+        coords = _MUNICIPIO_COORDS.get(municipio, {})
         candidatos.append(
             {
                 "id": int(fila["id"]),
                 "nombre": fila["nombre"],
                 "tipo": "restaurante",
-                "municipio": fila["municipio"],
+                "municipio": municipio,
                 "categoria": None,
                 "costo_estimado": float(fila["costo_estimado"]),
                 "costo_total_grupo": float(fila["costo_estimado"]) * personas,
                 "tiempo_horas": float(fila["tiempo_horas"]),
                 "nivel_afluencia": int(fila["nivel_afluencia"]),
                 "cluster_afluencia": None,
+                "lat": coords.get("lat"),
+                "lng": coords.get("lng"),
                 "valor": valor,
             }
         )
