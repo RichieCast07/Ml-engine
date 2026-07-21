@@ -1,11 +1,65 @@
 {
-  "naturaleza": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80",
-  "cultura": "https://images.unsplash.com/photo-1518638150340-f706e86654de?w=800&q=80",
-  "gastronomia": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800&q=80",
-  "aventura": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&q=80",
-  "familiar": "https://images.unsplash.com/photo-1602030638412-bb8dcc0bc8b0?w=800&q=80",
-  "descanso": "https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=800&q=80",
-  "fotografia": "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=800&q=80",
-  "eventos": "https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=800&q=80",
-  "restaurante": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&q=80"
+  "naturaleza": [
+    "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80",
+    "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&q=80",
+    "https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=800&q=80",
+    "https://images.unsplash.com/photo-1511300636408-a63a89df3482?w=800&q=80",
+    "https://images.unsplash.com/photo-1448375240586-882707db888b?w=800&q=80"
+  ],
+  "cultura": [
+    "https://images.unsplash.com/photo-1518638150340-f706e86654de?w=800&q=80",
+    "https://images.unsplash.com/photo-1547036967-23d11aacaee0?w=800&q=80",
+    "https://images.unsplash.com/photo-1508766917616-d22f3f1eea14?w=800&q=80",
+    "https://images.unsplash.com/photo-1550399105-c4db5fb15c71?w=800&q=80",
+    "https://images.unsplash.com/photo-1542332213-9b5a5a3fad35?w=800&q=80"
+  ],
+  "gastronomia": [
+    "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800&q=80",
+    "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&q=80",
+    "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800&q=80",
+    "https://images.unsplash.com/photo-1476124369491-e7addf5db371?w=800&q=80",
+    "https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=800&q=80"
+  ],
+  "aventura": [
+    "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&q=80",
+    "https://images.unsplash.com/photo-1551632811-561732d1e306?w=800&q=80",
+    "https://images.unsplash.com/photo-1530549387789-4c1017266635?w=800&q=80",
+    "https://images.unsplash.com/photo-1499209974431-9dddcece7f88?w=800&q=80",
+    "https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?w=800&q=80"
+  ],
+  "familiar": [
+    "https://images.unsplash.com/photo-1602030638412-bb8dcc0bc8b0?w=800&q=80",
+    "https://images.unsplash.com/photo-1553481187-be93c21490a9?w=800&q=80",
+    "https://images.unsplash.com/photo-1524260855046-f743b3cdad07?w=800&q=80",
+    "https://images.unsplash.com/photo-1565299507177-b0ac66763828?w=800&q=80",
+    "https://images.unsplash.com/photo-1528605248644-14dd04022da1?w=800&q=80"
+  ],
+  "descanso": [
+    "https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=800&q=80",
+    "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80",
+    "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80",
+    "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=800&q=80",
+    "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=800&q=80"
+  ],
+  "fotografia": [
+    "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=800&q=80",
+    "https://images.unsplash.com/photo-1452421822248-d4c2b47f0c81?w=800&q=80",
+    "https://images.unsplash.com/photo-1490077476659-095159692ab5?w=800&q=80",
+    "https://images.unsplash.com/photo-1517760444937-f6397edcbbcd?w=800&q=80",
+    "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=800&q=80"
+  ],
+  "eventos": [
+    "https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=800&q=80",
+    "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=800&q=80",
+    "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=800&q=80",
+    "https://images.unsplash.com/photo-1505236858219-8359eb29e329?w=800&q=80",
+    "https://images.unsplash.com/photo-1539650116574-75c0c6d73f6e?w=800&q=80"
+  ],
+  "restaurante": [
+    "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&q=80",
+    "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800&q=80",
+    "https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=800&q=80",
+    "https://images.unsplash.com/photo-1476124369491-e7addf5db371?w=800&q=80",
+    "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800&q=80"
+  ]
 }
