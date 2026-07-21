@@ -31,8 +31,9 @@ _FOTOS_CATEGORIAS: dict = {}
 try:
     with open(_FOTOS_PATH, encoding="utf-8") as _f:
         _FOTOS_CATEGORIAS = json.load(_f)
-except Exception:
-    pass
+    print(f"[recomendador] fotos_categorias cargadas: {list(_FOTOS_CATEGORIAS.keys())}")
+except Exception as _e:
+    print(f"[recomendador] ERROR cargando fotos_categorias: {_e}")
 
 BONUS_INTERES_PRINCIPAL = 3.0
 BONUS_CATEGORIA_COMPLEMENTARIA = 1.5
