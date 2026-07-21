@@ -85,10 +85,14 @@ def _filtrar_destinos(interes, destino_texto, complementarias):
 
     if destino_texto:
         patron = normalizar(destino_texto)
+        antes = len(destinos)
         destinos = destinos[
-            destinos["municipio"].apply(normalizar).str.contains(patron)
-            | destinos["nombre"].apply(normalizar).str.contains(patron)
+            destinos["municipio"].apply(normalizar).str.contains(patron, regex=False)
+            | destinos["nombre"].apply(normalizar).str.contains(patron, regex=False)
         ]
+        print(f"[recomendador] destino='{destino_texto}' patron='{patron}' {antes}->{len(destinos)} destinos")
+    else:
+        print(f"[recomendador] destino=None, sin filtro de municipio")
 
     if interes:
         categorias_aceptadas = {interes} | complementarias
