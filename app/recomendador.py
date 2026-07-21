@@ -35,6 +35,15 @@ try:
 except Exception as _e:
     print(f"[recomendador] ERROR cargando fotos_categorias: {_e}")
 
+
+def _get_foto(categoria: str | None, dest_id: int) -> str | None:
+    fotos = _FOTOS_CATEGORIAS.get(categoria) if categoria else None
+    if not fotos:
+        return None
+    if isinstance(fotos, list):
+        return fotos[dest_id % len(fotos)]
+    return fotos
+
 BONUS_INTERES_PRINCIPAL = 3.0
 BONUS_CATEGORIA_COMPLEMENTARIA = 1.5
 BONUS_POTENCIAL_OCULTO = 2.0
@@ -156,7 +165,7 @@ def _construir_candidatos(params: ParametrosViajeIn) -> tuple[list[dict], dict[s
                 "cluster_afluencia": fila["cluster_afluencia"],
                 "lat": coords.get("lat"),
                 "lng": coords.get("lng"),
-                "foto_principal": _FOTOS_CATEGORIAS.get(categoria_dest),
+                "foto_principal": _get_foto(categoria_dest, int(fila["id"])),
                 "valor": valor,
             }
         )
@@ -179,7 +188,7 @@ def _construir_candidatos(params: ParametrosViajeIn) -> tuple[list[dict], dict[s
                 "cluster_afluencia": None,
                 "lat": coords.get("lat"),
                 "lng": coords.get("lng"),
-                "foto_principal": _FOTOS_CATEGORIAS.get("restaurante"),
+                "foto_principal": _get_foto("restaurante", int(fila["id"])),
                 "valor": valor,
             }
         )
