@@ -107,42 +107,44 @@ DEFAULT_COSTO_TIEMPO = (100, 2.0, 2)
 # ── Query Overpass ───────────────────────────────────────────────────────────
 
 # Relación OSM para el estado de Chiapas
-# area(3600454477) = estado de Chiapas en OpenStreetMap (relation 454477)
-OVERPASS_QUERY = """
+# Bounding box del estado de Chiapas (sur, oeste, norte, este)
+# Formato Overpass: (min_lat, min_lon, max_lat, max_lon)
+CHIAPAS_BB = "(14.53,-94.24,17.88,-90.37)"
+
+OVERPASS_QUERY = f"""
 [out:json][timeout:180];
-area(3600454477)->.chiapas;
 (
-  node["tourism"="attraction"]["name"](area.chiapas);
-  node["tourism"="viewpoint"]["name"](area.chiapas);
-  node["tourism"="museum"]["name"](area.chiapas);
-  node["tourism"="gallery"]["name"](area.chiapas);
-  node["tourism"="theme_park"]["name"](area.chiapas);
-  node["tourism"="zoo"]["name"](area.chiapas);
-  node["tourism"="picnic_site"]["name"](area.chiapas);
-  node["tourism"="camp_site"]["name"](area.chiapas);
-  node["natural"="waterfall"]["name"](area.chiapas);
-  node["natural"="cave_entrance"]["name"](area.chiapas);
-  node["natural"="peak"]["name"](area.chiapas);
-  node["natural"="spring"]["name"](area.chiapas);
-  node["natural"="hot_spring"]["name"](area.chiapas);
-  node["natural"="beach"]["name"](area.chiapas);
-  node["historic"="archaeological_site"]["name"](area.chiapas);
-  node["historic"="ruins"]["name"](area.chiapas);
-  node["historic"="monument"]["name"](area.chiapas);
-  node["amenity"="restaurant"]["name"](area.chiapas);
-  node["amenity"="cafe"]["name"](area.chiapas);
-  node["leisure"="park"]["name"](area.chiapas);
-  node["leisure"="nature_reserve"]["name"](area.chiapas);
-  node["leisure"="garden"]["name"](area.chiapas);
-  way["tourism"="attraction"]["name"](area.chiapas);
-  way["tourism"="viewpoint"]["name"](area.chiapas);
-  way["tourism"="museum"]["name"](area.chiapas);
-  way["natural"="waterfall"]["name"](area.chiapas);
-  way["natural"="cave_entrance"]["name"](area.chiapas);
-  way["historic"="archaeological_site"]["name"](area.chiapas);
-  way["historic"="ruins"]["name"](area.chiapas);
-  way["leisure"="park"]["name"](area.chiapas);
-  way["leisure"="nature_reserve"]["name"](area.chiapas);
+  node["tourism"="attraction"]["name"]{CHIAPAS_BB};
+  node["tourism"="viewpoint"]["name"]{CHIAPAS_BB};
+  node["tourism"="museum"]["name"]{CHIAPAS_BB};
+  node["tourism"="gallery"]["name"]{CHIAPAS_BB};
+  node["tourism"="theme_park"]["name"]{CHIAPAS_BB};
+  node["tourism"="zoo"]["name"]{CHIAPAS_BB};
+  node["tourism"="picnic_site"]["name"]{CHIAPAS_BB};
+  node["tourism"="camp_site"]["name"]{CHIAPAS_BB};
+  node["natural"="waterfall"]["name"]{CHIAPAS_BB};
+  node["natural"="cave_entrance"]["name"]{CHIAPAS_BB};
+  node["natural"="peak"]["name"]{CHIAPAS_BB};
+  node["natural"="spring"]["name"]{CHIAPAS_BB};
+  node["natural"="hot_spring"]["name"]{CHIAPAS_BB};
+  node["natural"="beach"]["name"]{CHIAPAS_BB};
+  node["historic"="archaeological_site"]["name"]{CHIAPAS_BB};
+  node["historic"="ruins"]["name"]{CHIAPAS_BB};
+  node["historic"="monument"]["name"]{CHIAPAS_BB};
+  node["amenity"="restaurant"]["name"]{CHIAPAS_BB};
+  node["amenity"="cafe"]["name"]{CHIAPAS_BB};
+  node["leisure"="park"]["name"]{CHIAPAS_BB};
+  node["leisure"="nature_reserve"]["name"]{CHIAPAS_BB};
+  node["leisure"="garden"]["name"]{CHIAPAS_BB};
+  way["tourism"="attraction"]["name"]{CHIAPAS_BB};
+  way["tourism"="viewpoint"]["name"]{CHIAPAS_BB};
+  way["tourism"="museum"]["name"]{CHIAPAS_BB};
+  way["natural"="waterfall"]["name"]{CHIAPAS_BB};
+  way["natural"="cave_entrance"]["name"]{CHIAPAS_BB};
+  way["historic"="archaeological_site"]["name"]{CHIAPAS_BB};
+  way["historic"="ruins"]["name"]{CHIAPAS_BB};
+  way["leisure"="park"]["name"]{CHIAPAS_BB};
+  way["leisure"="nature_reserve"]["name"]{CHIAPAS_BB};
 );
 out center tags;
 """
