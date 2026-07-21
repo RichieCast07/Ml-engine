@@ -31,6 +31,8 @@ class ActividadOut(BaseModel):
     tiempo_horas: float
     nivel_afluencia: int
     cluster_afluencia: Optional[str] = None
+    lat: Optional[float] = None
+    lng: Optional[float] = None
 
 
 class RecomendacionOut(BaseModel):
