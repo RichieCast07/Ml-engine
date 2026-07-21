@@ -33,6 +33,7 @@ class ActividadOut(BaseModel):
     cluster_afluencia: Optional[str] = None
     lat: Optional[float] = None
     lng: Optional[float] = None
+    foto_principal: Optional[str] = None
 
 
 class RecomendacionOut(BaseModel):

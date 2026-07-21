@@ -25,6 +25,15 @@ try:
 except Exception:
     pass
 
+_FOTOS_PATH = Path(__file__).resolve().parent.parent / "data" / "fotos_categorias.json"
+_FOTOS_CATEGORIAS: dict = {}
+
+try:
+    with open(_FOTOS_PATH, encoding="utf-8") as _f:
+        _FOTOS_CATEGORIAS = json.load(_f)
+except Exception:
+    pass
+
 BONUS_INTERES_PRINCIPAL = 3.0
 BONUS_CATEGORIA_COMPLEMENTARIA = 1.5
 BONUS_POTENCIAL_OCULTO = 2.0
@@ -127,13 +136,14 @@ def _construir_candidatos(params: ParametrosViajeIn) -> tuple[list[dict], dict[s
 
         municipio = fila["municipio"]
         coords = _MUNICIPIO_COORDS.get(municipio, {})
+        categoria_dest = fila["categoria"]
         candidatos.append(
             {
                 "id": int(fila["id"]),
                 "nombre": fila["nombre"],
                 "tipo": "destino",
                 "municipio": municipio,
-                "categoria": fila["categoria"],
+                "categoria": categoria_dest,
                 "costo_estimado": float(fila["costo_estimado"]),
                 "costo_total_grupo": float(fila["costo_estimado"]) * personas,
                 "tiempo_horas": float(fila["tiempo_horas"]),
@@ -141,6 +151,7 @@ def _construir_candidatos(params: ParametrosViajeIn) -> tuple[list[dict], dict[s
                 "cluster_afluencia": fila["cluster_afluencia"],
                 "lat": coords.get("lat"),
                 "lng": coords.get("lng"),
+                "foto_principal": _FOTOS_CATEGORIAS.get(categoria_dest),
                 "valor": valor,
             }
         )
@@ -163,6 +174,7 @@ def _construir_candidatos(params: ParametrosViajeIn) -> tuple[list[dict], dict[s
                 "cluster_afluencia": None,
                 "lat": coords.get("lat"),
                 "lng": coords.get("lng"),
+                "foto_principal": _FOTOS_CATEGORIAS.get("restaurante"),
                 "valor": valor,
             }
         )
