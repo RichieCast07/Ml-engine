@@ -107,44 +107,19 @@ DEFAULT_COSTO_TIEMPO = (100, 2.0, 2)
 # ── Query Overpass ───────────────────────────────────────────────────────────
 
 # Relación OSM para el estado de Chiapas
-# Bounding box del estado de Chiapas (sur, oeste, norte, este)
-# Formato Overpass: (min_lat, min_lon, max_lat, max_lon)
-CHIAPAS_BB = "(14.53,-94.24,17.88,-90.37)"
+# Bounding box del estado de Chiapas: (sur, oeste, norte, este)
+BB = "(14.53,-94.24,17.88,-90.37)"
 
+# nwr = node + way + relation  (cubre puntos, polígonos y relaciones)
+# 5 queries en lugar de 32 → mucho más rápido
 OVERPASS_QUERY = f"""
-[out:json][timeout:180];
+[out:json][timeout:300];
 (
-  node["tourism"="attraction"]["name"]{CHIAPAS_BB};
-  node["tourism"="viewpoint"]["name"]{CHIAPAS_BB};
-  node["tourism"="museum"]["name"]{CHIAPAS_BB};
-  node["tourism"="gallery"]["name"]{CHIAPAS_BB};
-  node["tourism"="theme_park"]["name"]{CHIAPAS_BB};
-  node["tourism"="zoo"]["name"]{CHIAPAS_BB};
-  node["tourism"="picnic_site"]["name"]{CHIAPAS_BB};
-  node["tourism"="camp_site"]["name"]{CHIAPAS_BB};
-  node["natural"="waterfall"]["name"]{CHIAPAS_BB};
-  node["natural"="cave_entrance"]["name"]{CHIAPAS_BB};
-  node["natural"="peak"]["name"]{CHIAPAS_BB};
-  node["natural"="spring"]["name"]{CHIAPAS_BB};
-  node["natural"="hot_spring"]["name"]{CHIAPAS_BB};
-  node["natural"="beach"]["name"]{CHIAPAS_BB};
-  node["historic"="archaeological_site"]["name"]{CHIAPAS_BB};
-  node["historic"="ruins"]["name"]{CHIAPAS_BB};
-  node["historic"="monument"]["name"]{CHIAPAS_BB};
-  node["amenity"="restaurant"]["name"]{CHIAPAS_BB};
-  node["amenity"="cafe"]["name"]{CHIAPAS_BB};
-  node["leisure"="park"]["name"]{CHIAPAS_BB};
-  node["leisure"="nature_reserve"]["name"]{CHIAPAS_BB};
-  node["leisure"="garden"]["name"]{CHIAPAS_BB};
-  way["tourism"="attraction"]["name"]{CHIAPAS_BB};
-  way["tourism"="viewpoint"]["name"]{CHIAPAS_BB};
-  way["tourism"="museum"]["name"]{CHIAPAS_BB};
-  way["natural"="waterfall"]["name"]{CHIAPAS_BB};
-  way["natural"="cave_entrance"]["name"]{CHIAPAS_BB};
-  way["historic"="archaeological_site"]["name"]{CHIAPAS_BB};
-  way["historic"="ruins"]["name"]{CHIAPAS_BB};
-  way["leisure"="park"]["name"]{CHIAPAS_BB};
-  way["leisure"="nature_reserve"]["name"]{CHIAPAS_BB};
+  nwr["tourism"~"^(attraction|viewpoint|museum|gallery|theme_park|zoo|picnic_site|camp_site)$"]["name"]{BB};
+  nwr["natural"~"^(waterfall|cave_entrance|peak|spring|hot_spring|beach)$"]["name"]{BB};
+  nwr["historic"~"^(archaeological_site|ruins|monument|fort)$"]["name"]{BB};
+  nwr["amenity"~"^(restaurant|cafe)$"]["name"]{BB};
+  nwr["leisure"~"^(park|nature_reserve|garden)$"]["name"]{BB};
 );
 out center tags;
 """
@@ -248,7 +223,7 @@ def main() -> None:
                 break
             # Si 0 resultados, probar con query mínima de prueba
             print("  0 elementos — probando query de prueba...")
-            test_q = '[out:json][timeout:30];\nnode["natural"="waterfall"]["name"](14.53,-94.24,17.88,-90.37);\nout tags;'
+            test_q = '[out:json][timeout:60];\nnwr["natural"="waterfall"]["name"](14.53,-94.24,17.88,-90.37);\nout center tags;'
             r2 = requests.post(servidor, data={"data": test_q}, headers=headers, timeout=60)
             test_datos = r2.json()
             print(f"  Query de prueba: {len(test_datos.get('elements', []))} cascadas encontradas")
