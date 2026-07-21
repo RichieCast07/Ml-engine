@@ -25,7 +25,12 @@ import requests
 
 # ── Configuración ────────────────────────────────────────────────────────────
 
-OVERPASS_URL   = "https://overpass-api.de/api/interpreter"
+OVERPASS_SERVERS = [
+    "https://overpass-api.de/api/interpreter",
+    "https://lz4.overpass-api.de/api/interpreter",
+    "https://overpass.kumi.systems/api/interpreter",
+]
+OVERPASS_URL   = OVERPASS_SERVERS[0]  # se intenta en orden
 NOMINATIM_URL  = "https://nominatim.openstreetmap.org/reverse"
 PLACES_SEARCH  = "https://places.googleapis.com/v1/places:searchText"
 PLACES_PHOTO   = "https://places.googleapis.com/v1/{name}/media"
@@ -202,9 +207,27 @@ def main() -> None:
     print("=" * 60)
     print("PASO 1: Descargando lugares desde OpenStreetMap...")
     print("(puede tardar 30-60 segundos)")
-    r = requests.post(OVERPASS_URL, data={"data": OVERPASS_QUERY}, timeout=200)
-    r.raise_for_status()
-    elementos = r.json().get("elements", [])
+
+    headers = {
+        "User-Agent": "ExploraChiapas-ML/1.0 (proyecto educativo universitario)",
+        "Accept": "application/json",
+    }
+    elementos = []
+    for servidor in OVERPASS_SERVERS:
+        try:
+            print(f"  Intentando {servidor}...")
+            r = requests.post(servidor, data={"data": OVERPASS_QUERY},
+                              headers=headers, timeout=200)
+            r.raise_for_status()
+            elementos = r.json().get("elements", [])
+            print(f"  OK — {len(elementos)} elementos descargados")
+            break
+        except Exception as e:
+            print(f"  Fallo ({e}), probando siguiente servidor...")
+            time.sleep(3)
+    if not elementos:
+        print("ERROR: No se pudo conectar a ningún servidor Overpass.")
+        return
     print(f"  {len(elementos)} elementos OSM descargados")
 
     # 2. Filtrar y estructurar
