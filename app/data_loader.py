@@ -13,6 +13,10 @@ def cargar_destinos() -> pd.DataFrame:
     df = pd.read_csv(ruta_csv, encoding="utf-8", dtype={"id": int}, low_memory=False)
     df["categoria"] = df["categoria"].fillna("").astype(str)
     df["categoria"] = df["categoria"].replace("", None)
+    # Columnas opcionales del dataset real: coordenadas exactas y foto real
+    for col in ("lat", "lng", "foto_url"):
+        if col in df.columns:
+            df[col] = df[col].fillna("").astype(str).replace("nan", "")
     return df
 
 

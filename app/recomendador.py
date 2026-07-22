@@ -25,6 +25,19 @@ try:
 except Exception:
     pass
 
+
+def _coords_para(fila, municipio: str) -> tuple[float | None, float | None]:
+    """Prefiere las coordenadas exactas del CSV; si faltan usa el centroide del municipio."""
+    try:
+        lat = float(fila["lat"])
+        lng = float(fila["lng"])
+        if lat and lng:
+            return lat, lng
+    except (KeyError, TypeError, ValueError):
+        pass
+    c = _MUNICIPIO_COORDS.get(municipio, {})
+    return c.get("lat"), c.get("lng")
+
 _FOTOS_PATH = Path(__file__).resolve().parent.parent / "data" / "fotos_categorias.json"
 _FOTOS_CATEGORIAS: dict = {}
 
@@ -203,7 +216,7 @@ def _construir_candidatos(params: ParametrosViajeIn) -> tuple[list[dict], dict[s
             valor -= PENALIZACION_SATURADO
 
         municipio = fila["municipio"]
-        coords = _MUNICIPIO_COORDS.get(municipio, {})
+        lat, lng = _coords_para(fila, municipio)
         categoria_dest = fila["categoria"]
         candidatos.append(
             {
@@ -217,8 +230,8 @@ def _construir_candidatos(params: ParametrosViajeIn) -> tuple[list[dict], dict[s
                 "tiempo_horas": float(fila["tiempo_horas"]),
                 "nivel_afluencia": int(fila["nivel_afluencia"]),
                 "cluster_afluencia": fila["cluster_afluencia"],
-                "lat": coords.get("lat"),
-                "lng": coords.get("lng"),
+                "lat": lat,
+                "lng": lng,
                 "foto_principal": _get_foto(categoria_dest, int(fila["id"]), str(fila["nombre"]), str(fila.get("foto_url", ""))),
                 "valor": valor,
             }
@@ -228,7 +241,7 @@ def _construir_candidatos(params: ParametrosViajeIn) -> tuple[list[dict], dict[s
         es_regional = bool(fila.get("_es_regional", False))
         valor = 0.5 if es_regional else 1.0
         municipio = fila["municipio"]
-        coords = _MUNICIPIO_COORDS.get(municipio, {})
+        lat, lng = _coords_para(fila, municipio)
         candidatos.append(
             {
                 "id": int(fila["id"]),
@@ -241,8 +254,8 @@ def _construir_candidatos(params: ParametrosViajeIn) -> tuple[list[dict], dict[s
                 "tiempo_horas": float(fila["tiempo_horas"]),
                 "nivel_afluencia": int(fila["nivel_afluencia"]),
                 "cluster_afluencia": None,
-                "lat": coords.get("lat"),
-                "lng": coords.get("lng"),
+                "lat": lat,
+                "lng": lng,
                 "foto_principal": _get_foto("restaurante", int(fila["id"]), str(fila["nombre"]), str(fila.get("foto_url", ""))),
                 "valor": valor,
             }
