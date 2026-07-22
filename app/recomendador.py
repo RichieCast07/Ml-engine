@@ -162,9 +162,9 @@ def _filtrar_restaurantes(comida_texto, destino_texto):
 
     if destino_texto:
         patron = normalizar(destino_texto)
-        coincide_municipio = restaurantes["municipio"].apply(normalizar).str.contains(patron)
-        if coincide_municipio.any():
-            restaurantes = restaurantes[coincide_municipio]
+        restaurantes = restaurantes[
+            restaurantes["municipio"].apply(normalizar).str.contains(patron, regex=False)
+        ]
 
     return restaurantes
 
