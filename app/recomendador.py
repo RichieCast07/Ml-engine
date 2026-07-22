@@ -245,6 +245,52 @@ def _construir_candidatos(params: ParametrosViajeIn) -> tuple[list[dict], dict[s
     return candidatos, resumen_clusters_candidatos, complementarias_info
 
 
+def _intentar_fallback(
+    params: ParametrosViajeIn,
+    tiempo_disponible: float,
+    presupuesto_disponible: float,
+) -> tuple[list[dict], str | None]:
+    """
+    Intenta filtros progresivamente más amplios cuando el itinerario principal sale vacío.
+    Devuelve (itinerario, mensaje_para_usuario).
+    """
+    # Intento 1: misma categoría, sin restricción de municipio
+    if params.destino and params.interes:
+        candidatos, _, _ = _construir_candidatos(params.model_copy(update={"destino": None}))
+        resultado = resolver_mochila(candidatos, presupuesto_disponible, tiempo_disponible)
+        if resultado:
+            return resultado, (
+                f"No encontré destinos de {params.interes} en {params.destino}. "
+                f"Te muestro los mejores lugares de {params.interes} en todo Chiapas:"
+            )
+
+    # Intento 2: mismo municipio, sin restricción de categoría
+    if params.destino:
+        candidatos, _, _ = _construir_candidatos(
+            params.model_copy(update={"interes": None, "comida": None})
+        )
+        resultado = resolver_mochila(candidatos, presupuesto_disponible, tiempo_disponible)
+        if resultado:
+            motivo = f"de {params.interes} " if params.interes else ""
+            return resultado, (
+                f"No encontré lugares {motivo}en {params.destino}. "
+                f"Te muestro lo que hay disponible en ese municipio:"
+            )
+
+    # Intento 3: sin ningún filtro — top destinos de Chiapas
+    candidatos, _, _ = _construir_candidatos(
+        params.model_copy(update={"destino": None, "interes": None, "comida": None})
+    )
+    resultado = resolver_mochila(candidatos, presupuesto_disponible, tiempo_disponible)
+    if resultado:
+        return resultado, (
+            "No encontré resultados exactos para tu búsqueda. "
+            "Aquí tienes algunos de los mejores destinos de Chiapas:"
+        )
+
+    return [], "No encontré destinos disponibles con ese presupuesto y tiempo."
+
+
 def generar_recomendacion(params: ParametrosViajeIn) -> dict:
     candidatos, resumen_clusters_candidatos, complementarias_info = _construir_candidatos(params)
 
@@ -256,6 +302,13 @@ def generar_recomendacion(params: ParametrosViajeIn) -> dict:
         presupuesto_disponible = PRESUPUESTO_DEFAULT
 
     itinerario = resolver_mochila(candidatos, presupuesto_disponible, tiempo_disponible)
+
+    mensaje: str | None = None
+    es_fallback = False
+
+    if not itinerario:
+        itinerario, mensaje = _intentar_fallback(params, tiempo_disponible, presupuesto_disponible)
+        es_fallback = len(itinerario) > 0
 
     for item in itinerario:
         item.pop("valor", None)
@@ -278,4 +331,6 @@ def generar_recomendacion(params: ParametrosViajeIn) -> dict:
         "tiempo_disponible_horas": tiempo_disponible,
         "reglas_asociacion_aplicadas": reglas_aplicadas,
         "resumen_clusters_candidatos": resumen_clusters_candidatos,
+        "mensaje": mensaje,
+        "es_fallback": es_fallback,
     }

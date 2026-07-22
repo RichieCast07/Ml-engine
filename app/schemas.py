@@ -46,6 +46,8 @@ class RecomendacionOut(BaseModel):
     tiempo_disponible_horas: float
     reglas_asociacion_aplicadas: list[str]
     resumen_clusters_candidatos: dict[str, int]
+    mensaje: Optional[str] = None
+    es_fallback: bool = False
     creado_en: datetime
 
     model_config = ConfigDict(from_attributes=True)
