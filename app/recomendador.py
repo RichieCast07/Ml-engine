@@ -315,7 +315,8 @@ def generar_recomendacion(params: ParametrosViajeIn) -> dict:
     mensaje: str | None = None
     es_fallback = False
 
-    if not itinerario:
+    hay_destinos = any(i["tipo"] == "destino" for i in itinerario)
+    if not itinerario or not hay_destinos:
         itinerario, mensaje = _intentar_fallback(params, tiempo_disponible, presupuesto_disponible)
         es_fallback = len(itinerario) > 0
 
