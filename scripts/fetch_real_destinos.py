@@ -190,6 +190,10 @@ def _foto_google_places(nombre: str, municipio: str, api_key: str) -> str | None
 
 # ── Main ─────────────────────────────────────────────────────────────────────
 
+CACHE_FILAS   = Path("data/cache_filas.json")      # OSM + Nominatim (paso 1-2)
+CACHE_COORDS  = Path("data/cache_coords.json")     # centroides por municipio
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__,
                                      formatter_class=argparse.RawDescriptionHelpFormatter)
@@ -197,144 +201,153 @@ def main() -> None:
                         help="API key de Google Places (New) para obtener fotos reales")
     args = parser.parse_args()
 
-    # 1. Descargar datos de OpenStreetMap
-    print("=" * 60)
-    print("PASO 1: Descargando lugares desde OpenStreetMap...")
-    print("(puede tardar 30-60 segundos)")
-
-    headers = {
+    headers_osm = {
         "User-Agent": "ExploraChiapas-ML/1.0 (proyecto educativo universitario)",
         "Accept": "application/json",
     }
-    elementos = []
-    for servidor in OVERPASS_SERVERS:
-        try:
-            print(f"  Intentando {servidor}...")
-            r = requests.post(servidor, data={"data": OVERPASS_QUERY},
-                              headers=headers, timeout=200)
-            r.raise_for_status()
-            datos = r.json()
-            elementos = datos.get("elements", [])
-            # Debug: mostrar si hay remarks del servidor
-            if datos.get("remark"):
-                print(f"  Aviso del servidor: {datos['remark']}")
-            print(f"  OK — {len(elementos)} elementos descargados")
-            if elementos:
-                break
-            # Si 0 resultados, probar con query mínima de prueba
-            print("  0 elementos — probando query de prueba...")
-            test_q = '[out:json][timeout:60];\nnwr["natural"="waterfall"]["name"](14.53,-94.24,17.88,-90.37);\nout center tags;'
-            r2 = requests.post(servidor, data={"data": test_q}, headers=headers, timeout=60)
-            test_datos = r2.json()
-            print(f"  Query de prueba: {len(test_datos.get('elements', []))} cascadas encontradas")
-            print(f"  Respuesta raw (primeros 300 chars): {r2.text[:300]}")
-            break
-        except Exception as e:
-            print(f"  Fallo ({e}), probando siguiente servidor...")
-            time.sleep(3)
-    if not elementos:
-        print("ERROR: No se pudo obtener datos de Overpass.")
-        print("Revisa la salida de la query de prueba arriba.")
-        return
-    print(f"  {len(elementos)} elementos OSM descargados")
 
-    # 2. Filtrar y estructurar
-    filas: list[dict] = []
-    nombres_vistos: set[str] = set()
-    dest_id = 1
+    # ── PASO 1 y 2: OSM + Nominatim (omitir si ya hay caché) ────────────────
+    if CACHE_FILAS.exists():
+        print("=" * 60)
+        print("Caché encontrada — saltando OSM y Nominatim...")
+        filas = json.loads(CACHE_FILAS.read_text(encoding="utf-8"))
+        coords_municipios = json.loads(CACHE_COORDS.read_text(encoding="utf-8")) \
+            if CACHE_COORDS.exists() else {}
+        print(f"  {len(filas)} lugares cargados del caché")
+    else:
+        # PASO 1: OpenStreetMap
+        print("=" * 60)
+        print("PASO 1: Descargando lugares desde OpenStreetMap...")
+        elementos = []
+        for servidor in OVERPASS_SERVERS:
+            try:
+                print(f"  Intentando {servidor}...")
+                r = requests.post(servidor, data={"data": OVERPASS_QUERY},
+                                  headers=headers_osm, timeout=200)
+                r.raise_for_status()
+                datos = r.json()
+                elementos = datos.get("elements", [])
+                if datos.get("remark"):
+                    print(f"  Aviso: {datos['remark']}")
+                print(f"  OK — {len(elementos)} elementos descargados")
+                if elementos:
+                    break
+            except Exception as e:
+                print(f"  Fallo ({e}), probando siguiente servidor...")
+                time.sleep(3)
+        if not elementos:
+            print("ERROR: No se pudo obtener datos de Overpass.")
+            return
 
-    for el in elementos:
-        tags = el.get("tags", {})
-        nombre = tags.get("name", "").strip()
-        if not nombre or nombre in nombres_vistos:
-            continue
-        nombres_vistos.add(nombre)
+        filas: list[dict] = []
+        nombres_vistos: set[str] = set()
+        dest_id = 1
+        for el in elementos:
+            tags = el.get("tags", {})
+            nombre = tags.get("name", "").strip()
+            if not nombre or nombre in nombres_vistos:
+                continue
+            nombres_vistos.add(nombre)
+            if el["type"] == "node":
+                lat, lon = el.get("lat"), el.get("lon")
+            else:
+                centro = el.get("center", {})
+                lat, lon = centro.get("lat"), centro.get("lon")
+            if lat is None or lon is None:
+                continue
+            tag_val, _ = _tag_principal(tags)
+            if not tag_val or (tag_val not in TAG_CATEGORIA and tag_val not in TAG_COSTO_TIEMPO):
+                continue
+            categoria = TAG_CATEGORIA.get(tag_val)
+            tipo = "restaurante" if categoria is None else "destino"
+            costo, tiempo, afluencia = TAG_COSTO_TIEMPO.get(tag_val, DEFAULT_COSTO_TIEMPO)
+            filas.append({
+                "id": dest_id, "nombre": nombre, "tipo": tipo,
+                "categoria": categoria or "", "municipio": "",
+                "_lat": lat, "_lon": lon,
+                "costo_estimado": costo, "tiempo_horas": tiempo,
+                "nivel_afluencia": afluencia, "foto_url": "",
+            })
+            dest_id += 1
+        print(f"  {len(filas)} lugares válidos con nombre")
 
-        if el["type"] == "node":
-            lat, lon = el.get("lat"), el.get("lon")
-        else:
-            centro = el.get("center", {})
-            lat, lon = centro.get("lat"), centro.get("lon")
-        if lat is None or lon is None:
-            continue
+        # PASO 2: Nominatim
+        print()
+        print("PASO 2: Asignando municipios con Nominatim...")
+        print(f"  (tardará ~{len(filas) * 1.2 / 60:.0f} minutos — 1 solicitud/segundo)")
+        coords_municipios: dict[str, dict] = {}
+        municipio_puntos: dict[str, list] = {}
+        for i, fila in enumerate(filas, 1):
+            if i % 25 == 0 or i == 1:
+                print(f"  {i}/{len(filas)} municipios asignados...")
+            muni, lat, lon = _municipio_nominatim(fila["_lat"], fila["_lon"])
+            fila["municipio"] = muni
+            municipio_puntos.setdefault(muni, []).append((lat, lon))
+            time.sleep(1.1)
+        for muni, puntos in municipio_puntos.items():
+            coords_municipios[muni] = {
+                "lat": sum(p[0] for p in puntos) / len(puntos),
+                "lng": sum(p[1] for p in puntos) / len(puntos),
+            }
 
-        tag_val, _ = _tag_principal(tags)
-        if not tag_val or tag_val not in TAG_CATEGORIA and tag_val not in TAG_COSTO_TIEMPO:
-            continue
+        # Guardar caché para poder reanudar si se corta la conexión
+        CACHE_FILAS.write_text(json.dumps(filas, ensure_ascii=False), encoding="utf-8")
+        CACHE_COORDS.write_text(json.dumps(coords_municipios, ensure_ascii=False, indent=2), encoding="utf-8")
+        print("  Caché guardada en data/cache_filas.json")
 
-        categoria = TAG_CATEGORIA.get(tag_val)
-        tipo = "restaurante" if categoria is None else "destino"
-        costo, tiempo, afluencia = TAG_COSTO_TIEMPO.get(tag_val, DEFAULT_COSTO_TIEMPO)
+    # ── PASO 3: Fotos con Google Places ─────────────────────────────────────
+    # Construir índice de fotos ya obtenidas (para reanudar desde donde quedó)
+    fotos_existentes: dict[str, str] = {
+        f["nombre"]: f["foto_url"]
+        for f in filas if f.get("foto_url")
+    }
+    pendientes = [f for f in filas if not f.get("foto_url")]
 
-        filas.append({
-            "id":              dest_id,
-            "nombre":          nombre,
-            "tipo":            tipo,
-            "categoria":       categoria or "",
-            "municipio":       "",       # se rellena en paso 3
-            "_lat":            lat,
-            "_lon":            lon,
-            "costo_estimado":  costo,
-            "tiempo_horas":    tiempo,
-            "nivel_afluencia": afluencia,
-            "foto_url":        "",
-        })
-        dest_id += 1
-
-    print(f"  {len(filas)} lugares válidos con nombre")
-
-    # 3. Asignar municipio con Nominatim (1 req/seg por política)
-    print()
-    print("PASO 2: Asignando municipios con Nominatim...")
-    print(f"  (tardará ~{len(filas) * 1.2 / 60:.0f} minutos — 1 solicitud/segundo)")
-
-    coords_municipios: dict[str, dict] = {}
-    municipio_puntos: dict[str, list[tuple[float, float]]] = {}
-
-    for i, fila in enumerate(filas, 1):
-        if i % 25 == 0 or i == 1:
-            print(f"  {i}/{len(filas)} municipios asignados...")
-        muni, lat, lon = _municipio_nominatim(fila["_lat"], fila["_lon"])
-        fila["municipio"] = muni
-        municipio_puntos.setdefault(muni, []).append((lat, lon))
-        time.sleep(1.1)
-
-    # Calcular centroide por municipio
-    for muni, puntos in municipio_puntos.items():
-        coords_municipios[muni] = {
-            "lat": sum(p[0] for p in puntos) / len(puntos),
-            "lng": sum(p[1] for p in puntos) / len(puntos),
-        }
-
-    # 4. Obtener fotos con Google Places (si se proporcionó key)
     if args.google_key:
         print()
         print("PASO 3: Obteniendo fotos con Google Places API...")
-        print(f"  (~{len(filas)} solicitudes, puede tardar varios minutos)")
-        for i, fila in enumerate(filas, 1):
-            if i % 25 == 0 or i == 1:
-                print(f"  {i}/{len(filas)} fotos procesadas...")
-            foto = _foto_google_places(fila["nombre"], fila["municipio"], args.google_key)
-            if foto:
-                fila["foto_url"] = foto
-            time.sleep(0.3)
-        con_foto = sum(1 for f in filas if f["foto_url"])
+        ya_hechas = len(fotos_existentes)
+        if ya_hechas:
+            print(f"  Reanudando: {ya_hechas} fotos ya obtenidas, faltan {len(pendientes)}")
+        else:
+            print(f"  {len(pendientes)} lugares por procesar")
+
+        # Escribir CSV incremental: primero encabezado
+        columnas = ["id", "nombre", "tipo", "categoria", "municipio",
+                    "costo_estimado", "tiempo_horas", "nivel_afluencia", "foto_url"]
+        OUT_CSV.parent.mkdir(exist_ok=True)
+        with open(OUT_CSV, "w", newline="", encoding="utf-8") as f_csv:
+            writer = csv.DictWriter(f_csv, fieldnames=columnas, extrasaction="ignore")
+            writer.writeheader()
+            # Escribir los que ya tienen foto
+            for fila in filas:
+                if fila.get("foto_url"):
+                    writer.writerow(fila)
+            # Obtener fotos de los pendientes y escribir en tiempo real
+            for i, fila in enumerate(pendientes, 1):
+                if i % 25 == 0 or i == 1:
+                    print(f"  {ya_hechas + i}/{len(filas)} fotos procesadas...")
+                foto = _foto_google_places(fila["nombre"], fila["municipio"], args.google_key)
+                if foto:
+                    fila["foto_url"] = foto
+                writer.writerow(fila)
+                # Actualizar caché con el progreso actual
+                if i % 100 == 0:
+                    CACHE_FILAS.write_text(json.dumps(filas, ensure_ascii=False), encoding="utf-8")
+                time.sleep(0.3)
+
+        con_foto = sum(1 for f in filas if f.get("foto_url"))
         print(f"  {con_foto}/{len(filas)} lugares con foto encontrada")
     else:
         print()
         print("PASO 3: Omitiendo fotos (usa --google-key para obtenerlas)")
-
-    # 5. Escribir CSV
-    print()
-    print("PASO 4: Guardando archivos...")
-    columnas = ["id", "nombre", "tipo", "categoria", "municipio",
-                "costo_estimado", "tiempo_horas", "nivel_afluencia", "foto_url"]
-
-    OUT_CSV.parent.mkdir(exist_ok=True)
-    with open(OUT_CSV, "w", newline="", encoding="utf-8") as f:
-        w = csv.DictWriter(f, fieldnames=columnas, extrasaction="ignore")
-        w.writeheader()
-        w.writerows(filas)
+        columnas = ["id", "nombre", "tipo", "categoria", "municipio",
+                    "costo_estimado", "tiempo_horas", "nivel_afluencia", "foto_url"]
+        OUT_CSV.parent.mkdir(exist_ok=True)
+        with open(OUT_CSV, "w", newline="", encoding="utf-8") as f_csv:
+            writer = csv.DictWriter(f_csv, fieldnames=columnas, extrasaction="ignore")
+            writer.writeheader()
+            writer.writerows(filas)
 
     OUT_COORDS.write_text(
         json.dumps(coords_municipios, ensure_ascii=False, indent=2),
