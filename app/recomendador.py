@@ -310,7 +310,28 @@ def generar_recomendacion(params: ParametrosViajeIn) -> dict:
     else:
         presupuesto_disponible = PRESUPUESTO_DEFAULT
 
-    itinerario = resolver_mochila(candidatos, presupuesto_disponible, tiempo_disponible)
+    restaurantes_candidatos = [c for c in candidatos if c["tipo"] == "restaurante"]
+
+    # Reservar 1h para comer si el viaje es de medio día o más y hay restaurantes disponibles
+    tiempo_para_mochila = tiempo_disponible
+    if tiempo_disponible >= 4.0 and restaurantes_candidatos:
+        tiempo_para_mochila = tiempo_disponible - 1.0
+
+    itinerario = resolver_mochila(candidatos, presupuesto_disponible, tiempo_para_mochila)
+
+    # Insertar el mejor restaurante disponible si el itinerario no incluye ninguno
+    if restaurantes_candidatos and not any(i["tipo"] == "restaurante" for i in itinerario):
+        tiempo_usado = sum(i["tiempo_horas"] for i in itinerario)
+        costo_usado = sum(i["costo_total_grupo"] for i in itinerario)
+        tiempo_libre = tiempo_disponible - tiempo_usado
+        presupuesto_libre = presupuesto_disponible - costo_usado
+        opciones = [
+            r for r in restaurantes_candidatos
+            if r["tiempo_horas"] <= tiempo_libre and r["costo_total_grupo"] <= presupuesto_libre
+        ]
+        if opciones:
+            mejor = max(opciones, key=lambda r: r["nivel_afluencia"])
+            itinerario.append({k: v for k, v in mejor.items() if k != "valor"})
 
     mensaje: str | None = None
     es_fallback = False
