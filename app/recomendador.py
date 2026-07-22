@@ -160,12 +160,20 @@ def _filtrar_restaurantes(comida_texto, destino_texto):
     df = cargar_destinos()
     restaurantes = df[df["tipo"] == "restaurante"]
 
-    if destino_texto:
-        patron = normalizar(destino_texto)
-        restaurantes = restaurantes[
-            restaurantes["municipio"].apply(normalizar).str.contains(patron, regex=False)
-        ]
+    if not destino_texto:
+        return restaurantes
 
+    patron = normalizar(destino_texto)
+    locales = restaurantes[
+        restaurantes["municipio"].apply(normalizar).str.contains(patron, regex=False)
+    ]
+    if not locales.empty:
+        return locales
+
+    # Sin restaurantes en el municipio pedido → devuelve todos con flag para
+    # que _construir_candidatos les asigne menor valor en el knapsack.
+    restaurantes = restaurantes.copy()
+    restaurantes["_es_regional"] = True
     return restaurantes
 
 
@@ -217,7 +225,8 @@ def _construir_candidatos(params: ParametrosViajeIn) -> tuple[list[dict], dict[s
         )
 
     for _, fila in restaurantes.iterrows():
-        valor = 1.0
+        es_regional = bool(fila.get("_es_regional", False))
+        valor = 0.5 if es_regional else 1.0
         municipio = fila["municipio"]
         coords = _MUNICIPIO_COORDS.get(municipio, {})
         candidatos.append(
@@ -306,7 +315,8 @@ def generar_recomendacion(params: ParametrosViajeIn) -> dict:
     mensaje: str | None = None
     es_fallback = False
 
-    if not itinerario:
+    hay_destinos = any(i["tipo"] == "destino" for i in itinerario)
+    if not itinerario or not hay_destinos:
         itinerario, mensaje = _intentar_fallback(params, tiempo_disponible, presupuesto_disponible)
         es_fallback = len(itinerario) > 0
 
