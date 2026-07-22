@@ -248,8 +248,20 @@ def _construir_candidatos(params: ParametrosViajeIn) -> tuple[list[dict], dict[s
             }
         )
 
+    # Separar destinos y restaurantes antes de truncar para garantizar
+    # que siempre haya restaurantes en el pool, sin importar cuántos destinos existan.
+    destinos_pool = sorted(
+        [c for c in candidatos if c["tipo"] == "destino"],
+        key=lambda c: c["valor"],
+        reverse=True,
+    )
+    restaurantes_pool = sorted(
+        [c for c in candidatos if c["tipo"] == "restaurante"],
+        key=lambda c: c["valor"],
+        reverse=True,
+    )
+    candidatos = destinos_pool[: MAX_CANDIDATOS_KNAPSACK - 5] + restaurantes_pool[:5]
     candidatos.sort(key=lambda c: c["valor"], reverse=True)
-    candidatos = candidatos[:MAX_CANDIDATOS_KNAPSACK]
 
     return candidatos, resumen_clusters_candidatos, complementarias_info
 
