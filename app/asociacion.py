@@ -32,30 +32,48 @@ def entrenar_reglas() -> pd.DataFrame:
     return reglas.sort_values("confidence", ascending=False).reset_index(drop=True)
 
 
-def categorias_complementarias(categoria: str, top_n: int = 3) -> list[dict]:
-    """Dada una categoria de interes, regresa las categorias que mas
-    frecuentemente se eligen junto a ella, segun las reglas aprendidas."""
+def categorias_complementarias(
+    categorias: str | list[str],
+    top_n: int = 3,
+    excluidas: set[str] | None = None,
+) -> list[dict]:
+    """Dado un interés (o lista de intereses), devuelve las categorías que más
+    frecuentemente se eligen junto a ellos según Apriori.
+
+    Las categorías en `excluidas` se filtran del resultado antes de devolverlo:
+    el usuario declaró explícitamente que no las quiere, así que Apriori no
+    puede reintroducirlas como complemento.
+    """
     reglas = entrenar_reglas()
     if reglas.empty:
         return []
 
-    coincidencias = reglas[reglas["antecedents"].apply(lambda s: categoria in s)]
+    if isinstance(categorias, str):
+        categorias = [categorias]
+    excluidas = excluidas or set()
+
     resultado = []
-    vistos = set()
-    for _, fila in coincidencias.iterrows():
-        for consecuente in fila["consequents"]:
-            if consecuente == categoria or consecuente in vistos:
-                continue
-            vistos.add(consecuente)
-            resultado.append(
-                {
-                    "categoria": consecuente,
-                    "confianza": round(float(fila["confidence"]), 2),
-                    "soporte": round(float(fila["support"]), 2),
-                }
-            )
+    vistos = set(categorias) | excluidas  # no repetir intereses ya dados ni excluidos
+
+    for cat in categorias:
+        coincidencias = reglas[reglas["antecedents"].apply(lambda s: cat in s)]
+        for _, fila in coincidencias.iterrows():
+            for consecuente in fila["consequents"]:
+                if consecuente in vistos:
+                    continue
+                vistos.add(consecuente)
+                resultado.append(
+                    {
+                        "categoria": consecuente,
+                        "confianza": round(float(fila["confidence"]), 2),
+                        "soporte": round(float(fila["support"]), 2),
+                    }
+                )
+            if len(resultado) >= top_n:
+                break
         if len(resultado) >= top_n:
             break
+
     return resultado[:top_n]
 
 
