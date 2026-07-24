@@ -148,7 +148,12 @@ def horas_desde_texto(tiempo: str | None) -> float:
     return 6.0
 
 
-def _filtrar_destinos(interes, destino_texto, complementarias):
+def _filtrar_destinos(
+    intereses: set[str],
+    excluidas: set[str],
+    destino_texto: str | None,
+    complementarias: set[str],
+) -> "pd.DataFrame":
     destinos = entrenar_clusters()
 
     if destino_texto:
@@ -162,9 +167,18 @@ def _filtrar_destinos(interes, destino_texto, complementarias):
     else:
         print(f"[recomendador] destino=None, sin filtro de municipio")
 
-    if interes:
-        categorias_aceptadas = {interes} | complementarias
-        destinos = destinos[destinos["categoria"].isin(categorias_aceptadas)]
+    # Filtro duro 1: eliminar siempre las categorías que el usuario rechazó,
+    # independientemente de lo que Apriori haya sugerido.
+    if excluidas:
+        antes = len(destinos)
+        destinos = destinos[~destinos["categoria"].isin(excluidas)]
+        print(f"[recomendador] categorias_excluidas={excluidas} {antes}->{len(destinos)} destinos")
+
+    # Filtro por interés: SOLO las categorías que el usuario pidió.
+    # Las complementarias de Apriori NO amplían este filtro — sirven únicamente
+    # para dar un bonus de score dentro del pool ya filtrado.
+    if intereses:
+        destinos = destinos[destinos["categoria"].isin(intereses)]
 
     return destinos
 
@@ -192,10 +206,17 @@ def _filtrar_restaurantes(comida_texto, destino_texto):
 
 def _construir_candidatos(params: ParametrosViajeIn) -> tuple[list[dict], dict[str, int], list[dict]]:
     personas = params.personas or 1
-    complementarias_info = categorias_complementarias(params.interes) if params.interes else []
+    intereses = params.set_intereses
+    excluidas = set(params.categorias_excluidas)
+
+    # Apriori sobre todos los intereses declarados; las excluidas nunca entran.
+    complementarias_info = (
+        categorias_complementarias(list(intereses), excluidas=excluidas)
+        if intereses else []
+    )
     categorias_complementarias_set = {c["categoria"] for c in complementarias_info}
 
-    destinos = _filtrar_destinos(params.interes, params.destino, categorias_complementarias_set)
+    destinos = _filtrar_destinos(intereses, excluidas, params.destino, categorias_complementarias_set)
     restaurantes = _filtrar_restaurantes(params.comida, params.destino)
 
     resumen_clusters_candidatos = (
@@ -206,9 +227,11 @@ def _construir_candidatos(params: ParametrosViajeIn) -> tuple[list[dict], dict[s
 
     for _, fila in destinos.iterrows():
         valor = 1.0
-        if params.interes and fila["categoria"] == params.interes:
+        cat = fila["categoria"]
+        # Bonus mayor si la categoría coincide con alguno de los intereses declarados.
+        if cat in intereses:
             valor += BONUS_INTERES_PRINCIPAL
-        elif fila["categoria"] in categorias_complementarias_set:
+        elif cat in categorias_complementarias_set:
             valor += BONUS_CATEGORIA_COMPLEMENTARIA
         if fila["cluster_afluencia"] == "potencial_oculto":
             valor += BONUS_POTENCIAL_OCULTO
@@ -286,34 +309,40 @@ def _intentar_fallback(
 ) -> tuple[list[dict], str | None]:
     """
     Intenta filtros progresivamente más amplios cuando el itinerario principal sale vacío.
-    Devuelve (itinerario, mensaje_para_usuario).
+    Las `categorias_excluidas` se respetan SIEMPRE: el usuario las rechazó
+    explícitamente y no deben aparecer aunque los otros filtros se relajen.
     """
-    # Intento 1: misma categoría, sin restricción de municipio
-    if params.destino and params.interes:
+    interes_principal = params.interes  # puede ser None
+
+    # Intento 1: misma categoría(s), sin restricción de municipio
+    if params.destino and params.set_intereses:
         candidatos, _, _ = _construir_candidatos(params.model_copy(update={"destino": None}))
         resultado = resolver_mochila(candidatos, presupuesto_disponible, tiempo_disponible)
         if resultado:
+            cats = ", ".join(params.set_intereses)
             return resultado, (
-                f"No encontré destinos de {params.interes} en {params.destino}. "
-                f"Te muestro los mejores lugares de {params.interes} en todo Chiapas:"
+                f"No encontré destinos de {cats} en {params.destino}. "
+                f"Te muestro los mejores lugares de {cats} en todo Chiapas:"
             )
 
     # Intento 2: mismo municipio, sin restricción de categoría
+    # (pero mantenemos categorias_excluidas)
     if params.destino:
         candidatos, _, _ = _construir_candidatos(
-            params.model_copy(update={"interes": None, "comida": None})
+            params.model_copy(update={"interes": None, "intereses": [], "comida": None})
         )
         resultado = resolver_mochila(candidatos, presupuesto_disponible, tiempo_disponible)
         if resultado:
-            motivo = f"de {params.interes} " if params.interes else ""
+            motivo = f"de {interes_principal} " if interes_principal else ""
             return resultado, (
                 f"No encontré lugares {motivo}en {params.destino}. "
                 f"Te muestro lo que hay disponible en ese municipio:"
             )
 
-    # Intento 3: sin ningún filtro — top destinos de Chiapas
+    # Intento 3: sin filtro de municipio ni categoría — top Chiapas
+    # (categorias_excluidas siguen activas)
     candidatos, _, _ = _construir_candidatos(
-        params.model_copy(update={"destino": None, "interes": None, "comida": None})
+        params.model_copy(update={"destino": None, "interes": None, "intereses": [], "comida": None})
     )
     resultado = resolver_mochila(candidatos, presupuesto_disponible, tiempo_disponible)
     if resultado:
@@ -370,10 +399,11 @@ def generar_recomendacion(params: ParametrosViajeIn) -> dict:
         item.pop("valor", None)
 
     reglas_aplicadas = []
-    if params.interes:
+    if params.set_intereses:
+        cats = ", ".join(sorted(params.set_intereses))
         for complementaria in complementarias_info:
             texto_regla = (
-                f"{params.interes} -> {complementaria['categoria']} "
+                f"[{cats}] -> {complementaria['categoria']} "
                 f"(confianza {complementaria['confianza']}, soporte {complementaria['soporte']})"
             )
             reglas_aplicadas.append(texto_regla)
