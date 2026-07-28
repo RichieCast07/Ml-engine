@@ -10,7 +10,9 @@ DATA_DIR = Path(__file__).resolve().parent.parent / "data"
 @lru_cache(maxsize=1)
 def cargar_destinos() -> pd.DataFrame:
     ruta_csv = DATA_DIR / "destinos.csv"
-    df = pd.read_csv(ruta_csv, encoding="utf-8", dtype={"id": int}, low_memory=False)
+    df = pd.read_csv(ruta_csv, encoding="utf-8", low_memory=False)
+    df = df.dropna(subset=["id"])
+    df["id"] = df["id"].astype(int)
     df["categoria"] = df["categoria"].fillna("").astype(str)
     df["categoria"] = df["categoria"].replace("", None)
     # Columnas opcionales del dataset real: coordenadas exactas y foto real
