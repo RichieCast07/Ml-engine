@@ -1,583 +1,494 @@
 ﻿id,nombre,tipo,municipio,categoria,costo_estimado,tiempo_horas,nivel_afluencia,lat,lng,foto_url
-1,Izapa (grupo F),destino,Tapachula,cultura,79,2.4,349,14.9233,-92.179958,
-2,Izapa (grupo A),destino,Tapachula,cultura,63,1.7,252,14.913507,-92.184326,
-3,Club Campestre,destino,Tapachula,naturaleza,55,2.9,70,14.939568,-92.253411,
-4,Museo del Ambar de Chiapas,destino,San Cristobal de las Casas,cultura,71,1.1,304,16.735843,-92.642162,
-5,Museo de Culturas Populares,destino,San Cristobal de las Casas,cultura,33,1.9,72,16.736513,-92.641272,
-6,Na Bolom,destino,San Cristobal de las Casas,cultura,31,1.3,62,16.741687,-92.629943,
-7,Jardin del Jaguar,destino,San Cristobal de las Casas,naturaleza,111,2.3,275,16.741697,-92.630021,
-8,Museo de la Medicina Maya,destino,San Cristobal de las Casas,cultura,88,1.6,404,16.750033,-92.638689,
-9,Mirador El Tepehuaje,destino,Tuxtla Gutierrez,fotografia,0,1.1,53,16.829908,-93.090857,
-10,Abasolo,destino,Ocosingo,naturaleza,196,3.1,1181,16.81845,-92.216453,
+1,Izapa (grupo F),destino,Tapachula,cultura,79,2.4,349,14.9233,-92.179958,https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Izapa_1813.JPG/960px-Izapa_1813.JPG
+2,Izapa (grupo A),destino,Tapachula,cultura,63,1.7,252,14.913507,-92.184326,https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Izapa_chiapas.JPG/960px-Izapa_chiapas.JPG
+4,Museo del Ambar de Chiapas,destino,San Cristobal de las Casas,cultura,71,1.1,304,16.735843,-92.642162,https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/El_museo_del_%C3%A1mbar_%2818%29.jpg/960px-El_museo_del_%C3%A1mbar_%2818%29.jpg
+5,Museo de Culturas Populares,destino,San Cristobal de las Casas,cultura,33,1.9,72,16.736513,-92.641272,https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/EntranceMuseoCulturasPopularesChiapas.JPG/960px-EntranceMuseoCulturasPopularesChiapas.JPG
+6,Na Bolom,destino,San Cristobal de las Casas,cultura,31,1.3,62,16.741687,-92.629943,https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/San_Crist%C3%B3bal_de_las_Casas%2C_Chiapas_%2820524561663%29.jpg/960px-San_Crist%C3%B3bal_de_las_Casas%2C_Chiapas_%2820524561663%29.jpg
+7,Jardin del Jaguar,destino,San Cristobal de las Casas,naturaleza,111,2.3,275,16.741697,-92.630021,https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Adhemarius_donysa_MHNT_CUT_2010_0_31_San_Crist%C3%B3bal_de_Las_Casas_Mexico_female_dorsal.jpg/960px-Adhemarius_donysa_MHNT_CUT_2010_0_31_San_Crist%C3%B3bal_de_Las_Casas_Mexico_female_dorsal.jpg
+8,Museo de la Medicina Maya,destino,San Cristobal de las Casas,cultura,88,1.6,404,16.750033,-92.638689,https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Adhemarius_donysa_MHNT_CUT_2010_0_31_San_Crist%C3%B3bal_de_Las_Casas_Mexico_female_dorsal.jpg/960px-Adhemarius_donysa_MHNT_CUT_2010_0_31_San_Crist%C3%B3bal_de_Las_Casas_Mexico_female_dorsal.jpg
+9,Mirador El Tepehuaje,destino,Tuxtla Gutierrez,fotografia,0,1.1,53,16.829908,-93.090857,https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Mactumatz%C3%A1_visto_desde_el_centro_de_Tuxtla_Guti%C3%A9rrez.jpg/960px-Mactumatz%C3%A1_visto_desde_el_centro_de_Tuxtla_Guti%C3%A9rrez.jpg
+10,Abasolo,destino,Ocosingo,naturaleza,196,3.1,1181,16.81845,-92.216453,https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Abasolo%2C_Tamaulipas.jpg/960px-Abasolo%2C_Tamaulipas.jpg
 11,Agua Azul,destino,Ocosingo,naturaleza,102,2.7,4818,17.255205,-92.115034,https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Cascadas_de_Agua_Azul_5.jpg/960px-Cascadas_de_Agua_Azul_5.jpg
-12,Parque Bicentenario,destino,Tapachula,naturaleza,116,2.7,292,14.905662,-92.263348,
-13,Club Leones,destino,Tapachula,naturaleza,77,3.2,150,14.887253,-92.291296,
+12,Parque Bicentenario,destino,Tapachula,naturaleza,116,2.7,292,14.905662,-92.263348,https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Parque_Bicentenario%2C_Tapachula.jpg/960px-Parque_Bicentenario%2C_Tapachula.jpg
 14,La Pochota,destino,Chiapa de Corzo,naturaleza,192,3.4,9598,16.707723,-93.017206,https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/LaPochotaChiapa1.jpg/960px-LaPochotaChiapa1.jpg
-15,Cascada El Aguacero,destino,Jiquipilas,fotografia,37,1.2,462,16.759318,-93.525176,
-16,Museo Arqueológico del Soconusco,destino,Tapachula,cultura,54,2.2,549,14.910225,-92.265364,
+15,Cascada El Aguacero,destino,Jiquipilas,fotografia,37,1.2,462,16.759318,-93.525176,https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Cascada_el_Aguacero%2C_Chiapas.jpg/960px-Cascada_el_Aguacero%2C_Chiapas.jpg
+16,Museo Arqueológico del Soconusco,destino,Tapachula,cultura,54,2.2,549,14.910225,-92.265364,https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Letras_de_Tapachula_en_Plaza_Alaia.jpg/960px-Letras_de_Tapachula_en_Plaza_Alaia.jpg
 17,Cascadas de El Chiflón,destino,Tzimol,familiar,165,3.5,6004,16.189945,-92.273826,https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/El_chiflon_chiapas.jpg/960px-El_chiflon_chiapas.jpg
-18,Wasserfall,destino,Palenque,fotografia,3,1.2,91,17.485496,-92.043126,
-19,Estela 11,destino,Tenosique,cultura,114,1.9,565,16.899059,-90.963099,
-20,Estela 3,destino,Tenosique,cultura,85,1.6,390,16.898903,-90.963497,
-21,Gran Acrópolis,destino,Tenosique,cultura,82,2.1,368,16.898689,-90.964726,
-22,Templo olvidado,destino,Palenque,cultura,102,1.6,490,17.484537,-92.054948,
+22,Templo olvidado,destino,Palenque,cultura,102,1.6,490,17.484537,-92.054948,https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/PalenqueLetters2020p2.jpg/960px-PalenqueLetters2020p2.jpg
 23,Misol-Ha,destino,Palenque,naturaleza,60,2.7,2558,17.390948,-91.99869,https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Misolha_idyllic_upright.jpg/960px-Misolha_idyllic_upright.jpg
-24,Pequeña Acrópolis,destino,Tenosique,cultura,59,1.7,233,16.899636,-90.967095,
-25,La Gran Plaza,destino,Tenosique,cultura,104,2.5,505,16.899038,-90.963889,
-26,Diana Cazadora,destino,Tuxtla Gutierrez,cultura,37,2.0,98,16.747406,-93.083231,
-27,Antorcha de la Solidaridad,destino,Tuxtla Gutierrez,cultura,34,2.1,76,16.746753,-93.141245,
-28,Bandera Monumental,destino,Tuxtla Gutierrez,cultura,63,1.3,252,16.773344,-93.131027,
-29,ZooMat,destino,Tuxtla Gutierrez,familiar,80,2.7,52,16.725469,-93.094421,
-30,Mirador Ceiba,destino,Tuxtla Gutierrez,fotografia,31,1.2,393,16.792897,-93.07749,
-31,Mirador La Coyota,destino,Tuxtla Gutierrez,fotografia,28,1.2,360,16.818366,-93.069117,
-32,Parking Roblar; Mirador Roblar,destino,Tuxtla Gutierrez,fotografia,24,1.1,320,16.835497,-93.078279,
-33,La Pelona,destino,Villaflores,naturaleza,93,3.3,209,16.329246,-93.299145,
-34,Nambiyugüa,destino,Villaflores,naturaleza,82,2.4,169,16.290253,-93.333869,
-35,la Gruta,destino,La Independencia,naturaleza,170,2.5,491,16.135355,-91.728105,
+26,Diana Cazadora,destino,Tuxtla Gutierrez,cultura,37,2.0,98,16.747406,-93.083231,https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/La_Diana._-_panoramio.jpg/960px-La_Diana._-_panoramio.jpg
+27,Antorcha de la Solidaridad,destino,Tuxtla Gutierrez,cultura,34,2.1,76,16.746753,-93.141245,https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Mactumatz%C3%A1_visto_desde_el_centro_de_Tuxtla_Guti%C3%A9rrez.jpg/960px-Mactumatz%C3%A1_visto_desde_el_centro_de_Tuxtla_Guti%C3%A9rrez.jpg
+28,Bandera Monumental,destino,Tuxtla Gutierrez,cultura,63,1.3,252,16.773344,-93.131027,https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Mactumatz%C3%A1_visto_desde_el_centro_de_Tuxtla_Guti%C3%A9rrez.jpg/960px-Mactumatz%C3%A1_visto_desde_el_centro_de_Tuxtla_Guti%C3%A9rrez.jpg
+29,ZooMat,destino,Tuxtla Gutierrez,familiar,80,2.7,52,16.725469,-93.094421,https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Semanai-Sofz14-013.jpg/960px-Semanai-Sofz14-013.jpg
+30,Mirador Ceiba,destino,Tuxtla Gutierrez,fotografia,31,1.2,393,16.792897,-93.07749,https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Mactumatz%C3%A1_visto_desde_el_centro_de_Tuxtla_Guti%C3%A9rrez.jpg/960px-Mactumatz%C3%A1_visto_desde_el_centro_de_Tuxtla_Guti%C3%A9rrez.jpg
+31,Mirador La Coyota,destino,Tuxtla Gutierrez,fotografia,28,1.2,360,16.818366,-93.069117,https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Mactumatz%C3%A1_visto_desde_el_centro_de_Tuxtla_Guti%C3%A9rrez.jpg/960px-Mactumatz%C3%A1_visto_desde_el_centro_de_Tuxtla_Guti%C3%A9rrez.jpg
+32,Mirador Roblar,destino,Tuxtla Gutierrez,fotografia,24,1.1,320,16.835497,-93.078279,https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Mactumatz%C3%A1_visto_desde_el_centro_de_Tuxtla_Guti%C3%A9rrez.jpg/960px-Mactumatz%C3%A1_visto_desde_el_centro_de_Tuxtla_Guti%C3%A9rrez.jpg
+33,La Pelona,destino,Villaflores,naturaleza,93,3.3,209,16.329246,-93.299145,https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Vista_de_Villaflores_-_panoramio.jpg/960px-Vista_de_Villaflores_-_panoramio.jpg
+34,Nambiyugüa,destino,Villaflores,naturaleza,82,2.4,169,16.290253,-93.333869,https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Vista_de_Villaflores_-_panoramio.jpg/960px-Vista_de_Villaflores_-_panoramio.jpg
+35,la Gruta,destino,La Independencia,naturaleza,170,2.5,491,16.135355,-91.728105,https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Gruta_de_Rancho_Nuevo%2C.jpg/960px-Gruta_de_Rancho_Nuevo%2C.jpg
 36,Caparrosa,destino,Villaflores,naturaleza,162,2.9,463,16.359998,-93.322699,
-37,Lakan'Ha,destino,Tenosique,cultura,63,1.5,257,16.737759,-91.114299,
-38,Cascadas de Santo Domingo,destino,Tenosique,naturaleza,89,2.4,195,17.026258,-91.413361,
-39,Casa de Cultura,destino,Tapachula,eventos,111,1.5,550,14.989781,-92.168551,
-40,Estela 1,destino,Tenosique,cultura,111,2.4,549,16.89932,-90.963757,
-41,Cruz,destino,Berriozabal,fotografia,40,1.2,495,16.871345,-93.201501,
-42,Estatua de Emiliano Zapata,destino,Las Margaritas,fotografia,20,0.5,274,16.315465,-91.987927,
-43,María Adelina Flores Morales,destino,San Cristobal de las Casas,cultura,108,1.5,527,16.733797,-92.637973,
-44,Ángel Robles Ramirez,destino,San Cristobal de las Casas,cultura,35,1.5,80,16.733837,-92.638031,
-45,Prudencio Moscoso Pastrana,destino,San Cristobal de las Casas,cultura,62,2.4,251,16.733838,-92.638085,
-46,Mariano N. Ruíz Suasnavar,destino,San Cristobal de las Casas,cultura,96,2.4,454,16.733798,-92.638112,
-47,Monumento al Dr. Manuel Velasco Suárez,destino,San Cristobal de las Casas,cultura,40,1.4,114,16.737058,-92.637912,
-48,Las Canastas,destino,San Cristobal de las Casas,cultura,53,1.5,196,16.733711,-92.603669,
-49,Kiosko,destino,Chiapa de Corzo,naturaleza,79,3.2,156,16.728195,-92.978392,
-50,Monumento a Fray Bartolomé de Las Casas,destino,San Cristobal de las Casas,cultura,89,1.7,411,16.733652,-92.636747,
-51,Grutas del Arco,destino,La Independencia,naturaleza,66,3.2,111,15.821741,-91.892133,
-52,Tortugario,destino,La Independencia,naturaleza,66,3.3,109,15.827668,-91.897023,
-53,Mirador La Atalaya,destino,Tuxtla Gutierrez,naturaleza,68,2.8,119,16.82851,-93.095078,
+39,Casa de Cultura,destino,Tapachula,eventos,111,1.5,550,14.989781,-92.168551,https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Templo_y_Ex_Convento_de_Santo_Domingo_de_Guzm%C3%A1n%2CChiapa_de_Corzo%2CChiapas%2CM%C3%A9xico.jpg/960px-Templo_y_Ex_Convento_de_Santo_Domingo_de_Guzm%C3%A1n%2CChiapa_de_Corzo%2CChiapas%2CM%C3%A9xico.jpg
+42,Estatua de Emiliano Zapata,destino,Las Margaritas,fotografia,20,0.5,274,16.315465,-91.987927,https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Las_Margaritas_-_Chiapas.PNG/960px-Las_Margaritas_-_Chiapas.PNG
+43,María Adelina Flores Morales,destino,San Cristobal de las Casas,cultura,108,1.5,527,16.733797,-92.637973,https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Adhemarius_donysa_MHNT_CUT_2010_0_31_San_Crist%C3%B3bal_de_Las_Casas_Mexico_female_dorsal.jpg/960px-Adhemarius_donysa_MHNT_CUT_2010_0_31_San_Crist%C3%B3bal_de_Las_Casas_Mexico_female_dorsal.jpg
+44,Ángel Robles Ramirez,destino,San Cristobal de las Casas,cultura,35,1.5,80,16.733837,-92.638031,https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Adhemarius_donysa_MHNT_CUT_2010_0_31_San_Crist%C3%B3bal_de_Las_Casas_Mexico_female_dorsal.jpg/960px-Adhemarius_donysa_MHNT_CUT_2010_0_31_San_Crist%C3%B3bal_de_Las_Casas_Mexico_female_dorsal.jpg
+45,Prudencio Moscoso Pastrana,destino,San Cristobal de las Casas,cultura,62,2.4,251,16.733838,-92.638085,https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Adhemarius_donysa_MHNT_CUT_2010_0_31_San_Crist%C3%B3bal_de_Las_Casas_Mexico_female_dorsal.jpg/960px-Adhemarius_donysa_MHNT_CUT_2010_0_31_San_Crist%C3%B3bal_de_Las_Casas_Mexico_female_dorsal.jpg
+46,Mariano N. Ruíz Suasnavar,destino,San Cristobal de las Casas,cultura,96,2.4,454,16.733798,-92.638112,https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Adhemarius_donysa_MHNT_CUT_2010_0_31_San_Crist%C3%B3bal_de_Las_Casas_Mexico_female_dorsal.jpg/960px-Adhemarius_donysa_MHNT_CUT_2010_0_31_San_Crist%C3%B3bal_de_Las_Casas_Mexico_female_dorsal.jpg
+47,Monumento al Dr. Manuel Velasco Suárez,destino,San Cristobal de las Casas,cultura,40,1.4,114,16.737058,-92.637912,https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Adhemarius_donysa_MHNT_CUT_2010_0_31_San_Crist%C3%B3bal_de_Las_Casas_Mexico_female_dorsal.jpg/960px-Adhemarius_donysa_MHNT_CUT_2010_0_31_San_Crist%C3%B3bal_de_Las_Casas_Mexico_female_dorsal.jpg
+48,Las Canastas,destino,San Cristobal de las Casas,cultura,53,1.5,196,16.733711,-92.603669,https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Adhemarius_donysa_MHNT_CUT_2010_0_31_San_Crist%C3%B3bal_de_Las_Casas_Mexico_female_dorsal.jpg/960px-Adhemarius_donysa_MHNT_CUT_2010_0_31_San_Crist%C3%B3bal_de_Las_Casas_Mexico_female_dorsal.jpg
+49,Kiosko,destino,Chiapa de Corzo,naturaleza,79,3.2,156,16.728195,-92.978392,https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Chamula_%28Mexico%2C_January_2020%29_-_7.jpg/960px-Chamula_%28Mexico%2C_January_2020%29_-_7.jpg
+50,Monumento a Fray Bartolomé de Las Casas,destino,San Cristobal de las Casas,cultura,89,1.7,411,16.733652,-92.636747,https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/San_Cristobal_de_las_Casas_Chiapas_2002_11.jpg/960px-San_Cristobal_de_las_Casas_Chiapas_2002_11.jpg
+51,Grutas del Arco,destino,La Independencia,naturaleza,66,3.2,111,15.821741,-91.892133,https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Columna_de_la_Victoria_de_la_Guerra_de_la_Independencia%2C_Tallinn%2C_Estonia%2C_2012-08-05%2C_DD_15.JPG/960px-Columna_de_la_Victoria_de_la_Guerra_de_la_Independencia%2C_Tallinn%2C_Estonia%2C_2012-08-05%2C_DD_15.JPG
+52,Tortugario,destino,La Independencia,naturaleza,66,3.3,109,15.827668,-91.897023,https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Columna_de_la_Victoria_de_la_Guerra_de_la_Independencia%2C_Tallinn%2C_Estonia%2C_2012-08-05%2C_DD_15.JPG/960px-Columna_de_la_Victoria_de_la_Guerra_de_la_Independencia%2C_Tallinn%2C_Estonia%2C_2012-08-05%2C_DD_15.JPG
+53,Mirador La Atalaya,destino,Tuxtla Gutierrez,naturaleza,68,2.8,119,16.82851,-93.095078,https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Mactumatz%C3%A1_visto_desde_el_centro_de_Tuxtla_Guti%C3%A9rrez.jpg/960px-Mactumatz%C3%A1_visto_desde_el_centro_de_Tuxtla_Guti%C3%A9rrez.jpg
 54,Templo de Quechula,destino,Berriozabal,cultura,48,2.0,161,17.054888,-93.421997,
-55,5 de febrero,destino,Tapachula,naturaleza,175,3.9,508,14.92603,-92.258438,
+55,5 de febrero,destino,Tapachula,naturaleza,175,3.9,508,14.92603,-92.258438,https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Parachicos_2020%2C_Chiapa_de_Corzo%2C_Mexico_-_166.jpg/960px-Parachicos_2020%2C_Chiapa_de_Corzo%2C_Mexico_-_166.jpg
 56,izapa grupo B,destino,Tapachula,cultura,36,1.0,88,14.914441,-92.181409,
-57,Rincón Víbora,destino,Villaflores,naturaleza,181,2.5,533,16.392377,-93.309674,
-58,centro ecoturistico Laguna Miramar,destino,Las Margaritas,cultura,54,1.7,201,16.392955,-91.34157,
-59,laguna Miramar,destino,Las Margaritas,naturaleza,135,3.1,363,16.405244,-91.267116,
-60,laguna Cocodrilo,destino,Las Margaritas,naturaleza,77,2.5,150,16.400525,-91.297401,
+57,Rincón Víbora,destino,Villaflores,naturaleza,181,2.5,533,16.392377,-93.309674,https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Vista_de_Villaflores_-_panoramio.jpg/960px-Vista_de_Villaflores_-_panoramio.jpg
+58,centro ecoturistico Laguna Miramar,destino,Las Margaritas,cultura,54,1.7,201,16.392955,-91.34157,https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Las_Margaritas_-_Chiapas.PNG/960px-Las_Margaritas_-_Chiapas.PNG
+59,laguna Miramar,destino,Las Margaritas,naturaleza,135,3.1,363,16.405244,-91.267116,https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Morning_in_the_Laguna_Miramar_%288044003060%29.jpg/960px-Morning_in_the_Laguna_Miramar_%288044003060%29.jpg
+60,laguna Cocodrilo,destino,Las Margaritas,naturaleza,77,2.5,150,16.400525,-91.297401,https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Las_Margaritas_-_Chiapas.PNG/960px-Las_Margaritas_-_Chiapas.PNG
 61,lago ocotalito,destino,Ocosingo,naturaleza,50,3.6,53,16.945573,-91.601079,
-62,Grutas El Mamut,destino,San Cristobal de las Casas,naturaleza,82,3.3,169,16.740941,-92.586277,
-63,Parador turístico el tapir,destino,Las Margaritas,naturaleza,74,2.3,138,16.325767,-90.768811,
-64,Cristo de Copoya,destino,Tuxtla Gutierrez,fotografia,23,1.5,304,16.719459,-93.119379,
-65,Las nubes,destino,Las Margaritas,cultura,115,2.3,573,16.198394,-91.330766,
-66,Zona Arqueológica de Yaxchilán,destino,Tenosique,cultura,47,2.0,158,16.901489,-90.967638,
-67,Reloj Floral,destino,Tapachula,naturaleza,108,3.8,266,14.889939,-92.264767,
-68,nom_parque,destino,Tuxtla Gutierrez,naturaleza,122,2.5,315,16.762058,-93.076549,
-69,nom_recinto,destino,Tuxtla Gutierrez,naturaleza,93,3.7,210,16.761065,-93.072054,
+62,Grutas El Mamut,destino,San Cristobal de las Casas,naturaleza,82,3.3,169,16.740941,-92.586277,https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Adhemarius_donysa_MHNT_CUT_2010_0_31_San_Crist%C3%B3bal_de_Las_Casas_Mexico_female_dorsal.jpg/960px-Adhemarius_donysa_MHNT_CUT_2010_0_31_San_Crist%C3%B3bal_de_Las_Casas_Mexico_female_dorsal.jpg
+63,Parador turístico el tapir,destino,Las Margaritas,naturaleza,74,2.3,138,16.325767,-90.768811,https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Las_Margaritas_-_Chiapas.PNG/960px-Las_Margaritas_-_Chiapas.PNG
+64,Cristo de Copoya,destino,Tuxtla Gutierrez,fotografia,23,1.5,304,16.719459,-93.119379,https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Mactumatz%C3%A1_visto_desde_el_centro_de_Tuxtla_Guti%C3%A9rrez.jpg/960px-Mactumatz%C3%A1_visto_desde_el_centro_de_Tuxtla_Guti%C3%A9rrez.jpg
+65,Las nubes,destino,Las Margaritas,cultura,115,2.3,573,16.198394,-91.330766,https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Las_Nubes_Chiapas_-_panoramio.jpg/960px-Las_Nubes_Chiapas_-_panoramio.jpg
+67,Reloj Floral,destino,Tapachula,naturaleza,108,3.8,266,14.889939,-92.264767,https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Letras_de_Tapachula_en_Plaza_Alaia.jpg/960px-Letras_de_Tapachula_en_Plaza_Alaia.jpg
 70,Cascadas el aguacero,destino,Jiquipilas,cultura,110,2.4,544,16.75458,-93.51837,
-71,centro cultural el carmen,destino,San Cristobal de las Casas,eventos,57,2.7,76,16.733656,-92.637976,
-72,Museo textiles de mundo maya,destino,San Cristobal de las Casas,cultura,31,1.2,57,16.741677,-92.637475,
-73,Mirador Laguna La Cañada,destino,La Independencia,fotografia,46,0.8,566,16.110886,-91.677937,
-74,Museo Regional de Chiapas,destino,Tuxtla Gutierrez,cultura,55,1.1,205,16.75994,-93.106783,
-75,Museo de Palentología,destino,Tuxtla Gutierrez,cultura,55,1.8,206,16.759372,-93.105907,
-76,Museo Sergio Castro,destino,San Cristobal de las Casas,cultura,31,1.2,61,16.736987,-92.641545,
-77,Mercado,destino,Comitan de Dominguez,naturaleza,51,2.0,54,16.254372,-92.133864,
-78,Arco de Piedra,destino,San Cristobal de las Casas,naturaleza,145,2.6,400,16.724747,-92.583948,
-79,Ojo de Agua,destino,La Independencia,fotografia,8,0.6,146,16.108612,-91.44682,
-80,Cañón del Sumidero,destino,Chiapa de Corzo,aventura,164,2.8,468,16.743225,-93.035687,
-81,La Piedra Sabia,destino,Tuxtla Gutierrez,cultura,97,2.1,459,16.761884,-93.118306,
-82,"La Cruz ""Para calmar el cerro""",destino,Tuxtla Gutierrez,cultura,103,1.9,501,16.725738,-93.147522,
-83,El mirador,destino,San Cristobal de las Casas,fotografia,25,0.8,331,16.700613,-92.634814,
-84,La Ventana,destino,Palenque,cultura,68,2.2,680,17.454695,-92.03195,
-85,PARQUE CENTRAL,destino,Berriozabal,naturaleza,101,2.3,237,16.799982,-93.272695,
-86,Panteon,destino,Zinacantlan,naturaleza,108,2.6,263,16.764277,-92.733918,
-87,trees,destino,Tuxtla Gutierrez,naturaleza,194,2.1,578,16.750802,-93.195541,
-88,open grass field,destino,Tuxtla Gutierrez,naturaleza,58,3.7,80,16.751628,-93.196814,
-89,open land with some trees,destino,Tuxtla Gutierrez,naturaleza,135,3.5,362,16.749994,-93.195879,
-90,Open tree area,destino,Tuxtla Gutierrez,naturaleza,77,3.7,150,16.730864,-93.068284,
-91,open tree area,destino,Tuxtla Gutierrez,naturaleza,98,3.5,227,16.779494,-93.137282,
-92,Open Tree Area,destino,Tuxtla Gutierrez,naturaleza,88,3.1,192,16.73139,-93.067161,
-93,Open Field Area,destino,Tuxtla Gutierrez,naturaleza,140,2.7,382,16.754044,-93.068395,
-94,Open Tree,destino,Tuxtla Gutierrez,naturaleza,61,2.1,91,16.736437,-93.089701,
-95,Cafemuseo cafe,destino,San Cristobal de las Casas,cultura,77,1.2,339,16.738259,-92.636008,
-96,Grutas del Agua,destino,San Cristobal de las Casas,naturaleza,113,2.5,281,16.744498,-92.589793,
-97,Huitepec reserva natural,destino,San Juan Chamula,naturaleza,147,3.2,407,16.75999,-92.681056,
-98,Galeria Mudra,destino,San Cristobal de las Casas,naturaleza,114,2.2,287,16.7405,-92.634207,
-99,Beau Dégât [bo.de.ga],destino,San Cristobal de las Casas,cultura,94,2.5,444,16.735685,-92.638064,
-100,Enzué,destino,San Cristobal de las Casas,cultura,115,1.8,572,16.740181,-92.63534,
-101,La Galería,destino,San Cristobal de las Casas,cultura,46,1.4,152,16.73622,-92.638154,
-102,"La Enseñanza, Casa De La Ciudad",destino,San Cristobal de las Casas,cultura,107,2.0,523,16.738597,-92.635479,
-103,La Tozi Galeria Hotel,destino,San Cristobal de las Casas,cultura,36,1.5,87,16.737547,-92.633815,
-104,Galería MUY,destino,San Cristobal de las Casas,cultura,67,1.4,281,16.738589,-92.628689,
-105,Open Area,destino,Tuxtla Gutierrez,naturaleza,167,3.3,479,16.774715,-93.100037,
-106,Alberca,destino,Huehuetan,cultura,100,1.7,483,15.125535,-92.300073,
-107,palitroche,destino,Huehuetan,familiar,229,2.0,535,15.127272,-92.300453,
-108,Alberto Dominguez B.,destino,San Cristobal de las Casas,cultura,90,1.3,421,16.73412,-92.638147,
-109,Cañón antiguo derecho,destino,San Cristobal de las Casas,aventura,60,1.4,239,16.737133,-92.638089,
-110,Cañon antiguo izquierdo,destino,San Cristobal de las Casas,aventura,32,1.4,63,16.73681,-92.638094,
-111,Cruz de San Francisco,destino,San Cristobal de las Casas,cultura,37,1.4,94,16.734567,-92.63679,
-112,Pila antigua de piedra,destino,San Cristobal de las Casas,cultura,52,1.4,190,16.734658,-92.636915,
-113,Camping Presa,destino,Arriaga,cultura,80,1.9,356,16.466252,-93.999439,
-114,Dr. Faustino Miranda,destino,Tuxtla Gutierrez,naturaleza,165,2.4,471,16.75835,-93.107307,
-115,Busto a Vicente Guerrero,destino,San Cristobal de las Casas,cultura,118,2.1,588,16.736899,-92.638731,
-116,Busto a Miguel Hidalgo,destino,San Cristobal de las Casas,cultura,112,1.6,554,16.737092,-92.638562,
-117,Sirena de PIedra,destino,San Cristobal de las Casas,cultura,68,1.4,287,16.736666,-92.637117,
-118,Casa de las Sirenas,destino,San Cristobal de las Casas,cultura,79,1.3,354,16.736435,-92.637122,
-119,Chocohuital,destino,Pijijiapan,naturaleza,118,3.4,300,15.602151,-93.33826,
-120,Junchivin,destino,Comitan de Dominguez,naturaleza,103,2.0,246,16.305115,-92.185763,
-121,Tologue,destino,Palenque,cultura,87,1.3,399,17.502443,-92.003993,
-122,Monumento a la madre,destino,Palenque,cultura,40,1.4,114,17.504957,-91.991921,
-123,Brisas del Mar,destino,Tapachula,fotografia,10,0.8,161,14.616769,-92.318096,
+71,centro cultural el carmen,destino,San Cristobal de las Casas,eventos,57,2.7,76,16.733656,-92.637976,https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Adhemarius_donysa_MHNT_CUT_2010_0_31_San_Crist%C3%B3bal_de_Las_Casas_Mexico_female_dorsal.jpg/960px-Adhemarius_donysa_MHNT_CUT_2010_0_31_San_Crist%C3%B3bal_de_Las_Casas_Mexico_female_dorsal.jpg
+72,Museo textiles de mundo maya,destino,San Cristobal de las Casas,cultura,31,1.2,57,16.741677,-92.637475,https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Adhemarius_donysa_MHNT_CUT_2010_0_31_San_Crist%C3%B3bal_de_Las_Casas_Mexico_female_dorsal.jpg/960px-Adhemarius_donysa_MHNT_CUT_2010_0_31_San_Crist%C3%B3bal_de_Las_Casas_Mexico_female_dorsal.jpg
+73,Mirador Laguna La Cañada,destino,La Independencia,fotografia,46,0.8,566,16.110886,-91.677937,https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Columna_de_la_Victoria_de_la_Guerra_de_la_Independencia%2C_Tallinn%2C_Estonia%2C_2012-08-05%2C_DD_15.JPG/960px-Columna_de_la_Victoria_de_la_Guerra_de_la_Independencia%2C_Tallinn%2C_Estonia%2C_2012-08-05%2C_DD_15.JPG
+74,Museo Regional de Chiapas,destino,Tuxtla Gutierrez,cultura,55,1.1,205,16.75994,-93.106783,https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/HallRegMusTuxtla.JPG/960px-HallRegMusTuxtla.JPG
+75,Museo de Palentología,destino,Tuxtla Gutierrez,cultura,55,1.8,206,16.759372,-93.105907,https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Mactumatz%C3%A1_visto_desde_el_centro_de_Tuxtla_Guti%C3%A9rrez.jpg/960px-Mactumatz%C3%A1_visto_desde_el_centro_de_Tuxtla_Guti%C3%A9rrez.jpg
+76,Museo Sergio Castro,destino,San Cristobal de las Casas,cultura,31,1.2,61,16.736987,-92.641545,https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Adhemarius_donysa_MHNT_CUT_2010_0_31_San_Crist%C3%B3bal_de_Las_Casas_Mexico_female_dorsal.jpg/960px-Adhemarius_donysa_MHNT_CUT_2010_0_31_San_Crist%C3%B3bal_de_Las_Casas_Mexico_female_dorsal.jpg
+77,Mercado,destino,Comitan de Dominguez,naturaleza,51,2.0,54,16.254372,-92.133864,https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Mercado_Belisario_Dominguez_-_Ocosingo%2C_Chiapas_-_12.jpg/960px-Mercado_Belisario_Dominguez_-_Ocosingo%2C_Chiapas_-_12.jpg
+78,Arco de Piedra,destino,San Cristobal de las Casas,naturaleza,145,2.6,400,16.724747,-92.583948,https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Adhemarius_donysa_MHNT_CUT_2010_0_31_San_Crist%C3%B3bal_de_Las_Casas_Mexico_female_dorsal.jpg/960px-Adhemarius_donysa_MHNT_CUT_2010_0_31_San_Crist%C3%B3bal_de_Las_Casas_Mexico_female_dorsal.jpg
+79,Ojo de Agua,destino,La Independencia,fotografia,8,0.6,146,16.108612,-91.44682,https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Mexibus_Ojo_de_Agua_03.jpg/960px-Mexibus_Ojo_de_Agua_03.jpg
+80,Cañón del Sumidero,destino,Chiapa de Corzo,aventura,164,2.8,468,16.743225,-93.035687,https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Ca%C3%B1on_del_Sumidero._Chiapa_de_Corzo._-_panoramio_%2813%29.jpg/960px-Ca%C3%B1on_del_Sumidero._Chiapa_de_Corzo._-_panoramio_%2813%29.jpg
+81,La Piedra Sabia,destino,Tuxtla Gutierrez,cultura,97,2.1,459,16.761884,-93.118306,https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Mactumatz%C3%A1_visto_desde_el_centro_de_Tuxtla_Guti%C3%A9rrez.jpg/960px-Mactumatz%C3%A1_visto_desde_el_centro_de_Tuxtla_Guti%C3%A9rrez.jpg
+82,"La Cruz ""Para calmar el cerro""",destino,Tuxtla Gutierrez,cultura,103,1.9,501,16.725738,-93.147522,https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Mactumatz%C3%A1_visto_desde_el_centro_de_Tuxtla_Guti%C3%A9rrez.jpg/960px-Mactumatz%C3%A1_visto_desde_el_centro_de_Tuxtla_Guti%C3%A9rrez.jpg
+83,El mirador,destino,San Cristobal de las Casas,fotografia,25,0.8,331,16.700613,-92.634814,https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Adhemarius_donysa_MHNT_CUT_2010_0_31_San_Crist%C3%B3bal_de_Las_Casas_Mexico_female_dorsal.jpg/960px-Adhemarius_donysa_MHNT_CUT_2010_0_31_San_Crist%C3%B3bal_de_Las_Casas_Mexico_female_dorsal.jpg
+84,La Ventana,destino,Palenque,cultura,68,2.2,680,17.454695,-92.03195,https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/PalenqueLetters2020p2.jpg/960px-PalenqueLetters2020p2.jpg
+85,PARQUE CENTRAL,destino,Berriozabal,naturaleza,101,2.3,237,16.799982,-93.272695,https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Palenque%2C_Pueblo_Magico_-_Chiapas_2020.jpg/960px-Palenque%2C_Pueblo_Magico_-_Chiapas_2020.jpg
+86,Panteon,destino,Zinacantlan,naturaleza,108,2.6,263,16.764277,-92.733918,https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Flores_del_Panteon._-_panoramio.jpg/960px-Flores_del_Panteon._-_panoramio.jpg
+95,Cafemuseo cafe,destino,San Cristobal de las Casas,cultura,77,1.2,339,16.738259,-92.636008,https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Adhemarius_donysa_MHNT_CUT_2010_0_31_San_Crist%C3%B3bal_de_Las_Casas_Mexico_female_dorsal.jpg/960px-Adhemarius_donysa_MHNT_CUT_2010_0_31_San_Crist%C3%B3bal_de_Las_Casas_Mexico_female_dorsal.jpg
+96,Grutas del Agua,destino,San Cristobal de las Casas,naturaleza,113,2.5,281,16.744498,-92.589793,https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Adhemarius_donysa_MHNT_CUT_2010_0_31_San_Crist%C3%B3bal_de_Las_Casas_Mexico_female_dorsal.jpg/960px-Adhemarius_donysa_MHNT_CUT_2010_0_31_San_Crist%C3%B3bal_de_Las_Casas_Mexico_female_dorsal.jpg
+97,Huitepec reserva natural,destino,San Juan Chamula,naturaleza,147,3.2,407,16.75999,-92.681056,https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Street_Scene_-_San_Juan_Chamula_-_Chiapas_-_Mexico.jpg/960px-Street_Scene_-_San_Juan_Chamula_-_Chiapas_-_Mexico.jpg
+98,Galeria Mudra,destino,San Cristobal de las Casas,naturaleza,114,2.2,287,16.7405,-92.634207,https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Adhemarius_donysa_MHNT_CUT_2010_0_31_San_Crist%C3%B3bal_de_Las_Casas_Mexico_female_dorsal.jpg/960px-Adhemarius_donysa_MHNT_CUT_2010_0_31_San_Crist%C3%B3bal_de_Las_Casas_Mexico_female_dorsal.jpg
+100,Enzué,destino,San Cristobal de las Casas,cultura,115,1.8,572,16.740181,-92.63534,https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Adhemarius_donysa_MHNT_CUT_2010_0_31_San_Crist%C3%B3bal_de_Las_Casas_Mexico_female_dorsal.jpg/960px-Adhemarius_donysa_MHNT_CUT_2010_0_31_San_Crist%C3%B3bal_de_Las_Casas_Mexico_female_dorsal.jpg
+101,La Galería,destino,San Cristobal de las Casas,cultura,46,1.4,152,16.73622,-92.638154,https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Adhemarius_donysa_MHNT_CUT_2010_0_31_San_Crist%C3%B3bal_de_Las_Casas_Mexico_female_dorsal.jpg/960px-Adhemarius_donysa_MHNT_CUT_2010_0_31_San_Crist%C3%B3bal_de_Las_Casas_Mexico_female_dorsal.jpg
+102,"La Enseñanza, Casa De La Ciudad",destino,San Cristobal de las Casas,cultura,107,2.0,523,16.738597,-92.635479,https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Adhemarius_donysa_MHNT_CUT_2010_0_31_San_Crist%C3%B3bal_de_Las_Casas_Mexico_female_dorsal.jpg/960px-Adhemarius_donysa_MHNT_CUT_2010_0_31_San_Crist%C3%B3bal_de_Las_Casas_Mexico_female_dorsal.jpg
+103,La Tozi Galeria Hotel,destino,San Cristobal de las Casas,cultura,36,1.5,87,16.737547,-92.633815,https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Adhemarius_donysa_MHNT_CUT_2010_0_31_San_Crist%C3%B3bal_de_Las_Casas_Mexico_female_dorsal.jpg/960px-Adhemarius_donysa_MHNT_CUT_2010_0_31_San_Crist%C3%B3bal_de_Las_Casas_Mexico_female_dorsal.jpg
+104,Galería MUY,destino,San Cristobal de las Casas,cultura,67,1.4,281,16.738589,-92.628689,https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Espacio-de-la-galeria-en-2014.jpg/960px-Espacio-de-la-galeria-en-2014.jpg
+106,Alberca,destino,Huehuetan,cultura,100,1.7,483,15.125535,-92.300073,https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Albercas_de_forma_piramidal%2C_San_Fernando%2C_Chiapas.jpg/960px-Albercas_de_forma_piramidal%2C_San_Fernando%2C_Chiapas.jpg
+107,palitroche,destino,Huehuetan,familiar,229,2.0,535,15.127272,-92.300453,https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Huehuet%C3%A1n_-_Chiapas.PNG/960px-Huehuet%C3%A1n_-_Chiapas.PNG
+108,Alberto Dominguez B.,destino,San Cristobal de las Casas,cultura,90,1.3,421,16.73412,-92.638147,https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Adhemarius_donysa_MHNT_CUT_2010_0_31_San_Crist%C3%B3bal_de_Las_Casas_Mexico_female_dorsal.jpg/960px-Adhemarius_donysa_MHNT_CUT_2010_0_31_San_Crist%C3%B3bal_de_Las_Casas_Mexico_female_dorsal.jpg
+109,Cañón antiguo derecho,destino,San Cristobal de las Casas,aventura,60,1.4,239,16.737133,-92.638089,https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Adhemarius_donysa_MHNT_CUT_2010_0_31_San_Crist%C3%B3bal_de_Las_Casas_Mexico_female_dorsal.jpg/960px-Adhemarius_donysa_MHNT_CUT_2010_0_31_San_Crist%C3%B3bal_de_Las_Casas_Mexico_female_dorsal.jpg
+110,Cañon antiguo izquierdo,destino,San Cristobal de las Casas,aventura,32,1.4,63,16.73681,-92.638094,https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Adhemarius_donysa_MHNT_CUT_2010_0_31_San_Crist%C3%B3bal_de_Las_Casas_Mexico_female_dorsal.jpg/960px-Adhemarius_donysa_MHNT_CUT_2010_0_31_San_Crist%C3%B3bal_de_Las_Casas_Mexico_female_dorsal.jpg
+111,Cruz de San Francisco,destino,San Cristobal de las Casas,cultura,37,1.4,94,16.734567,-92.63679,https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Adhemarius_donysa_MHNT_CUT_2010_0_31_San_Crist%C3%B3bal_de_Las_Casas_Mexico_female_dorsal.jpg/960px-Adhemarius_donysa_MHNT_CUT_2010_0_31_San_Crist%C3%B3bal_de_Las_Casas_Mexico_female_dorsal.jpg
+112,Pila antigua de piedra,destino,San Cristobal de las Casas,cultura,52,1.4,190,16.734658,-92.636915,https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Adhemarius_donysa_MHNT_CUT_2010_0_31_San_Crist%C3%B3bal_de_Las_Casas_Mexico_female_dorsal.jpg/960px-Adhemarius_donysa_MHNT_CUT_2010_0_31_San_Crist%C3%B3bal_de_Las_Casas_Mexico_female_dorsal.jpg
+113,Camping Presa,destino,Arriaga,cultura,80,1.9,356,16.466252,-93.999439,https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Arriaga_-_Chiapas.PNG/960px-Arriaga_-_Chiapas.PNG
+114,Dr. Faustino Miranda,destino,Tuxtla Gutierrez,naturaleza,165,2.4,471,16.75835,-93.107307,https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Jardin_Botanico._Dr._Faustino_Miranda._-_panoramio.jpg/960px-Jardin_Botanico._Dr._Faustino_Miranda._-_panoramio.jpg
+115,Busto a Vicente Guerrero,destino,San Cristobal de las Casas,cultura,118,2.1,588,16.736899,-92.638731,https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Adhemarius_donysa_MHNT_CUT_2010_0_31_San_Crist%C3%B3bal_de_Las_Casas_Mexico_female_dorsal.jpg/960px-Adhemarius_donysa_MHNT_CUT_2010_0_31_San_Crist%C3%B3bal_de_Las_Casas_Mexico_female_dorsal.jpg
+116,Busto a Miguel Hidalgo,destino,San Cristobal de las Casas,cultura,112,1.6,554,16.737092,-92.638562,https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Adhemarius_donysa_MHNT_CUT_2010_0_31_San_Crist%C3%B3bal_de_Las_Casas_Mexico_female_dorsal.jpg/960px-Adhemarius_donysa_MHNT_CUT_2010_0_31_San_Crist%C3%B3bal_de_Las_Casas_Mexico_female_dorsal.jpg
+117,Sirena de PIedra,destino,San Cristobal de las Casas,cultura,68,1.4,287,16.736666,-92.637117,https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Adhemarius_donysa_MHNT_CUT_2010_0_31_San_Crist%C3%B3bal_de_Las_Casas_Mexico_female_dorsal.jpg/960px-Adhemarius_donysa_MHNT_CUT_2010_0_31_San_Crist%C3%B3bal_de_Las_Casas_Mexico_female_dorsal.jpg
+118,Casa de las Sirenas,destino,San Cristobal de las Casas,cultura,79,1.3,354,16.736435,-92.637122,https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Adhemarius_donysa_MHNT_CUT_2010_0_31_San_Crist%C3%B3bal_de_Las_Casas_Mexico_female_dorsal.jpg/960px-Adhemarius_donysa_MHNT_CUT_2010_0_31_San_Crist%C3%B3bal_de_Las_Casas_Mexico_female_dorsal.jpg
+119,Chocohuital,destino,Pijijiapan,naturaleza,118,3.4,300,15.602151,-93.33826,https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Presidencia_municipal_pijijiapan.JPG/960px-Presidencia_municipal_pijijiapan.JPG
+120,Junchivin,destino,Comitan de Dominguez,naturaleza,103,2.0,246,16.305115,-92.185763,https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Comit%C3%A1n_de_Dom%C3%ADnguez_-_Chiapas.PNG/960px-Comit%C3%A1n_de_Dom%C3%ADnguez_-_Chiapas.PNG
+121,Tologue,destino,Palenque,cultura,87,1.3,399,17.502443,-92.003993,https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/PalenqueLetters2020p2.jpg/960px-PalenqueLetters2020p2.jpg
+122,Monumento a la madre,destino,Palenque,cultura,40,1.4,114,17.504957,-91.991921,https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/PalenqueLetters2020p2.jpg/960px-PalenqueLetters2020p2.jpg
+123,Brisas del Mar,destino,Tapachula,fotografia,10,0.8,161,14.616769,-92.318096,https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Letras_de_Tapachula_en_Plaza_Alaia.jpg/960px-Letras_de_Tapachula_en_Plaza_Alaia.jpg
 124,Parque Cireba,destino,Tapachula,naturaleza,117,3.3,297,14.891066,-92.248834,
 125,La Chiapaneca,destino,Chiapa de Corzo,cultura,56,1.4,209,16.719307,-93.018574,
 126,El Parachico,destino,Chiapa de Corzo,cultura,112,1.6,555,16.719457,-93.018687,
 127,Casa Museo Madrigal,destino,Chiapa de Corzo,cultura,79,2.3,354,16.70768,-93.019175,
-128,Pilares CFE,destino,Tapachula,cultura,40,2.2,117,14.915359,-92.240647,
-129,Pueblo La Palma,destino,Acapetahua,naturaleza,88,2.1,191,15.174245,-92.839182,
-130,Pueblo Las Garzas,destino,Acapetahua,naturaleza,111,3.9,274,15.202891,-92.815214,
-131,Monumento a Benito Juárez,destino,Tapachula,cultura,56,1.3,209,14.9106,-92.265462,
-132,Bancrisa,destino,Tapachula,naturaleza,133,3.9,355,14.891147,-92.269698,
+129,Pueblo La Palma,destino,Acapetahua,naturaleza,88,2.1,191,15.174245,-92.839182,https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Acapetahua_-_Chiapas.PNG/960px-Acapetahua_-_Chiapas.PNG
+130,Pueblo Las Garzas,destino,Acapetahua,naturaleza,111,3.9,274,15.202891,-92.815214,https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Acapetahua_-_Chiapas.PNG/960px-Acapetahua_-_Chiapas.PNG
+131,Monumento a Benito Juárez,destino,Tapachula,cultura,56,1.3,209,14.9106,-92.265462,https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Sal%C3%B3n_de_Pasos_Perdidos_del_Congreso_de_Chiapas.jpg/960px-Sal%C3%B3n_de_Pasos_Perdidos_del_Congreso_de_Chiapas.jpg
 133,Poza tepescuhintle,destino,Mapastepec,naturaleza,189,3.5,559,15.50428,-92.929899,
-134,Poza,destino,Mapastepec,naturaleza,180,3.9,529,15.50457,-92.926858,
+134,Poza Natural de Mapastepec,destino,Mapastepec,naturaleza,180,3.9,529,15.50457,-92.926858,
 135,Altar del monstruo de la tierra,destino,Ocosingo,naturaleza,82,3.9,167,16.901756,-92.009381,
-136,Entrance Montebello,destino,La Independencia,naturaleza,93,2.1,209,16.103541,-91.734628,
-137,Cancha Basquetball,destino,Tapachula,naturaleza,80,3.5,161,14.839584,-92.189906,
-138,El puma,destino,Comitan de Dominguez,cultura,111,2.0,546,16.255059,-92.13354,
-139,Busto,destino,Comitan de Dominguez,cultura,88,1.1,410,16.252894,-92.134239,
+136,Entrance Montebello,destino,La Independencia,naturaleza,93,2.1,209,16.103541,-91.734628,https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Columna_de_la_Victoria_de_la_Guerra_de_la_Independencia%2C_Tallinn%2C_Estonia%2C_2012-08-05%2C_DD_15.JPG/960px-Columna_de_la_Victoria_de_la_Guerra_de_la_Independencia%2C_Tallinn%2C_Estonia%2C_2012-08-05%2C_DD_15.JPG
+138,El puma,destino,Comitan de Dominguez,cultura,111,2.0,546,16.255059,-92.13354,https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Comit%C3%A1n_de_Dom%C3%ADnguez_-_Chiapas.PNG/960px-Comit%C3%A1n_de_Dom%C3%ADnguez_-_Chiapas.PNG
+139,Busto,destino,Comitan de Dominguez,cultura,88,1.1,410,16.252894,-92.134239,https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Busto_a_Benito_Ju%C3%A1rez_en_el_Parque_Ju%C3%A1rez_de_Tonal%C3%A1_%28Chiapas%29.jpg/960px-Busto_a_Benito_Ju%C3%A1rez_en_el_Parque_Ju%C3%A1rez_de_Tonal%C3%A1_%28Chiapas%29.jpg
 140,Entrada unijab,destino,Tzimol,naturaleza,145,3.8,398,16.137255,-92.188508,
 141,Casa Ejidal de Suchiapa,destino,Suchiapa,naturaleza,157,3.0,443,16.622918,-93.10287,
 142,Panteon Municipal,destino,Suchiapa,naturaleza,77,3.6,149,16.620543,-93.099536,
-143,Parque Municipal,destino,Suchiapa,naturaleza,70,4.0,123,16.621724,-93.104872,
+143,Parque Municipal,destino,Suchiapa,naturaleza,70,4.0,123,16.621724,-93.104872,https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Busto_a_Benito_Ju%C3%A1rez_en_el_Parque_Ju%C3%A1rez_de_Tonal%C3%A1_%28Chiapas%29.jpg/960px-Busto_a_Benito_Ju%C3%A1rez_en_el_Parque_Ju%C3%A1rez_de_Tonal%C3%A1_%28Chiapas%29.jpg
 144,Kiosko Central,destino,Suchiapa,naturaleza,107,2.2,261,16.621543,-93.104777,
 145,Munumento a Corpus Crhisti,destino,Suchiapa,fotografia,4,1.4,98,16.619888,-93.10009,
-146,Canchita del Panteon,destino,Suchiapa,naturaleza,197,2.4,592,16.620427,-93.0998,
-147,Batshit Cave,destino,Palenque,naturaleza,96,3.9,219,17.390725,-91.998811,
-148,Parque convivencia infantil,destino,Tuxtla Gutierrez,naturaleza,67,3.3,113,16.75866,-93.104155,
-149,Steps (non-profit with workshops),destino,San Cristobal de las Casas,naturaleza,55,3.6,70,16.737972,-92.632649,
-150,Camping Familiar,destino,Palenque,cultura,68,1.1,286,17.489283,-92.032733,
+146,Canchita del Panteon,destino,Suchiapa,naturaleza,197,2.4,592,16.620427,-93.0998,https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Danza_de_Corpus_Christi_frente_a_la_Cofrad%C3%ADa_del_Sant%C3%ADsimo_Sacramento_del_Altar%2C_Suchiapa_2017.jpg/960px-Danza_de_Corpus_Christi_frente_a_la_Cofrad%C3%ADa_del_Sant%C3%ADsimo_Sacramento_del_Altar%2C_Suchiapa_2017.jpg
+148,Parque convivencia infantil,destino,Tuxtla Gutierrez,naturaleza,67,3.3,113,16.75866,-93.104155,https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Panor%C3%A1mica_de_Tuxtla_Guti%C3%A9rrez_desde_el_aire.jpg/960px-Panor%C3%A1mica_de_Tuxtla_Guti%C3%A9rrez_desde_el_aire.jpg
+150,Camping Familiar,destino,Palenque,cultura,68,1.1,286,17.489283,-92.032733,https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/PalenqueLetters2020p2.jpg/960px-PalenqueLetters2020p2.jpg
 151,Cᴀᴍɪɴᴏ ᴀ ʟᴀ ᴘɪᴇᴅʀᴀ,destino,Huixtla,naturaleza,97,3.5,224,15.168418,-92.453994,
-152,Isla de las Orquídeas,destino,La Independencia,naturaleza,126,2.0,329,16.104719,-91.668264,
-153,Cueva del oso,destino,Tapachula,cultura,39,2.2,110,15.125425,-92.106342,
-154,Parque Natural Monte Azul,destino,Tenosique,naturaleza,59,3.7,84,16.823708,-91.462921,
-155,Placa de fundacion,destino,Huixtla,cultura,31,2.1,57,15.214312,-92.577188,
+152,Isla de las Orquídeas,destino,La Independencia,naturaleza,126,2.0,329,16.104719,-91.668264,https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Columna_de_la_Victoria_de_la_Guerra_de_la_Independencia%2C_Tallinn%2C_Estonia%2C_2012-08-05%2C_DD_15.JPG/960px-Columna_de_la_Victoria_de_la_Guerra_de_la_Independencia%2C_Tallinn%2C_Estonia%2C_2012-08-05%2C_DD_15.JPG
+153,Cueva del oso,destino,Tapachula,cultura,39,2.2,110,15.125425,-92.106342,https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Letras_de_Tapachula_en_Plaza_Alaia.jpg/960px-Letras_de_Tapachula_en_Plaza_Alaia.jpg
+155,Placa de fundacion,destino,Huixtla,cultura,31,2.1,57,15.214312,-92.577188,https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Placa_conmemorariva_fundacion_del_pueblo_de_Venustiano_Carranza_en_Chiapas_M%C3%A9xico.jpg/960px-Placa_conmemorariva_fundacion_del_pueblo_de_Venustiano_Carranza_en_Chiapas_M%C3%A9xico.jpg
 156,Monumento versiculo,destino,Huixtla,cultura,109,2.0,534,15.214474,-92.577344,
 157,placa palacio municipal,destino,Huixtla,cultura,118,1.9,590,15.214272,-92.577437,
 158,los comales,destino,Huixtla,fotografia,20,1.1,270,15.217315,-92.575559,
-159,Estatua de Copoya,destino,Tuxtla Gutierrez,fotografia,34,1.1,430,16.71103,-93.110301,
-160,Parque Central de El Jobo,destino,Tuxtla Gutierrez,naturaleza,51,2.1,54,16.704649,-93.106756,
-161,Balneario,destino,Tapachula,descanso,120,3.2,307,15.039029,-92.170995,
-162,Museo De La Marimba,destino,Tuxtla Gutierrez,cultura,105,1.4,509,16.755005,-93.12398,
-163,Xamil Cascada y Balneario,destino,Ocosingo,descanso,184,2.4,541,17.2143,-92.108513,
-164,Centro Ecoturistico Ara Macao las Guacamayas,destino,Las Margaritas,naturaleza,128,3.0,338,16.256991,-90.86141,
-165,Lago Pojoj,destino,La Independencia,fotografia,2,1.2,80,16.103239,-91.672293,
-166,Museo Mesoamericano del Jade,destino,San Cristobal de las Casas,cultura,105,1.4,514,16.741284,-92.635049,
+159,Estatua de Copoya,destino,Tuxtla Gutierrez,fotografia,34,1.1,430,16.71103,-93.110301,https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Panor%C3%A1mica_de_Tuxtla_Guti%C3%A9rrez_desde_el_aire.jpg/960px-Panor%C3%A1mica_de_Tuxtla_Guti%C3%A9rrez_desde_el_aire.jpg
+160,Parque Central de El Jobo,destino,Tuxtla Gutierrez,naturaleza,51,2.1,54,16.704649,-93.106756,https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Panor%C3%A1mica_de_Tuxtla_Guti%C3%A9rrez_desde_el_aire.jpg/960px-Panor%C3%A1mica_de_Tuxtla_Guti%C3%A9rrez_desde_el_aire.jpg
+161,Balneario,destino,Tapachula,descanso,120,3.2,307,15.039029,-92.170995,https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Letras_de_Tapachula_en_Plaza_Alaia.jpg/960px-Letras_de_Tapachula_en_Plaza_Alaia.jpg
+162,Museo De La Marimba,destino,Tuxtla Gutierrez,cultura,105,1.4,509,16.755005,-93.12398,https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Sala_principal_del_Museo_de_la_Marimba.jpg/960px-Sala_principal_del_Museo_de_la_Marimba.jpg
+163,Xamil Cascada y Balneario,destino,Ocosingo,descanso,184,2.4,541,17.2143,-92.108513,https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Plaza_Scene_-_Ocosingo_-_Chiapas_-_Mexico_2021.jpg/960px-Plaza_Scene_-_Ocosingo_-_Chiapas_-_Mexico_2021.jpg
+164,Centro Ecoturistico Ara Macao las Guacamayas,destino,Las Margaritas,naturaleza,128,3.0,338,16.256991,-90.86141,https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Las_Margaritas%2C_Chiapas_%2821836373629%29.jpg/960px-Las_Margaritas%2C_Chiapas_%2821836373629%29.jpg
+165,Lago Pojoj,destino,La Independencia,fotografia,2,1.2,80,16.103239,-91.672293,https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Panorama_of_Lago_Pojoj_%2850833756921%29.jpg/960px-Panorama_of_Lago_Pojoj_%2850833756921%29.jpg
+166,Museo Mesoamericano del Jade,destino,San Cristobal de las Casas,cultura,105,1.4,514,16.741284,-92.635049,https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/EntranceMuseoMesoJadeSanCris.JPG/960px-EntranceMuseoMesoJadeSanCris.JPG
 167,Monumento de Trabajadores de CFE,destino,Pueblo Nuevo Solistahaucan,cultura,98,1.3,470,16.93762,-93.101332,
 168,PARQUECITO 20 DE NOVIEMBRE,destino,Tapachula,naturaleza,142,2.3,388,14.976762,-92.265441,
 169,Arco del tiempo,destino,Cintalapa,naturaleza,138,2.5,372,16.93881,-93.731467,
-170,LAGOS DE MONTEBELLO,destino,La Independencia,naturaleza,147,2.5,405,16.110204,-91.700487,
-171,Museo Cultural Tziscao,destino,La Independencia,cultura,56,2.1,210,16.087808,-91.666613,
+170,LAGOS DE MONTEBELLO,destino,La Independencia,naturaleza,147,2.5,405,16.110204,-91.700487,https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Chiapas%2C_Lagos_de_Montebello_%2816388562919%29.jpg/960px-Chiapas%2C_Lagos_de_Montebello_%2816388562919%29.jpg
+171,Museo Cultural Tziscao,destino,La Independencia,cultura,56,2.1,210,16.087808,-91.666613,https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Columna_de_la_Victoria_de_la_Guerra_de_la_Independencia%2C_Tallinn%2C_Estonia%2C_2012-08-05%2C_DD_15.JPG/960px-Columna_de_la_Victoria_de_la_Guerra_de_la_Independencia%2C_Tallinn%2C_Estonia%2C_2012-08-05%2C_DD_15.JPG
 172,Camping free,destino,Ocosingo,cultura,32,1.6,68,17.257023,-92.113377,
 173,El Romerillo,destino,San Cristobal de las Casas,naturaleza,122,2.8,317,16.764129,-92.562988,
-174,Mirador Lago El Caracol,destino,La Independencia,fotografia,21,0.5,284,16.108836,-91.680295,
-175,embarcación en balsa,destino,La Independencia,naturaleza,56,3.3,73,16.119453,-91.727955,
-176,Mirador,destino,La Independencia,fotografia,3,1.4,87,16.119976,-91.730748,
+174,Mirador Lago El Caracol,destino,La Independencia,fotografia,21,0.5,284,16.108836,-91.680295,https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Columna_de_la_Victoria_de_la_Guerra_de_la_Independencia%2C_Tallinn%2C_Estonia%2C_2012-08-05%2C_DD_15.JPG/960px-Columna_de_la_Victoria_de_la_Guerra_de_la_Independencia%2C_Tallinn%2C_Estonia%2C_2012-08-05%2C_DD_15.JPG
+175,embarcación en balsa,destino,La Independencia,naturaleza,56,3.3,73,16.119453,-91.727955,https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Columna_de_la_Victoria_de_la_Guerra_de_la_Independencia%2C_Tallinn%2C_Estonia%2C_2012-08-05%2C_DD_15.JPG/960px-Columna_de_la_Victoria_de_la_Guerra_de_la_Independencia%2C_Tallinn%2C_Estonia%2C_2012-08-05%2C_DD_15.JPG
+176,Mirador,destino,La Independencia,fotografia,3,1.4,87,16.119976,-91.730748,https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Chiapa_de_Corzo%2C_Chiapas%2C_Mexico._-_panoramio.jpg/960px-Chiapa_de_Corzo%2C_Chiapas%2C_Mexico._-_panoramio.jpg
 177,Misión Surf Mexico,destino,Tapachula,cultura,37,2.0,371,14.732903,-92.43399,
-178,Grutas de Arcoton,destino,Las Margaritas,naturaleza,101,2.3,239,16.27945,-91.834305,
-179,Parque Miguel Hidalgo,destino,Pijijiapan,naturaleza,169,2.7,486,15.692041,-93.209531,
+178,Grutas de Arcoton,destino,Las Margaritas,naturaleza,101,2.3,239,16.27945,-91.834305,https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Las_Margaritas_-_Chiapas.PNG/960px-Las_Margaritas_-_Chiapas.PNG
+179,Parque Miguel Hidalgo,destino,Pijijiapan,naturaleza,169,2.7,486,15.692041,-93.209531,https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Kiosko_%286300474911%29.jpg/960px-Kiosko_%286300474911%29.jpg
 180,"Parque ""La Villa Real"".",destino,San Cristobal de las Casas,naturaleza,182,2.1,537,16.747571,-92.651095,
 181,Etéreo Taller,destino,San Cristobal de las Casas,cultura,70,2.2,299,16.736811,-92.644574,
-182,STEPS nonprofit,destino,San Cristobal de las Casas,naturaleza,186,2.4,551,16.739538,-92.634017,
-183,Marimba del Parque Chiapasiónate,destino,Tuxtla Gutierrez,cultura,72,1.2,308,16.743565,-93.071345,
+183,Marimba del Parque Chiapasiónate,destino,Tuxtla Gutierrez,cultura,72,1.2,308,16.743565,-93.071345,https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Panor%C3%A1mica_de_Tuxtla_Guti%C3%A9rrez_desde_el_aire.jpg/960px-Panor%C3%A1mica_de_Tuxtla_Guti%C3%A9rrez_desde_el_aire.jpg
 184,Mural Laja Tendida,destino,Venustiano Carranza,fotografia,25,1.4,335,16.33723,-92.670051,
-185,Mural Hombre del Maíz,destino,Venustiano Carranza,fotografia,48,1.2,582,16.337798,-92.670124,
-186,Mural Miguel de Allende,destino,Venustiano Carranza,fotografia,7,0.9,137,16.336159,-92.670115,
-187,Embarcadero Las Garzas,destino,Acapetahua,naturaleza,82,2.9,169,15.203818,-92.813804,
+185,Mural Hombre del Maíz,destino,Venustiano Carranza,fotografia,48,1.2,582,16.337798,-92.670124,https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Placa_conmemorariva_fundacion_del_pueblo_de_Venustiano_Carranza_en_Chiapas_M%C3%A9xico.jpg/960px-Placa_conmemorariva_fundacion_del_pueblo_de_Venustiano_Carranza_en_Chiapas_M%C3%A9xico.jpg
+186,Mural Miguel de Allende,destino,Venustiano Carranza,fotografia,7,0.9,137,16.336159,-92.670115,https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Placa_conmemorariva_fundacion_del_pueblo_de_Venustiano_Carranza_en_Chiapas_M%C3%A9xico.jpg/960px-Placa_conmemorariva_fundacion_del_pueblo_de_Venustiano_Carranza_en_Chiapas_M%C3%A9xico.jpg
+187,Embarcadero Las Garzas,destino,Acapetahua,naturaleza,82,2.9,169,15.203818,-92.813804,https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Acapetahua_-_Chiapas.PNG/960px-Acapetahua_-_Chiapas.PNG
 188,Rancho El Tesoro,destino,Tapachula,cultura,62,1.7,246,14.745767,-92.240303,
 189,Plaza principal,destino,Yajalon,naturaleza,157,2.2,442,17.105286,-92.271446,
 190,Lienzo Charro,destino,Yajalon,naturaleza,155,3.8,435,17.102433,-92.273483,
 191,"Zona arqueológica Náchoj, Mukana y Nátentsun",destino,Yajalon,cultura,60,1.9,238,17.097134,-92.272159,
-192,Monumento Parque Bicentenario,destino,Tuxtla Gutierrez,cultura,114,1.2,565,16.752921,-93.127902,
-193,Gral. José María Morelos y Pavón,destino,Tuxtla Gutierrez,cultura,72,2.3,307,16.753711,-93.127576,
-194,Mto. Edgar Robledo Santiago,destino,Tuxtla Gutierrez,cultura,118,2.2,592,16.754771,-93.127896,
-195,Dr. Samuel León Brindis,destino,Tuxtla Gutierrez,cultura,103,1.2,499,16.754931,-93.127529,
-196,Zeferino Nandayapa Ralda,destino,Tuxtla Gutierrez,cultura,53,1.3,190,16.755066,-93.123636,
-197,Alberto Peña Rios,destino,Tuxtla Gutierrez,cultura,93,2.1,439,16.755722,-93.123594,
-198,General Joaquin Miguel Gutierrez Canales,destino,Tuxtla Gutierrez,cultura,66,2.3,274,16.755154,-93.115522,
-199,Jaime Sabines,destino,Tuxtla Gutierrez,fotografia,11,0.6,173,16.752655,-93.106471,
-200,Salomón González Blanco,destino,Tuxtla Gutierrez,cultura,89,1.6,415,16.760665,-93.145721,
-201,Árbol de Navidad,destino,Tuxtla Gutierrez,naturaleza,182,2.5,536,16.875242,-93.105448,
-202,Cueva de los Colores,destino,Tuxtla Gutierrez,naturaleza,196,2.0,585,16.83705,-93.088108,
-203,Puente Belisario Domínguez,destino,Chiapa de Corzo,naturaleza,189,3.1,559,16.742809,-93.034694,
-204,Luis H. Álvarez Álvarez,destino,San Cristobal de las Casas,cultura,65,1.7,269,16.741492,-92.636131,
-205,Hermilo Lopez Sanchez,destino,San Cristobal de las Casas,cultura,52,1.3,189,16.735298,-92.638762,
+192,Monumento Parque Bicentenario,destino,Tuxtla Gutierrez,cultura,114,1.2,565,16.752921,-93.127902,https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Parque_Bicentenario_Tuxtla_Guti%C3%A9rrez_Chiapas.jpg/960px-Parque_Bicentenario_Tuxtla_Guti%C3%A9rrez_Chiapas.jpg
+193,Gral. José María Morelos y Pavón,destino,Tuxtla Gutierrez,cultura,72,2.3,307,16.753711,-93.127576,https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Panor%C3%A1mica_de_Tuxtla_Guti%C3%A9rrez_desde_el_aire.jpg/960px-Panor%C3%A1mica_de_Tuxtla_Guti%C3%A9rrez_desde_el_aire.jpg
+194,Mto. Edgar Robledo Santiago,destino,Tuxtla Gutierrez,cultura,118,2.2,592,16.754771,-93.127896,https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Mactumatz%C3%A1_visto_desde_el_centro_de_Tuxtla_Guti%C3%A9rrez.jpg/960px-Mactumatz%C3%A1_visto_desde_el_centro_de_Tuxtla_Guti%C3%A9rrez.jpg
+195,Dr. Samuel León Brindis,destino,Tuxtla Gutierrez,cultura,103,1.2,499,16.754931,-93.127529,https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Estadio_Dr._Samuel_Le%C3%B3n_Brindis.jpg/960px-Estadio_Dr._Samuel_Le%C3%B3n_Brindis.jpg
+196,Zeferino Nandayapa Ralda,destino,Tuxtla Gutierrez,cultura,53,1.3,190,16.755066,-93.123636,https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Mactumatz%C3%A1_visto_desde_el_centro_de_Tuxtla_Guti%C3%A9rrez.jpg/960px-Mactumatz%C3%A1_visto_desde_el_centro_de_Tuxtla_Guti%C3%A9rrez.jpg
+197,Alberto Peña Rios,destino,Tuxtla Gutierrez,cultura,93,2.1,439,16.755722,-93.123594,https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Mactumatz%C3%A1_visto_desde_el_centro_de_Tuxtla_Guti%C3%A9rrez.jpg/960px-Mactumatz%C3%A1_visto_desde_el_centro_de_Tuxtla_Guti%C3%A9rrez.jpg
+198,General Joaquin Miguel Gutierrez Canales,destino,Tuxtla Gutierrez,cultura,66,2.3,274,16.755154,-93.115522,https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Panor%C3%A1mica_de_Tuxtla_Guti%C3%A9rrez_desde_el_aire.jpg/960px-Panor%C3%A1mica_de_Tuxtla_Guti%C3%A9rrez_desde_el_aire.jpg
+199,Jaime Sabines,destino,Tuxtla Gutierrez,fotografia,11,0.6,173,16.752655,-93.106471,https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Panor%C3%A1mica_de_Tuxtla_Guti%C3%A9rrez_desde_el_aire.jpg/960px-Panor%C3%A1mica_de_Tuxtla_Guti%C3%A9rrez_desde_el_aire.jpg
+200,Salomón González Blanco,destino,Tuxtla Gutierrez,cultura,89,1.6,415,16.760665,-93.145721,https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Panor%C3%A1mica_de_Tuxtla_Guti%C3%A9rrez_desde_el_aire.jpg/960px-Panor%C3%A1mica_de_Tuxtla_Guti%C3%A9rrez_desde_el_aire.jpg
+201,Árbol de Navidad,destino,Tuxtla Gutierrez,naturaleza,182,2.5,536,16.875242,-93.105448,https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Panor%C3%A1mica_de_Tuxtla_Guti%C3%A9rrez_desde_el_aire.jpg/960px-Panor%C3%A1mica_de_Tuxtla_Guti%C3%A9rrez_desde_el_aire.jpg
+202,Cueva de los Colores,destino,Tuxtla Gutierrez,naturaleza,196,2.0,585,16.83705,-93.088108,https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Mactumatz%C3%A1_visto_desde_el_centro_de_Tuxtla_Guti%C3%A9rrez.jpg/960px-Mactumatz%C3%A1_visto_desde_el_centro_de_Tuxtla_Guti%C3%A9rrez.jpg
+203,Puente Belisario Domínguez,destino,Chiapa de Corzo,naturaleza,189,3.1,559,16.742809,-93.034694,https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/El_puente_viejo_-_panoramio.jpg/960px-El_puente_viejo_-_panoramio.jpg
+204,Luis H. Álvarez Álvarez,destino,San Cristobal de las Casas,cultura,65,1.7,269,16.741492,-92.636131,https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/CHIAPAS_2022.jpg/960px-CHIAPAS_2022.jpg
+205,Hermilo Lopez Sanchez,destino,San Cristobal de las Casas,cultura,52,1.3,189,16.735298,-92.638762,https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Adhemarius_donysa_MHNT_CUT_2010_0_31_San_Crist%C3%B3bal_de_Las_Casas_Mexico_female_dorsal.jpg/960px-Adhemarius_donysa_MHNT_CUT_2010_0_31_San_Crist%C3%B3bal_de_Las_Casas_Mexico_female_dorsal.jpg
 206,La Cueva del Oso Balu,destino,San Cristobal de las Casas,naturaleza,161,3.6,459,16.724589,-92.583342,
 207,Grutas Golondrina,destino,San Cristobal de las Casas,naturaleza,59,2.8,84,16.670656,-92.584457,
-208,Arqueologo Alberto Ruz Lhuillier,destino,Palenque,cultura,52,2.1,189,17.484132,-92.047111,
-209,Parque,destino,Palenque,naturaleza,63,2.0,98,17.516447,-91.987898,
-210,Centro Ecoturístico Wejlib-ha,destino,Palenque,naturaleza,73,3.3,134,17.371961,-91.803549,
-211,Pakal,destino,Palenque,fotografia,38,0.6,476,17.508352,-91.989647,
-212,José Menezes,destino,Amatenango del Valle,cultura,85,1.8,387,16.376278,-92.374892,
-213,Tortuga,destino,Tonala,fotografia,25,1.3,331,15.932583,-93.809907,
-214,"Campamento Tortuguero ""Boca del Cielo""",destino,Tonala,naturaleza,128,3.4,336,15.848977,-93.674781,
-215,Cueva del Silencio,destino,Tuxtla Gutierrez,naturaleza,145,2.9,401,16.806741,-93.067633,
+208,Arqueologo Alberto Ruz Lhuillier,destino,Palenque,cultura,52,2.1,189,17.484132,-92.047111,https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/PalenqueLetters2020p2.jpg/960px-PalenqueLetters2020p2.jpg
+209,Parque,destino,Palenque,naturaleza,63,2.0,98,17.516447,-91.987898,https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Palenque%2C_Pueblo_Magico_-_Chiapas_2020.jpg/960px-Palenque%2C_Pueblo_Magico_-_Chiapas_2020.jpg
+210,Centro Ecoturístico Wejlib-ha,destino,Palenque,naturaleza,73,3.3,134,17.371961,-91.803549,https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/PalenqueLetters2020p2.jpg/960px-PalenqueLetters2020p2.jpg
+211,Pakal,destino,Palenque,fotografia,38,0.6,476,17.508352,-91.989647,https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/PalenqueLetters2020p2.jpg/960px-PalenqueLetters2020p2.jpg
+212,José Menezes,destino,Amatenango del Valle,cultura,85,1.8,387,16.376278,-92.374892,https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Amatenango_del_Valle_-_Chiapas.PNG/960px-Amatenango_del_Valle_-_Chiapas.PNG
+213,Tortuga,destino,Tonala,fotografia,25,1.3,331,15.932583,-93.809907,https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Incidents_of_travel_in_Central_America%2C_Chiapas%2C_and_Yucatan_%281858%29_%2814577219028%29.jpg/960px-Incidents_of_travel_in_Central_America%2C_Chiapas%2C_and_Yucatan_%281858%29_%2814577219028%29.jpg
+214,"Campamento Tortuguero ""Boca del Cielo""",destino,Tonala,naturaleza,128,3.4,336,15.848977,-93.674781,https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Muncipio_de_Tonal%C3%A1_-_Ubicaci%C3%B3n_en_Chiapas_-_M%C3%A9xico.jpg/960px-Muncipio_de_Tonal%C3%A1_-_Ubicaci%C3%B3n_en_Chiapas_-_M%C3%A9xico.jpg
+215,Cueva del Silencio,destino,Tuxtla Gutierrez,naturaleza,145,2.9,401,16.806741,-93.067633,https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Panor%C3%A1mica_de_Tuxtla_Guti%C3%A9rrez_desde_el_aire.jpg/960px-Panor%C3%A1mica_de_Tuxtla_Guti%C3%A9rrez_desde_el_aire.jpg
 216,Cerro La Sombra,destino,Berriozabal,naturaleza,156,2.8,440,16.934662,-93.149841,
 217,Balenario Jordan,destino,Ocosingo,cultura,35,1.6,84,16.821703,-91.672124,
 218,Zak-Té,destino,Ocosingo,cultura,77,1.4,337,16.901315,-92.016219,
-219,Mukul-Ton,destino,Ocosingo,cultura,118,1.3,591,16.89947,-92.012459,
-220,Street art,destino,San Cristobal de las Casas,fotografia,23,0.7,306,16.741282,-92.634187,
-221,Cononial,destino,San Cristobal de las Casas,fotografia,43,1.0,531,16.755073,-92.650624,
-222,Palenque,destino,Palenque,naturaleza,65,2.2,107,17.50907,-91.980948,
-223,Isla,destino,La Independencia,naturaleza,53,3.5,63,16.111392,-91.701418,
-224,Mirador Lago Aqua Tinta,destino,La Independencia,fotografia,12,1.3,188,16.112367,-91.678378,
-225,El paso. lancha a cooperativa el paraiso,destino,Tonala,naturaleza,186,2.8,551,15.845643,-93.659725,
+219,Mukul-Ton,destino,Ocosingo,cultura,118,1.3,591,16.89947,-92.012459,https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Plaza_Scene_-_Ocosingo_-_Chiapas_-_Mexico_2021.jpg/960px-Plaza_Scene_-_Ocosingo_-_Chiapas_-_Mexico_2021.jpg
+220,Arte Urbano San Cristobal de las Casas,destino,San Cristobal de las Casas,fotografia,23,0.7,306,16.741282,-92.634187,https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/EZLN_Graffiti%2C_San_Crist%C3%B3bal_de_Las_Casas%2C_M%C3%A9xico.jpg/960px-EZLN_Graffiti%2C_San_Crist%C3%B3bal_de_Las_Casas%2C_M%C3%A9xico.jpg
+221,Cononial,destino,San Cristobal de las Casas,fotografia,43,1.0,531,16.755073,-92.650624,https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Adhemarius_donysa_MHNT_CUT_2010_0_31_San_Crist%C3%B3bal_de_Las_Casas_Mexico_female_dorsal.jpg/960px-Adhemarius_donysa_MHNT_CUT_2010_0_31_San_Crist%C3%B3bal_de_Las_Casas_Mexico_female_dorsal.jpg
+222,Palenque,destino,Palenque,naturaleza,65,2.2,107,17.50907,-91.980948,https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/PalenqueLetters2020p2.jpg/960px-PalenqueLetters2020p2.jpg
+223,Isla,destino,La Independencia,naturaleza,53,3.5,63,16.111392,-91.701418,https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Mexico_-_panoramio_%288%29.jpg/960px-Mexico_-_panoramio_%288%29.jpg
+224,Mirador Lago Aqua Tinta,destino,La Independencia,fotografia,12,1.3,188,16.112367,-91.678378,https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Columna_de_la_Victoria_de_la_Guerra_de_la_Independencia%2C_Tallinn%2C_Estonia%2C_2012-08-05%2C_DD_15.JPG/960px-Columna_de_la_Victoria_de_la_Guerra_de_la_Independencia%2C_Tallinn%2C_Estonia%2C_2012-08-05%2C_DD_15.JPG
+225,El paso. lancha a cooperativa el paraiso,destino,Tonala,naturaleza,186,2.8,551,15.845643,-93.659725,https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Muncipio_de_Tonal%C3%A1_-_Ubicaci%C3%B3n_en_Chiapas_-_M%C3%A9xico.jpg/960px-Muncipio_de_Tonal%C3%A1_-_Ubicaci%C3%B3n_en_Chiapas_-_M%C3%A9xico.jpg
 226,Casa TatikWari,destino,San Cristobal de las Casas,naturaleza,50,4.0,52,16.670826,-92.634348,
-227,Arco Del Tiempo,destino,Cintalapa,naturaleza,176,3.9,512,16.941215,-93.732391,
-228,River View platform,destino,Palenque,fotografia,23,1.3,308,17.487611,-92.050024,
-229,Hidden temple entrance under tree,destino,Palenque,cultura,104,2.0,502,17.486658,-92.051102,
-230,Top platform,destino,Ocosingo,fotografia,22,0.7,302,17.254149,-92.114604,
+228,River View platform,destino,Palenque,fotografia,23,1.3,308,17.487611,-92.050024,https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/PalenqueLetters2020p2.jpg/960px-PalenqueLetters2020p2.jpg
+230,Top platform,destino,Ocosingo,fotografia,22,0.7,302,17.254149,-92.114604,https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Incidents_of_travel_in_Central_America%2C_Chiapas%2C_and_Yucatan_%281858%29_%2814577194559%29.jpg/960px-Incidents_of_travel_in_Central_America%2C_Chiapas%2C_and_Yucatan_%281858%29_%2814577194559%29.jpg
 231,Lu'um Taller de Ceramica,destino,Comitan de Dominguez,cultura,41,2.4,417,16.332549,-92.078123,
-232,Gruta Sak Tenam,destino,La Independencia,naturaleza,86,3.0,183,16.121141,-91.672842,
-233,Aluxes Ecopark,destino,Palenque,naturaleza,160,2.9,963,17.501875,-92.015549,
-234,Temple sacrificiel Maya,destino,Tenosique,cultura,31,2.4,58,16.736772,-91.113238,
-235,Parque de los tamarindos,destino,Tuxtla Gutierrez,naturaleza,172,2.7,500,16.744803,-93.159776,
-236,Arco del Carmen,destino,San Cristobal de las Casas,naturaleza,52,3.7,59,16.733862,-92.638265,
-237,Cenote de Chukumaltic,destino,La Trinitaria,fotografia,35,0.9,444,16.121105,-92.168948,
-238,Arco Carmen,destino,San Cristobal de las Casas,cultura,102,1.3,495,16.734038,-92.638284,
-239,Embarcadero Chiapa de Corzo,destino,Chiapa de Corzo,fotografia,20,1.4,275,16.709499,-93.023766,
-240,La Grutas,destino,San Cristobal de las Casas,naturaleza,111,2.9,274,16.724734,-92.583803,
-241,Aqua Azul,destino,Ocosingo,fotografia,5,0.6,108,17.252643,-92.115418,
+232,Gruta Sak Tenam,destino,La Independencia,naturaleza,86,3.0,183,16.121141,-91.672842,https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Columna_de_la_Victoria_de_la_Guerra_de_la_Independencia%2C_Tallinn%2C_Estonia%2C_2012-08-05%2C_DD_15.JPG/960px-Columna_de_la_Victoria_de_la_Guerra_de_la_Independencia%2C_Tallinn%2C_Estonia%2C_2012-08-05%2C_DD_15.JPG
+233,Aluxes Ecopark,destino,Palenque,naturaleza,160,2.9,963,17.501875,-92.015549,https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/PalenqueLetters2020p2.jpg/960px-PalenqueLetters2020p2.jpg
+235,Parque de los tamarindos,destino,Tuxtla Gutierrez,naturaleza,172,2.7,500,16.744803,-93.159776,https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Panor%C3%A1mica_de_Tuxtla_Guti%C3%A9rrez_desde_el_aire.jpg/960px-Panor%C3%A1mica_de_Tuxtla_Guti%C3%A9rrez_desde_el_aire.jpg
+236,Arco del Carmen,destino,San Cristobal de las Casas,naturaleza,52,3.7,59,16.733862,-92.638265,https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Centro_Cultural_del_Carmen_-_San_Crist%C3%B3bal_de_las_Casas_-_3.jpg/960px-Centro_Cultural_del_Carmen_-_San_Crist%C3%B3bal_de_las_Casas_-_3.jpg
+237,Cenote de Chukumaltic,destino,La Trinitaria,fotografia,35,0.9,444,16.121105,-92.168948,https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Escudo_de_La_Trinitaria.png/960px-Escudo_de_La_Trinitaria.png
+239,Embarcadero Chiapa de Corzo,destino,Chiapa de Corzo,fotografia,20,1.4,275,16.709499,-93.023766,https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Al_embarcadero_-_panoramio.jpg/960px-Al_embarcadero_-_panoramio.jpg
+240,La Grutas,destino,San Cristobal de las Casas,naturaleza,111,2.9,274,16.724734,-92.583803,https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Gruta_de_Rancho_Nuevo%2C.jpg/960px-Gruta_de_Rancho_Nuevo%2C.jpg
+241,Aqua Azul,destino,Ocosingo,fotografia,5,0.6,108,17.252643,-92.115418,https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Plaza_Scene_-_Ocosingo_-_Chiapas_-_Mexico_2021.jpg/960px-Plaza_Scene_-_Ocosingo_-_Chiapas_-_Mexico_2021.jpg
 242,Área de natación,destino,Ocosingo,naturaleza,96,3.1,220,17.256643,-92.114571,
 243,Acceso al Parque Natural El Encuentro,destino,San Cristobal de las Casas,naturaleza,100,3.2,604,16.733715,-92.614867,
-244,jaltenango de la paz,destino,Angel Albino Corzo,cultura,76,2.0,334,15.866545,-92.725212,
-245,Noh K'uh,destino,Tenosique,cultura,71,1.1,303,17.103873,-91.619645,
-246,La Punta,destino,Tenosique,cultura,103,1.4,497,17.120974,-91.632716,
-247,Tzunun,destino,Tenosique,cultura,87,2.1,401,17.117219,-91.624369,
-248,Tz'ib'ana,destino,Tenosique,cultura,101,1.9,487,17.125682,-91.629968,
-249,Munic Ná,destino,Tenosique,cultura,83,2.4,376,17.129749,-91.636838,
-250,Xtabay,destino,Tenosique,cultura,79,1.2,355,17.128206,-91.63708,
-251,Chak Ak Tun,destino,Tenosique,cultura,82,2.2,370,17.125701,-91.636586,
-252,Kuh Nabaat,destino,Tenosique,cultura,95,1.6,447,17.125869,-91.621536,
-253,Kakoch,destino,Tenosique,cultura,36,1.9,89,17.135904,-91.634681,
-254,Mensabak,destino,Tenosique,cultura,90,1.1,417,17.13788,-91.638966,
-255,Sakapuk,destino,Tenosique,cultura,85,2.1,390,17.120791,-91.615847,
-256,Sak Tat,destino,Tenosique,cultura,57,1.6,216,17.11872,-91.612288,
-257,Kinbor,destino,Tenosique,cultura,72,1.6,307,17.112372,-91.613804,
-258,Joton K'ak,destino,Tenosique,cultura,51,2.1,181,17.110396,-91.610484,
-259,Aj Chaj Chi,destino,Tenosique,cultura,86,2.3,396,17.111954,-91.614958,
+244,jaltenango de la paz,destino,Angel Albino Corzo,cultura,76,2.0,334,15.866545,-92.725212,https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Escudo_de_%C3%81ngel_Albino_Corzo%2C_Chiapas.png/960px-Escudo_de_%C3%81ngel_Albino_Corzo%2C_Chiapas.png
 260,Talismán,destino,Tapachula,naturaleza,132,3.9,353,14.960057,-92.151446,
-261,Tuxtla Chico Chiapas,destino,Tapachula,naturaleza,144,2.5,396,14.912143,-92.197648,
-262,Col. 16 de Septiembre,destino,Tapachula,fotografia,4,0.6,101,14.897224,-92.260252,
-263,Three Monkeys,destino,San Cristobal de las Casas,fotografia,10,1.2,169,16.741731,-92.63325,
-264,Museo IK,destino,Palenque,cultura,87,1.5,402,17.508757,-91.980331,
+261,Tuxtla Chico Chiapas,destino,Tapachula,naturaleza,144,2.5,396,14.912143,-92.197648,https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Alfombra_de_Acerrin_en_la_Feria_de_la_Candelaria%2C_Tuxtla_Chico%2C_Chiapas%2C_M%C3%A9xico.jpg/960px-Alfombra_de_Acerrin_en_la_Feria_de_la_Candelaria%2C_Tuxtla_Chico%2C_Chiapas%2C_M%C3%A9xico.jpg
+264,Museo IK,destino,Palenque,cultura,87,1.5,402,17.508757,-91.980331,https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/PalenqueLetters2020p2.jpg/960px-PalenqueLetters2020p2.jpg
 265,Espacio Taxcalate,destino,San Cristobal de las Casas,descanso,74,1.3,324,16.740289,-92.632947,
-266,Balneario Rebeldia,destino,Las Margaritas,descanso,72,1.2,310,16.688376,-92.01822,
+266,Balneario Rebeldia,destino,Las Margaritas,descanso,72,1.2,310,16.688376,-92.01822,https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Las_Margaritas%2C_Chiapas_%2821836373629%29.jpg/960px-Las_Margaritas%2C_Chiapas_%2821836373629%29.jpg
 267,Arbol Gigante,destino,Chiapa de Corzo,naturaleza,66,3.8,108,16.7061,-93.017457,
-268,Museo De Laca,destino,Chiapa de Corzo,cultura,40,1.4,114,16.706349,-93.018031,
-269,Museo Franco Lázaro Gómez,destino,Chiapa de Corzo,cultura,31,1.7,57,16.706193,-93.017809,
+268,Museo De Laca,destino,Chiapa de Corzo,cultura,40,1.4,114,16.706349,-93.018031,https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/ParachicosMaskMuseoLaca.jpg/960px-ParachicosMaskMuseoLaca.jpg
+269,Museo Franco Lázaro Gómez,destino,Chiapa de Corzo,cultura,31,1.7,57,16.706193,-93.017809,https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Pintura_de_Franco_Lazaro_Gomez._-_panoramio.jpg/960px-Pintura_de_Franco_Lazaro_Gomez._-_panoramio.jpg
 270,Mirador Madrón,destino,San Cristobal de las Casas,fotografia,6,0.7,120,16.732354,-92.603326,
 271,Centro Ecoturístico Cascadas El Chiflón,destino,Tzimol,naturaleza,133,4.0,355,16.188781,-92.275231,
 272,Parque Ecoturístico El Arcotete,destino,San Cristobal de las Casas,naturaleza,199,3.5,599,16.725721,-92.584872,
 273,Parque Ecoturístico Cañón Río La Venta,destino,Jiquipilas,aventura,171,2.2,495,16.758652,-93.524994,
 274,Centro Ecoturístico Cascada El Chorreadero,destino,Chiapa de Corzo,naturaleza,184,2.6,541,16.75475,-92.971546,
 275,Orquídeas Moxviquil,destino,San Cristobal de las Casas,naturaleza,101,2.5,606,16.754193,-92.633087,
-276,Cancha La Pista,destino,Simojovel,naturaleza,143,3.7,391,17.169472,-92.685755,
-277,Street-art,destino,San Cristobal de las Casas,fotografia,44,1.3,541,16.740936,-92.630834,
 278,Galería Studio Cerrillo,destino,San Cristobal de las Casas,cultura,109,2.0,1097,16.742174,-92.633969,
 279,María Adelina Flores,destino,San Cristobal de las Casas,fotografia,17,0.7,242,16.741254,-92.636034,
 280,Casa Museo Angel Albino Corzo,destino,Chiapa de Corzo,cultura,61,2.1,240,16.709319,-93.017082,
 281,Temazcal Relajante Las Flores,destino,Zinacantlan,naturaleza,122,3.6,317,16.725126,-92.694947,
-282,Parque de la Albania Alta,destino,Tuxtla Gutierrez,naturaleza,122,3.5,316,16.77591,-93.107129,
-283,Columna de la Infamia,destino,Tenejapa,cultura,81,1.9,366,16.988098,-92.515933,
-284,Parque Ecoturístico Montetik,destino,San Cristobal de las Casas,naturaleza,98,3.5,229,16.696742,-92.607758,
-285,Quisco Ejido Chajul y Casa Ejidal,destino,Las Margaritas,naturaleza,97,2.9,225,16.11552,-90.926085,
+282,Parque de la Albania Alta,destino,Tuxtla Gutierrez,naturaleza,122,3.5,316,16.77591,-93.107129,https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Panor%C3%A1mica_de_Tuxtla_Guti%C3%A9rrez_desde_el_aire.jpg/960px-Panor%C3%A1mica_de_Tuxtla_Guti%C3%A9rrez_desde_el_aire.jpg
+283,Columna de la Infamia,destino,Tenejapa,cultura,81,1.9,366,16.988098,-92.515933,https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/M%C3%BAsicos_tradicionales_de_Tenejapa_%28Chiapas%29.jpg/960px-M%C3%BAsicos_tradicionales_de_Tenejapa_%28Chiapas%29.jpg
+284,Parque Ecoturístico Montetik,destino,San Cristobal de las Casas,naturaleza,98,3.5,229,16.696742,-92.607758,https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Adhemarius_donysa_MHNT_CUT_2010_0_31_San_Crist%C3%B3bal_de_Las_Casas_Mexico_female_dorsal.jpg/960px-Adhemarius_donysa_MHNT_CUT_2010_0_31_San_Crist%C3%B3bal_de_Las_Casas_Mexico_female_dorsal.jpg
+285,Quisco Ejido Chajul y Casa Ejidal,destino,Las Margaritas,naturaleza,97,2.9,225,16.11552,-90.926085,https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Las_Margaritas%2C_Chiapas_%2821836373629%29.jpg/960px-Las_Margaritas%2C_Chiapas_%2821836373629%29.jpg
 286,Mirador del Corona,destino,Tzimol,fotografia,11,1.1,171,16.194944,-92.265623,
 287,Parque Central Navenchauc,destino,Zinacantlan,naturaleza,166,3.9,478,16.734764,-92.78034,
 288,Entrada del COBACH,destino,Huehuetan,naturaleza,116,2.4,293,15.024392,-92.386561,
-289,Parque de la Vista Hermosa,destino,Tuxtla Gutierrez,naturaleza,57,3.1,77,16.764711,-93.122547,
+289,Parque de la Vista Hermosa,destino,Tuxtla Gutierrez,naturaleza,57,3.1,77,16.764711,-93.122547,https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Panor%C3%A1mica_de_Tuxtla_Guti%C3%A9rrez_desde_el_aire.jpg/960px-Panor%C3%A1mica_de_Tuxtla_Guti%C3%A9rrez_desde_el_aire.jpg
 290,Monumento del Quesillo,destino,Pijijiapan,cultura,93,1.4,438,15.689799,-93.205979,
-291,Monumento Yo soy Chiapas,destino,Tuxtla Gutierrez,fotografia,47,1.2,576,16.761405,-93.095296,
-292,Monumento a la Cultura Chiapaneca,destino,Tuxtla Gutierrez,fotografia,33,1.5,423,16.761533,-93.097581,
-293,Monumento al Teniente Piloto Aviador José Espinosa Fuentes,destino,Tuxtla Gutierrez,fotografia,37,1.3,460,16.757673,-93.131992,
-294,Monumento al Rey Pakal,destino,Tuxtla Gutierrez,fotografia,34,0.7,430,16.754126,-93.131048,
-295,Bienvenidos a Tuxtla Gutiérrez,destino,Tuxtla Gutierrez,naturaleza,79,2.7,159,16.742888,-93.070495,
+291,Monumento Yo soy Chiapas,destino,Tuxtla Gutierrez,fotografia,47,1.2,576,16.761405,-93.095296,https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Mactumatz%C3%A1_visto_desde_el_centro_de_Tuxtla_Guti%C3%A9rrez.jpg/960px-Mactumatz%C3%A1_visto_desde_el_centro_de_Tuxtla_Guti%C3%A9rrez.jpg
+292,Monumento a la Cultura Chiapaneca,destino,Tuxtla Gutierrez,fotografia,33,1.5,423,16.761533,-93.097581,https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Panor%C3%A1mica_de_Tuxtla_Guti%C3%A9rrez_desde_el_aire.jpg/960px-Panor%C3%A1mica_de_Tuxtla_Guti%C3%A9rrez_desde_el_aire.jpg
+293,Monumento al Teniente Piloto Aviador José Espinosa Fuentes,destino,Tuxtla Gutierrez,fotografia,37,1.3,460,16.757673,-93.131992,https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Panor%C3%A1mica_de_Tuxtla_Guti%C3%A9rrez_desde_el_aire.jpg/960px-Panor%C3%A1mica_de_Tuxtla_Guti%C3%A9rrez_desde_el_aire.jpg
+294,Monumento al Rey Pakal,destino,Tuxtla Gutierrez,fotografia,34,0.7,430,16.754126,-93.131048,https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Panor%C3%A1mica_de_Tuxtla_Guti%C3%A9rrez_desde_el_aire.jpg/960px-Panor%C3%A1mica_de_Tuxtla_Guti%C3%A9rrez_desde_el_aire.jpg
+295,Bienvenidos a Tuxtla Gutiérrez,destino,Tuxtla Gutierrez,naturaleza,79,2.7,159,16.742888,-93.070495,https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Panor%C3%A1mica_de_Tuxtla_Guti%C3%A9rrez_desde_el_aire.jpg/960px-Panor%C3%A1mica_de_Tuxtla_Guti%C3%A9rrez_desde_el_aire.jpg
 296,Kukulcán,destino,San Cristobal de las Casas,fotografia,7,1.3,127,16.690959,-92.602237,
-297,Street Art,destino,San Cristobal de las Casas,naturaleza,177,4.0,518,16.742106,-92.636054,
-298,Gaia Glamping,destino,San Cristobal de las Casas,cultura,110,1.8,541,16.733573,-92.608519,
+298,Gaia Glamping,destino,San Cristobal de las Casas,cultura,110,1.8,541,16.733573,-92.608519,https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Adhemarius_donysa_MHNT_CUT_2010_0_31_San_Crist%C3%B3bal_de_Las_Casas_Mexico_female_dorsal.jpg/960px-Adhemarius_donysa_MHNT_CUT_2010_0_31_San_Crist%C3%B3bal_de_Las_Casas_Mexico_female_dorsal.jpg
 299,Jardín Botánico y Orquidario Comitán,destino,Comitan de Dominguez,naturaleza,150,2.2,418,16.265905,-92.110656,
-300,Parque Muul-Ha,destino,Tuxtla Gutierrez,naturaleza,142,3.8,389,16.729029,-93.150631,
-301,Cerro Mactumatza,destino,Tuxtla Gutierrez,naturaleza,162,2.2,462,16.725321,-93.147374,
+300,Parque Muul-Ha,destino,Tuxtla Gutierrez,naturaleza,142,3.8,389,16.729029,-93.150631,https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Panor%C3%A1mica_de_Tuxtla_Guti%C3%A9rrez_desde_el_aire.jpg/960px-Panor%C3%A1mica_de_Tuxtla_Guti%C3%A9rrez_desde_el_aire.jpg
+301,Cerro Mactumatza,destino,Tuxtla Gutierrez,naturaleza,162,2.2,462,16.725321,-93.147374,https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Panor%C3%A1mica_de_Tuxtla_Guti%C3%A9rrez_desde_el_aire.jpg/960px-Panor%C3%A1mica_de_Tuxtla_Guti%C3%A9rrez_desde_el_aire.jpg
 302,Campo La Granja,destino,Bochil,naturaleza,161,4.0,458,16.999532,-92.899148,
 303,Cerro El Calvario,destino,Pueblo Nuevo Solistahaucan,naturaleza,74,3.8,140,17.180927,-93.11585,
-304,Mirador Chiapas,destino,Tuxtla Gutierrez,fotografia,42,1.2,515,16.828799,-93.095174,
+304,Mirador Chiapas,destino,Tuxtla Gutierrez,fotografia,42,1.2,515,16.828799,-93.095174,https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Panor%C3%A1mica_de_Tuxtla_Guti%C3%A9rrez_desde_el_aire.jpg/960px-Panor%C3%A1mica_de_Tuxtla_Guti%C3%A9rrez_desde_el_aire.jpg
 305,mirador Mauricio,destino,Berriozabal,fotografia,12,1.0,189,16.859086,-93.194815,
 306,Zona arqueológica de Tenam Puente,destino,La Trinitaria,cultura,36,1.1,2575,16.140923,-92.106196,https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Estructura_7-Tenam_Puente.JPG/960px-Estructura_7-Tenam_Puente.JPG
-307,Plaza Central Miguel Hidalgo,destino,Tapachula,naturaleza,71,3.8,127,14.91048,-92.264725,
+307,Plaza Central Miguel Hidalgo,destino,Tapachula,naturaleza,71,3.8,127,14.91048,-92.264725,https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Plaza_%285762450411%29.jpg/960px-Plaza_%285762450411%29.jpg
 308,Zona Arqueologica Palenque,destino,Palenque,cultura,108,2.1,9020,17.484065,-92.044996,https://upload.wikimedia.org/wikipedia/commons/9/90/Palenque_Collage.jpg
 309,Plazuela de La Merced,destino,San Cristobal de las Casas,naturaleza,192,2.3,572,16.736059,-92.641598,
 310,Plazuela de San Ramón,destino,San Cristobal de las Casas,naturaleza,91,2.9,200,16.737838,-92.649947,
-311,Museo Chiapas de Ciencia y Tecnologia (MUCH),destino,Tuxtla Gutierrez,cultura,97,2.0,462,16.722666,-93.091705,
-312,Zócalo,destino,Palenque,naturaleza,134,2.7,359,17.50893,-91.980991,
+311,Museo Chiapas de Ciencia y Tecnologia (MUCH),destino,Tuxtla Gutierrez,cultura,97,2.0,462,16.722666,-93.091705,https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Museo_de_Ciencia_y_Tecnolog%C3%ADa_de_Chiapas_%28MUCH%29.jpg/960px-Museo_de_Ciencia_y_Tecnolog%C3%ADa_de_Chiapas_%28MUCH%29.jpg
+312,Zócalo,destino,Palenque,naturaleza,134,2.7,359,17.50893,-91.980991,https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/ZOCALO_DE_PALENQUE%2C_TEMPLO_DE_SANTO_DOMINGO.jpg/960px-ZOCALO_DE_PALENQUE%2C_TEMPLO_DE_SANTO_DOMINGO.jpg
 313,"Parque Recreativo ""Los Cerritos""",destino,Tapachula,naturaleza,52,3.2,59,14.885297,-92.293484,
 314,Parque Central Miguel Hidalgo,destino,Tapachula,naturaleza,94,3.2,213,14.940638,-92.16876,
-315,Plan de Ayutla,destino,Tenosique,cultura,55,1.8,1414,16.784285,-91.280547,
-316,Ruinas el Lagartero,destino,La Independencia,cultura,117,2.2,585,15.827365,-91.883903,
-317,Zona arqueológica de Yaxchilan,destino,Tenosique,cultura,37,1.3,2687,16.89878,-90.965702,https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Structure_33_..._%28Photo_by_JC_PLE%29_%2849536362547%29.jpg/960px-Structure_33_..._%28Photo_by_JC_PLE%29_%2849536362547%29.jpg
+316,Ruinas el Lagartero,destino,La Independencia,cultura,117,2.2,585,15.827365,-91.883903,https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Columna_de_la_Victoria_de_la_Guerra_de_la_Independencia%2C_Tallinn%2C_Estonia%2C_2012-08-05%2C_DD_15.JPG/960px-Columna_de_la_Victoria_de_la_Guerra_de_la_Independencia%2C_Tallinn%2C_Estonia%2C_2012-08-05%2C_DD_15.JPG
+317,Zona arqueológica de Yaxchilan,destino,Ocosingo,cultura,37,1.3,2687,16.89878,-90.965702,https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Structure_33_..._%28Photo_by_JC_PLE%29_%2849536362547%29.jpg/960px-Structure_33_..._%28Photo_by_JC_PLE%29_%2849536362547%29.jpg
 318,Parque central Benito Juárez,destino,Comitan de Dominguez,naturaleza,119,3.9,303,16.252328,-92.135458,
-319,Misión Surf México,destino,Tapachula,naturaleza,178,3.5,520,14.733133,-92.436353,
-320,Parque del Oriente,destino,Tuxtla Gutierrez,naturaleza,110,3.1,271,16.7604,-93.089806,
+320,Parque del Oriente,destino,Tuxtla Gutierrez,naturaleza,110,3.1,271,16.7604,-93.089806,https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Panor%C3%A1mica_de_Tuxtla_Guti%C3%A9rrez_desde_el_aire.jpg/960px-Panor%C3%A1mica_de_Tuxtla_Guti%C3%A9rrez_desde_el_aire.jpg
 321,Ex Convento de Santo Domingo,destino,San Cristobal de las Casas,cultura,74,1.6,322,16.741914,-92.637304,
 322,Templo De San Sebastián,destino,Chiapa de Corzo,cultura,79,1.6,352,16.70637,-93.011861,
-323,Zona arqueológica de Bonampak,destino,Tenosique,cultura,42,2.1,3077,16.703128,-91.063568,https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Zona_arqueologica_Bonampak_01_ID_ZA30_DBannasch.jpg/960px-Zona_arqueologica_Bonampak_01_ID_ZA30_DBannasch.jpg
+323,Zona arqueológica de Bonampak,destino,Ocosingo,cultura,42,2.1,3077,16.703128,-91.063568,https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Zona_arqueologica_Bonampak_01_ID_ZA30_DBannasch.jpg/960px-Zona_arqueologica_Bonampak_01_ID_ZA30_DBannasch.jpg
 324,Izapa,destino,Tapachula,cultura,30,2.2,2057,14.92835,-92.176903,https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Vista_de_las_pir%C3%A1mides_de_Izapa.jpg/960px-Vista_de_las_pir%C3%A1mides_de_Izapa.jpg
 325,Toniná,destino,Ocosingo,cultura,50,1.9,3836,16.900385,-92.00976,https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Monta%C3%B1a_Prehisp%C3%A1nica_-_Tonin%C3%A1.jpg/960px-Monta%C3%B1a_Prehisp%C3%A1nica_-_Tonin%C3%A1.jpg
-326,Museo del Sitio Palenque,destino,Palenque,cultura,43,1.7,130,17.488464,-92.041969,
-327,Juego de Pelota,destino,Palenque,cultura,95,1.7,451,17.484953,-92.045259,
-328,Palacio,destino,Palenque,cultura,65,1.4,266,17.484067,-92.046168,
-329,Templo XV,destino,Palenque,cultura,53,2.4,192,17.483162,-92.04564,
-330,Templo XIV,destino,Palenque,cultura,112,2.4,553,17.483014,-92.045767,
-331,Templo VII (Del Conde),destino,Palenque,cultura,64,2.4,262,17.485575,-92.045622,
-332,Grupo Norte,destino,Palenque,cultura,78,2.1,346,17.485729,-92.045119,
-333,Templo X,destino,Palenque,cultura,100,1.1,480,17.48536,-92.046187,
-334,Templo XII,destino,Palenque,cultura,62,1.5,249,17.483866,-92.047503,
-335,Templo XIII,destino,Palenque,cultura,45,1.9,144,17.483731,-92.047265,
-336,Templo de Calavera,destino,Palenque,cultura,41,2.4,120,17.484004,-92.047753,
-337,Templo de la Cruz,destino,Palenque,cultura,92,2.2,431,17.482916,-92.04523,
-338,Templo de la Cruz Foliada,destino,Palenque,cultura,59,2.0,232,17.482328,-92.045144,
-339,Templo de las Inscripciones,destino,Palenque,cultura,64,2.3,5041,17.483605,-92.046947,
-340,Templo del Sol,destino,Palenque,cultura,116,1.5,579,17.482863,-92.045892,
-341,Parque Las palmas,destino,Tuxtla Gutierrez,naturaleza,74,3.3,138,16.752312,-93.088876,
-342,Parque Electricistas,destino,Tuxtla Gutierrez,naturaleza,89,2.0,195,16.752118,-93.083621,
+326,Museo del Sitio Palenque,destino,Palenque,cultura,43,1.7,130,17.488464,-92.041969,https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/PalenqueLetters2020p2.jpg/960px-PalenqueLetters2020p2.jpg
+327,Juego de Pelota,destino,Palenque,cultura,95,1.7,451,17.484953,-92.045259,https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/2013-12-31_Palenque_Juego_de_Pelota_anagoria.JPG/960px-2013-12-31_Palenque_Juego_de_Pelota_anagoria.JPG
+328,Palacio,destino,Palenque,cultura,65,1.4,266,17.484067,-92.046168,https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/PalenqueLetters2020p2.jpg/960px-PalenqueLetters2020p2.jpg
+329,Templo XV,destino,Palenque,cultura,53,2.4,192,17.483162,-92.04564,https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/PalenqueLetters2020p2.jpg/960px-PalenqueLetters2020p2.jpg
+330,Templo XIV,destino,Palenque,cultura,112,2.4,553,17.483014,-92.045767,https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/2013-12-31_Palenque_Tempel_XIV_Zentralbild_anagoria.JPG/960px-2013-12-31_Palenque_Tempel_XIV_Zentralbild_anagoria.JPG
+331,Templo VII (Del Conde),destino,Palenque,cultura,64,2.4,262,17.485575,-92.045622,https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/PalenqueLetters2020p2.jpg/960px-PalenqueLetters2020p2.jpg
+332,Grupo Norte,destino,Palenque,cultura,78,2.1,346,17.485729,-92.045119,https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Palenque_-_Grupo_Norte_1.jpg/960px-Palenque_-_Grupo_Norte_1.jpg
+333,Templo X,destino,Palenque,cultura,100,1.1,480,17.48536,-92.046187,https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/San_Crist%C3%B3bal_-_Templo_de_Santo_Domingo_-_Statue.JPG/960px-San_Crist%C3%B3bal_-_Templo_de_Santo_Domingo_-_Statue.JPG
+334,Templo XII,destino,Palenque,cultura,62,1.5,249,17.483866,-92.047503,https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/2013-12-31_Palenque_Temple_of_the_Skull_Detail_anagoria.JPG/960px-2013-12-31_Palenque_Temple_of_the_Skull_Detail_anagoria.JPG
+335,Templo XIII,destino,Palenque,cultura,45,1.9,144,17.483731,-92.047265,https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Palenque_-_Templo_XIII_-_Junio_2019.jpg/960px-Palenque_-_Templo_XIII_-_Junio_2019.jpg
+336,Templo de Calavera,destino,Palenque,cultura,41,2.4,120,17.484004,-92.047753,https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/PalenqueLetters2020p2.jpg/960px-PalenqueLetters2020p2.jpg
+337,Templo de la Cruz,destino,Palenque,cultura,92,2.2,431,17.482916,-92.04523,https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/PalenqueLetters2020p2.jpg/960px-PalenqueLetters2020p2.jpg
+338,Templo de la Cruz Foliada,destino,Palenque,cultura,59,2.0,232,17.482328,-92.045144,https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/PalenqueLetters2020p2.jpg/960px-PalenqueLetters2020p2.jpg
+339,Templo de las Inscripciones,destino,Palenque,cultura,64,2.3,5041,17.483605,-92.046947,https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/PalenqueLetters2020p2.jpg/960px-PalenqueLetters2020p2.jpg
+340,Templo del Sol,destino,Palenque,cultura,116,1.5,579,17.482863,-92.045892,https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/PalenqueLetters2020p2.jpg/960px-PalenqueLetters2020p2.jpg
+341,Parque Las palmas,destino,Tuxtla Gutierrez,naturaleza,74,3.3,138,16.752312,-93.088876,https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Mactumatz%C3%A1_visto_desde_el_centro_de_Tuxtla_Guti%C3%A9rrez.jpg/960px-Mactumatz%C3%A1_visto_desde_el_centro_de_Tuxtla_Guti%C3%A9rrez.jpg
+342,Parque Electricistas,destino,Tuxtla Gutierrez,naturaleza,89,2.0,195,16.752118,-93.083621,https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Panor%C3%A1mica_de_Tuxtla_Guti%C3%A9rrez_desde_el_aire.jpg/960px-Panor%C3%A1mica_de_Tuxtla_Guti%C3%A9rrez_desde_el_aire.jpg
 343,Parque Central,destino,Villaflores,naturaleza,89,2.2,194,16.235139,-93.267268,
-344,Plaza Principal,destino,Escuintla,naturaleza,92,2.2,206,15.349774,-92.544288,
-345,Miguel Hidalgo,destino,Tapachula,naturaleza,195,3.9,583,14.920309,-92.378827,
+344,Plaza Principal,destino,Escuintla,naturaleza,92,2.2,206,15.349774,-92.544288,https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Parque_Central_de_Escuintla.jpg/960px-Parque_Central_de_Escuintla.jpg
+345,Miguel Hidalgo,destino,Tapachula,naturaleza,195,3.9,583,14.920309,-92.378827,https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Quiosco_de_Tapachula.jpg/960px-Quiosco_de_Tapachula.jpg
 346,Parque Ecologico El Zapote,destino,Villaflores,naturaleza,199,2.8,598,16.350187,-93.310185,
-347,Emiliano Zapata,destino,Villaflores,naturaleza,176,3.4,515,16.231784,-93.272367,
-348,Parque de la Marimba,destino,Tuxtla Gutierrez,naturaleza,136,2.3,368,16.75533,-93.123389,
+347,Emiliano Zapata,destino,Villaflores,naturaleza,176,3.4,515,16.231784,-93.272367,https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Emiliano_Zapata%2C_1914.jpg/960px-Emiliano_Zapata%2C_1914.jpg
+348,Parque de la Marimba,destino,Tuxtla Gutierrez,naturaleza,136,2.3,368,16.75533,-93.123389,https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Parque_de_la_Marimba.jpg/960px-Parque_de_la_Marimba.jpg
 349,Grutas de Guaymas,destino,Suchiapa,naturaleza,143,2.6,392,16.468618,-93.243465,
-350,Salto Chiquito,destino,Tonala,naturaleza,164,3.8,470,16.325735,-93.572334,
+350,Salto Chiquito,destino,Tonala,naturaleza,164,3.8,470,16.325735,-93.572334,https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Muncipio_de_Tonal%C3%A1_-_Ubicaci%C3%B3n_en_Chiapas_-_M%C3%A9xico.jpg/960px-Muncipio_de_Tonal%C3%A1_-_Ubicaci%C3%B3n_en_Chiapas_-_M%C3%A9xico.jpg
 351,Ecoturismo Laguna encantada,destino,Pueblo Nuevo Solistahaucan,naturaleza,171,2.2,494,17.132298,-93.163453,
 352,Campo deportivo,destino,Pueblo Nuevo Solistahaucan,naturaleza,135,2.0,362,17.222128,-93.16236,
-353,Malecon,destino,Palenque,familiar,150,2.2,277,17.728558,-92.015706,
+353,Malecon,destino,Palenque,familiar,150,2.2,277,17.728558,-92.015706,https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/PalenqueLetters2020p2.jpg/960px-PalenqueLetters2020p2.jpg
 354,Reserva Ecológica Moxviquil,destino,San Cristobal de las Casas,naturaleza,154,2.9,432,16.759,-92.636559,
 355,Parque Deportivo,destino,Ostuacan,naturaleza,194,2.1,579,17.188724,-93.607168,
-356,Parque Recreativo Ya'Ax-Na,destino,Comitan de Dominguez,naturaleza,134,3.6,359,16.223823,-92.130737,
+356,Parque Recreativo Ya'Ax-Na,destino,Comitan de Dominguez,naturaleza,134,3.6,359,16.223823,-92.130737,https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Comit%C3%A1n_de_Dom%C3%ADnguez_-_Chiapas.PNG/960px-Comit%C3%A1n_de_Dom%C3%ADnguez_-_Chiapas.PNG
 357,Parque Central Ciudad Hidalgo,destino,Tapachula,naturaleza,94,2.5,214,14.679739,-92.150279,
-358,Edificio 1 - Edificio de las Pinturas,destino,Tenosique,cultura,119,1.9,597,16.703526,-91.065122,
-359,Escala,destino,Tenosique,cultura,104,1.4,503,16.703471,-91.064861,
-360,Acrópolis,destino,Tenosique,cultura,57,2.1,215,16.703424,-91.06502,
-361,Templo,destino,Tenosique,cultura,45,2.2,142,16.703347,-91.064701,
-362,Edificio 33,destino,Tenosique,cultura,95,1.1,448,16.898664,-90.964791,
-363,Edificio 12,destino,Tenosique,cultura,96,1.9,455,16.899909,-90.96427,
-364,Edificio 14 (Juego de Pelota),destino,Tenosique,cultura,63,1.2,256,16.899886,-90.964507,
-365,Pirámide,destino,Ocosingo,cultura,88,1.5,405,16.902152,-92.009522,
+365,Pirámide,destino,Ocosingo,cultura,88,1.5,405,16.902152,-92.009522,https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Tonina_pyramid_%28pir%C3%A1mide_de_Tonin%C3%A1%29.jpg/960px-Tonina_pyramid_%28pir%C3%A1mide_de_Tonin%C3%A1%29.jpg
 366,Templo de la guerra cósmica,destino,Ocosingo,cultura,99,1.3,476,16.898822,-92.010329,
-367,Edificio 16,destino,Tenosique,cultura,39,1.2,110,16.900272,-90.965065,
-368,Edificio 39,destino,Tenosique,cultura,108,1.4,526,16.897015,-90.966676,
-369,Edificio 40,destino,Tenosique,cultura,43,2.2,133,16.89676,-90.96664,
-370,Edificio 41,destino,Tenosique,cultura,50,1.8,174,16.896534,-90.966535,
-371,El Laberinto - Edificio 19,destino,Tenosique,cultura,95,1.4,450,16.899979,-90.965718,
-372,Edificio 17,destino,Tenosique,cultura,114,2.3,565,16.900434,-90.965225,
-373,Edificio 20,destino,Tenosique,cultura,48,1.6,163,16.898629,-90.963922,
-374,Edificio 21,destino,Tenosique,cultura,54,1.5,200,16.898918,-90.964061,
-375,Edificio 22,destino,Tenosique,cultura,37,1.3,95,16.899231,-90.96428,
-376,Edificio23,destino,Tenosique,cultura,47,1.8,157,16.899402,-90.964459,
-377,Edificio 24,destino,Tenosique,cultura,40,1.6,114,16.899503,-90.964493,
-378,San Cristóbal de las Casas;Kiosco Central,destino,San Cristobal de las Casas,naturaleza,147,3.8,408,16.73701,-92.637573,
-379,Centro Ecoturístico Cascadas de Misol-Ha,destino,Palenque,naturaleza,156,3.3,441,17.390194,-92.001553,
+378,San Cristóbal de las Casas;Kiosco Central,destino,San Cristobal de las Casas,naturaleza,147,3.8,408,16.73701,-92.637573,https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Adhemarius_donysa_MHNT_CUT_2010_0_31_San_Crist%C3%B3bal_de_Las_Casas_Mexico_female_dorsal.jpg/960px-Adhemarius_donysa_MHNT_CUT_2010_0_31_San_Crist%C3%B3bal_de_Las_Casas_Mexico_female_dorsal.jpg
+379,Centro Ecoturístico Cascadas de Misol-Ha,destino,Palenque,naturaleza,156,3.3,441,17.390194,-92.001553,https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/PalenqueLetters2020p2.jpg/960px-PalenqueLetters2020p2.jpg
 380,Parque Central de la Col. Juan de Grijalva,destino,Chiapa de Corzo,naturaleza,118,2.7,300,16.728274,-92.978392,
-381,Zona arqueológica de Chinkultic,destino,La Independencia,cultura,75,1.1,6042,16.126273,-91.783847,
-382,Zona arqueológica de Iglesia Vieja o Los Horcones,destino,Tonala,cultura,70,1.1,5639,16.131338,-93.747249,
+381,Zona arqueológica de Chinkultic,destino,La Independencia,cultura,75,1.1,6042,16.126273,-91.783847,https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Columna_de_la_Victoria_de_la_Guerra_de_la_Independencia%2C_Tallinn%2C_Estonia%2C_2012-08-05%2C_DD_15.JPG/960px-Columna_de_la_Victoria_de_la_Guerra_de_la_Independencia%2C_Tallinn%2C_Estonia%2C_2012-08-05%2C_DD_15.JPG
+382,Zona arqueológica de Iglesia Vieja o Los Horcones,destino,Tonala,cultura,70,1.1,5639,16.131338,-93.747249,https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Muncipio_de_Tonal%C3%A1_-_Ubicaci%C3%B3n_en_Chiapas_-_M%C3%A9xico.jpg/960px-Muncipio_de_Tonal%C3%A1_-_Ubicaci%C3%B3n_en_Chiapas_-_M%C3%A9xico.jpg
 383,Zona Arqueológica de Chiapa de Corzo,destino,Chiapa de Corzo,cultura,33,1.5,2333,16.702975,-93.003694,
-384,Pirámide del Dios del Viento,destino,La Independencia,cultura,76,1.3,334,15.82759,-91.883835,
-385,La Pirámide de las Tumbas,destino,La Independencia,cultura,88,1.4,408,15.828138,-91.884001,
-386,La Pirámide de las Vasijas,destino,La Independencia,cultura,99,2.5,475,15.828352,-91.883395,
-387,La Pirámide del Guajil,destino,La Independencia,cultura,41,1.8,119,15.827801,-91.883332,
-388,Centro Ecoturístico Lagos de Colón,destino,La Independencia,naturaleza,147,2.8,408,15.829181,-91.886753,
-389,Convento de San José Coneta,destino,La Independencia,cultura,99,1.5,473,15.894699,-91.940385,
-390,Parque de la Mujer Soldado,destino,Tuxtla Gutierrez,naturaleza,139,3.7,379,16.759302,-93.09187,
+384,Pirámide del Dios del Viento,destino,La Independencia,cultura,76,1.3,334,15.82759,-91.883835,https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Columna_de_la_Victoria_de_la_Guerra_de_la_Independencia%2C_Tallinn%2C_Estonia%2C_2012-08-05%2C_DD_15.JPG/960px-Columna_de_la_Victoria_de_la_Guerra_de_la_Independencia%2C_Tallinn%2C_Estonia%2C_2012-08-05%2C_DD_15.JPG
+385,La Pirámide de las Tumbas,destino,La Independencia,cultura,88,1.4,408,15.828138,-91.884001,https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Columna_de_la_Victoria_de_la_Guerra_de_la_Independencia%2C_Tallinn%2C_Estonia%2C_2012-08-05%2C_DD_15.JPG/960px-Columna_de_la_Victoria_de_la_Guerra_de_la_Independencia%2C_Tallinn%2C_Estonia%2C_2012-08-05%2C_DD_15.JPG
+386,La Pirámide de las Vasijas,destino,La Independencia,cultura,99,2.5,475,15.828352,-91.883395,https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Columna_de_la_Victoria_de_la_Guerra_de_la_Independencia%2C_Tallinn%2C_Estonia%2C_2012-08-05%2C_DD_15.JPG/960px-Columna_de_la_Victoria_de_la_Guerra_de_la_Independencia%2C_Tallinn%2C_Estonia%2C_2012-08-05%2C_DD_15.JPG
+387,La Pirámide del Guajil,destino,La Independencia,cultura,41,1.8,119,15.827801,-91.883332,https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Columna_de_la_Victoria_de_la_Guerra_de_la_Independencia%2C_Tallinn%2C_Estonia%2C_2012-08-05%2C_DD_15.JPG/960px-Columna_de_la_Victoria_de_la_Guerra_de_la_Independencia%2C_Tallinn%2C_Estonia%2C_2012-08-05%2C_DD_15.JPG
+388,Centro Ecoturístico Lagos de Colón,destino,La Independencia,naturaleza,147,2.8,408,15.829181,-91.886753,https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Columna_de_la_Victoria_de_la_Guerra_de_la_Independencia%2C_Tallinn%2C_Estonia%2C_2012-08-05%2C_DD_15.JPG/960px-Columna_de_la_Victoria_de_la_Guerra_de_la_Independencia%2C_Tallinn%2C_Estonia%2C_2012-08-05%2C_DD_15.JPG
+389,Convento de San José Coneta,destino,La Independencia,cultura,99,1.5,473,15.894699,-91.940385,https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Columna_de_la_Victoria_de_la_Guerra_de_la_Independencia%2C_Tallinn%2C_Estonia%2C_2012-08-05%2C_DD_15.JPG/960px-Columna_de_la_Victoria_de_la_Guerra_de_la_Independencia%2C_Tallinn%2C_Estonia%2C_2012-08-05%2C_DD_15.JPG
+390,Parque de la Mujer Soldado,destino,Tuxtla Gutierrez,naturaleza,139,3.7,379,16.759302,-93.09187,https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Panor%C3%A1mica_de_Tuxtla_Guti%C3%A9rrez_desde_el_aire.jpg/960px-Panor%C3%A1mica_de_Tuxtla_Guti%C3%A9rrez_desde_el_aire.jpg
 391,Valdivia,destino,Mapastepec,naturaleza,140,2.8,382,15.502841,-92.949533,
-392,Parque Col Pedregal de San Angel,destino,Tapachula,naturaleza,136,2.6,366,14.882775,-92.266657,
-393,Parque Central de Copoya,destino,Tuxtla Gutierrez,naturaleza,161,2.3,457,16.714159,-93.118274,
-394,Parque Central Arriaga,destino,Arriaga,naturaleza,114,3.1,288,16.235608,-93.899224,
+392,Parque Col Pedregal de San Angel,destino,Tapachula,naturaleza,136,2.6,366,14.882775,-92.266657,https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Letras_de_Tapachula_en_Plaza_Alaia.jpg/960px-Letras_de_Tapachula_en_Plaza_Alaia.jpg
+393,Parque Central de Copoya,destino,Tuxtla Gutierrez,naturaleza,161,2.3,457,16.714159,-93.118274,https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Mactumatz%C3%A1_visto_desde_el_centro_de_Tuxtla_Guti%C3%A9rrez.jpg/960px-Mactumatz%C3%A1_visto_desde_el_centro_de_Tuxtla_Guti%C3%A9rrez.jpg
+394,Parque Central Arriaga,destino,Arriaga,naturaleza,114,3.1,288,16.235608,-93.899224,https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Arriaga_-_Chiapas.PNG/960px-Arriaga_-_Chiapas.PNG
 395,"Parque ""Bosque la Concordia""",destino,Tapachula,naturaleza,86,3.0,184,14.894678,-92.251053,
 396,"Parque ""Los Laureles""",destino,Tapachula,naturaleza,139,3.8,379,14.893281,-92.253195,
-397,Mirador Manos que imploran.,destino,Tuxtla Gutierrez,naturaleza,125,3.9,327,16.912578,-93.10246,
+397,Mirador Manos que imploran.,destino,Tuxtla Gutierrez,naturaleza,125,3.9,327,16.912578,-93.10246,https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Panor%C3%A1mica_de_Tuxtla_Guti%C3%A9rrez_desde_el_aire.jpg/960px-Panor%C3%A1mica_de_Tuxtla_Guti%C3%A9rrez_desde_el_aire.jpg
 398,La Peña,destino,Huehuetan,naturaleza,128,3.9,338,15.116032,-92.231593,
-399,Parque Caña Hueca,destino,Tuxtla Gutierrez,naturaleza,183,3.1,539,16.757988,-93.142413,
-400,Convivencia Infantil,destino,Tuxtla Gutierrez,naturaleza,113,3.2,281,16.759791,-93.103537,
-401,Museo de Paleontología,destino,Tuxtla Gutierrez,cultura,86,1.9,397,16.759375,-93.105859,
-402,Parque de los Laureles,destino,Tuxtla Gutierrez,naturaleza,82,3.1,168,16.761727,-93.165309,
-403,Parque Joyyo Mayu,destino,Tuxtla Gutierrez,naturaleza,139,2.2,379,16.761227,-93.143813,
-404,Parque San Antonio,destino,Tuxtla Gutierrez,naturaleza,103,3.5,246,16.771765,-93.114144,
-405,Parque Morelos Bicentenario,destino,Tuxtla Gutierrez,naturaleza,61,2.7,90,16.753813,-93.127848,
-406,Parque de la Juventud,destino,Tuxtla Gutierrez,naturaleza,69,3.4,120,16.754609,-93.127805,
-407,Cinco de Mayo,destino,Tuxtla Gutierrez,naturaleza,184,2.9,542,16.752841,-93.106421,
-408,Parque Popular,destino,Tuxtla Gutierrez,naturaleza,90,2.6,199,16.733317,-93.1172,
-409,Rotonda de la Marimba,destino,Venustiano Carranza,cultura,73,1.7,317,16.337367,-92.558708,
-410,Museo de Antropología e Historia,destino,Tuxtla Gutierrez,cultura,53,1.6,192,16.759801,-93.106847,
-411,Parque Niño de Atocha,destino,Tuxtla Gutierrez,naturaleza,92,2.5,206,16.763008,-93.118615,
+399,Parque Caña Hueca,destino,Tuxtla Gutierrez,naturaleza,183,3.1,539,16.757988,-93.142413,https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Panor%C3%A1mica_de_Tuxtla_Guti%C3%A9rrez_desde_el_aire.jpg/960px-Panor%C3%A1mica_de_Tuxtla_Guti%C3%A9rrez_desde_el_aire.jpg
+400,Convivencia Infantil,destino,Tuxtla Gutierrez,naturaleza,113,3.2,281,16.759791,-93.103537,https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Teatro_Bonampak.jpg/960px-Teatro_Bonampak.jpg
+401,Museo de Paleontología,destino,Tuxtla Gutierrez,cultura,86,1.9,397,16.759375,-93.105859,https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/MuseumPalentologyTuxtla.JPG/960px-MuseumPalentologyTuxtla.JPG
+402,Parque de los Laureles,destino,Tuxtla Gutierrez,naturaleza,82,3.1,168,16.761727,-93.165309,https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Panor%C3%A1mica_de_Tuxtla_Guti%C3%A9rrez_desde_el_aire.jpg/960px-Panor%C3%A1mica_de_Tuxtla_Guti%C3%A9rrez_desde_el_aire.jpg
+403,Parque Joyyo Mayu,destino,Tuxtla Gutierrez,naturaleza,139,2.2,379,16.761227,-93.143813,https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Panor%C3%A1mica_de_Tuxtla_Guti%C3%A9rrez_desde_el_aire.jpg/960px-Panor%C3%A1mica_de_Tuxtla_Guti%C3%A9rrez_desde_el_aire.jpg
+404,Parque San Antonio,destino,Tuxtla Gutierrez,naturaleza,103,3.5,246,16.771765,-93.114144,https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Panor%C3%A1mica_de_Tuxtla_Guti%C3%A9rrez_desde_el_aire.jpg/960px-Panor%C3%A1mica_de_Tuxtla_Guti%C3%A9rrez_desde_el_aire.jpg
+405,Parque Morelos Bicentenario,destino,Tuxtla Gutierrez,naturaleza,61,2.7,90,16.753813,-93.127848,https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Panor%C3%A1mica_de_Tuxtla_Guti%C3%A9rrez_desde_el_aire.jpg/960px-Panor%C3%A1mica_de_Tuxtla_Guti%C3%A9rrez_desde_el_aire.jpg
+406,Parque de la Juventud,destino,Tuxtla Gutierrez,naturaleza,69,3.4,120,16.754609,-93.127805,https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Panor%C3%A1mica_de_Tuxtla_Guti%C3%A9rrez_desde_el_aire.jpg/960px-Panor%C3%A1mica_de_Tuxtla_Guti%C3%A9rrez_desde_el_aire.jpg
+407,Cinco de Mayo,destino,Tuxtla Gutierrez,naturaleza,184,2.9,542,16.752841,-93.106421,https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Calle_5_de_Mayo%2C_Mazatl%C3%A1n%2C_25_de_mayo_de_2022.jpg/960px-Calle_5_de_Mayo%2C_Mazatl%C3%A1n%2C_25_de_mayo_de_2022.jpg
+408,Parque Popular,destino,Tuxtla Gutierrez,naturaleza,90,2.6,199,16.733317,-93.1172,https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Mactumatz%C3%A1_visto_desde_el_centro_de_Tuxtla_Guti%C3%A9rrez.jpg/960px-Mactumatz%C3%A1_visto_desde_el_centro_de_Tuxtla_Guti%C3%A9rrez.jpg
+409,Rotonda de la Marimba,destino,Venustiano Carranza,cultura,73,1.7,317,16.337367,-92.558708,https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Placa_conmemorariva_fundacion_del_pueblo_de_Venustiano_Carranza_en_Chiapas_M%C3%A9xico.jpg/960px-Placa_conmemorariva_fundacion_del_pueblo_de_Venustiano_Carranza_en_Chiapas_M%C3%A9xico.jpg
+410,Museo de Antropología e Historia,destino,Tuxtla Gutierrez,cultura,53,1.6,192,16.759801,-93.106847,https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Museo_de_Antropologia_e_Historia._-_panoramio.jpg/960px-Museo_de_Antropologia_e_Historia._-_panoramio.jpg
+411,Parque Niño de Atocha,destino,Tuxtla Gutierrez,naturaleza,92,2.5,206,16.763008,-93.118615,https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Panor%C3%A1mica_de_Tuxtla_Guti%C3%A9rrez_desde_el_aire.jpg/960px-Panor%C3%A1mica_de_Tuxtla_Guti%C3%A9rrez_desde_el_aire.jpg
 412,Parque de Soconusco,destino,Acapetahua,naturaleza,161,4.0,459,15.3154,-92.726641,
 413,Parque Acuático Yolonam,destino,Tapachula,familiar,238,2.7,564,14.912043,-92.199015,
-414,Parque Jardines del Pedregal,destino,Tuxtla Gutierrez,naturaleza,103,3.3,247,16.769916,-93.088926,
-415,Parque central,destino,Berriozabal,naturaleza,111,3.1,275,16.800007,-93.27256,
-416,Museo Zoque de Copoya,destino,Tuxtla Gutierrez,cultura,46,1.8,148,16.714147,-93.117907,
-417,area verde,destino,Tonala,naturaleza,93,2.1,209,16.095086,-93.757184,
-418,Parque de San Jose Teran,destino,Tuxtla Gutierrez,naturaleza,146,2.5,404,16.748631,-93.180447,
-419,Plaza de Santo Domingo,destino,Tuxtla Gutierrez,naturaleza,84,2.9,176,16.755211,-93.116605,
+414,Parque Jardines del Pedregal,destino,Tuxtla Gutierrez,naturaleza,103,3.3,247,16.769916,-93.088926,https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Panor%C3%A1mica_de_Tuxtla_Guti%C3%A9rrez_desde_el_aire.jpg/960px-Panor%C3%A1mica_de_Tuxtla_Guti%C3%A9rrez_desde_el_aire.jpg
+415,Parque central,destino,Berriozabal,naturaleza,111,3.1,275,16.800007,-93.27256,https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Berrioz%C3%A1bal_-_Chiapas.PNG/960px-Berrioz%C3%A1bal_-_Chiapas.PNG
+416,Museo Zoque de Copoya,destino,Tuxtla Gutierrez,cultura,46,1.8,148,16.714147,-93.117907,https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Mactumatz%C3%A1_visto_desde_el_centro_de_Tuxtla_Guti%C3%A9rrez.jpg/960px-Mactumatz%C3%A1_visto_desde_el_centro_de_Tuxtla_Guti%C3%A9rrez.jpg
+417,area verde,destino,Tonala,naturaleza,93,2.1,209,16.095086,-93.757184,https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Muncipio_de_Tonal%C3%A1_-_Ubicaci%C3%B3n_en_Chiapas_-_M%C3%A9xico.jpg/960px-Muncipio_de_Tonal%C3%A1_-_Ubicaci%C3%B3n_en_Chiapas_-_M%C3%A9xico.jpg
+418,Parque de San Jose Teran,destino,Tuxtla Gutierrez,naturaleza,146,2.5,404,16.748631,-93.180447,https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Panor%C3%A1mica_de_Tuxtla_Guti%C3%A9rrez_desde_el_aire.jpg/960px-Panor%C3%A1mica_de_Tuxtla_Guti%C3%A9rrez_desde_el_aire.jpg
+419,Plaza de Santo Domingo,destino,Tuxtla Gutierrez,naturaleza,84,2.9,176,16.755211,-93.116605,https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Panor%C3%A1mica_de_Tuxtla_Guti%C3%A9rrez_desde_el_aire.jpg/960px-Panor%C3%A1mica_de_Tuxtla_Guti%C3%A9rrez_desde_el_aire.jpg
 420,Plaza de Santa Lucia,destino,San Cristobal de las Casas,naturaleza,136,3.6,367,16.732115,-92.636731,
 421,Parque Juan Sabines,destino,Bochil,naturaleza,159,2.6,451,16.997051,-92.897157,
 422,Parque Morelos,destino,Bochil,naturaleza,196,2.0,588,16.994693,-92.895151,
-423,"Parque ""Bancrisa""",destino,Tapachula,naturaleza,138,2.9,374,14.890663,-92.269983,
 424,Parque Bicentenario Par Vial,destino,Tapachula,naturaleza,72,2.2,132,14.888588,-92.26588,
 425,Parque ecologico Tapachula,destino,Tapachula,naturaleza,119,2.7,303,14.883779,-92.292254,
 426,Parque Akishino,destino,Tapachula,naturaleza,177,3.5,517,14.890058,-92.296461,
 427,Parque Akishino 2da Plaza,destino,Tapachula,naturaleza,188,2.6,556,14.890591,-92.295624,
-428,Zona boscosa 24 Pte,destino,Tapachula,naturaleza,195,2.4,582,14.898373,-92.27663,
-429,Museo Botánico,destino,Tuxtla Gutierrez,cultura,119,1.2,597,16.75903,-93.10816,
-430,"Parque ""Armonía""",destino,Tapachula,naturaleza,79,3.6,157,14.903285,-92.254351,
+429,Museo Botánico,destino,Tuxtla Gutierrez,cultura,119,1.2,597,16.75903,-93.10816,https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Panor%C3%A1mica_de_Tuxtla_Guti%C3%A9rrez_desde_el_aire.jpg/960px-Panor%C3%A1mica_de_Tuxtla_Guti%C3%A9rrez_desde_el_aire.jpg
+430,"Parque ""Armonía""",destino,Tapachula,naturaleza,79,3.6,157,14.903285,-92.254351,https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Letras_de_Tapachula_en_Plaza_Alaia.jpg/960px-Letras_de_Tapachula_en_Plaza_Alaia.jpg
 431,"Parque ""Cireba""",destino,Tapachula,naturaleza,95,2.9,216,14.890906,-92.248615,
 432,Fuente Atzacua,destino,Tapachula,naturaleza,95,3.5,216,14.898033,-92.242888,
-433,parque maya,destino,Ocozocoautla,naturaleza,158,3.0,449,16.736757,-93.314068,
-434,Parque Centenario de la Fuerza Aérea,destino,Tuxtla Gutierrez,naturaleza,178,3.4,519,16.758332,-93.132728,
-435,Parque De La Primavera Pumpushuti,destino,Tuxtla Gutierrez,naturaleza,69,2.5,119,16.746951,-93.076617,
-436,Templo XIX,destino,Palenque,cultura,61,1.2,242,17.481267,-92.046031,
-437,Templo de los Guerreros (XVII),destino,Palenque,cultura,86,2.0,396,17.48191,-92.045616,
-438,Templo XXI,destino,Palenque,cultura,61,1.2,240,17.482227,-92.046119,
-439,Grupo I,destino,Palenque,cultura,63,1.1,253,17.486151,-92.044034,
-440,Grupo II,destino,Palenque,cultura,84,1.4,380,17.486314,-92.044304,
-441,Grupo de los Murciélagos,destino,Palenque,cultura,47,1.5,159,17.486233,-92.042629,
-442,Grupo B,destino,Palenque,cultura,100,1.2,480,17.485659,-92.042771,
-443,Templo XX,destino,Palenque,cultura,84,1.8,385,17.48175,-92.046276,
+433,parque maya,destino,Ocozocoautla de Espinosa,naturaleza,158,3.0,449,16.736757,-93.314068,
+434,Parque Centenario de la Fuerza Aérea,destino,Tuxtla Gutierrez,naturaleza,178,3.4,519,16.758332,-93.132728,https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Panor%C3%A1mica_de_Tuxtla_Guti%C3%A9rrez_desde_el_aire.jpg/960px-Panor%C3%A1mica_de_Tuxtla_Guti%C3%A9rrez_desde_el_aire.jpg
+435,Parque De La Primavera Pumpushuti,destino,Tuxtla Gutierrez,naturaleza,69,2.5,119,16.746951,-93.076617,https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Panor%C3%A1mica_de_Tuxtla_Guti%C3%A9rrez_desde_el_aire.jpg/960px-Panor%C3%A1mica_de_Tuxtla_Guti%C3%A9rrez_desde_el_aire.jpg
+436,Templo XIX,destino,Palenque,cultura,61,1.2,242,17.481267,-92.046031,https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Templo_y_Ex_Convento_de_Santo_Domingo_de_Guzm%C3%A1n%2CChiapa_de_Corzo%2CChiapas%2CM%C3%A9xico.jpg/960px-Templo_y_Ex_Convento_de_Santo_Domingo_de_Guzm%C3%A1n%2CChiapa_de_Corzo%2CChiapas%2CM%C3%A9xico.jpg
+437,Templo de los Guerreros (XVII),destino,Palenque,cultura,86,2.0,396,17.48191,-92.045616,https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/PalenqueLetters2020p2.jpg/960px-PalenqueLetters2020p2.jpg
+438,Templo XXI,destino,Palenque,cultura,61,1.2,240,17.482227,-92.046119,https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/PalenqueLetters2020p2.jpg/960px-PalenqueLetters2020p2.jpg
+439,Grupo I,destino,Palenque,cultura,63,1.1,253,17.486151,-92.044034,https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/PalenqueLetters2020p2.jpg/960px-PalenqueLetters2020p2.jpg
+440,Grupo II,destino,Palenque,cultura,84,1.4,380,17.486314,-92.044304,https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/PalenqueLetters2020p2.jpg/960px-PalenqueLetters2020p2.jpg
+441,Grupo de los Murciélagos,destino,Palenque,cultura,47,1.5,159,17.486233,-92.042629,https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/PalenqueLetters2020p2.jpg/960px-PalenqueLetters2020p2.jpg
+442,Grupo B,destino,Palenque,cultura,100,1.2,480,17.485659,-92.042771,https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/PalenqueLetters2020p2.jpg/960px-PalenqueLetters2020p2.jpg
+443,Templo XX,destino,Palenque,cultura,84,1.8,385,17.48175,-92.046276,https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/PalenqueLetters2020p2.jpg/960px-PalenqueLetters2020p2.jpg
 444,Parque - Malecón,destino,Tapachula,naturaleza,167,3.8,481,14.915438,-92.269689,
-445,Malecón Puerto Madero,destino,Tapachula,naturaleza,160,3.3,456,14.711907,-92.417809,
-446,Museo Juan Sabines,destino,Tuxtla Gutierrez,cultura,109,1.8,536,16.750041,-93.072482,
+445,Malecón Puerto Madero,destino,Tapachula,naturaleza,160,3.3,456,14.711907,-92.417809,https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Letras_de_Tapachula_en_Plaza_Alaia.jpg/960px-Letras_de_Tapachula_en_Plaza_Alaia.jpg
+446,Museo Juan Sabines,destino,Tuxtla Gutierrez,cultura,109,1.8,536,16.750041,-93.072482,https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Panor%C3%A1mica_de_Tuxtla_Guti%C3%A9rrez_desde_el_aire.jpg/960px-Panor%C3%A1mica_de_Tuxtla_Guti%C3%A9rrez_desde_el_aire.jpg
 447,parque carmen,destino,Tapachula,naturaleza,104,3.9,248,14.888238,-92.295976,
-448,Parque de Terán,destino,Tuxtla Gutierrez,naturaleza,77,3.1,149,16.753598,-93.162672,
-449,Feria Mesoamericana,destino,Tapachula,eventos,181,3.1,377,14.878425,-92.2913,
+448,Parque de Terán,destino,Tuxtla Gutierrez,naturaleza,77,3.1,149,16.753598,-93.162672,https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Parque_Central_del_Teran._-_panoramio.jpg/960px-Parque_Central_del_Teran._-_panoramio.jpg
+449,Feria Mesoamericana,destino,Tapachula,eventos,181,3.1,377,14.878425,-92.2913,https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Rafael_Ordu%C3%B1a_Dominguez.jpg/960px-Rafael_Ordu%C3%B1a_Dominguez.jpg
 450,parque de la iglesia del rosario,destino,San Cristobal de las Casas,naturaleza,192,4.0,573,16.741509,-92.625303,
-451,Parque Central Catedral,destino,Tuxtla Gutierrez,naturaleza,107,3.6,260,16.753075,-93.115661,
-452,Parque Tulipanes conmemoración de RCM,destino,Tapachula,naturaleza,95,3.9,215,14.875918,-92.288658,
+451,Parque Central Catedral,destino,Tuxtla Gutierrez,naturaleza,107,3.6,260,16.753075,-93.115661,https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Catedral_de_San_Marcos%2C_Tuxtla_Guti%C3%A9rrez%2C_Chiapas.jpg/960px-Catedral_de_San_Marcos%2C_Tuxtla_Guti%C3%A9rrez%2C_Chiapas.jpg
+452,Parque Tulipanes conmemoración de RCM,destino,Tapachula,naturaleza,95,3.9,215,14.875918,-92.288658,https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Letras_de_Tapachula_en_Plaza_Alaia.jpg/960px-Letras_de_Tapachula_en_Plaza_Alaia.jpg
 453,"Parque ecologico ""Del Café""",destino,Tapachula,naturaleza,59,3.1,85,14.949807,-92.252986,
 454,"Parque mirador ""El rinconcito""",destino,Tapachula,naturaleza,83,2.9,174,14.941751,-92.254577,
 455,Malecon Seccion 1 (Parque),destino,Tapachula,naturaleza,100,3.2,233,14.90997,-92.27233,
 456,Parque 5 de febrero,destino,Tapachula,naturaleza,103,3.3,247,14.926162,-92.258305,
-457,Parque infantil privado de la Iglesia,destino,Tapachula,naturaleza,114,3.1,284,14.9255,-92.258541,
-458,Parque De Hombres Ilustres,destino,Tuxtla Gutierrez,naturaleza,67,3.0,115,16.759543,-93.107219,
-459,Parque de Niños,destino,Tuxtla Gutierrez,naturaleza,148,3.3,410,16.761487,-93.09973,
+458,Parque De Hombres Ilustres,destino,Tuxtla Gutierrez,naturaleza,67,3.0,115,16.759543,-93.107219,https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Panor%C3%A1mica_de_Tuxtla_Guti%C3%A9rrez_desde_el_aire.jpg/960px-Panor%C3%A1mica_de_Tuxtla_Guti%C3%A9rrez_desde_el_aire.jpg
+459,Parque de Niños,destino,Tuxtla Gutierrez,naturaleza,148,3.3,410,16.761487,-93.09973,https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Mactumatz%C3%A1_visto_desde_el_centro_de_Tuxtla_Guti%C3%A9rrez.jpg/960px-Mactumatz%C3%A1_visto_desde_el_centro_de_Tuxtla_Guti%C3%A9rrez.jpg
 460,Unidad Deportiva Metapa de Dominguez,destino,Tapachula,naturaleza,61,3.9,91,14.836235,-92.20037,
 461,Plazuela de la pilita,destino,Comitan de Dominguez,naturaleza,186,3.1,551,16.25585,-92.126741,
 462,Parque de San Sebastian,destino,Comitan de Dominguez,naturaleza,104,3.1,250,16.247045,-92.131417,
 463,Parque de San Jose,destino,Comitan de Dominguez,naturaleza,76,4.0,148,16.250106,-92.134678,
-464,Parque de la Pila,destino,Comitan de Dominguez,naturaleza,180,3.0,529,16.255042,-92.133721,
+464,Parque de la Pila,destino,Comitan de Dominguez,naturaleza,180,3.0,529,16.255042,-92.133721,https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Pila_de_Chiapa_de_Corzo.jpg/960px-Pila_de_Chiapa_de_Corzo.jpg
 465,Parque Recreativo de San Sebastian,destino,Comitan de Dominguez,naturaleza,153,2.8,427,16.246852,-92.132957,
-466,Parque de Guadalupe,destino,Comitan de Dominguez,naturaleza,129,3.3,343,16.249958,-92.139776,
+466,Parque de Guadalupe,destino,Comitan de Dominguez,naturaleza,129,3.3,343,16.249958,-92.139776,https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Comit%C3%A1n_de_Dom%C3%ADnguez_-_Chiapas.PNG/960px-Comit%C3%A1n_de_Dom%C3%ADnguez_-_Chiapas.PNG
 467,SEDEM,destino,San Cristobal de las Casas,naturaleza,161,2.4,458,16.728409,-92.64657,
-468,Parque del Mariachi,destino,Tuxtla Gutierrez,naturaleza,167,3.9,479,16.746364,-93.114665,
+468,Parque del Mariachi,destino,Tuxtla Gutierrez,naturaleza,167,3.9,479,16.746364,-93.114665,https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Panor%C3%A1mica_de_Tuxtla_Guti%C3%A9rrez_desde_el_aire.jpg/960px-Panor%C3%A1mica_de_Tuxtla_Guti%C3%A9rrez_desde_el_aire.jpg
 469,Parquecito de la Zona Urbana,destino,Venustiano Carranza,naturaleza,76,3.3,146,16.342173,-92.555282,
 470,Parque San Quintin Calcaneo,destino,Huixtla,naturaleza,168,2.4,485,15.214235,-92.577299,
-471,Miramar,destino,Tuxtla Gutierrez,naturaleza,159,3.6,452,16.769012,-93.114909,
-472,Las Canchitas,destino,Tuxtla Gutierrez,naturaleza,51,2.2,56,16.772397,-93.117869,
-473,Parquecito de la entrada,destino,Tapachula,naturaleza,136,3.8,368,14.684245,-92.151269,
+471,Miramar,destino,Tuxtla Gutierrez,naturaleza,159,3.6,452,16.769012,-93.114909,https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Panor%C3%A1mica_de_Tuxtla_Guti%C3%A9rrez_desde_el_aire.jpg/960px-Panor%C3%A1mica_de_Tuxtla_Guti%C3%A9rrez_desde_el_aire.jpg
+472,Las Canchitas,destino,Tuxtla Gutierrez,naturaleza,51,2.2,56,16.772397,-93.117869,https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Panor%C3%A1mica_de_Tuxtla_Guti%C3%A9rrez_desde_el_aire.jpg/960px-Panor%C3%A1mica_de_Tuxtla_Guti%C3%A9rrez_desde_el_aire.jpg
+473,Parquecito de la entrada,destino,Tapachula,naturaleza,136,3.8,368,14.684245,-92.151269,https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Letras_de_Tapachula_en_Plaza_Alaia.jpg/960px-Letras_de_Tapachula_en_Plaza_Alaia.jpg
 474,Parque La Cañada,destino,Tapachula,naturaleza,191,2.9,569,14.867912,-92.250968,
 475,Parque Deportivo Parroquial Señor de Tila,destino,Simojovel,naturaleza,64,2.1,101,17.171937,-92.684982,
 476,es un parque donde hay muchos juegos,destino,Zinacantlan,naturaleza,189,2.4,562,16.555822,-92.813186,
-477,Parque 4ta Seccion,destino,Tuxtla Gutierrez,naturaleza,182,2.9,535,16.730746,-93.066418,
+477,Parque 4ta Seccion,destino,Tuxtla Gutierrez,naturaleza,182,2.9,535,16.730746,-93.066418,https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Panor%C3%A1mica_de_Tuxtla_Guti%C3%A9rrez_desde_el_aire.jpg/960px-Panor%C3%A1mica_de_Tuxtla_Guti%C3%A9rrez_desde_el_aire.jpg
 478,"Parque ""Velazco Suarez¨.",destino,San Cristobal de las Casas,naturaleza,194,3.1,579,16.739285,-92.648487,
 479,Parque Central Ocosingo,destino,Ocosingo,naturaleza,178,3.3,521,16.908297,-92.094858,
-480,estacionamiento con parque,destino,Pijijiapan,naturaleza,122,2.7,317,15.691662,-93.209792,
-481,Parque Vega del Paso,destino,Venustiano Carranza,naturaleza,181,3.2,532,16.339316,-92.671178,
+481,Parque Vega del Paso,destino,Venustiano Carranza,naturaleza,181,3.2,532,16.339316,-92.671178,https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Placa_conmemorariva_fundacion_del_pueblo_de_Venustiano_Carranza_en_Chiapas_M%C3%A9xico.jpg/960px-Placa_conmemorariva_fundacion_del_pueblo_de_Venustiano_Carranza_en_Chiapas_M%C3%A9xico.jpg
 482,Calle Los Pinos,destino,Frontera Comalapa,cultura,87,1.1,403,15.707242,-92.058994,
 483,Parque San Sebastian,destino,Ocosingo,naturaleza,184,2.0,541,16.90265,-92.100296,
 484,Parque Benito Juárez,destino,Ocosingo,naturaleza,125,2.7,325,16.903024,-92.101543,
 485,El Cerrito,destino,Venustiano Carranza,naturaleza,170,3.8,491,16.335209,-92.668947,
-486,Museo del Café Chiapas,destino,Tuxtla Gutierrez,cultura,63,1.8,252,16.754444,-93.114125,
+486,Museo del Café Chiapas,destino,Tuxtla Gutierrez,cultura,63,1.8,252,16.754444,-93.114125,https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Panor%C3%A1mica_de_Tuxtla_Guti%C3%A9rrez_desde_el_aire.jpg/960px-Panor%C3%A1mica_de_Tuxtla_Guti%C3%A9rrez_desde_el_aire.jpg
 487,Parque de Santa Ana,destino,Suchiapa,naturaleza,98,3.9,229,16.623728,-93.10232,
-488,Parque Nacional Cañón del Sumidero,destino,Tuxtla Gutierrez,aventura,124,3.1,322,16.838541,-93.094986,
-489,Parque Ecoturístico Cañon del Sumidero,destino,Tuxtla Gutierrez,aventura,189,2.9,559,16.885193,-93.102578,
-490,Reserva de la Biosfera Selva El Ocote,destino,Jiquipilas,naturaleza,137,2.2,6668,16.955049,-93.634022,
+488,Parque Nacional Cañón del Sumidero,destino,Tuxtla Gutierrez,aventura,124,3.1,322,16.838541,-93.094986,https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Vista_en_el_Parque_Nacional_Ca%C3%B1%C3%B3n_del_Sumidero_en_Chiapa_de_Corzo.jpg/960px-Vista_en_el_Parque_Nacional_Ca%C3%B1%C3%B3n_del_Sumidero_en_Chiapa_de_Corzo.jpg
+489,Parque Ecoturístico Cañon del Sumidero,destino,Tuxtla Gutierrez,aventura,189,2.9,559,16.885193,-93.102578,https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Mactumatz%C3%A1_visto_desde_el_centro_de_Tuxtla_Guti%C3%A9rrez.jpg/960px-Mactumatz%C3%A1_visto_desde_el_centro_de_Tuxtla_Guti%C3%A9rrez.jpg
+490,Reserva de la Biosfera Selva El Ocote,destino,Jiquipilas,naturaleza,137,2.2,6668,16.955049,-93.634022,https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Selva_el_Ocote_banner.jpg/960px-Selva_el_Ocote_banner.jpg
 491,Reserva de la Biosfera La Encrucijada,destino,Acapetahua,naturaleza,170,3.1,490,15.196318,-92.927112,
-492,Reserva de la Biosfera La Sepultura,destino,Arriaga,naturaleza,145,2.1,401,16.245298,-93.764642,
+492,Reserva de la Biosfera La Sepultura,destino,Arriaga,naturaleza,145,2.1,401,16.245298,-93.764642,https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Rambla_de_la_Sepultura_01.jpg/960px-Rambla_de_la_Sepultura_01.jpg
 493,Reserva de la Biosfera El Triunfo,destino,Mapastepec,naturaleza,107,4.0,260,15.67908,-92.893024,
-494,IMSS,destino,Tapachula,naturaleza,100,2.5,235,14.988805,-92.165879,
-495,Gruta Ecoturistica Yaxal Juk-Pik,destino,Palenque,naturaleza,124,3.7,324,17.377446,-91.924936,
-496,Water Blue,destino,Tapachula,familiar,99,3.4,112,15.001411,-92.163888,
+495,Gruta Ecoturistica Yaxal Juk-Pik,destino,Palenque,naturaleza,124,3.7,324,17.377446,-91.924936,https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/PalenqueLetters2020p2.jpg/960px-PalenqueLetters2020p2.jpg
 497,Bosques de Comitán,destino,Comitan de Dominguez,naturaleza,93,3.9,208,16.23791,-92.158013,
-498,Centro Ecoturístico Sima de las Cotorras,destino,Ocozocoautla,naturaleza,107,2.8,5082,16.807723,-93.47469,
+498,Centro Ecoturístico Sima de las Cotorras,destino,Ocozocoautla de Espinosa,naturaleza,107,2.8,5082,16.807723,-93.47469,
 499,Iglesia,destino,Tumbala,cultura,98,1.3,465,17.338247,-92.289677,
-500,"Parque Central ""Fundadores""",destino,Las Margaritas,naturaleza,115,2.1,289,16.231553,-92.010687,
-501,Paseo de las esculturas,destino,Tuxtla Gutierrez,fotografia,2,1.2,80,16.754429,-93.152762,
-502,Teatro Hundido,destino,Tuxtla Gutierrez,eventos,127,3.3,333,16.754772,-93.152626,
-503,CEDECO Estación Ferroviaria,destino,Tapachula,naturaleza,84,3.4,177,14.89857,-92.268357,
-504,Unidad deportiva La Cebadilla,destino,Tapachula,naturaleza,124,3.6,322,14.878719,-92.262283,
+500,"Parque Central ""Fundadores""",destino,Las Margaritas,naturaleza,115,2.1,289,16.231553,-92.010687,https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Las_Margaritas%2C_Chiapas_%2821836373629%29.jpg/960px-Las_Margaritas%2C_Chiapas_%2821836373629%29.jpg
+501,Paseo de las esculturas,destino,Tuxtla Gutierrez,fotografia,2,1.2,80,16.754429,-93.152762,https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Panor%C3%A1mica_de_Tuxtla_Guti%C3%A9rrez_desde_el_aire.jpg/960px-Panor%C3%A1mica_de_Tuxtla_Guti%C3%A9rrez_desde_el_aire.jpg
+502,Teatro Hundido,destino,Tuxtla Gutierrez,eventos,127,3.3,333,16.754772,-93.152626,https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Panor%C3%A1mica_de_Tuxtla_Guti%C3%A9rrez_desde_el_aire.jpg/960px-Panor%C3%A1mica_de_Tuxtla_Guti%C3%A9rrez_desde_el_aire.jpg
+504,Unidad deportiva La Cebadilla,destino,Tapachula,naturaleza,124,3.6,322,14.878719,-92.262283,https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Letras_de_Tapachula_en_Plaza_Alaia.jpg/960px-Letras_de_Tapachula_en_Plaza_Alaia.jpg
 505,Parque Ejidal,destino,Ostuacan,naturaleza,181,3.6,530,17.341281,-93.55285,
-506,Campo Moscafrut,destino,Tapachula,naturaleza,164,2.3,468,14.829056,-92.196139,
-507,Estacionamiento D. Metodos,destino,Tapachula,naturaleza,130,3.5,346,14.831336,-92.194118,
-508,Embarcadero Cahuare,destino,Chiapa de Corzo,naturaleza,90,2.8,199,16.739746,-93.031263,
+508,Embarcadero Cahuare,destino,Chiapa de Corzo,naturaleza,90,2.8,199,16.739746,-93.031263,https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Golondrina_Bicolor.JPG/960px-Golondrina_Bicolor.JPG
 509,Parque las Ciénagas.,destino,San Cristobal de las Casas,naturaleza,191,2.2,570,16.743028,-92.649517,
 510,Parque la Isla.,destino,San Cristobal de las Casas,naturaleza,151,4.0,420,16.741454,-92.645949,
-511,Parque Terán II,destino,Tuxtla Gutierrez,naturaleza,54,3.8,65,16.76847,-93.161367,
+511,Parque Terán II,destino,Tuxtla Gutierrez,naturaleza,54,3.8,65,16.76847,-93.161367,https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Mactumatz%C3%A1_visto_desde_el_centro_de_Tuxtla_Guti%C3%A9rrez.jpg/960px-Mactumatz%C3%A1_visto_desde_el_centro_de_Tuxtla_Guti%C3%A9rrez.jpg
 512,Cráter del volcán Chichonal,destino,Ixtacomitan,naturaleza,153,3.7,430,17.36007,-93.229324,
 513,Villa Trinidad,destino,Tapachula,naturaleza,192,2.1,572,14.98356,-92.156473,
 514,Parque Niños Héroes,destino,Tapachula,naturaleza,147,3.9,407,14.897201,-92.260267,
 515,Parque Juárez,destino,Pichucalco,naturaleza,145,2.6,398,17.607648,-93.193028,
 516,Área de Protección de Flora y Fauna Cascadas de Agua Azul,destino,Ocosingo,naturaleza,88,2.6,191,17.262157,-92.117961,
-517,Área de Protección de Flora y Fauna Nahá,destino,Tenosique,naturaleza,130,2.9,344,16.975681,-91.588836,
-518,Área de Protección de Flora y Fauna Metzabok,destino,Tenosique,naturaleza,148,3.7,412,17.111488,-91.619748,
-519,Monumento Natural Yaxchilán,destino,Tenosique,naturaleza,193,2.0,576,16.872401,-90.978321,
-520,Área de Protección de Flora y Fauna Chan-Kin,destino,Tenosique,naturaleza,148,3.5,410,16.7097,-90.77052,
-521,Monumento Natural Bonampak,destino,Tenosique,naturaleza,170,2.0,493,16.703194,-91.087084,
-522,Santuario Playa Puerto Arista,destino,Tonala,naturaleza,85,2.1,180,15.929819,-93.813906,
+517,Área de Protección de Flora y Fauna Nahá,destino,Ocosingo,naturaleza,130,2.9,344,16.975681,-91.588836,https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Naha-Metzabok_banner.jpg/960px-Naha-Metzabok_banner.jpg
+518,Área de Protección de Flora y Fauna Metzabok,destino,Ocosingo,naturaleza,148,3.7,412,17.111488,-91.619748,https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Tenosique%2C_Tabasco%2C_Mexico_-_panoramio.jpg/960px-Tenosique%2C_Tabasco%2C_Mexico_-_panoramio.jpg
+519,Monumento Natural Yaxchilán,destino,Ocosingo,naturaleza,193,2.0,576,16.872401,-90.978321,https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Tenosique%2C_Tabasco%2C_Mexico_-_panoramio.jpg/960px-Tenosique%2C_Tabasco%2C_Mexico_-_panoramio.jpg
+520,Área de Protección de Flora y Fauna Chan-Kin,destino,Ocosingo,naturaleza,148,3.5,410,16.7097,-90.77052,https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Chan_Kin_Man.jpg/960px-Chan_Kin_Man.jpg
+521,Monumento Natural Bonampak,destino,Ocosingo,naturaleza,170,2.0,493,16.703194,-91.087084,
+522,Santuario Playa Puerto Arista,destino,Tonala,naturaleza,85,2.1,180,15.929819,-93.813906,https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Muncipio_de_Tonal%C3%A1_-_Ubicaci%C3%B3n_en_Chiapas_-_M%C3%A9xico.jpg/960px-Muncipio_de_Tonal%C3%A1_-_Ubicaci%C3%B3n_en_Chiapas_-_M%C3%A9xico.jpg
 523,Reserva Ecológica el Silencio,destino,Tapachula,naturaleza,153,3.8,429,14.679093,-92.231772,
 524,Las Nubes,destino,Mapastepec,naturaleza,151,3.1,421,15.586621,-92.934439,
 525,El Paraíso del Jaguar,destino,Pijijiapan,naturaleza,116,3.3,295,15.843031,-93.005702,
-526,Grutas de Montecristo,destino,Juchitan,naturaleza,120,2.7,307,16.379168,-93.096918,
+526,Grutas de Montecristo,destino,Juchitan,naturaleza,120,2.7,307,16.379168,-93.096918,https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Iglesia_San_Vicente_Ferrer_Juchit%C3%A1n.jpg/960px-Iglesia_San_Vicente_Ferrer_Juchit%C3%A1n.jpg
 527,Reserva Privada Los Bordos,destino,Jiquipilas,naturaleza,151,2.8,420,16.809733,-93.557946,
 528,Barranca Honda,destino,Jiquipilas,aventura,150,2.5,419,16.525438,-93.418306,
-529,Finca El Corinto,destino,Ocozocoautla,naturaleza,165,2.5,472,16.826608,-93.502275,
-530,Reserva Las Guacamayas,destino,Las Margaritas,naturaleza,65,2.9,105,16.257625,-90.827994,
-531,Área de Conservación La Caverna,destino,Las Margaritas,naturaleza,74,2.1,140,16.228836,-91.363578,
-532,Zona Sujeta a Conservación Ecológica Cordón Pico El Loro-Paxtal,destino,Siltepec,naturaleza,51,3.2,55,15.513426,-92.485159,
-533,Área Natural Típica La Concordia Zaragoza,destino,Angel Albino Corzo,naturaleza,114,3.7,288,15.95876,-92.613366,
-534,Plaza del Pueblo,destino,San Cristobal de las Casas,naturaleza,166,3.9,476,16.720844,-92.602745,
+529,Finca El Corinto,destino,Ocozocoautla de Espinosa,naturaleza,165,2.5,472,16.826608,-93.502275,
+530,Reserva Las Guacamayas,destino,Las Margaritas,naturaleza,65,2.9,105,16.257625,-90.827994,https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Las_Margaritas%2C_Chiapas_%2821836373629%29.jpg/960px-Las_Margaritas%2C_Chiapas_%2821836373629%29.jpg
+531,Área de Conservación La Caverna,destino,Las Margaritas,naturaleza,74,2.1,140,16.228836,-91.363578,https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Las_Margaritas%2C_Chiapas_%2821836373629%29.jpg/960px-Las_Margaritas%2C_Chiapas_%2821836373629%29.jpg
+532,Zona Sujeta a Conservación Ecológica Cordón Pico El Loro-Paxtal,destino,Siltepec,naturaleza,51,3.2,55,15.513426,-92.485159,https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Nectandra_matudae_Lundell_nmnhbotany_2111285_NMNH-00099288-000001.jpg/960px-Nectandra_matudae_Lundell_nmnhbotany_2111285_NMNH-00099288-000001.jpg
+533,Área Natural Típica La Concordia Zaragoza,destino,Angel Albino Corzo,naturaleza,114,3.7,288,15.95876,-92.613366,https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Escudo_de_%C3%81ngel_Albino_Corzo%2C_Chiapas.png/960px-Escudo_de_%C3%81ngel_Albino_Corzo%2C_Chiapas.png
+534,Plaza del Pueblo,destino,San Cristobal de las Casas,naturaleza,166,3.9,476,16.720844,-92.602745,https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Adhemarius_donysa_MHNT_CUT_2010_0_31_San_Crist%C3%B3bal_de_Las_Casas_Mexico_female_dorsal.jpg/960px-Adhemarius_donysa_MHNT_CUT_2010_0_31_San_Crist%C3%B3bal_de_Las_Casas_Mexico_female_dorsal.jpg
 535,Zona Sujeta a Conservación Ecológica Huitepec-Los Alcanfores,destino,Zinacantlan,naturaleza,80,2.5,162,16.743019,-92.682872,
 536,Zona Sujeta a Conservación Ecológica El Cabildo Amatal,destino,Tapachula,naturaleza,96,3.2,219,14.762722,-92.465826,
 537,Zona Sujeta a Conservación Ecológica El Gancho Murillo,destino,Tapachula,naturaleza,63,3.0,99,14.608621,-92.307068,
 538,Zona Sujeta a Conservación Ecológica La Pera,destino,Berriozabal,naturaleza,143,3.9,394,16.888248,-93.34303,
-539,Parque Educativo Laguna Bélgica,destino,Ocozocoautla,naturaleza,78,3.0,154,16.881878,-93.456075,
-540,Zona Sujeta a Conservación Ecológica Cerro Meyapac,destino,Ocozocoautla,naturaleza,99,2.1,230,16.768873,-93.36197,
+539,Parque Educativo Laguna Bélgica,destino,Ocozocoautla de Espinosa,naturaleza,78,3.0,154,16.881878,-93.456075,
+540,Zona Sujeta a Conservación Ecológica Cerro Meyapac,destino,Ocozocoautla de Espinosa,naturaleza,99,2.1,230,16.768873,-93.36197,
 541,Zona Sujeta a Conservación Ecológica Tzama Cun Pümy,destino,Pueblo Nuevo Solistahaucan,naturaleza,55,2.9,71,17.190039,-93.126703,
-542,Área Natural y Típica Bosques de Coníferas Chanal,destino,Amatenango del Valle,naturaleza,177,2.6,517,16.555321,-92.192113,
+542,Área Natural y Típica Bosques de Coníferas Chanal,destino,Amatenango del Valle,naturaleza,177,2.6,517,16.555321,-92.192113,https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Amatenango_del_Valle_-_Chiapas.PNG/960px-Amatenango_del_Valle_-_Chiapas.PNG
 543,Parque Estatal La Primavera,destino,La Trinitaria,naturaleza,167,3.0,480,16.082841,-92.171492,
 544,Reserva Estatal La Lluvia,destino,Villaflores,naturaleza,51,2.5,53,16.403663,-93.222397,
 545,Zona Sujeta a Conservación Ecológica El Canelar,destino,Juchitan,naturaleza,130,2.9,345,16.52286,-92.893679,
-546,Reserva Estatal El Zapotal,destino,Tuxtla Gutierrez,naturaleza,160,3.8,453,16.724041,-93.095363,
-547,Zona Sujeta a Conservación Ecológica Corredor Cerro Mactumatzá - Meseta de Copoya,destino,Tuxtla Gutierrez,naturaleza,64,3.8,102,16.691049,-93.103661,
-548,Zona Sujeta a Conservación Ecológica Rancho Nuevo,destino,San Cristobal de las Casas,naturaleza,102,2.5,244,16.646728,-92.573777,
-549,Parque Ecoturístico Grutas de Rancho Nuevo,destino,San Cristobal de las Casas,naturaleza,64,3.7,101,16.671015,-92.583385,
+546,Reserva Estatal El Zapotal,destino,Tuxtla Gutierrez,naturaleza,160,3.8,453,16.724041,-93.095363,https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Panor%C3%A1mica_de_Tuxtla_Guti%C3%A9rrez_desde_el_aire.jpg/960px-Panor%C3%A1mica_de_Tuxtla_Guti%C3%A9rrez_desde_el_aire.jpg
+547,Zona Sujeta a Conservación Ecológica Corredor Cerro Mactumatzá - Meseta de Copoya,destino,Tuxtla Gutierrez,naturaleza,64,3.8,102,16.691049,-93.103661,https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Panor%C3%A1mica_de_Tuxtla_Guti%C3%A9rrez_desde_el_aire.jpg/960px-Panor%C3%A1mica_de_Tuxtla_Guti%C3%A9rrez_desde_el_aire.jpg
+548,Zona Sujeta a Conservación Ecológica Rancho Nuevo,destino,San Cristobal de las Casas,naturaleza,102,2.5,244,16.646728,-92.573777,https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Adhemarius_donysa_MHNT_CUT_2010_0_31_San_Crist%C3%B3bal_de_Las_Casas_Mexico_female_dorsal.jpg/960px-Adhemarius_donysa_MHNT_CUT_2010_0_31_San_Crist%C3%B3bal_de_Las_Casas_Mexico_female_dorsal.jpg
+549,Parque Ecoturístico Grutas de Rancho Nuevo,destino,San Cristobal de las Casas,naturaleza,64,3.7,101,16.671015,-92.583385,https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Adhemarius_donysa_MHNT_CUT_2010_0_31_San_Crist%C3%B3bal_de_Las_Casas_Mexico_female_dorsal.jpg/960px-Adhemarius_donysa_MHNT_CUT_2010_0_31_San_Crist%C3%B3bal_de_Las_Casas_Mexico_female_dorsal.jpg
 550,Centro Ecoturístico Grutas del Mamut,destino,San Cristobal de las Casas,naturaleza,152,3.0,426,16.741676,-92.585908,
 551,Zona Sujeta a Conservación Ecológica El Recreo,destino,San Cristobal de las Casas,naturaleza,101,2.8,240,16.615015,-92.52052,
 552,Reserva Ecológica Huitepec,destino,San Juan Chamula,naturaleza,178,2.1,520,16.751275,-92.682355,
 553,Reserva Biótica Gertrude Duby,destino,San Cristobal de las Casas,naturaleza,83,2.2,174,16.742896,-92.598928,
 554,Zona Sujeta a Conservación Ecológica Humedales de Montaña María Eugenia,destino,San Cristobal de las Casas,aventura,91,2.6,201,16.70997,-92.623258,
 555,Zona Sujeta a Conservación Ecológica Humedales de Montaña La Kisst,destino,San Cristobal de las Casas,aventura,188,2.0,559,16.721763,-92.644464,
-556,Reserva Montecielo,destino,Chiapa de Corzo,naturaleza,76,2.2,148,16.676286,-93.054946,
+556,Reserva Montecielo,destino,Chiapa de Corzo,naturaleza,76,2.2,148,16.676286,-93.054946,https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Chiapa_de_Corzo_%28Mexico%2C_January_2020%29_-_49.jpg/960px-Chiapa_de_Corzo_%28Mexico%2C_January_2020%29_-_49.jpg
 557,Zona Sujeta a Conservación Ecológica Finca Santa Ana,destino,Pichucalco,naturaleza,52,2.7,60,17.581917,-93.050229,
-558,Zona Sujeta a Conservación Ecológica Sistema Lagunar Catazajá,destino,Palenque,naturaleza,97,2.9,222,17.830067,-91.952325,
-559,Zona Sujeta a Conservación Ecológica Humedales La Libertad,destino,Palenque,naturaleza,154,3.3,431,17.645532,-91.714858,
-560,Parque Estatal de la Sierra de Tabasco,destino,San Fernando,naturaleza,173,2.0,502,17.506049,-92.882,
-561,Acrópolis Sur,destino,Tenosique,cultura,96,2.1,456,16.896736,-90.966647,
-562,Parque Rafael Pascacio Gamboa,destino,Reforma,naturaleza,123,2.7,321,17.91611,-93.26938,
-563,Terreno en venta,destino,Reforma,naturaleza,131,3.8,350,17.918663,-93.265069,
-564,"Zona verde, Zona con muchos arboles",destino,Tapachula,naturaleza,115,3.7,288,14.885834,-92.265106,
+558,Zona Sujeta a Conservación Ecológica Sistema Lagunar Catazajá,destino,Palenque,naturaleza,97,2.9,222,17.830067,-91.952325,https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/PalenqueLetters2020p2.jpg/960px-PalenqueLetters2020p2.jpg
+559,Zona Sujeta a Conservación Ecológica Humedales La Libertad,destino,Palenque,naturaleza,154,3.3,431,17.645532,-91.714858,https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/PalenqueLetters2020p2.jpg/960px-PalenqueLetters2020p2.jpg
+560,Parque Estatal de la Sierra de Tabasco,destino,San Fernando,naturaleza,173,2.0,502,17.506049,-92.882,https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Albercas_de_forma_piramidal%2C_San_Fernando%2C_Chiapas.jpg/960px-Albercas_de_forma_piramidal%2C_San_Fernando%2C_Chiapas.jpg
+562,Parque Rafael Pascacio Gamboa,destino,Reforma,naturaleza,123,2.7,321,17.91611,-93.26938,https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Parroquia_del_Se%C3%B1or_del_Santuario%2C_Reforma%2C_Chiapas%2C_Mexico_01.jpg/960px-Parroquia_del_Se%C3%B1or_del_Santuario%2C_Reforma%2C_Chiapas%2C_Mexico_01.jpg
+563,Terreno en venta,destino,Reforma,naturaleza,131,3.8,350,17.918663,-93.265069,https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Parroquia_del_Se%C3%B1or_del_Santuario%2C_Reforma%2C_Chiapas%2C_Mexico_01.jpg/960px-Parroquia_del_Se%C3%B1or_del_Santuario%2C_Reforma%2C_Chiapas%2C_Mexico_01.jpg
 565,Parque Acuático Lu'um Ha Y Villas,destino,Tapachula,familiar,181,3.7,838,14.829814,-92.337669,
-566,Parque Industrial Los Rios,destino,Tapachula,naturaleza,64,3.6,103,14.668229,-92.165187,
-567,Museo Manuel K'ulub,destino,Tenejapa,cultura,90,1.3,418,16.789621,-92.34477,
+567,Museo Manuel K'ulub,destino,Tenejapa,cultura,90,1.3,418,16.789621,-92.34477,https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/M%C3%BAsicos_tradicionales_de_Tenejapa_%28Chiapas%29.jpg/960px-M%C3%BAsicos_tradicionales_de_Tenejapa_%28Chiapas%29.jpg
 568,Parque Tigrilla,destino,Angel Albino Corzo,naturaleza,84,3.4,176,15.9871,-92.851432,
-569,Parque Tuchtlán,destino,Tuxtla Gutierrez,naturaleza,168,2.1,484,16.759921,-93.146719,
-570,Paseo El Sabinal,destino,Tuxtla Gutierrez,naturaleza,181,3.3,532,16.759119,-93.126895,
-571,Parque el magueyito,destino,Tuxtla Gutierrez,naturaleza,107,4.0,259,16.75921,-93.125999,
+569,Parque Tuchtlán,destino,Tuxtla Gutierrez,naturaleza,168,2.1,484,16.759921,-93.146719,https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Panor%C3%A1mica_de_Tuxtla_Guti%C3%A9rrez_desde_el_aire.jpg/960px-Panor%C3%A1mica_de_Tuxtla_Guti%C3%A9rrez_desde_el_aire.jpg
+570,Paseo El Sabinal,destino,Tuxtla Gutierrez,naturaleza,181,3.3,532,16.759119,-93.126895,https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Panor%C3%A1mica_de_Tuxtla_Guti%C3%A9rrez_desde_el_aire.jpg/960px-Panor%C3%A1mica_de_Tuxtla_Guti%C3%A9rrez_desde_el_aire.jpg
+571,Parque el magueyito,destino,Tuxtla Gutierrez,naturaleza,107,4.0,259,16.75921,-93.125999,https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Mactumatz%C3%A1_visto_desde_el_centro_de_Tuxtla_Guti%C3%A9rrez.jpg/960px-Mactumatz%C3%A1_visto_desde_el_centro_de_Tuxtla_Guti%C3%A9rrez.jpg
 572,Poza Azul,destino,Salto de Agua,naturaleza,93,2.1,207,17.557797,-92.352363,
-573,Parque la Hacienda,destino,Tuxtla Gutierrez,naturaleza,164,2.4,471,16.762794,-93.134309,
-574,Area verde con bancas,destino,Tuxtla Gutierrez,naturaleza,115,2.9,291,16.763637,-93.133458,
-575,Parque Xamaipak,destino,Tuxtla Gutierrez,naturaleza,59,3.0,85,16.753236,-93.131077,
-576,Parque del Pedaleo,destino,Tuxtla Gutierrez,naturaleza,106,3.7,255,16.759774,-93.149044,
-577,Parque San José Chapultepec,destino,Tuxtla Gutierrez,naturaleza,133,2.2,357,16.768501,-93.158426,
-578,Parque de La Unidad Chapaneca,destino,Tuxtla Gutierrez,naturaleza,162,2.8,463,16.765456,-93.084716,
-579,Parque de la Unidad,destino,Tuxtla Gutierrez,naturaleza,74,3.3,140,16.758647,-93.073133,
+573,Parque la Hacienda,destino,Tuxtla Gutierrez,naturaleza,164,2.4,471,16.762794,-93.134309,https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Panor%C3%A1mica_de_Tuxtla_Guti%C3%A9rrez_desde_el_aire.jpg/960px-Panor%C3%A1mica_de_Tuxtla_Guti%C3%A9rrez_desde_el_aire.jpg
+575,Parque Xamaipak,destino,Tuxtla Gutierrez,naturaleza,59,3.0,85,16.753236,-93.131077,https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Panor%C3%A1mica_de_Tuxtla_Guti%C3%A9rrez_desde_el_aire.jpg/960px-Panor%C3%A1mica_de_Tuxtla_Guti%C3%A9rrez_desde_el_aire.jpg
+576,Parque del Pedaleo,destino,Tuxtla Gutierrez,naturaleza,106,3.7,255,16.759774,-93.149044,https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Panor%C3%A1mica_de_Tuxtla_Guti%C3%A9rrez_desde_el_aire.jpg/960px-Panor%C3%A1mica_de_Tuxtla_Guti%C3%A9rrez_desde_el_aire.jpg
+577,Parque San José Chapultepec,destino,Tuxtla Gutierrez,naturaleza,133,2.2,357,16.768501,-93.158426,https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Panor%C3%A1mica_de_Tuxtla_Guti%C3%A9rrez_desde_el_aire.jpg/960px-Panor%C3%A1mica_de_Tuxtla_Guti%C3%A9rrez_desde_el_aire.jpg
+578,Parque de La Unidad Chapaneca,destino,Tuxtla Gutierrez,naturaleza,162,2.8,463,16.765456,-93.084716,https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Mactumatz%C3%A1_visto_desde_el_centro_de_Tuxtla_Guti%C3%A9rrez.jpg/960px-Mactumatz%C3%A1_visto_desde_el_centro_de_Tuxtla_Guti%C3%A9rrez.jpg
+579,Parque de la Unidad,destino,Tuxtla Gutierrez,naturaleza,74,3.3,140,16.758647,-93.073133,https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Panor%C3%A1mica_de_Tuxtla_Guti%C3%A9rrez_desde_el_aire.jpg/960px-Panor%C3%A1mica_de_Tuxtla_Guti%C3%A9rrez_desde_el_aire.jpg
 580,"Zona Sujeta a Conservación Ecológica ""La Ciénega""",destino,Comitan de Dominguez,naturaleza,127,2.4,333,16.273423,-92.112869,
 581,Zona Arqueológica de Palenque,destino,Palenque,cultura,90,3.5,9500,17.4838,-92.0458,https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Palenque_-_Temple_of_the_Inscriptions.jpg/960px-Palenque_-_Temple_of_the_Inscriptions.jpg
 582,Cascada de Agua Azul,destino,Tumbalá,naturaleza,60,3.0,8200,17.2589,-92.1131,https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Cascadas_de_Agua_Azul.jpg/960px-Cascadas_de_Agua_Azul.jpg
@@ -594,7 +505,6 @@
 593,Templo de Santo Domingo de Guzmán,destino,San Cristobal de las Casas,cultura,0,1.0,9200,16.7397,-92.6383,https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Templo_de_Santo_Domingo%2C_San_Cristobal_de_las_Casas.jpg/960px-Templo_de_Santo_Domingo%2C_San_Cristobal_de_las_Casas.jpg
 594,Parque Nacional Lagunas de Montebello,destino,La Trinitaria,aventura,60,5.0,7800,16.0836,-91.7278,https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Lagunas_de_Montebello_Chiapas.jpg/960px-Lagunas_de_Montebello_Chiapas.jpg
 595,Mercado de Artesanías de San Cristóbal,destino,San Cristobal de las Casas,cultura,0,1.5,8000,16.736,-92.637,
-596,Museo Na Bolom,destino,San Cristobal de las Casas,cultura,75,1.5,4200,16.7449,-92.6338,
 597,Restaurant Adriana,restaurante,San Cristobal de las Casas,gastronomia,138,1.4,611,16.737728,-92.639916,
 598,Cafe Plaza,restaurante,Palenque,gastronomia,225,1.0,520,17.509426,-91.980641,
 599,Italian Coffee,restaurante,San Cristobal de las Casas,gastronomia,183,1.2,385,16.737379,-92.6368,
@@ -688,7 +598,6 @@
 687,Belil Sabores de Chiapas Interconexion Social,restaurante,San Cristobal de las Casas,gastronomia,144,1.2,643,16.738355,-92.634683,
 688,Entropia,restaurante,San Cristobal de las Casas,gastronomia,82,1.2,315,16.738346,-92.63445,
 689,Restaurante Monte Líbano,restaurante,Ocosingo,gastronomia,210,1.5,472,16.891414,-91.882939,
-690,Nueva Alianza,restaurante,Tenosique,gastronomia,228,1.1,530,16.822091,-90.888464,
 691,Te Quiero Verde,restaurante,San Cristobal de las Casas,gastronomia,83,1.2,316,16.735246,-92.63777,
 692,Restaurante Baljum,restaurante,Palenque,gastronomia,163,1.3,740,17.497931,-92.015721,
 693,La Chiapaneca,restaurante,Palenque,gastronomia,129,1.1,560,17.49901,-92.018653,
@@ -696,7 +605,7 @@
 695,Rasha,restaurante,Ocosingo,gastronomia,119,1.3,509,16.907026,-92.094245,
 696,Las Delicias,restaurante,Ocosingo,gastronomia,194,1.3,906,16.909711,-92.091603,
 697,El Piru,restaurante,Las Margaritas,gastronomia,185,1.4,392,16.09967,-90.836633,
-698,El Encanto,restaurante,Ocozocoautla,gastronomia,109,1.4,144,16.742993,-93.331044,
+698,El Encanto,restaurante,Ocozocoautla de Espinosa,gastronomia,109,1.4,144,16.742993,-93.331044,
 699,El Recuerdo,restaurante,Cintalapa,gastronomia,127,1.3,204,16.68875,-93.723143,
 700,Las Vegas,restaurante,Cintalapa,gastronomia,175,1.4,360,16.686523,-93.669884,
 701,El Girasol,restaurante,San Juan Chamula,gastronomia,245,1.3,585,16.782571,-92.694667,
@@ -766,7 +675,6 @@
 765,Mar y Tierra,restaurante,Comitan de Dominguez,gastronomia,235,1.5,1125,16.214155,-92.116786,
 766,Restaurant El Trebol,restaurante,Comitan de Dominguez,gastronomia,118,1.0,173,16.212955,-92.114066,
 767,Casa Navarez,restaurante,Comitan de Dominguez,gastronomia,241,1.3,570,16.213921,-92.11662,
-768,PARADOR Vallescondido RESTAURANTE,restaurante,Tenosique,gastronomia,133,1.5,222,17.177795,-91.488086,
 769,Comida Thai,restaurante,San Cristobal de las Casas,gastronomia,242,1.3,577,16.736187,-92.629817,
 770,Cocina Economica Dona Naty,restaurante,San Cristobal de las Casas,gastronomia,212,1.3,480,16.742291,-92.63683,
 771,Mr Taco,restaurante,Palenque,gastronomia,184,1.0,388,17.50815,-91.986326,
@@ -900,8 +808,6 @@
 899,Café Zot's,restaurante,Palenque,gastronomia,124,1.3,192,17.509425,-91.982067,
 900,Delicatessen Pizza Il Piccolo,restaurante,San Cristobal de las Casas,gastronomia,171,1.5,345,16.737548,-92.633766,
 901,Pizzas Expres,restaurante,Palenque,gastronomia,167,1.2,334,17.509062,-91.989756,
-902,Restaurant Maya,restaurante,Tenosique,gastronomia,207,1.1,461,16.799781,-91.105081,
-903,Selva Maya,restaurante,Tenosique,gastronomia,218,1.1,498,16.815541,-90.887788,
 904,Asadero Las Brasas,restaurante,Comitan de Dominguez,gastronomia,144,1.3,259,16.27683,-92.167919,
 905,Comedores mapastepec,restaurante,Mapastepec,gastronomia,186,1.4,395,15.45571,-92.882502,
 906,Restaurant Maya Agua Azul,restaurante,Ocosingo,gastronomia,170,1.1,344,17.257583,-92.114241,
@@ -1215,7 +1121,6 @@
 1214,El Colibri Café and Bar,restaurante,San Cristobal de las Casas,gastronomia,131,1.4,570,16.733181,-92.634714,
 1215,Borrego Chino,restaurante,Salto de Agua,gastronomia,152,1.0,284,17.695959,-92.291765,
 1216,Los Tibios,restaurante,Yajalon,gastronomia,150,1.2,277,17.160786,-92.333772,
-1217,Yax Lum,restaurante,Tenosique,gastronomia,127,1.1,202,17.175525,-91.48409,
 1218,"Taquería ""Las Gemelitas""",restaurante,Tuxtla Gutierrez,gastronomia,82,1.2,58,16.756045,-93.162835,
 1219,Restaurant El Chiflon,restaurante,Tzimol,gastronomia,223,1.2,515,16.190423,-92.273764,
 1220,Super 24 hrs.,restaurante,Palenque,gastronomia,118,1.2,174,17.714029,-92.013018,
@@ -1225,11 +1130,10 @@
 1224,Restaurant La toluqueña,restaurante,Palenque,gastronomia,190,1.1,409,17.727046,-92.015141,
 1225,Restaurant Palapa el poblanito,restaurante,Tapachula,gastronomia,241,1.2,573,14.799692,-92.355344,
 1226,Cafetería Contaduría UNACH,restaurante,Tuxtla Gutierrez,gastronomia,105,1.0,131,16.753533,-93.153217,
-1227,Sima of the Parrots,restaurante,Ocozocoautla,gastronomia,248,1.4,1193,16.806993,-93.474857,
+1227,Sima of the Parrots,restaurante,Ocozocoautla de Espinosa,gastronomia,248,1.4,1193,16.806993,-93.474857,
 1228,La Mansion,restaurante,Tuxtla Gutierrez,gastronomia,120,1.5,182,16.754175,-93.142437,
 1229,Cocina el Mana,restaurante,Tuxtla Gutierrez,gastronomia,108,1.5,143,16.77845,-93.179159,
 1230,La Floresta,restaurante,Palenque,gastronomia,151,1.0,280,17.498359,-92.017004,
-1231,La Candones,restaurante,Tenosique,gastronomia,159,1.4,307,16.768261,-91.125771,
 1232,Cascada Wejlib ja,restaurante,Palenque,gastronomia,113,1.0,157,17.375573,-91.798017,
 1233,Misol-Ha,restaurante,Palenque,gastronomia,91,1.2,88,17.391245,-91.998705,
 1234,Cafeteria Ingenieria UNACH,restaurante,Tuxtla Gutierrez,gastronomia,177,1.2,365,16.755405,-93.155021,
@@ -1245,145 +1149,145 @@
 1244,Restaurante Velo de Novia,restaurante,Tzimol,gastronomia,128,1.5,207,16.191749,-92.27387,
 1245,Pollos Fritos Cacahoatán,restaurante,Tapachula,gastronomia,128,1.5,206,14.99463,-92.166449,
 1246,Global Lounge Tapachula,restaurante,Tapachula,gastronomia,168,1.0,770,14.790223,-92.369687,
-1247,La casa de Adobe,restaurante,Ocozocoautla,gastronomia,235,1.2,1120,16.759756,-93.371521,
+1247,La casa de Adobe,restaurante,Ocozocoautla de Espinosa,gastronomia,235,1.2,1120,16.759756,-93.371521,
 1248,Barbacoa,restaurante,Tuxtla Gutierrez,gastronomia,118,1.5,175,16.755141,-93.124932,
 1249,El Rancho,restaurante,Tapachula,gastronomia,200,1.1,936,14.859045,-92.296356,
 1250,Restaurant Victoria,restaurante,Ostuacan,gastronomia,159,1.3,718,17.414944,-93.337855,
 1251,LOS 2 AGUACHILES,restaurante,Huehuetan,gastronomia,112,1.3,155,15.020047,-92.386162,
 1252,Antojitos Fany,restaurante,San Juan Chamula,gastronomia,172,1.3,349,16.882423,-92.629954,
 1253,La Guerita,restaurante,Escuintla,gastronomia,122,1.1,524,15.349021,-92.543364,
-1254,Iglesia de San Juan Bautista de Chamula,destino,Chamula,cultura,30,2.0,8420,16.787710,-92.686340,
-1255,Mercado de Artesanias Chamula,destino,Chamula,cultura,0,1.5,3200,16.788500,-92.686100,
-1256,Tejido Tradicional Tzotzil,destino,Chamula,cultura,50,1.5,1100,16.788000,-92.686000,
+1254,Iglesia de San Juan Bautista de Chamula,destino,San Juan Chamula,cultura,30,2.0,8420,16.787710,-92.686340,
+1255,Mercado de Artesanias Chamula,destino,San Juan Chamula,cultura,0,1.5,3200,16.788500,-92.686100,https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Street_Scene_-_San_Juan_Chamula_-_Chiapas_-_Mexico.jpg/960px-Street_Scene_-_San_Juan_Chamula_-_Chiapas_-_Mexico.jpg
+1256,Tejido Tradicional Tzotzil,destino,San Juan Chamula,cultura,50,1.5,1100,16.788000,-92.686000,https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/La_ni%C3%B1a_entre_las_flores.jpg/960px-La_ni%C3%B1a_entre_las_flores.jpg
 1257,Santuario del Senor de Tila,destino,Tila,cultura,0,3.0,12000,17.296800,-92.410600,https://upload.wikimedia.org/wikipedia/commons/4/4b/Parroquia_de_San_Mateo_Apostol_y_Santuario_del_Se%C3%B1or_de_Tila.jpg
 1258,Rio Tila,destino,Tila,naturaleza,0,2.0,980,17.298000,-92.415000,
 1259,Mercado Artesanal de Tila,destino,Tila,cultura,0,1.0,760,17.297000,-92.411000,
-1260,Volcan Tacana,destino,Union Juarez,naturaleza,200,8.0,3800,15.131000,-92.108000,
-1261,Finca Hamburgo,destino,Union Juarez,cultura,120,3.0,2100,15.050000,-92.080000,
-1262,Cascada Muxbal,destino,Union Juarez,naturaleza,60,2.5,1400,15.045000,-92.085000,
-1263,Cafe de Altura Union Juarez,destino,Union Juarez,cultura,80,1.5,900,15.047000,-92.083000,
-1264,Parque Nacional Volcan Tacana,destino,Cacahoatan,naturaleza,50,6.0,2600,15.100000,-92.110000,
+1260,Volcan Tacana,destino,Union Juarez,naturaleza,200,8.0,3800,15.131000,-92.108000,https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Volcan_Tacana_01.jpg/960px-Volcan_Tacana_01.jpg
+1261,Finca Hamburgo,destino,Union Juarez,cultura,120,3.0,2100,15.050000,-92.080000,https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/JuarezChiapasEscudo.jpg/960px-JuarezChiapasEscudo.jpg
+1262,Cascada Muxbal,destino,Union Juarez,naturaleza,60,2.5,1400,15.045000,-92.085000,https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/JuarezChiapasEscudo.jpg/960px-JuarezChiapasEscudo.jpg
+1263,Cafe de Altura Union Juarez,destino,Union Juarez,cultura,80,1.5,900,15.047000,-92.083000,https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/JuarezChiapasEscudo.jpg/960px-JuarezChiapasEscudo.jpg
+1264,Parque Nacional Volcan Tacana,destino,Cacahoatan,naturaleza,50,6.0,2600,15.100000,-92.110000,https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Cacahoat%C3%A1n_-_Chiapas.PNG/960px-Cacahoat%C3%A1n_-_Chiapas.PNG
 1265,Finca Irlanda cafe organico,destino,Cacahoatan,cultura,150,2.5,1800,15.000000,-92.167000,
 1266,Plantaciones de Cafe Soconusco,destino,Cacahoatan,naturaleza,80,2.0,1200,14.984000,-92.159000,
-1267,Centro Ecoturistico Larrainzar,destino,Larrainzar,cultura,40,2.0,820,16.891000,-92.801000,
-1268,Comunidad Tzotzil San Andres,destino,Larrainzar,cultura,30,2.5,1500,16.892000,-92.802000,
-1269,Tejido Ceremonial Tzotzil,destino,Larrainzar,cultura,50,1.5,680,16.891000,-92.800000,
+1267,Centro Ecoturistico Larrainzar,destino,Larrainzar,cultura,40,2.0,820,16.891000,-92.801000,https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/2006_03_12_San_Andr%C3%A9s_Larra%C3%ADnzar_9.JPG/960px-2006_03_12_San_Andr%C3%A9s_Larra%C3%ADnzar_9.JPG
+1268,Comunidad Tzotzil San Andres,destino,Larrainzar,cultura,30,2.5,1500,16.892000,-92.802000,https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/2006_03_12_San_Andr%C3%A9s_Larra%C3%ADnzar_9.JPG/960px-2006_03_12_San_Andr%C3%A9s_Larra%C3%ADnzar_9.JPG
+1269,Tejido Ceremonial Tzotzil,destino,Larrainzar,cultura,50,1.5,680,16.891000,-92.800000,https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/2006_03_12_San_Andr%C3%A9s_Larra%C3%ADnzar_9.JPG/960px-2006_03_12_San_Andr%C3%A9s_Larra%C3%ADnzar_9.JPG
 1270,Zona Arqueologica Chinkultic,destino,La Trinitaria,cultura,85,2.5,3200,16.104800,-91.987300,https://upload.wikimedia.org/wikipedia/commons/f/fe/Estructura_1_Chinkultic.JPEG
 1271,Lagunas de Montebello,destino,La Trinitaria,naturaleza,50,4.0,18500,16.107000,-91.693000,https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Lagunas_de_Montebello_Chiapas.jpg/960px-Lagunas_de_Montebello_Chiapas.jpg
 1272,Lago Pojoj,destino,La Trinitaria,naturaleza,30,2.0,2400,16.108000,-91.680000,
-1273,Rio Lacandon,destino,Marques de Comillas,naturaleza,0,3.0,1600,16.266000,-90.839000,
+1273,Rio Lacandon,destino,Marques de Comillas,naturaleza,0,3.0,1600,16.266000,-90.839000,https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Emiliano_Zapata%2C_1914.jpg/960px-Emiliano_Zapata%2C_1914.jpg
 1274,Reserva Montes Azules,destino,Marques de Comillas,naturaleza,100,4.0,2800,16.200000,-90.900000,
 1275,Rio Lacantun Ecoturismo,destino,Marques de Comillas,naturaleza,80,3.5,1400,16.250000,-90.850000,
-1276,Presa Nezahualcoyotl Malpaso,destino,Tecpatan,naturaleza,0,2.0,1900,17.155000,-93.621000,
-1277,Templo de Santo Domingo Colonial,destino,Tecpatan,cultura,0,1.5,2600,17.138000,-93.327000,
-1278,Canon del Rio La Venta,destino,Tecpatan,naturaleza,120,5.0,3200,17.100000,-93.400000,
+1276,Presa Nezahualcoyotl Malpaso,destino,Tecpatan,naturaleza,0,2.0,1900,17.155000,-93.621000,https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Unach_Virtual_Sede_Tecpatan_Parte_de_la_Primera_Generaci%C3%B3n.jpg/960px-Unach_Virtual_Sede_Tecpatan_Parte_de_la_Primera_Generaci%C3%B3n.jpg
+1277,Templo de Santo Domingo Colonial,destino,Tecpatan,cultura,0,1.5,2600,17.138000,-93.327000,https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/San_Cristobal_de_las_Casas%2C_Santo_Domingo_church_%2814362868301%29.jpg/960px-San_Cristobal_de_las_Casas%2C_Santo_Domingo_church_%2814362868301%29.jpg
+1278,Canon del Rio La Venta,destino,Tecpatan,naturaleza,120,5.0,3200,17.100000,-93.400000,https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Cascada_el_Aguacero%2C_Chiapas.jpg/960px-Cascada_el_Aguacero%2C_Chiapas.jpg
 1279,Zona Arqueologica Tonina,destino,Ocosingo,cultura,95,3.0,8900,17.075900,-92.009400,https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Monta%C3%B1a_Prehisp%C3%A1nica_-_Tonin%C3%A1.jpg/960px-Monta%C3%B1a_Prehisp%C3%A1nica_-_Tonin%C3%A1.jpg
-1280,Laguna Miramar,destino,Ocosingo,naturaleza,350,4.0,4200,16.194000,-91.423000,
+1280,Laguna Miramar,destino,Ocosingo,naturaleza,350,4.0,4200,16.194000,-91.423000,https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/La_Laguna_Roja_%288043991261%29.jpg/960px-La_Laguna_Roja_%288043991261%29.jpg
 1281,Cascada Roberto Barrios,destino,Ocosingo,naturaleza,80,3.0,2700,17.415000,-92.100000,
-1282,Pueblo Zoque de Copainala,destino,Copainala,cultura,0,2.0,1200,17.081000,-93.200000,
-1283,Iglesia de Santiago Apostol,destino,Copainala,cultura,0,1.0,980,17.081000,-93.200000,
+1282,Pueblo Zoque de Copainala,destino,Copainala,cultura,0,2.0,1200,17.081000,-93.200000,https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Copainal%C3%A1_-_Chiapas.PNG/960px-Copainal%C3%A1_-_Chiapas.PNG
+1283,Iglesia de Santiago Apostol,destino,Copainala,cultura,0,1.0,980,17.081000,-93.200000,https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Copainal%C3%A1_-_Chiapas.PNG/960px-Copainal%C3%A1_-_Chiapas.PNG
 1284,Artesanias Zoques Copainala,destino,Copainala,cultura,40,1.5,650,17.080000,-93.199000,
 1285,Templo del Senor del Pozo,destino,Chilon,cultura,0,1.5,1800,17.080000,-92.410000,
 1286,Cascada Agua Escondida,destino,Chilon,naturaleza,60,2.5,1400,17.050000,-92.390000,
 1287,Comunidad Tzeltal San Sebastian,destino,Chilon,cultura,50,2.0,980,17.080000,-92.410000,
 1288,Parque Nacional Canon del Sumidero acceso,destino,Chicoasen,naturaleza,180,3.5,22000,16.851000,-93.076000,https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Canyon_del_Sumidero.jpg/960px-Canyon_del_Sumidero.jpg
-1289,Presa Manuel Moreno Torres,destino,Chicoasen,naturaleza,0,1.5,1800,16.920000,-93.076000,
-1290,Mirador Presa Chicoasen,destino,Chicoasen,fotografia,0,1.0,900,16.920000,-93.080000,
-1291,Bosque Niebla El Bosque,destino,El Bosque,naturaleza,60,3.0,1600,17.083000,-93.041000,
-1292,Cascada La Golondrina,destino,El Bosque,naturaleza,40,2.5,820,17.080000,-93.040000,
-1293,Sendero Ecoturistico Sierra Norte,destino,El Bosque,naturaleza,50,3.5,740,17.085000,-93.042000,
+1289,Presa Manuel Moreno Torres,destino,Chicoasen,naturaleza,0,1.5,1800,16.920000,-93.076000,https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Chicoas%C3%A9n_-_Chiapas.PNG/960px-Chicoas%C3%A9n_-_Chiapas.PNG
+1290,Mirador Presa Chicoasen,destino,Chicoasen,fotografia,0,1.0,900,16.920000,-93.080000,https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Chicoas%C3%A9n_-_Chiapas.PNG/960px-Chicoas%C3%A9n_-_Chiapas.PNG
+1291,Bosque Niebla El Bosque,destino,El Bosque,naturaleza,60,3.0,1600,17.083000,-93.041000,https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Pav%C3%B3n_cornudo_%28Oreophasis_derbianus%29.jpg/960px-Pav%C3%B3n_cornudo_%28Oreophasis_derbianus%29.jpg
+1292,Cascada La Golondrina,destino,El Bosque,naturaleza,40,2.5,820,17.080000,-93.040000,https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Torre_El_Bosque_500%2C_Las_Condes%2C_Chile_-_2024_-_A74198220240928.jpg/960px-Torre_El_Bosque_500%2C_Las_Condes%2C_Chile_-_2024_-_A74198220240928.jpg
+1293,Sendero Ecoturistico Sierra Norte,destino,El Bosque,naturaleza,50,3.5,740,17.085000,-93.042000,https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/El_Bosque_-_Chiapas.PNG/960px-El_Bosque_-_Chiapas.PNG
 1294,Yaxchilan Zona Arqueologica,destino,Ocosingo,cultura,95,4.0,7800,16.899000,-90.965000,https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Yaxchilan-estructura33.jpg/960px-Yaxchilan-estructura33.jpg
 1295,Laguna Miramar Selva Lacandona,destino,Ocosingo,naturaleza,200,5.0,4100,16.700000,-91.500000,
 1296,Comunidad Lacandona Naha,destino,Ocosingo,cultura,150,3.0,1200,16.990000,-91.560000,
 1297,Cataratas de San Juan Cancuc,destino,San Juan Cancuc,naturaleza,50,2.5,680,16.946000,-92.436000,
 1298,Comunidad Tzeltal Cancuc,destino,San Juan Cancuc,cultura,40,2.0,540,16.946000,-92.436000,
 1299,Artesanias Textiles Cancuc,destino,San Juan Cancuc,cultura,60,1.5,420,16.945000,-92.435000,
-1300,Cerro Tzontehuitz,destino,Tenejapa,naturaleza,0,4.0,1800,16.957000,-92.499000,
-1301,Mercado Tradicional Tzeltal Tenejapa,destino,Tenejapa,cultura,0,1.5,2400,16.920000,-92.500000,
+1300,Cerro Tzontehuitz,destino,Tenejapa,naturaleza,0,4.0,1800,16.957000,-92.499000,https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/M%C3%BAsicos_tradicionales_de_Tenejapa_%28Chiapas%29.jpg/960px-M%C3%BAsicos_tradicionales_de_Tenejapa_%28Chiapas%29.jpg
+1301,Mercado Tradicional Tzeltal Tenejapa,destino,Tenejapa,cultura,0,1.5,2400,16.920000,-92.500000,https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/M%C3%BAsicos_tradicionales_de_Tenejapa_%28Chiapas%29.jpg/960px-M%C3%BAsicos_tradicionales_de_Tenejapa_%28Chiapas%29.jpg
 1302,Cascada Yaxanal,destino,Oxchuc,naturaleza,60,2.5,950,16.781000,-92.331000,
 1303,Comunidad Tzeltal Oxchuc,destino,Oxchuc,cultura,30,2.0,780,16.781000,-92.331000,
 1304,Artesanias Tzeltal Oxchuc,destino,Oxchuc,cultura,40,1.5,580,16.780000,-92.330000,
 1305,Laguna Boca del Cielo,destino,Pijijiapan,naturaleza,80,2.5,3600,15.699000,-93.200000,
 1306,Playa Boca del Cielo,destino,Pijijiapan,naturaleza,0,2.0,4200,15.690000,-93.210000,
-1307,Hacienda San Francisco Acala,destino,Acala,cultura,80,2.0,1200,16.558000,-92.802000,
-1308,Rio Grijalva Acala,destino,Acala,naturaleza,0,1.5,900,16.558000,-92.802000,
+1307,Hacienda San Francisco Acala,destino,Acala,cultura,80,2.0,1200,16.558000,-92.802000,https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Acala_-_Chiapas.PNG/960px-Acala_-_Chiapas.PNG
+1308,Rio Grijalva Acala,destino,Acala,naturaleza,0,1.5,900,16.558000,-92.802000,https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Acala_-_Chiapas.PNG/960px-Acala_-_Chiapas.PNG
 1309,Templo Colonial de Acala,destino,Acala,cultura,0,1.0,680,16.558000,-92.802000,
-1310,Museo Comunitario Aldama,destino,Aldama,cultura,30,1.5,420,16.873000,-92.620000,
-1311,Comunidad Tzotzil Aldama,destino,Aldama,cultura,40,2.0,350,16.873000,-92.620000,
-1312,Zona Arqueologica Altamirano,destino,Altamirano,cultura,50,2.0,1100,16.734000,-92.037000,
-1313,Canadas de Chiapas Altamirano,destino,Altamirano,naturaleza,0,3.0,1400,16.734000,-92.037000,
-1314,Mercado Indigena Altamirano,destino,Altamirano,cultura,0,1.5,980,16.735000,-92.037000,
-1315,Cascada Velo de Novia Amatan,destino,Amatan,naturaleza,60,2.0,1200,17.381000,-92.824000,
-1316,Comunidad Zoque Amatan,destino,Amatan,cultura,40,1.5,680,17.381000,-92.824000,
+1310,Museo Comunitario Aldama,destino,Aldama,cultura,30,1.5,420,16.873000,-92.620000,https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/ALDAMA_%28TAMAULIPAS%29.png/960px-ALDAMA_%28TAMAULIPAS%29.png
+1311,Comunidad Tzotzil Aldama,destino,Aldama,cultura,40,2.0,350,16.873000,-92.620000,https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/ALDAMA_%28TAMAULIPAS%29.png/960px-ALDAMA_%28TAMAULIPAS%29.png
+1312,Zona Arqueologica Altamirano,destino,Altamirano,cultura,50,2.0,1100,16.734000,-92.037000,https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Altamirano_-_Chiapas.PNG/960px-Altamirano_-_Chiapas.PNG
+1313,Canadas de Chiapas Altamirano,destino,Altamirano,naturaleza,0,3.0,1400,16.734000,-92.037000,https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Altamirano_-_Chiapas.PNG/960px-Altamirano_-_Chiapas.PNG
+1314,Mercado Indigena Altamirano,destino,Altamirano,cultura,0,1.5,980,16.735000,-92.037000,https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Altamirano_-_Chiapas.PNG/960px-Altamirano_-_Chiapas.PNG
+1315,Cascada Velo de Novia Amatan,destino,Amatan,naturaleza,60,2.0,1200,17.381000,-92.824000,https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Amat%C3%A1n_-_Chiapas.PNG/960px-Amat%C3%A1n_-_Chiapas.PNG
+1316,Comunidad Zoque Amatan,destino,Amatan,cultura,40,1.5,680,17.381000,-92.824000,https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Amat%C3%A1n_-_Chiapas.PNG/960px-Amat%C3%A1n_-_Chiapas.PNG
 1317,Iglesia Colonial de Amatan,destino,Amatan,cultura,0,1.0,520,17.381000,-92.823000,
 1318,Laguna de Catazaja,destino,Catazaja,naturaleza,0,2.5,2600,17.688000,-92.075000,
 1319,Pesca Deportiva Catazaja,destino,Catazaja,naturaleza,80,3.0,1800,17.690000,-92.070000,
 1320,Comunidad Chol Catazaja,destino,Catazaja,cultura,40,1.5,620,17.688000,-92.075000,
-1321,Cascada Chalchihuitan,destino,Chalchihuitan,naturaleza,50,2.5,780,16.987000,-92.726000,
-1322,Comunidad Tzotzil Chalchihuitan,destino,Chalchihuitan,cultura,40,2.0,540,16.987000,-92.726000,
-1323,Ceremonias Tradicionales Chalchihuitan,destino,Chalchihuitan,cultura,60,2.5,480,16.987000,-92.725000,
-1324,Balneario Las Joyas Chapultenango,destino,Chapultenango,naturaleza,60,2.5,1400,17.330000,-93.440000,
+1321,Cascada Chalchihuitan,destino,Chalchihuitan,naturaleza,50,2.5,780,16.987000,-92.726000,https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Chalchihuit%C3%A1n_-_Chiapas.PNG/960px-Chalchihuit%C3%A1n_-_Chiapas.PNG
+1322,Comunidad Tzotzil Chalchihuitan,destino,Chalchihuitan,cultura,40,2.0,540,16.987000,-92.726000,https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Chalchihuit%C3%A1n_-_Chiapas.PNG/960px-Chalchihuit%C3%A1n_-_Chiapas.PNG
+1323,Ceremonias Tradicionales Chalchihuitan,destino,Chalchihuitan,cultura,60,2.5,480,16.987000,-92.725000,https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Chalchihuit%C3%A1n_-_Chiapas.PNG/960px-Chalchihuit%C3%A1n_-_Chiapas.PNG
+1324,Balneario Las Joyas Chapultenango,destino,Chapultenango,naturaleza,60,2.5,1400,17.330000,-93.440000,https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Chapultenango_-_Chiapas.PNG/960px-Chapultenango_-_Chiapas.PNG
 1325,Volcan Chichonal,destino,Chapultenango,naturaleza,150,5.0,1800,17.357000,-93.228000,
 1326,Laguna Crater Chichonal,destino,Chapultenango,naturaleza,200,6.0,1200,17.357000,-93.228000,
 1327,Templo de Chenalho,destino,Chenalho,cultura,0,1.5,820,16.911000,-92.593000,
 1328,Comunidad Tzotzil Chenalho,destino,Chenalho,cultura,40,2.0,650,16.911000,-92.593000,
 1329,Artesanias Textiles Chenalho,destino,Chenalho,cultura,60,1.5,580,16.912000,-92.593000,
-1330,Sierra Madre Chicomuselo,destino,Chicomuselo,naturaleza,60,3.0,800,15.760000,-92.213000,
-1331,Comunidad Maya Chicomuselo,destino,Chicomuselo,cultura,40,2.0,480,15.760000,-92.213000,
-1332,Rio Negro Chicomuselo,destino,Chicomuselo,naturaleza,0,2.5,620,15.760000,-92.214000,
-1333,Cascada Cueva del Arco Coapilla,destino,Coapilla,naturaleza,70,3.0,1600,17.127000,-93.064000,
-1334,Mirador Sierra Coapilla,destino,Coapilla,fotografia,0,2.0,920,17.127000,-93.064000,
-1335,Pueblo Zoque Coapilla,destino,Coapilla,cultura,40,1.5,580,17.127000,-93.063000,
+1330,Sierra Madre Chicomuselo,destino,Chicomuselo,naturaleza,60,3.0,800,15.760000,-92.213000,https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Chicomuselo_-_Chiapas.PNG/960px-Chicomuselo_-_Chiapas.PNG
+1331,Comunidad Maya Chicomuselo,destino,Chicomuselo,cultura,40,2.0,480,15.760000,-92.213000,https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Chicomuselo_-_Chiapas.PNG/960px-Chicomuselo_-_Chiapas.PNG
+1332,Rio Negro Chicomuselo,destino,Chicomuselo,naturaleza,0,2.5,620,15.760000,-92.214000,https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Chicomuselo_-_Chiapas.PNG/960px-Chicomuselo_-_Chiapas.PNG
+1333,Cascada Cueva del Arco Coapilla,destino,Coapilla,naturaleza,70,3.0,1600,17.127000,-93.064000,https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Letras_de_Coapilla.jpg/960px-Letras_de_Coapilla.jpg
+1334,Mirador Sierra Coapilla,destino,Coapilla,fotografia,0,2.0,920,17.127000,-93.064000,https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Letras_de_Coapilla.jpg/960px-Letras_de_Coapilla.jpg
+1335,Pueblo Zoque Coapilla,destino,Coapilla,cultura,40,1.5,580,17.127000,-93.063000,https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Letras_de_Coapilla.jpg/960px-Letras_de_Coapilla.jpg
 1336,Parque Francisco Leon Volcan,destino,Francisco Leon,naturaleza,100,4.0,920,17.336000,-93.261000,
 1337,Zonas Cafetaleras Leon,destino,Francisco Leon,cultura,80,2.0,580,17.336000,-93.261000,
-1338,Sierra Madre El Parral,destino,El Parral,naturaleza,0,2.5,580,16.680000,-92.180000,
-1339,Comunidad Tzeltal El Parral,destino,El Parral,cultura,40,2.0,380,16.680000,-92.180000,
+1338,Sierra Madre El Parral,destino,El Parral,naturaleza,0,2.5,580,16.680000,-92.180000,https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Monasterio_de_El_Parral_-_01.jpg/960px-Monasterio_de_El_Parral_-_01.jpg
+1339,Comunidad Tzeltal El Parral,destino,El Parral,cultura,40,2.0,380,16.680000,-92.180000,https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Monasterio_de_El_Parral_-_01.jpg/960px-Monasterio_de_El_Parral_-_01.jpg
 1340,Mirador El Porvenir Sierra,destino,El Porvenir,fotografia,0,3.0,680,15.202000,-92.029000,
 1341,Frontera Guatemala El Porvenir,destino,El Porvenir,cultura,0,1.5,820,15.202000,-92.029000,
 1342,Cerro de la Cruz Frontera Comalapa,destino,Frontera Comalapa,fotografia,0,1.5,680,15.660000,-92.120000,
 1343,Comunidades Maya Comalapa,destino,Frontera Comalapa,cultura,50,2.0,780,15.660000,-92.121000,
-1344,Rio Negro Ecoturismo La Grandeza,destino,La Grandeza,naturaleza,60,2.5,480,15.456000,-92.093000,
-1345,Sierra Madre La Grandeza,destino,La Grandeza,naturaleza,0,3.0,380,15.456000,-92.094000,
-1346,Cascada La Independencia,destino,La Independencia,naturaleza,80,3.0,1200,16.070000,-92.020000,
-1347,Comunidad Tojolabal La Independencia,destino,La Independencia,cultura,50,2.0,820,16.070000,-92.020000,
+1344,Rio Negro Ecoturismo La Grandeza,destino,La Grandeza,naturaleza,60,2.5,480,15.456000,-92.093000,https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/La_Grandeza_-_Chiapas.PNG/960px-La_Grandeza_-_Chiapas.PNG
+1345,Sierra Madre La Grandeza,destino,La Grandeza,naturaleza,0,3.0,380,15.456000,-92.094000,https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/La_Grandeza_-_Chiapas.PNG/960px-La_Grandeza_-_Chiapas.PNG
+1346,Cascada La Independencia,destino,La Independencia,naturaleza,80,3.0,1200,16.070000,-92.020000,https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Columna_de_la_Victoria_de_la_Guerra_de_la_Independencia%2C_Tallinn%2C_Estonia%2C_2012-08-05%2C_DD_15.JPG/960px-Columna_de_la_Victoria_de_la_Guerra_de_la_Independencia%2C_Tallinn%2C_Estonia%2C_2012-08-05%2C_DD_15.JPG
+1347,Comunidad Tojolabal La Independencia,destino,La Independencia,cultura,50,2.0,820,16.070000,-92.020000,https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Columna_de_la_Victoria_de_la_Guerra_de_la_Independencia%2C_Tallinn%2C_Estonia%2C_2012-08-05%2C_DD_15.JPG/960px-Columna_de_la_Victoria_de_la_Guerra_de_la_Independencia%2C_Tallinn%2C_Estonia%2C_2012-08-05%2C_DD_15.JPG
 1348,Balneario La Libertad,destino,La Libertad,naturaleza,60,2.0,1100,16.738000,-91.786000,
 1349,Comunidades Maya La Libertad,destino,La Libertad,cultura,40,2.0,620,16.738000,-91.786000,
 1350,Lagunas Las Rosas,destino,Las Rosas,naturaleza,0,2.5,1800,16.380000,-92.330000,
 1351,Artesanias Tzeltal Las Rosas,destino,Las Rosas,cultura,50,1.5,960,16.380000,-92.330000,
 1352,Balneario Las Rosas,destino,Las Rosas,naturaleza,60,2.0,1400,16.381000,-92.331000,
-1353,Presa Angostura Rio Grijalva,destino,La Concordia,naturaleza,0,2.5,2800,15.860000,-92.700000,
-1354,Laguna de Bochil,destino,Bochil,naturaleza,0,2.0,1200,17.000000,-92.890000,
-1355,Templo Colonial Bochil,destino,Bochil,cultura,0,1.0,820,17.000000,-92.890000,
+1353,Presa Angostura Rio Grijalva,destino,La Concordia,naturaleza,0,2.5,2800,15.860000,-92.700000,https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/La_Concordia_-_Chiapas.PNG/960px-La_Concordia_-_Chiapas.PNG
+1354,Laguna de Bochil,destino,Bochil,naturaleza,0,2.0,1200,17.000000,-92.890000,https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Bochil_-_Chiapas.PNG/960px-Bochil_-_Chiapas.PNG
+1355,Templo Colonial Bochil,destino,Bochil,cultura,0,1.0,820,17.000000,-92.890000,https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Bochil_-_Chiapas.PNG/960px-Bochil_-_Chiapas.PNG
 1356,Comunidad Tzotzil Bochil,destino,Bochil,cultura,40,1.5,620,17.001000,-92.889000,
 1357,Aguas Termales Huitiupan,destino,Huitiupan,naturaleza,80,2.5,980,17.262000,-92.740000,
 1358,Comunidad Tzotzil Huitiupan,destino,Huitiupan,cultura,40,2.0,580,17.262000,-92.740000,
 1359,Artesanias Textiles Huitiupan,destino,Huitiupan,cultura,50,1.5,480,17.262000,-92.739000,
 1360,Laguna Inferior Ixhuatan,destino,Ixhuatan,naturaleza,0,3.0,1600,16.180000,-94.500000,
-1361,Cascada Rio Jitotol,destino,Jitotol,naturaleza,50,2.0,1200,17.066000,-92.987000,
-1362,Cafe de Montana Jitotol,destino,Jitotol,cultura,60,1.5,800,17.066000,-92.987000,
-1363,Iglesia Colonial Jitotol,destino,Jitotol,cultura,0,1.0,580,17.066000,-92.986000,
+1361,Cascada Rio Jitotol,destino,Jitotol,naturaleza,50,2.0,1200,17.066000,-92.987000,https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Aulonemia_clarkiae_Davidse_%26_R_W_Pohl_nmnhbotany_2120033_NMNH-00390668-000001.jpg/960px-Aulonemia_clarkiae_Davidse_%26_R_W_Pohl_nmnhbotany_2120033_NMNH-00390668-000001.jpg
+1362,Cafe de Montana Jitotol,destino,Jitotol,cultura,60,1.5,800,17.066000,-92.987000,https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Aulonemia_clarkiae_Davidse_%26_R_W_Pohl_nmnhbotany_2120033_NMNH-00390668-000001.jpg/960px-Aulonemia_clarkiae_Davidse_%26_R_W_Pohl_nmnhbotany_2120033_NMNH-00390668-000001.jpg
+1363,Iglesia Colonial Jitotol,destino,Jitotol,cultura,0,1.0,580,17.066000,-92.986000,https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Aulonemia_clarkiae_Davidse_%26_R_W_Pohl_nmnhbotany_2120033_NMNH-00390668-000001.jpg/960px-Aulonemia_clarkiae_Davidse_%26_R_W_Pohl_nmnhbotany_2120033_NMNH-00390668-000001.jpg
 1364,Rio Usumacinta Marques,destino,Marques de Comillas,naturaleza,120,4.0,2200,16.250000,-90.870000,
 1365,Grutas Lacandona,destino,Marques de Comillas,naturaleza,100,2.5,1800,16.260000,-90.845000,
 1366,Playa Los Patos Mazatan,destino,Mazatan,naturaleza,0,2.5,2200,14.829000,-92.461000,
 1367,Boca del Rio Mazatan,destino,Mazatan,naturaleza,60,2.0,1600,14.820000,-92.460000,
 1368,Laguna La Joya Mazatan,destino,Mazatan,naturaleza,40,2.5,1400,14.830000,-92.462000,
 1369,Finca El Paraiso Metapa,destino,Metapa,naturaleza,100,2.5,1200,14.851000,-92.163000,
-1370,Cafe Soconusco Metapa,destino,Metapa,cultura,80,1.5,820,14.851000,-92.163000,
-1371,Comunidad Mame Metapa,destino,Metapa,cultura,50,2.0,580,14.852000,-92.163000,
+1370,Cafe Soconusco Metapa,destino,Metapa,cultura,80,1.5,820,14.851000,-92.163000,https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/054_Arjuna_Metapa%2C_Pura_Arjuna_Metapa%2C_Bali%2C_photograph_by_Anandajoti_Bhikkhu.jpg/960px-054_Arjuna_Metapa%2C_Pura_Arjuna_Metapa%2C_Bali%2C_photograph_by_Anandajoti_Bhikkhu.jpg
+1371,Comunidad Mame Metapa,destino,Metapa,cultura,50,2.0,580,14.852000,-92.163000,https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/054_Arjuna_Metapa%2C_Pura_Arjuna_Metapa%2C_Bali%2C_photograph_by_Anandajoti_Bhikkhu.jpg/960px-054_Arjuna_Metapa%2C_Pura_Arjuna_Metapa%2C_Bali%2C_photograph_by_Anandajoti_Bhikkhu.jpg
 1372,Mirador Mitontic,destino,Mitontic,fotografia,0,2.5,780,16.875000,-92.743000,
 1373,Comunidad Tzotzil Mitontic,destino,Mitontic,cultura,40,2.0,540,16.875000,-92.743000,
 1374,Artesanias de Lana Mitontic,destino,Mitontic,cultura,60,1.5,480,16.875000,-92.742000,
 1375,Comunidad Tojolabal Nicolas Ruiz,destino,Nicolas Ruiz,cultura,40,2.0,520,16.438000,-92.781000,
 1376,Balneario Nicolas Ruiz,destino,Nicolas Ruiz,naturaleza,50,2.0,800,16.438000,-92.781000,
-1377,Cascada Pantelho,destino,Pantelho,naturaleza,60,2.5,920,16.990000,-92.600000,
-1378,Comunidad Tzotzil Pantelho,destino,Pantelho,cultura,40,2.0,620,16.990000,-92.600000,
+1377,Cascada Pantelho,destino,Pantelho,naturaleza,60,2.5,920,16.990000,-92.600000,https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Carnaval_tradicional_de_Pantelh%C3%B3.jpg/960px-Carnaval_tradicional_de_Pantelh%C3%B3.jpg
+1378,Comunidad Tzotzil Pantelho,destino,Pantelho,cultura,40,2.0,620,16.990000,-92.600000,https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Carnaval_tradicional_de_Pantelh%C3%B3.jpg/960px-Carnaval_tradicional_de_Pantelh%C3%B3.jpg
 1379,Artesanias Textiles Pantelho,destino,Pantelho,cultura,50,1.5,480,16.990000,-92.599000,
 1380,Canon del Rio Rayon,destino,Rayon,naturaleza,80,3.0,1200,17.113000,-92.951000,
 1381,Bosque Sierra Rayon,destino,Rayon,naturaleza,0,2.5,820,17.113000,-92.950000,
 1382,Templo Colonial Rayon,destino,Rayon,cultura,0,1.0,480,17.113000,-92.951000,
-1383,Cascada Rio Sabanilla,destino,Sabanilla,naturaleza,60,2.5,1100,17.447000,-92.661000,
-1384,Comunidad Chol Sabanilla,destino,Sabanilla,cultura,40,2.0,680,17.447000,-92.661000,
-1385,Rio Sabanilla,destino,Sabanilla,naturaleza,0,2.0,820,17.448000,-92.661000,
+1383,Cascada Rio Sabanilla,destino,Sabanilla,naturaleza,60,2.5,1100,17.447000,-92.661000,https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Sabanilla%2C_Chiapas_-_panoramio.jpg/960px-Sabanilla%2C_Chiapas_-_panoramio.jpg
+1384,Comunidad Chol Sabanilla,destino,Sabanilla,cultura,40,2.0,680,17.447000,-92.661000,https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Sabanilla%2C_Chiapas_-_panoramio.jpg/960px-Sabanilla%2C_Chiapas_-_panoramio.jpg
+1385,Rio Sabanilla,destino,Sabanilla,naturaleza,0,2.0,820,17.448000,-92.661000,https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Sabanilla%2C_Chiapas_-_panoramio.jpg/960px-Sabanilla%2C_Chiapas_-_panoramio.jpg
 1386,Artesanias Santiago el Pinar,destino,Santiago el Pinar,cultura,50,1.5,620,16.899000,-92.777000,
 1387,Comunidad Tzotzil Santiago Pinar,destino,Santiago el Pinar,cultura,40,2.0,480,16.899000,-92.777000,
 1388,Mirador Santiago el Pinar,destino,Santiago el Pinar,fotografia,0,1.5,520,16.900000,-92.778000,
@@ -1399,84 +1303,84 @@
 1398,Mercado Fronterizo Suchiate,destino,Suchiate,cultura,0,1.5,3200,14.650000,-92.220000,
 1399,Parque Ecoturistico Sunuapa,destino,Sunuapa,naturaleza,60,2.5,580,17.665000,-93.460000,
 1400,Comunidad Zoque Sunuapa,destino,Sunuapa,cultura,40,2.0,420,17.665000,-93.460000,
-1401,Zona Arqueologica Ixtacomitan,destino,Ixtacomitan,cultura,50,2.0,820,17.470000,-93.100000,
+1401,Zona Arqueologica Ixtacomitan,destino,Ixtacomitan,cultura,50,2.0,820,17.470000,-93.100000,https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Ixtacomit%C3%A1n_-_Chiapas.PNG/960px-Ixtacomit%C3%A1n_-_Chiapas.PNG
 1402,Rio Ixtacomitan,destino,Ixtacomitan,naturaleza,0,2.0,680,17.470000,-93.100000,
 1403,Laguna Tapalapa,destino,Tapalapa,naturaleza,0,2.0,1200,17.191000,-93.039000,
 1404,Comunidad Zoque Tapalapa,destino,Tapalapa,cultura,40,1.5,680,17.191000,-93.039000,
 1405,Cascada Tapilula,destino,Tapilula,naturaleza,60,2.5,1400,17.210000,-92.893000,
 1406,Cafe de Altura Tapilula,destino,Tapilula,cultura,80,1.5,820,17.210000,-92.892000,
 1407,Pueblo Magico Potencial Tapilula,destino,Tapilula,cultura,0,2.0,960,17.211000,-92.893000,
-1408,Presa Angostura Salto de Agua,destino,Salto de Agua,naturaleza,80,3.0,2800,17.550000,-92.320000,
-1409,Rio Salto de Agua,destino,Salto de Agua,naturaleza,0,2.5,1600,17.551000,-92.321000,
-1410,Comunidad Chol Salto de Agua,destino,Salto de Agua,cultura,50,2.0,820,17.550000,-92.319000,
-1411,Cascada Siltepec Sierra Madre,destino,Siltepec,naturaleza,60,3.0,920,15.500000,-92.311000,
-1412,Comunidad Mam Siltepec,destino,Siltepec,cultura,50,2.5,620,15.501000,-92.310000,
+1408,Presa Angostura Salto de Agua,destino,Salto de Agua,naturaleza,80,3.0,2800,17.550000,-92.320000,https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Salto_de_Agua_-_Chiapas.PNG/960px-Salto_de_Agua_-_Chiapas.PNG
+1409,Rio Salto de Agua,destino,Salto de Agua,naturaleza,0,2.5,1600,17.551000,-92.321000,https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Cascadas_salto_de_agua.jpg/960px-Cascadas_salto_de_agua.jpg
+1410,Comunidad Chol Salto de Agua,destino,Salto de Agua,cultura,50,2.0,820,17.550000,-92.319000,https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Salto_de_Agua_-_Chiapas.PNG/960px-Salto_de_Agua_-_Chiapas.PNG
+1411,Cascada Siltepec Sierra Madre,destino,Siltepec,naturaleza,60,3.0,920,15.500000,-92.311000,https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Nectandra_matudae_Lundell_nmnhbotany_2111285_NMNH-00099288-000001.jpg/960px-Nectandra_matudae_Lundell_nmnhbotany_2111285_NMNH-00099288-000001.jpg
+1412,Comunidad Mam Siltepec,destino,Siltepec,cultura,50,2.5,620,15.501000,-92.310000,https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Nectandra_matudae_Lundell_nmnhbotany_2111285_NMNH-00099288-000001.jpg/960px-Nectandra_matudae_Lundell_nmnhbotany_2111285_NMNH-00099288-000001.jpg
 1413,Mercado de Ambar Simojovel,destino,Simojovel,cultura,60,1.5,3600,17.130000,-92.720000,
 1414,Mina de Ambar Simojovel,destino,Simojovel,cultura,120,2.0,2800,17.131000,-92.721000,
 1415,Aguas Termales Simojovel,destino,Simojovel,naturaleza,80,2.5,2400,17.130000,-92.720000,
-1416,Cascada Totolapa,destino,Totolapa,naturaleza,50,2.0,980,16.530000,-92.870000,
-1417,Pueblo Colonial Totolapa,destino,Totolapa,cultura,0,1.5,680,16.530000,-92.870000,
+1416,Cascada Totolapa,destino,Totolapa,naturaleza,50,2.0,980,16.530000,-92.870000,https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Tityus_apozonalli_plosone_plate_01.jpg/960px-Tityus_apozonalli_plosone_plate_01.jpg
+1417,Pueblo Colonial Totolapa,destino,Totolapa,cultura,0,1.5,680,16.530000,-92.870000,https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Tityus_apozonalli_plosone_plate_01.jpg/960px-Tityus_apozonalli_plosone_plate_01.jpg
 1418,Malecon Tuxtla Chico,destino,Tuxtla Chico,naturaleza,0,1.5,1600,14.998000,-92.163000,
 1419,Parque Botanico Tuxtla Chico,destino,Tuxtla Chico,naturaleza,30,1.5,820,14.999000,-92.164000,
 1420,Mirador Panoramico Villa Corzo,destino,Villa Corzo,fotografia,0,2.0,1400,16.170000,-93.260000,
-1421,Reserva La Sepultura,destino,Villa Corzo,naturaleza,100,4.0,2800,16.050000,-93.170000,
+1421,Reserva La Sepultura,destino,Villa Corzo,naturaleza,100,4.0,2800,16.050000,-93.170000,https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Rambla_de_la_Sepultura_01.jpg/960px-Rambla_de_la_Sepultura_01.jpg
 1422,Rio Villa Corzo,destino,Villa Corzo,naturaleza,0,2.5,1200,16.170000,-93.261000,
 1423,Cascada Yajalon,destino,Yajalon,naturaleza,60,2.5,1800,17.170000,-92.340000,
-1424,Cafe de Altura Yajalon,destino,Yajalon,cultura,80,1.5,1200,17.171000,-92.341000,
-1425,Aguas Termales Ixtapa,destino,Ixtapa,naturaleza,60,2.0,1800,16.822000,-92.895000,
+1424,Cafe de Altura Yajalon,destino,Yajalon,cultura,80,1.5,1200,17.171000,-92.341000,https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Zona_Centro_-_2012_%28De_Sur_a_Nte%29_-_panoramio.jpg/960px-Zona_Centro_-_2012_%28De_Sur_a_Nte%29_-_panoramio.jpg
+1425,Aguas Termales Ixtapa,destino,Ixtapa,naturaleza,60,2.0,1800,16.822000,-92.895000,https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/IxtapaChEscudo.jpg/960px-IxtapaChEscudo.jpg
 1426,Balneario Natural Ixtapa,destino,Ixtapa,naturaleza,40,2.0,1400,16.823000,-92.895000,
 1427,Cascada Osumacinta,destino,Osumacinta,naturaleza,60,2.5,820,16.648000,-92.859000,
 1428,Rio Grijalva Osumacinta,destino,Osumacinta,naturaleza,0,2.0,680,16.648000,-92.859000,
 1429,Presa de Malpaso Mezcalapa,destino,Mezcalapa,naturaleza,0,2.5,1600,16.810000,-93.210000,
 1430,Rio Grijalva Mezcalapa,destino,Mezcalapa,naturaleza,0,2.0,980,16.811000,-93.210000,
-1431,Templo Colonial Teopisca,destino,Teopisca,cultura,0,1.0,1200,16.524000,-92.476000,
-1432,Balneario Teopisca,destino,Teopisca,naturaleza,50,2.0,1600,16.524000,-92.476000,
-1433,Artesanias de Barro Teopisca,destino,Teopisca,cultura,60,1.5,980,16.525000,-92.477000,
-1434,Playa Tuzantan,destino,Tuzantan,naturaleza,0,2.5,1400,15.140000,-92.390000,
-1435,Manglares Tuzantan,destino,Tuzantan,naturaleza,60,2.5,1200,15.138000,-92.392000,
+1431,Templo Colonial Teopisca,destino,Teopisca,cultura,0,1.0,1200,16.524000,-92.476000,https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Jorge_Z%C3%BA%C3%B1iga_Berm%C3%BAdez.png/960px-Jorge_Z%C3%BA%C3%B1iga_Berm%C3%BAdez.png
+1432,Balneario Teopisca,destino,Teopisca,naturaleza,50,2.0,1600,16.524000,-92.476000,https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Jorge_Z%C3%BA%C3%B1iga_Berm%C3%BAdez.png/960px-Jorge_Z%C3%BA%C3%B1iga_Berm%C3%BAdez.png
+1433,Artesanias de Barro Teopisca,destino,Teopisca,cultura,60,1.5,980,16.525000,-92.477000,https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Jorge_Z%C3%BA%C3%B1iga_Berm%C3%BAdez.png/960px-Jorge_Z%C3%BA%C3%B1iga_Berm%C3%BAdez.png
+1434,Playa Tuzantan,destino,Tuzantan,naturaleza,0,2.5,1400,15.140000,-92.390000,https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Escudo_prehisp%C3%A1nico_de_Xochiltepec.jpg/960px-Escudo_prehisp%C3%A1nico_de_Xochiltepec.jpg
+1435,Manglares Tuzantan,destino,Tuzantan,naturaleza,60,2.5,1200,15.138000,-92.392000,https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Escudo_prehisp%C3%A1nico_de_Xochiltepec.jpg/960px-Escudo_prehisp%C3%A1nico_de_Xochiltepec.jpg
 1436,Playa Villa Comaltitlan,destino,Villa Comaltitlan,naturaleza,0,2.5,1600,15.218000,-92.564000,
 1437,Estero Villa Comaltitlan,destino,Villa Comaltitlan,naturaleza,50,2.0,1200,15.220000,-92.562000,
 1438,Ecoturismo Benemerto Americas,destino,Benemerto de las Americas,naturaleza,150,4.0,2600,16.529000,-90.660000,
 1439,Rio Usumacinta Benemerto,destino,Benemerto de las Americas,naturaleza,120,3.5,2200,16.530000,-90.665000,
 1440,Selva Lacandona Acceso Benemerto,destino,Benemerto de las Americas,naturaleza,200,5.0,1800,16.525000,-90.660000,
-1441,Puente Internacional Frontera Hidalgo,destino,Frontera Hidalgo,cultura,0,1.0,2400,14.720000,-92.159000,
-1442,Playa Frontera Hidalgo,destino,Frontera Hidalgo,naturaleza,0,2.0,1600,14.722000,-92.159000,
-1443,Sierra Madre Bejucal de Ocampo,destino,Bejucal de Ocampo,naturaleza,60,3.0,620,15.490000,-92.280000,
-1444,Comunidad Mam Bejucal,destino,Bejucal de Ocampo,cultura,40,2.0,480,15.490000,-92.280000,
+1441,Puente Internacional Frontera Hidalgo,destino,Frontera Hidalgo,cultura,0,1.0,2400,14.720000,-92.159000,https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Frontera_Hidalgo_-_Chiapas.PNG/960px-Frontera_Hidalgo_-_Chiapas.PNG
+1442,Playa Frontera Hidalgo,destino,Frontera Hidalgo,naturaleza,0,2.0,1600,14.722000,-92.159000,https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Frontera_Hidalgo_-_Chiapas.PNG/960px-Frontera_Hidalgo_-_Chiapas.PNG
+1443,Sierra Madre Bejucal de Ocampo,destino,Bejucal de Ocampo,naturaleza,60,3.0,620,15.490000,-92.280000,https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Bejucal_de_Ocampo_-_Chiapas.PNG/960px-Bejucal_de_Ocampo_-_Chiapas.PNG
+1444,Comunidad Mam Bejucal,destino,Bejucal de Ocampo,cultura,40,2.0,480,15.490000,-92.280000,https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Bejucal_de_Ocampo_-_Chiapas.PNG/960px-Bejucal_de_Ocampo_-_Chiapas.PNG
 1445,Cerro Bella Vista Sierra,destino,Bella Vista,naturaleza,80,3.5,580,15.527000,-92.138000,
 1446,Comunidad Mam Bella Vista,destino,Bella Vista,cultura,40,2.0,420,15.527000,-92.138000,
 1447,Mirador Chanal,destino,Chanal,fotografia,0,2.0,680,16.646000,-92.273000,
 1448,Comunidad Tzeltal Chanal,destino,Chanal,cultura,40,2.0,540,16.646000,-92.273000,
-1449,Rio Chiapilla,destino,Chiapilla,naturaleza,0,1.5,720,16.572000,-92.952000,
-1450,Pueblo Colonial Chiapilla,destino,Chiapilla,cultura,0,1.0,580,16.572000,-92.952000,
-1451,Bosque de Niebla San Andres Duraznal,destino,San Andres Duraznal,naturaleza,60,3.0,820,17.278000,-92.919000,
-1452,Cascada Duraznal,destino,San Andres Duraznal,naturaleza,50,2.5,640,17.278000,-92.920000,
+1449,Rio Chiapilla,destino,Chiapilla,naturaleza,0,1.5,720,16.572000,-92.952000,https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Chiapilla_-_Chiapas.PNG/960px-Chiapilla_-_Chiapas.PNG
+1450,Pueblo Colonial Chiapilla,destino,Chiapilla,cultura,0,1.0,580,16.572000,-92.952000,https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Chiapilla_-_Chiapas.PNG/960px-Chiapilla_-_Chiapas.PNG
+1451,Bosque de Niebla San Andres Duraznal,destino,San Andres Duraznal,naturaleza,60,3.0,820,17.278000,-92.919000,https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/DuraznalNaBolom02.JPG/960px-DuraznalNaBolom02.JPG
+1452,Cascada Duraznal,destino,San Andres Duraznal,naturaleza,50,2.5,640,17.278000,-92.920000,https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/DuraznalNaBolom02.JPG/960px-DuraznalNaBolom02.JPG
 1453,Ruta del Cafe Huixtan,destino,Huixtan,cultura,80,2.5,980,16.733000,-92.413000,
 1454,Comunidad Tzeltal Huixtan,destino,Huixtan,cultura,40,2.0,680,16.733000,-92.413000,
 1455,Cascada Ixtapangajoya,destino,Ixtapangajoya,naturaleza,60,2.5,980,17.412000,-93.050000,
 1456,Comunidad Zoque Ixtapangajoya,destino,Ixtapangajoya,cultura,40,1.5,620,17.412000,-93.050000,
-1457,Reserva Natural Maravilla Tenejapa,destino,Maravilla Tenejapa,naturaleza,120,4.0,1600,16.390000,-91.440000,
-1458,Rio Lacantun Maravilla Tenejapa,destino,Maravilla Tenejapa,naturaleza,100,3.0,1200,16.390000,-91.440000,
+1457,Reserva Natural Maravilla Tenejapa,destino,Maravilla Tenejapa,naturaleza,120,4.0,1600,16.390000,-91.440000,https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Maravilla_Tenejapa_-_Chiapas.PNG/960px-Maravilla_Tenejapa_-_Chiapas.PNG
+1458,Rio Lacantun Maravilla Tenejapa,destino,Maravilla Tenejapa,naturaleza,100,3.0,1200,16.390000,-91.440000,https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Maravilla_Tenejapa_-_Chiapas.PNG/960px-Maravilla_Tenejapa_-_Chiapas.PNG
 1459,Sierra Madre Mazapa de Madero,destino,Mazapa de Madero,naturaleza,60,3.5,680,15.322000,-92.217000,
 1460,Comunidad Mam Mazapa,destino,Mazapa de Madero,cultura,40,2.0,480,15.322000,-92.217000,
 1461,Sendero Montecristo de Guerrero,destino,Montecristo de Guerrero,naturaleza,80,4.0,580,15.490000,-92.028000,
 1462,Comunidad Sierra Montecristo,destino,Montecristo de Guerrero,cultura,40,2.5,420,15.490000,-92.028000,
 1463,Templo Zoque Ocotepec,destino,Ocotepec,cultura,0,1.5,820,17.169000,-93.063000,
 1464,Rio Ocotepec,destino,Ocotepec,naturaleza,0,2.0,680,17.169000,-93.063000,
-1465,Cascada Pantepec,destino,Pantepec,naturaleza,60,2.5,1100,17.275000,-93.134000,
-1466,Rio Pantepec,destino,Pantepec,naturaleza,0,2.0,820,17.275000,-93.135000,
+1465,Cascada Pantepec,destino,Pantepec,naturaleza,60,2.5,1100,17.275000,-93.134000,https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Escudo_prehisp%C3%A1nico_de_Pantepec.jpg/960px-Escudo_prehisp%C3%A1nico_de_Pantepec.jpg
+1466,Rio Pantepec,destino,Pantepec,naturaleza,0,2.0,820,17.275000,-93.135000,https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Escudo_prehisp%C3%A1nico_de_Pantepec.jpg/960px-Escudo_prehisp%C3%A1nico_de_Pantepec.jpg
 1467,Comunidad Tzotzil Rincon Chamula,destino,Rincon Chamula San Pedro,cultura,40,2.0,620,16.820000,-92.710000,
 1468,Artesanias Rincon Chamula,destino,Rincon Chamula San Pedro,cultura,50,1.5,480,16.820000,-92.710000,
 1469,Comunidad Chol Sitala,destino,Sitala,cultura,40,2.0,580,17.097000,-92.355000,
 1470,Rio Sitala,destino,Sitala,naturaleza,0,2.0,720,17.097000,-92.355000,
-1471,Ecoturismo Honduras de la Sierra,destino,Honduras de la Sierra,naturaleza,60,3.0,680,17.180000,-92.820000,
-1472,Comunidad Tzotzil Honduras Sierra,destino,Honduras de la Sierra,cultura,40,2.0,520,17.180000,-92.820000,
-1473,Selva Emiliano Zapata,destino,Emiliano Zapata,naturaleza,100,4.0,1200,16.510000,-91.010000,
-1474,Rio Emiliano Zapata,destino,Emiliano Zapata,naturaleza,60,3.0,820,16.510000,-91.011000,
+1471,Ecoturismo Honduras de la Sierra,destino,Honduras de la Sierra,naturaleza,60,3.0,680,17.180000,-92.820000,https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Escudo_de_Honduras_de_la_Sierra_Chiapas.png/960px-Escudo_de_Honduras_de_la_Sierra_Chiapas.png
+1472,Comunidad Tzotzil Honduras Sierra,destino,Honduras de la Sierra,cultura,40,2.0,520,17.180000,-92.820000,https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Escudo_de_Honduras_de_la_Sierra_Chiapas.png/960px-Escudo_de_Honduras_de_la_Sierra_Chiapas.png
+1473,Selva Emiliano Zapata,destino,Emiliano Zapata,naturaleza,100,4.0,1200,16.510000,-91.010000,https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Emiliano_Zapata_Chiapas_banner.jpg/960px-Emiliano_Zapata_Chiapas_banner.jpg
+1474,Rio Emiliano Zapata,destino,Emiliano Zapata,naturaleza,60,3.0,820,16.510000,-91.011000,https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Emiliano_Zapata_Chiapas_banner.jpg/960px-Emiliano_Zapata_Chiapas_banner.jpg
 1475,Parque Ecoturistico Capitan Vidal,destino,Capitan Luis Angel Vidal,naturaleza,60,2.5,680,17.540000,-93.670000,
-1476,Rio Usumacinta Juarez Chiapas,destino,Juarez,naturaleza,80,3.0,820,17.666000,-93.103000,
+1476,Rio Usumacinta Juarez Chiapas,destino,Juarez,naturaleza,80,3.0,820,17.666000,-93.103000,https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Busto_a_Benito_Ju%C3%A1rez_en_el_Parque_Ju%C3%A1rez_de_Tonal%C3%A1_%28Chiapas%29.jpg/960px-Busto_a_Benito_Ju%C3%A1rez_en_el_Parque_Ju%C3%A1rez_de_Tonal%C3%A1_%28Chiapas%29.jpg
 1477,Parque San Lucas,destino,San Lucas,naturaleza,50,2.0,880,16.360000,-92.460000,
 1478,Comunidad Tzeltal San Lucas,destino,San Lucas,cultura,40,1.5,620,16.360000,-92.460000,
-1479,Rio Amatenango Frontera,destino,Amatenango de la Frontera,naturaleza,60,2.5,820,15.447000,-92.084000,
-1480,Comunidad Mam Amatenango Frontera,destino,Amatenango de la Frontera,cultura,40,2.0,580,15.447000,-92.084000,
-
+1479,Rio Amatenango Frontera,destino,Amatenango de la Frontera,naturaleza,60,2.5,820,15.447000,-92.084000,https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Amatenango_de_la_Frontera_-_Chiapas.PNG/960px-Amatenango_de_la_Frontera_-_Chiapas.PNG
+1480,Comunidad Mam Amatenango Frontera,destino,Amatenango de la Frontera,cultura,40,2.0,580,15.447000,-92.084000,https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Amatenango_de_la_Frontera_-_Chiapas.PNG/960px-Amatenango_de_la_Frontera_-_Chiapas.PNG
+,,,,,,,,,,
