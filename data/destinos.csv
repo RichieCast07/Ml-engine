@@ -1,4 +1,4 @@
-id,nombre,tipo,municipio,categoria,costo_estimado,tiempo_horas,nivel_afluencia,lat,lng,foto_url
+﻿id,nombre,tipo,municipio,categoria,costo_estimado,tiempo_horas,nivel_afluencia,lat,lng,foto_url
 1,Izapa (grupo F),destino,Tapachula,cultura,79,2.4,349,14.9233,-92.179958,
 2,Izapa (grupo A),destino,Tapachula,cultura,63,1.7,252,14.913507,-92.184326,
 3,Club Campestre,destino,Tapachula,naturaleza,55,2.9,70,14.939568,-92.253411,
@@ -15,7 +15,7 @@ id,nombre,tipo,municipio,categoria,costo_estimado,tiempo_horas,nivel_afluencia,l
 14,La Pochota,destino,Chiapa de Corzo,naturaleza,192,3.4,9598,16.707723,-93.017206,https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/LaPochotaChiapa1.jpg/960px-LaPochotaChiapa1.jpg
 15,Cascada El Aguacero,destino,Jiquipilas,fotografia,37,1.2,462,16.759318,-93.525176,
 16,Museo Arqueológico del Soconusco,destino,Tapachula,cultura,54,2.2,549,14.910225,-92.265364,
-17,Cascadas de El Chiflón,destino,Tzimol,familiar,165,3.5,6004,16.189945,-92.273826,https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/UsumacintaYaxchilan16.JPG/960px-UsumacintaYaxchilan16.JPG
+17,Cascadas de El Chiflón,destino,Tzimol,familiar,165,3.5,6004,16.189945,-92.273826,https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/El_Chifl%C3%B3n.jpg/800px-El_Chifl%C3%B3n.jpg
 18,Wasserfall,destino,Palenque,fotografia,3,1.2,91,17.485496,-92.043126,
 19,Estela 11,destino,Tenosique,cultura,114,1.9,565,16.899059,-90.963099,
 20,Estela 3,destino,Tenosique,cultura,85,1.6,390,16.898903,-90.963497,
@@ -1255,10 +1255,10 @@ id,nombre,tipo,municipio,categoria,costo_estimado,tiempo_horas,nivel_afluencia,l
 1254,Iglesia de San Juan Bautista de Chamula,destino,Chamula,cultura,30,2.0,8420,16.787710,-92.686340,
 1255,Mercado de Artesanias Chamula,destino,Chamula,cultura,0,1.5,3200,16.788500,-92.686100,
 1256,Tejido Tradicional Tzotzil,destino,Chamula,cultura,50,1.5,1100,16.788000,-92.686000,
-1257,Santuario del Senor de Tila,destino,Tila,cultura,0,3.0,12000,17.296800,-92.410600,https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Tila_church.jpg/960px-Tila_church.jpg
+1257,Santuario del Senor de Tila,destino,Tila,cultura,0,3.0,12000,17.296800,-92.410600,https://upload.wikimedia.org/wikipedia/commons/4/4b/Parroquia_de_San_Mateo_Apostol_y_Santuario_del_Se%C3%B1or_de_Tila.jpg
 1258,Rio Tila,destino,Tila,naturaleza,0,2.0,980,17.298000,-92.415000,
 1259,Mercado Artesanal de Tila,destino,Tila,cultura,0,1.0,760,17.297000,-92.411000,
-1260,Volcan Tacana,destino,Union Juarez,naturaleza,200,8.0,3800,15.131000,-92.108000,https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Tacana_volcano_from_Guatemala_2.jpg/960px-Tacana_volcano_from_Guatemala_2.jpg
+1260,Volcan Tacana,destino,Union Juarez,naturaleza,200,8.0,3800,15.131000,-92.108000,
 1261,Finca Hamburgo,destino,Union Juarez,cultura,120,3.0,2100,15.050000,-92.080000,
 1262,Cascada Muxbal,destino,Union Juarez,naturaleza,60,2.5,1400,15.045000,-92.085000,
 1263,Cafe de Altura Union Juarez,destino,Union Juarez,cultura,80,1.5,900,15.047000,-92.083000,
@@ -1268,8 +1268,8 @@ id,nombre,tipo,municipio,categoria,costo_estimado,tiempo_horas,nivel_afluencia,l
 1267,Centro Ecoturistico Larrainzar,destino,Larrainzar,cultura,40,2.0,820,16.891000,-92.801000,
 1268,Comunidad Tzotzil San Andres,destino,Larrainzar,cultura,30,2.5,1500,16.892000,-92.802000,
 1269,Tejido Ceremonial Tzotzil,destino,Larrainzar,cultura,50,1.5,680,16.891000,-92.800000,
-1270,Zona Arqueologica Chinkultic,destino,La Trinitaria,cultura,85,2.5,3200,16.104800,-91.987300,https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Chinkultic_Ballcourt.jpg/960px-Chinkultic_Ballcourt.jpg
-1271,Lagunas de Montebello,destino,La Trinitaria,naturaleza,50,4.0,18500,16.107000,-91.693000,https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Lagunas_de_Montebello.jpg/960px-Lagunas_de_Montebello.jpg
+1270,Zona Arqueologica Chinkultic,destino,La Trinitaria,cultura,85,2.5,3200,16.104800,-91.987300,https://upload.wikimedia.org/wikipedia/commons/f/fe/Estructura_1_Chinkultic.JPEG
+1271,Lagunas de Montebello,destino,La Trinitaria,naturaleza,50,4.0,18500,16.107000,-91.693000,https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Lagunas_de_Montebello_Chiapas.jpg/800px-Lagunas_de_Montebello_Chiapas.jpg
 1272,Lago Pojoj,destino,La Trinitaria,naturaleza,30,2.0,2400,16.108000,-91.680000,
 1273,Rio Lacandon,destino,Marques de Comillas,naturaleza,0,3.0,1600,16.266000,-90.839000,
 1274,Reserva Montes Azules,destino,Marques de Comillas,naturaleza,100,4.0,2800,16.200000,-90.900000,
@@ -1277,7 +1277,7 @@ id,nombre,tipo,municipio,categoria,costo_estimado,tiempo_horas,nivel_afluencia,l
 1276,Presa Nezahualcoyotl Malpaso,destino,Tecpatan,naturaleza,0,2.0,1900,17.155000,-93.621000,
 1277,Templo de Santo Domingo Colonial,destino,Tecpatan,cultura,0,1.5,2600,17.138000,-93.327000,
 1278,Canon del Rio La Venta,destino,Tecpatan,naturaleza,120,5.0,3200,17.100000,-93.400000,
-1279,Zona Arqueologica Tonina,destino,Ocosingo,cultura,95,3.0,8900,17.075900,-92.009400,https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Toninasoccer.jpg/960px-Toninasoccer.jpg
+1279,Zona Arqueologica Tonina,destino,Ocosingo,cultura,95,3.0,8900,17.075900,-92.009400,https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Monta%C3%B1a_Prehisp%C3%A1nica_-_Tonin%C3%A1.jpg/960px-Monta%C3%B1a_Prehisp%C3%A1nica_-_Tonin%C3%A1.jpg
 1280,Laguna Miramar,destino,Ocosingo,naturaleza,350,4.0,4200,16.194000,-91.423000,
 1281,Cascada Roberto Barrios,destino,Ocosingo,naturaleza,80,3.0,2700,17.415000,-92.100000,
 1282,Pueblo Zoque de Copainala,destino,Copainala,cultura,0,2.0,1200,17.081000,-93.200000,
@@ -1286,13 +1286,13 @@ id,nombre,tipo,municipio,categoria,costo_estimado,tiempo_horas,nivel_afluencia,l
 1285,Templo del Senor del Pozo,destino,Chilon,cultura,0,1.5,1800,17.080000,-92.410000,
 1286,Cascada Agua Escondida,destino,Chilon,naturaleza,60,2.5,1400,17.050000,-92.390000,
 1287,Comunidad Tzeltal San Sebastian,destino,Chilon,cultura,50,2.0,980,17.080000,-92.410000,
-1288,Parque Nacional Canon del Sumidero acceso,destino,Chicoasen,naturaleza,180,3.5,22000,16.851000,-93.076000,https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Canon_del_Sumidero_crocodile.jpg/960px-Canon_del_Sumidero_crocodile.jpg
+1288,Parque Nacional Canon del Sumidero acceso,destino,Chicoasen,naturaleza,180,3.5,22000,16.851000,-93.076000,https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Canyon_del_Sumidero.jpg/800px-Canyon_del_Sumidero.jpg
 1289,Presa Manuel Moreno Torres,destino,Chicoasen,naturaleza,0,1.5,1800,16.920000,-93.076000,
 1290,Mirador Presa Chicoasen,destino,Chicoasen,fotografia,0,1.0,900,16.920000,-93.080000,
 1291,Bosque Niebla El Bosque,destino,El Bosque,naturaleza,60,3.0,1600,17.083000,-93.041000,
 1292,Cascada La Golondrina,destino,El Bosque,naturaleza,40,2.5,820,17.080000,-93.040000,
 1293,Sendero Ecoturistico Sierra Norte,destino,El Bosque,naturaleza,50,3.5,740,17.085000,-93.042000,
-1294,Yaxchilan Zona Arqueologica,destino,Ocosingo,cultura,95,4.0,7800,16.899000,-90.965000,https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Yaxchilan_stela.jpg/960px-Yaxchilan_stela.jpg
+1294,Yaxchilan Zona Arqueologica,destino,Ocosingo,cultura,95,4.0,7800,16.899000,-90.965000,https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Yaxchilan-estructura33.jpg/800px-Yaxchilan-estructura33.jpg
 1295,Laguna Miramar Selva Lacandona,destino,Ocosingo,naturaleza,200,5.0,4100,16.700000,-91.500000,
 1296,Comunidad Lacandona Naha,destino,Ocosingo,cultura,150,3.0,1200,16.990000,-91.560000,
 1297,Cataratas de San Juan Cancuc,destino,San Juan Cancuc,naturaleza,50,2.5,680,16.946000,-92.436000,
@@ -1479,3 +1479,4 @@ id,nombre,tipo,municipio,categoria,costo_estimado,tiempo_horas,nivel_afluencia,l
 1478,Comunidad Tzeltal San Lucas,destino,San Lucas,cultura,40,1.5,620,16.360000,-92.460000,
 1479,Rio Amatenango Frontera,destino,Amatenango de la Frontera,naturaleza,60,2.5,820,15.447000,-92.084000,
 1480,Comunidad Mam Amatenango Frontera,destino,Amatenango de la Frontera,cultura,40,2.0,580,15.447000,-92.084000,
+
