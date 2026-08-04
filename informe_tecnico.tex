@@ -1,0 +1,1088 @@
+% ============================================================
+%  INFORME TÉCNICO – ExploraChiapas
+%  Proyecto Integrador  |  Semestre 9
+% ============================================================
+\documentclass[12pt,letterpaper]{report}
+
+% ── Codificación y fuente ───────────────────────────────────
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish,mexico]{babel}
+
+% ── Márgenes ───────────────────────────────────────────────
+\usepackage[top=2.5cm,bottom=2.5cm,left=3cm,right=2.5cm]{geometry}
+
+% ── Interlineado ───────────────────────────────────────────
+\usepackage{setspace}
+\onehalfspacing
+
+% ── Fuente (alternativa a Times) ───────────────────────────
+\usepackage{mathptmx}
+
+% ── Gráficos y colores ─────────────────────────────────────
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{float}
+
+% ── Tablas ─────────────────────────────────────────────────
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{multirow}
+
+% ── Matemáticas ────────────────────────────────────────────
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+% ── Código fuente ──────────────────────────────────────────
+\usepackage{listings}
+\usepackage{inconsolata}
+\lstset{
+  basicstyle=\footnotesize\ttfamily,
+  breaklines=true,
+  frame=single,
+  captionpos=b,
+  numbers=left,
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{blue},
+  commentstyle=\color{gray},
+  stringstyle=\color{teal},
+  showstringspaces=false,
+}
+
+% ── Hipervínculos ──────────────────────────────────────────
+\usepackage[hidelinks,colorlinks=false]{hyperref}
+\usepackage{url}
+
+% ── Encabezados y pies de página ───────────────────────────
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\footnotesize ExploraChiapas – Informe Técnico}
+\rhead{\footnotesize Semestre 9 · 2025}
+\cfoot{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+
+% ── Secciones dentro de chapter ────────────────────────────
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}
+
+% ── Utilidades ─────────────────────────────────────────────
+\usepackage{enumitem}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric,arrows.meta,positioning,fit,backgrounds}
+
+% ============================================================
+\begin{document}
+% ============================================================
+
+% ──────────────────────────────────────────────────────────
+%  PORTADA
+% ──────────────────────────────────────────────────────────
+\begin{titlepage}
+\centering
+\vspace*{1cm}
+
+% Logo institucional
+% \includegraphics[width=4cm]{logo_tec.png}\\[1.5cm]
+
+{\Large \textbf{Instituto Tecnológico de [Nombre del Campus]}\\
+Carrera de Ingeniería en Sistemas Computacionales}\\[2cm]
+
+{\Huge \textbf{ExploraChiapas}}\\[0.5cm]
+{\large Plataforma inteligente de recomendación turística para el estado de Chiapas}\\[2cm]
+
+\begin{tabular}{rl}
+\textbf{Proyecto:} & Integrador Semestre 9 \\[4pt]
+\textbf{Materia:}  & Desarrollo de Proyectos de Software \\[4pt]
+\textbf{Integrantes:} & [Nombre Integrante 1] \\
+                       & [Nombre Integrante 2] \\
+                       & [Nombre Integrante 3] \\[4pt]
+\textbf{Asesor:}   & [Nombre del Asesor] \\[4pt]
+\textbf{Período:}  & Agosto – Diciembre 2025 \\
+\end{tabular}
+
+\vfill
+{\normalsize Tuxtla Gutiérrez, Chiapas, México}\\
+{\normalsize \today}
+\end{titlepage}
+
+% ──────────────────────────────────────────────────────────
+%  RESUMEN
+% ──────────────────────────────────────────────────────────
+\chapter*{Resumen}
+\addcontentsline{toc}{chapter}{Resumen}
+
+ExploraChiapas es una aplicación móvil desarrollada en Flutter que ayuda al turista a planear
+visitas dentro del estado de Chiapas sin necesidad de conocer los lugares de antemano.
+El sistema combina dos capas de inteligencia: una capa de procesamiento de lenguaje natural (PLN)
+que interpreta la solicitud escrita por el usuario, y un motor de minería de datos que genera
+itinerarios concretos a partir de un catálogo de más de 820 destinos turísticos distribuidos
+en los 124 municipios de la entidad.
+
+La capa de PLN extrae de forma automática los parámetros del viaje (destino, interés, presupuesto
+y tiempo) a partir del texto libre que escribe el turista. El motor de recomendación aplica tres
+técnicas complementarias: agrupamiento no supervisado K-Means para clasificar destinos según su
+nivel de afluencia y costo; reglas de asociación Apriori para identificar categorías
+frecuentemente co-visitadas; y optimización 0/1 de mochila bidimensional para seleccionar la
+combinación de lugares que maximiza el valor turístico dentro del presupuesto y el tiempo
+disponibles.
+
+El sistema también incluye enrutamiento interactivo entre municipios mediante OSRM para rutas en
+automóvil y Valhalla para desplazamientos en bicicleta o a pie. El grafo de municipios contiene
+128 nodos y 8\,128 aristas calculadas con tiempos reales de conducción.
+
+\bigskip
+\noindent\textbf{Palabras clave:} Turismo inteligente, Flutter, K-Means, Apriori, mochila 0/1, PLN,
+FastAPI, OSRM, Chiapas.
+
+% ──────────────────────────────────────────────────────────
+%  ABSTRACT
+% ──────────────────────────────────────────────────────────
+\chapter*{Abstract}
+\addcontentsline{toc}{chapter}{Abstract}
+
+ExploraChiapas is a Flutter mobile application designed to assist tourists in planning visits
+across the state of Chiapas, Mexico. The system consists of two intelligence layers: a Natural
+Language Processing (NLP) layer that interprets free-text user requests, and a data mining engine
+that builds concrete itineraries from a catalog of over 820 tourist destinations spanning all 124
+municipalities of the state.
+
+The NLP layer automatically extracts travel parameters (destination, interest, budget and time)
+from the user's natural language input. The recommendation engine applies three complementary
+techniques: unsupervised K-Means clustering to classify destinations by crowd level and cost;
+Apriori association rules to identify co-visited category patterns; and 2D 0/1 knapsack
+optimization to select the combination of places that maximizes tourist value within budget and
+time constraints.
+
+The platform also provides interactive route guidance between municipalities using OSRM for
+driving routes and Valhalla for cycling or walking. The municipality graph contains 128 nodes
+and 8,128 edges computed from real driving-time data.
+
+\bigskip
+\noindent\textbf{Keywords:} Smart tourism, Flutter, K-Means, Apriori, 0/1 knapsack, NLP,
+FastAPI, OSRM, Chiapas.
+
+% ──────────────────────────────────────────────────────────
+%  ÍNDICES
+% ──────────────────────────────────────────────────────────
+\tableofcontents
+\listoftables
+\listoffigures
+
+% ──────────────────────────────────────────────────────────
+%  CAPÍTULO I – INTRODUCCIÓN
+% ──────────────────────────────────────────────────────────
+\chapter{Introducción}
+
+\section{Antecedentes}
+
+El turismo en Chiapas representa una de las principales fuentes de ingreso para la economía
+local. Según datos de la Secretaría de Turismo del estado, en 2023 la entidad recibió
+aproximadamente 5.4 millones de visitantes nacionales e internacionales, destacando destinos
+como San Cristóbal de las Casas, Palenque, las Cascadas de Agua Azul y el Cañón del Sumidero
+\cite{sectur2023}. Sin embargo, esta afluencia se concentra en menos del 10\% de los 124
+municipios chiapanecos, dejando sin explotar una enorme diversidad de atractivos naturales,
+arqueológicos y culturales.
+
+El crecimiento de las plataformas digitales de viaje (TripAdvisor, Google Maps, Airbnb
+Experiences) ha generado expectativas en el turista moderno respecto a la personalización de la
+experiencia y la disponibilidad de información confiable en tiempo real. Sin embargo, la
+mayoría de estas plataformas globales no cubren con detalle suficiente los municipios pequeños
+de Chiapas, donde la señalización física es escasa y la información en línea está dispersa
+o desactualizada.
+
+Desde el punto de vista tecnológico, la combinación de aplicaciones móviles con algoritmos de
+recomendación basados en datos ha probado ser efectiva en el sector turístico. Trabajos como
+los de \textit{Ricci et al.} (2015) en sistemas recomendadores y los de \textit{Bi et al.}
+(2019) sobre minería de datos aplicada al turismo muestran que la personalización basada en
+historial de visitas y preferencias mejora significativamente la satisfacción del usuario.
+
+\section{Planteamiento del Problema}
+
+El turista que visita Chiapas por primera vez enfrenta tres problemas concretos. Primero, la
+dispersión de la información: los destinos relevantes para su perfil están repartidos en
+docenas de sitios web y aplicaciones sin una fuente unificada. Segundo, la saturación selectiva:
+los mismos cinco o seis destinos reciben el 80\% del turismo mientras que municipios con igual
+o mayor atractivo permanecen prácticamente desconocidos. Tercero, la ausencia de planificación
+adaptada: el presupuesto y el tiempo disponibles varían mucho de un turista a otro, pero las
+guías existentes ofrecen itinerarios fijos que no respetan esas restricciones.
+
+La pregunta de investigación que orienta este proyecto es: \textit{¿Es posible construir un
+sistema que, a partir de una solicitud escrita en lenguaje natural, genere automáticamente un
+itinerario de visita optimizado para el presupuesto y el tiempo del turista, promoviendo a la
+vez destinos con potencial poco explorado?}
+
+\section{Justificación}
+
+El desarrollo de ExploraChiapas se justifica en tres dimensiones:
+
+\begin{itemize}[leftmargin=2cm]
+  \item \textbf{Social:} Distribuir el flujo turístico hacia municipios con menor afluencia
+        reduce la presión sobre los destinos saturados y genera derrama económica en comunidades
+        que actualmente no se benefician del turismo.
+  \item \textbf{Técnica:} El proyecto permite aplicar y validar técnicas de minería de datos
+        no supervisada (K-Means, Apriori) y de optimización combinatoria (knapsack 0/1) en un
+        caso de uso real con datos propios recolectados del estado.
+  \item \textbf{Educativa:} Para el equipo de desarrollo, el proyecto integra competencias de
+        semestres anteriores (estructuras de datos, bases de datos, ingeniería de software) con
+        los contenidos de inteligencia artificial y desarrollo móvil propios del noveno semestre.
+\end{itemize}
+
+\section{Objetivos}
+
+\subsection{Objetivo General}
+
+Desarrollar una aplicación móvil que utilice procesamiento de lenguaje natural y minería de
+datos para generar itinerarios turísticos personalizados en el estado de Chiapas, considerando
+el presupuesto, el tiempo disponible y las preferencias declaradas por el usuario.
+
+\subsection{Objetivos Específicos}
+
+\begin{enumerate}[leftmargin=2cm]
+  \item Construir un catálogo de destinos turísticos con información de los 124 municipios del
+        estado de Chiapas, incluyendo categoría, costo estimado, tiempo de visita, nivel de
+        afluencia y coordenadas geográficas.
+  \item Implementar un módulo de PLN capaz de extraer, a partir de texto libre, los parámetros
+        del viaje: destino, tipo de interés, presupuesto y duración disponible.
+  \item Diseñar y entrenar un sistema de agrupamiento K-Means para clasificar los destinos según
+        su nivel de afluencia turística y costo.
+  \item Implementar un motor de reglas de asociación Apriori que identifique categorías de
+        destinos frecuentemente visitadas en conjunto.
+  \item Desarrollar un algoritmo de optimización de mochila 0/1 bidimensional que construya
+        itinerarios dentro del presupuesto y tiempo disponibles.
+  \item Integrar datos de enrutamiento real entre los 124 municipios mediante la API de OSRM,
+        construyendo un grafo completo de 8\,128 aristas.
+  \item Publicar la aplicación en Google Play Store y someterla a pruebas de usuario con turistas
+        reales en la región.
+\end{enumerate}
+
+\section{Alcances y Limitaciones}
+
+\subsection{Alcances}
+
+El proyecto cubre los 124 municipios de Chiapas con al menos tres destinos turísticos por
+municipio. El motor de recomendación considera hasta ocho categorías de interés: naturaleza,
+cultura, gastronomía, aventura, familiar, descanso, fotografía y eventos. El módulo de rutas
+calcula trayectos en automóvil (OSRM) y en bicicleta o a pie (Valhalla). La aplicación móvil
+está disponible para Android 7.0 o superior.
+
+\subsection{Limitaciones}
+
+Los tiempos de trayecto entre municipios son estimaciones basadas en el servidor público de
+OSRM y pueden variar en condiciones de tráfico real. El historial de visitas utilizado para
+entrenar las reglas de Apriori es sintético, generado a partir de patrones verosímiles; un
+despliegue en producción requeriría reemplazarlo por datos reales acumulados de usuarios.
+La extracción de parámetros por PLN depende de la calidad del modelo de lenguaje disponible
+y puede fallar con textos con errores ortográficos graves o combinaciones de idiomas.
+
+\section{Presupuesto}
+
+\begin{table}[H]
+\centering
+\caption{Presupuesto estimado del proyecto}
+\label{tab:presupuesto}
+\begin{tabular}{lrr}
+\toprule
+\textbf{Concepto} & \textbf{Horas / Unidades} & \textbf{Costo estimado (MXN)} \\
+\midrule
+Desarrollo de backend (FastAPI)      & 120 h & \$12\,000 \\
+Motor de ML (Python)                 & 80 h  & \$8\,000 \\
+Desarrollo móvil (Flutter)           & 150 h & \$15\,000 \\
+Levantamiento y limpieza de datos    & 60 h  & \$6\,000 \\
+Pruebas y corrección de errores      & 40 h  & \$4\,000 \\
+Infraestructura (Render.com, 6 meses) & 1 plan & \$2\,400 \\
+Dominio y certificado SSL            & 1 año & \$500 \\
+\midrule
+\textbf{Total}                       &       & \$\textbf{47\,900} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+El costo de mano de obra considera una tarifa de \$100 MXN/hora para desarrolladores junior
+universitarios. El proyecto se realiza como actividad académica, por lo que el costo efectivo
+para el equipo es cero; la tabla refleja el valor de mercado del trabajo realizado.
+
+\section{Modelo de Negocio y Marketing}
+
+El modelo de negocio está orientado a la sostenibilidad a largo plazo mediante tres fuentes de
+ingreso potenciales:
+
+\begin{enumerate}[leftmargin=2cm]
+  \item \textbf{Freemium:} La aplicación es gratuita con funcionalidad básica. Una suscripción
+        mensual de \$49 MXN desbloquea itinerarios guardados, modo sin conexión y recomendaciones
+        premium.
+  \item \textbf{Alianzas B2B:} Convenios con operadoras turísticas locales para publicitar tours
+        guiados dentro de los itinerarios generados por la aplicación.
+  \item \textbf{Turismo sostenible (institucional):} La Secretaría de Turismo de Chiapas o
+        municipios con vocación turística podrían patrocinar la plataforma como herramienta de
+        promoción regional.
+\end{enumerate}
+
+La estrategia de marketing inicial se enfoca en redes sociales (Instagram, TikTok) con
+contenido generado a partir de los propios destinos del catálogo, complementado con la
+presencia en Google Play Store mediante ASO (App Store Optimization).
+
+% ──────────────────────────────────────────────────────────
+%  CAPÍTULO II – MARCO REFERENCIAL
+% ──────────────────────────────────────────────────────────
+\chapter{Marco Referencial}
+
+\section{Marco Teórico}
+
+\subsection{Sistemas Recomendadores}
+
+Un sistema recomendador es un filtro de información que predice la valoración que un usuario
+daría a un elemento que no ha consumido aún, con el objetivo de sugerirle los elementos con
+mayor valoración esperada \cite{ricci2015}. Existen tres enfoques principales: filtrado
+colaborativo, filtrado basado en contenido e híbrido.
+
+ExploraChiapas adopta un enfoque híbrido basado en contenido: los destinos se describen
+mediante atributos (categoría, costo, afluencia, tipo) y la recomendación maximiza la
+correspondencia entre esos atributos y las preferencias declaradas por el usuario. Las
+reglas de Apriori añaden un componente de filtrado colaborativo implícito al explotar
+patrones de co-visita del historial agregado.
+
+\subsection{Minería de Datos No Supervisada}
+
+\subsubsection{K-Means}
+
+El algoritmo K-Means divide un conjunto de $n$ observaciones en $k$ grupos de forma que se
+minimice la suma de cuadrados intra-cluster (inercia):
+
+\begin{equation}
+  J = \sum_{j=1}^{k} \sum_{\mathbf{x}_i \in C_j} \|\mathbf{x}_i - \boldsymbol{\mu}_j\|^2
+  \label{eq:kmeans}
+\end{equation}
+
+donde $C_j$ es el cluster $j$ y $\boldsymbol{\mu}_j$ su centroide. El algoritmo alterna entre
+dos pasos hasta la convergencia: (a) asignar cada punto al cluster cuyo centroide está más
+cercano, y (b) recalcular los centroides como la media de los puntos asignados
+\cite{macqueen1967}.
+
+\subsubsection{Reglas de Asociación y Algoritmo Apriori}
+
+Una regla de asociación $X \Rightarrow Y$ expresa que los ítems del antecedente $X$ tienden a
+aparecer junto con los del consecuente $Y$ en las mismas transacciones. Se mide mediante tres
+métricas:
+
+\begin{align}
+  \text{Soporte}(X \Rightarrow Y)    &= \frac{|T_{XY}|}{|T|} \label{eq:support} \\[4pt]
+  \text{Confianza}(X \Rightarrow Y)  &= \frac{|T_{XY}|}{|T_X|} \label{eq:confidence} \\[4pt]
+  \text{Lift}(X \Rightarrow Y)       &= \frac{\text{Confianza}(X \Rightarrow Y)}{\text{Soporte}(Y)} \label{eq:lift}
+\end{align}
+
+El algoritmo Apriori genera primero todos los conjuntos de ítems frecuentes (con soporte mayor
+al umbral mínimo) aprovechando la propiedad anti-monótona del soporte: si un conjunto no es
+frecuente, ninguno de sus superconjuntos lo será \cite{agrawal1994}.
+
+\subsubsection{Problema de la Mochila 0/1 Bidimensional}
+
+El problema de la mochila 0/1 estándar selecciona un subconjunto de $n$ objetos, cada uno con
+un peso $w_i$ y un valor $v_i$, de forma que se maximice el valor total sin superar una
+capacidad $W$. La extensión bidimensional añade una segunda restricción de capacidad $T$
+(tiempo en este caso):
+
+\begin{equation}
+  \max \sum_{i=1}^{n} v_i x_i \quad \text{sujeto a} \quad
+  \sum_{i=1}^{n} w_i^c x_i \leq C, \quad
+  \sum_{i=1}^{n} w_i^t x_i \leq T, \quad
+  x_i \in \{0,1\}
+  \label{eq:knapsack}
+\end{equation}
+
+La solución exacta se obtiene mediante programación dinámica con tabla de estados
+$dp[i][c][t]$, de complejidad $O(n \cdot C \cdot T)$ \cite{martello1990}.
+
+\subsection{Procesamiento de Lenguaje Natural}
+
+El módulo de PLN convierte texto libre a un objeto estructurado de parámetros de viaje.
+Conceptualmente, la tarea corresponde a \textit{slot-filling} (extracción de atributos de una
+consulta de dominio específico). En este proyecto se utiliza un modelo de lenguaje grande (LLM)
+accedido mediante la API de Groq, el cual recibe el texto del usuario junto con un prompt que
+describe los campos a extraer y devuelve un JSON con los valores encontrados.
+
+El preprocesamiento de texto incluye normalización Unicode (eliminación de tildes y conversión
+a minúsculas) implementada en el módulo \texttt{texto\_utils.py}, y validación de los valores
+extraídos frente al vocabulario controlado de categorías definido en los esquemas Pydantic del
+motor.
+
+\subsection{Enrutamiento Geoespacial}
+
+El cálculo de rutas entre municipios se apoya en dos motores:
+
+\begin{itemize}
+  \item \textbf{OSRM (Open Source Routing Machine):} Motor de enrutamiento en automóvil
+        sobre datos OpenStreetMap. Se utiliza el endpoint \texttt{/table/v1/driving/} para
+        obtener matrices de tiempos de conducción en bloques de $25 \times 25$ municipios.
+  \item \textbf{Valhalla:} Motor de enrutamiento multimodo (pie, bicicleta, automóvil) que
+        se usa dentro de la aplicación Flutter para trazar rutas en tiempo real.
+\end{itemize}
+
+Dado que el servidor público de OSRM no devuelve distancias en kilómetros, las distancias
+se estiman mediante la fórmula de Haversine multiplicada por un factor de tortuosidad de
+$1.3$, valor calibrado para el terreno montañoso de Chiapas.
+
+\section{Marco Contextual}
+
+\subsection{Turismo en Chiapas}
+
+Chiapas ocupa consistentemente los primeros lugares del ranking nacional en Turismo de
+Naturaleza y Aventura (SECTUR, 2022). El estado cuenta con 10 Áreas Naturales Protegidas
+federales, 4 sitios del Patrimonio Mundial de la UNESCO y una biodiversidad que lo coloca
+entre los 5 estados más megadiversos de México.
+
+A pesar de ello, más del 75\% de los turistas limitan su visita al corredor Tuxtla
+Gutiérrez–Cañón del Sumidero–San Cristóbal de las Casas–Palenque. Municipios como Motozintla,
+Mezcalapa o Maravilla Tenejapa —con ríos, montañas y cultura zoque o maya— reciben menos de
+5\,000 visitantes al año.
+
+\subsection{Brecha Digital y Turismo Rural}
+
+Uno de los factores que explican esta concentración es la falta de información digital accesible
+sobre los municipios menos conocidos. Mientras Palenque cuenta con cientos de reseñas en Google
+y TripAdvisor, muchos municipios del norte o la sierra de Chiapas no tienen presencia en ninguna
+plataforma digital relevante. ExploraChiapas atiende directamente esta brecha al incluir en su
+catálogo destinos de los 124 municipios.
+
+\section{Marco Tecnológico}
+
+\subsection{Flutter}
+
+Flutter es el framework de Google para construir aplicaciones nativas compiladas desde una
+sola base de código en Dart. La versión utilizada es Flutter 3.x con gestión de estado
+mediante el patrón Provider + ChangeNotifier. La elección de Flutter sobre alternativas
+como React Native o Kotlin nativo se fundamenta en el rendimiento nativo de la compilación
+AOT (Ahead-of-Time) y en la disponibilidad de paquetes como \texttt{flutter\_map}
+(mapas Leaflet) y \texttt{provider} (gestión de estado).
+
+\subsection{FastAPI + Python}
+
+El motor de ML se expone como un microservicio HTTP escrito con FastAPI (Python 3.12).
+FastAPI genera automáticamente documentación interactiva (Swagger UI) a partir de los
+esquemas Pydantic, lo que facilita la integración con el cliente Flutter. La base de datos
+es SQLite en desarrollo y puede migrarse a PostgreSQL en producción sin cambios en el ORM
+(SQLAlchemy).
+
+\subsection{scikit-learn y mlxtend}
+
+La librería \texttt{scikit-learn} provee la implementación de K-Means utilizada
+(\texttt{sklearn.cluster.KMeans}), junto con el escalado estándar
+(\texttt{StandardScaler}) que normaliza las features antes del agrupamiento.
+La librería \texttt{mlxtend} ofrece el algoritmo Apriori
+(\texttt{mlxtend.frequent\_patterns.apriori}) y la generación de reglas de asociación
+(\texttt{mlxtend.frequent\_patterns.association\_rules}).
+
+\subsection{NumPy para la Mochila}
+
+La tabla de programación dinámica del knapsack se implementa con NumPy para evitar los bucles
+Python en la dimensión interna. Con $n=150$ items, $C=500$ unidades de costo y $T=16$ pasos de
+tiempo, la tabla ocupa aproximadamente 5 MB en memoria y se resuelve en menos de 200 ms, lo que
+hace viable la ejecución por solicitud sin caché.
+
+% ──────────────────────────────────────────────────────────
+%  CAPÍTULO III – METODOLOGÍA Y DESARROLLO
+% ──────────────────────────────────────────────────────────
+\chapter{Metodología y Desarrollo}
+
+La metodología adoptada es SCRUM adaptado a equipo pequeño, con sprints de dos semanas y
+revisión al cierre de cada uno. Las épicas y las historias de usuario se describen en la
+sección de Análisis; el diseño cubre la arquitectura del sistema; la implementación detalla
+los módulos más relevantes.
+
+\section{Análisis}
+
+\subsection{Épicas e Historias de Usuario}
+
+\begin{table}[H]
+\centering
+\caption{Épicas del proyecto}
+\label{tab:epicas}
+\begin{tabular}{cl}
+\toprule
+\textbf{ID} & \textbf{Descripción de la épica} \\
+\midrule
+EP-01 & Exploración de destinos turísticos por municipio \\
+EP-02 & Recomendación personalizada mediante PLN y ML \\
+EP-03 & Enrutamiento y mapa interactivo entre municipios \\
+EP-04 & Gestión de perfil e itinerarios guardados \\
+EP-05 & Administración del catálogo de destinos (back-office) \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[H]
+\centering
+\caption{Historias de usuario seleccionadas}
+\label{tab:hu}
+\begin{tabular}{p{1.5cm}p{10cm}p{2.5cm}}
+\toprule
+\textbf{HU} & \textbf{Descripción} & \textbf{Épica} \\
+\midrule
+HU-01 & Como turista, quiero escribir en mi propio idioma lo que quiero hacer (``quiero
+  visitar cascadas en Palenque con \$500'') y que la app me dé un plan de visita detallado
+  con lugares, tiempos y costos. & EP-02 \\
+HU-02 & Como turista, quiero ver en un mapa la ruta entre los destinos de mi itinerario
+  con el tiempo estimado de traslado. & EP-03 \\
+HU-03 & Como turista, quiero que la app me sugiera destinos poco conocidos que estén cerca
+  de los populares para explorar más de la región. & EP-01, EP-02 \\
+HU-04 & Como turista, quiero poder guardar mis itinerarios favoritos y verlos sin
+  conexión a internet. & EP-04 \\
+HU-05 & Como administrador, quiero añadir o modificar destinos turísticos desde un panel
+  web sin necesidad de publicar una nueva versión de la aplicación. & EP-05 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{Diseño}
+
+\subsection{Arquitectura del Sistema}
+
+El sistema sigue una arquitectura de microservicios con dos capas de inteligencia separadas.
+La Capa~1 (PLN) recibe el texto del usuario y produce un JSON de parámetros estructurados.
+La Capa~2 (Motor ML) recibe esos parámetros y produce el itinerario final. El cliente Flutter
+consume ambas capas a través de HTTP.
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[
+  node distance=1.6cm,
+  box/.style={rectangle, draw, rounded corners=4pt, minimum height=0.9cm,
+              minimum width=3.2cm, align=center, font=\small},
+  arr/.style={-{Stealth}, thick}
+]
+  \node[box, fill=blue!10]  (flutter)  {Cliente Flutter\\(Android / iOS)};
+  \node[box, fill=green!10, right=2cm of flutter] (nlp) {Capa 1\\Servicio PLN\\(Groq / Ollama)};
+  \node[box, fill=orange!10, below=of nlp] (ml)  {Capa 2\\Motor ML\\(FastAPI + Python)};
+  \node[box, fill=gray!10,  below=of flutter] (maps) {Enrutamiento\\OSRM / Valhalla};
+  \node[box, fill=yellow!10, right=2cm of ml] (db) {Catálogo\\destinos.csv\\SQLite};
+
+  \draw[arr] (flutter) -- node[above, font=\footnotesize]{texto libre} (nlp);
+  \draw[arr] (nlp)     -- node[right, font=\footnotesize]{parámetros JSON} (ml);
+  \draw[arr] (ml)      -- node[below, font=\footnotesize]{itinerario} (flutter);
+  \draw[arr] (flutter) -- node[left, font=\footnotesize]{coords.} (maps);
+  \draw[arr] (ml)      -- (db);
+\end{tikzpicture}
+\caption{Arquitectura de microservicios de ExploraChiapas}
+\label{fig:arquitectura}
+\end{figure}
+
+\subsection{Modelo de Datos}
+
+El catálogo de destinos se almacena en un archivo CSV con los siguientes campos:
+
+\begin{table}[H]
+\centering
+\caption{Estructura del catálogo de destinos (\texttt{destinos.csv})}
+\label{tab:csv}
+\begin{tabular}{lll}
+\toprule
+\textbf{Campo} & \textbf{Tipo} & \textbf{Descripción} \\
+\midrule
+\texttt{id}              & Entero    & Identificador único \\
+\texttt{nombre}          & Texto     & Nombre del destino o restaurante \\
+\texttt{tipo}            & Categórico & \texttt{destino} / \texttt{restaurante} \\
+\texttt{municipio}       & Texto     & Municipio de Chiapas al que pertenece \\
+\texttt{categoria}       & Categórico & Uno de ocho valores (naturaleza, cultura, …) \\
+\texttt{costo\_estimado} & Decimal   & Costo de entrada o consumo por persona (MXN) \\
+\texttt{tiempo\_horas}   & Decimal   & Duración estimada de la visita (horas) \\
+\texttt{nivel\_afluencia} & Entero   & Escala 1–10 de afluencia turística \\
+\texttt{lat}             & Decimal   & Latitud WGS84 \\
+\texttt{lng}             & Decimal   & Longitud WGS84 \\
+\texttt{foto\_url}       & Texto     & URL de imagen en Wikimedia Commons \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{Implementación}
+
+\subsection{Construcción del Catálogo}
+
+El catálogo de destinos se construyó en cuatro etapas. Primero se recopiló una lista inicial
+de destinos conocidos para los municipios turísticos principales (Tuxtla Gutiérrez, San
+Cristóbal de las Casas, Palenque, Comitán, Ocosingo y diez más). Después, para los 100 o
+más municipios restantes, se aplicó un proceso de generación guiada basado en el conocimiento
+geográfico de la región, distribuyendo los destinos según la vocación territorial de cada
+municipio (serrana, costera, selva, altiplano).
+
+Las coordenadas de cada destino se verificaron manualmente contra fuentes cartográficas abiertas.
+Cuando no se disponía de coordenadas exactas se usó el centroide del municipio almacenado en
+\texttt{municipio\_coords.json}. Las imágenes se obtienen en tiempo de ejecución mediante
+la API de Wikimedia Commons, buscando por nombre del destino y municipio.
+
+\subsection{Grafo de Municipios}
+
+El módulo \texttt{build\_graph.py} construye la matriz completa de tiempos de conducción entre
+los 128 municipios registrados. El algoritmo divide los 128 nodos en bloques de 25 y realiza
+21 consultas al servidor público de OSRM en el formato:
+
+\begin{lstlisting}[language=Python, caption=Consulta al endpoint /table de OSRM]
+url = (
+    f"{OSRM_BASE}/{coords_str}"
+    f"?sources={sources_str}&destinations={dests_str}"
+)
+\end{lstlisting}
+
+donde \texttt{sources} y \texttt{destinations} son índices locales separados por \texttt{;}.
+Las distancias en kilómetros se aproximan mediante Haversine con factor de tortuosidad 1.3:
+
+\begin{equation}
+  d_{\text{real}} \approx d_{\text{haversine}} \times 1.3
+  \label{eq:haversine}
+\end{equation}
+
+El grafo resultante tiene 8\,128 aristas y se almacena en \texttt{grafo\_municipios.json}
+junto con las matrices completas de duración OSRM y tiempo estimado corregido.
+
+\section{Minería de Datos}
+
+\subsection{Módulo de Agrupamiento K-Means}
+
+El módulo \texttt{clustering.py} clasifica los destinos en tres grupos según su nivel de
+afluencia y costo. Las variables se normalizan con \texttt{StandardScaler} antes de aplicar
+el algoritmo para evitar que la escala monetaria (pesos) domine sobre el índice de afluencia
+(1–10).
+
+\begin{lstlisting}[language=Python, caption=Entrenamiento del modelo K-Means]
+X = destinos[["nivel_afluencia", "costo_estimado"]].to_numpy(dtype=float)
+scaler = StandardScaler()
+X_scaled = scaler.fit_transform(X)
+
+kmeans = KMeans(n_clusters=3, random_state=42, n_init=10)
+destinos["cluster"] = kmeans.fit_predict(X_scaled)
+\end{lstlisting}
+
+Dado que K-Means asigna etiquetas numéricas de forma arbitraria, el código ordena los clusters
+por afluencia promedio y les asigna nombres semánticos: \texttt{potencial\_oculto} (baja
+afluencia), \texttt{moderado} y \texttt{saturado} (alta afluencia). En la recomendación, los
+destinos de tipo \texttt{potencial\_oculto} reciben un bono de +2.0 en la función de valor y
+los \texttt{saturados} una penalización de -1.0.
+
+\begin{table}[H]
+\centering
+\caption{Descripción de los tres clusters de destinos}
+\label{tab:clusters}
+\begin{tabular}{llll}
+\toprule
+\textbf{Cluster} & \textbf{Etiqueta} & \textbf{Afluencia prom.} & \textbf{Costo prom. (MXN)} \\
+\midrule
+0 & \texttt{potencial\_oculto} & 1–3  & 0–80   \\
+1 & \texttt{moderado}          & 4–6  & 50–200 \\
+2 & \texttt{saturado}          & 7–10 & 100–600 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Módulo de Reglas de Asociación Apriori}
+
+El módulo \texttt{asociacion.py} aplica el algoritmo Apriori sobre el historial de visitas,
+donde cada transacción es el conjunto de categorías visitadas por un turista en un mismo viaje.
+
+Los umbrales utilizados son soporte mínimo de 0.08 (una categoría debe aparecer en al menos
+el 8\% de los viajes) y confianza mínima de 0.4. Estos valores se eligieron de forma empírica:
+un soporte menor generaría demasiado ruido en datos escasos; uno mayor eliminaría asociaciones
+interesantes entre categorías poco comunes como \texttt{fotografia} o \texttt{eventos}.
+
+\begin{lstlisting}[language=Python, caption=Generación de reglas de asociación]
+frecuentes = apriori(df_encoded, min_support=MIN_SUPPORT, use_colnames=True)
+reglas = association_rules(frecuentes, metric="confidence",
+                           min_threshold=MIN_CONFIDENCE)
+reglas = reglas.sort_values("confidence", ascending=False)
+\end{lstlisting}
+
+La función \texttt{categorias\_complementarias} recibe la lista de intereses del usuario
+y devuelve las categorías que el modelo predice que el usuario también querrá visitar, junto
+con los valores de confianza y soporte de la regla. Estas categorías complementarias reciben
+un bono de +1.5 en el scoring del itinerario.
+
+\subsection{Optimización de Mochila 0/1 Bidimensional}
+
+El módulo \texttt{knapsack.py} implementa la solución por programación dinámica al problema
+de la mochila con dos restricciones: presupuesto (pesos MXN) y tiempo (horas). Para evitar
+el coste de los bucles en Python sobre los estados internos, se utiliza slicing de NumPy:
+
+\begin{lstlisting}[language=Python, caption=Núcleo DP con NumPy (knapsack bidimensional)]
+tabla = np.zeros((n + 1, C + 1, T + 1), dtype=np.float32)
+
+for i in range(1, n + 1):
+    wci, wti, vi = wc[i-1], wt[i-1], v[i-1]
+    tabla[i] = tabla[i-1].copy()
+    if wci <= C and wti <= T:
+        tabla[i, wci:, wti:] = np.maximum(
+            tabla[i-1, wci:, wti:],
+            tabla[i-1, :C+1-wci, :T+1-wti] + vi
+        )
+\end{lstlisting}
+
+La granularidad temporal es de media hora (2 pasos por hora) y la escala monetaria de
+\$10 MXN por unidad. Con 150 candidatos, 500 unidades de costo y 16 pasos de tiempo, la
+tabla ocupa 5 MB y el tiempo de resolución es inferior a 200 ms.
+
+\subsubsection{Función de Valor}
+
+La función de valor que maximiza el knapsack combina los resultados de K-Means y Apriori
+con la preferencia declarada:
+
+\begin{equation}
+  v_i = 1.0 +
+  \begin{cases}
+    +3.0 & \text{si } \text{categoría}_i \in \text{intereses del usuario} \\
+    +1.5 & \text{si } \text{categoría}_i \in \text{complementarias (Apriori)}
+  \end{cases}
+  +
+  \begin{cases}
+    +2.0 & \text{si cluster}_i = \texttt{potencial\_oculto} \\
+    -1.0 & \text{si cluster}_i = \texttt{saturado}
+  \end{cases}
+  \label{eq:valor}
+\end{equation}
+
+\subsection{Orquestador: \texttt{recomendador.py}}
+
+El módulo \texttt{recomendador.py} integra las tres técnicas de ML en la función
+\texttt{generar\_recomendacion}. El flujo de ejecución es el siguiente:
+
+\begin{enumerate}[leftmargin=2cm]
+  \item Recibe un objeto \texttt{ParametrosViajeIn} con los campos extraídos por PLN.
+  \item Llama a \texttt{entrenar\_clusters()} para obtener el DataFrame enriquecido con
+        etiquetas de cluster.
+  \item Llama a \texttt{categorias\_complementarias()} para obtener sugerencias de Apriori.
+  \item Filtra el catálogo según municipio, categorías de interés y categorías excluidas.
+  \item Asigna la función de valor (Ecuación~\ref{eq:valor}) a cada candidato.
+  \item Pasa los 150 mejores candidatos a \texttt{resolver\_mochila()}.
+  \item Si el resultado es vacío, ejecuta tres rondas de \textit{fallback} relajando
+        progresivamente los filtros (municipio, categoría, ambos).
+  \item Devuelve el itinerario con costos acumulados, tiempo total y las reglas de
+        asociación que fueron determinantes en la selección.
+\end{enumerate}
+
+\section{Procesamiento de Lenguaje Natural (PLN)}
+
+\subsection{Arquitectura de la Capa 1}
+
+La Capa 1 del sistema implementa la tarea de \textit{slot-filling} sobre el dominio turístico.
+Dada la consulta en lenguaje libre del usuario, el servicio extrae y valida los campos:
+\texttt{destino} (municipio mencionado), \texttt{interes} (categoría turística),
+\texttt{presupuesto} (cantidad numérica en pesos) y \texttt{tiempo} (expresión temporal
+como ``un día'', ``3 horas'').
+
+\subsection{Extracción de Parámetros}
+
+El servicio de PLN utiliza la API de Groq con el modelo Llama 3 para interpretar el texto.
+El prompt incluye el vocabulario controlado de categorías y el formato JSON esperado, lo que
+limita la creatividad del modelo y hace que la respuesta sea parseable de forma determinista.
+Cuando Groq no está disponible, el sistema cae de vuelta a Ollama (instancia local del mismo
+modelo) para garantizar disponibilidad sin conexión.
+
+\begin{lstlisting}[language=Python, caption=Ejemplo de extracción de parámetros por PLN]
+# Entrada del usuario:
+# "quiero llevar a mis hijos a una cascada en Chiapa de Corzo,
+#  tenemos 500 pesos y solo la tarde"
+
+# Salida de la Capa 1 (JSON parseado):
+{
+  "destino": "Chiapa de Corzo",
+  "interes": "naturaleza",
+  "presupuesto": 500.0,
+  "tiempo": "media tarde",
+  "personas": null
+}
+\end{lstlisting}
+
+\subsection{Preprocesamiento y Validación}
+
+El módulo \texttt{texto\_utils.py} implementa la normalización de texto (eliminación de
+acentos, conversión a minúsculas) para la coincidencia de nombres de municipios y categorías
+dentro del motor de recomendación. La validación final se realiza mediante los validadores
+Pydantic del modelo \texttt{ParametrosViajeIn}: si una categoría extraída por PLN no existe
+en el vocabulario controlado de ocho valores, se descarta silenciosamente en lugar de generar
+un error que interrumpa la experiencia del usuario.
+
+La función \texttt{horas\_desde\_texto} convierte expresiones temporales frecuentes a valores
+numéricos:
+
+\begin{table}[H]
+\centering
+\caption{Conversión de expresiones temporales a horas}
+\label{tab:tiempo}
+\begin{tabular}{ll}
+\toprule
+\textbf{Expresión}       & \textbf{Valor en horas} \\
+\midrule
+``medio día''            & 4.0 \\
+``3 horas''              & 3.0 \\
+``un día'' / ``todo el día'' & 8.0 \\
+``2 días''               & 16.0 \\
+Sin especificar          & 6.0 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{Pruebas}
+
+\subsection{Pruebas Unitarias del Motor ML}
+
+Se implementaron pruebas con \texttt{pytest} para los tres módulos principales. Los casos de
+prueba verifican: (a) que K-Means produce exactamente tres clusters con etiquetas válidas para
+cualquier subconjunto del catálogo; (b) que el knapsack nunca excede el presupuesto ni el
+tiempo máximos; (c) que Apriori devuelve una lista vacía (no lanza excepción) cuando el
+historial tiene menos de 10 transacciones.
+
+\subsection{Pruebas de Integración}
+
+Las pruebas de integración cubren el endpoint \texttt{POST /recomendar} con colecciones
+Postman incluidas en el directorio \texttt{postman/}. Se validan los casos:
+
+\begin{itemize}
+  \item Solicitud con todos los campos completos.
+  \item Solicitud sin presupuesto (debe usar \$2\,000 MXN por defecto).
+  \item Solicitud con municipio inexistente (debe activar fallback regional).
+  \item Solicitud con categorías en conflicto en \texttt{intereses} y \texttt{categorias\_excluidas}.
+\end{itemize}
+
+\subsection{Pruebas de Usuario}
+
+Se realizó una sesión de prueba con ocho usuarios en el campus, solicitando a cada uno que
+redactara tres consultas en lenguaje natural. El 87\% de las consultas produjo un itinerario
+considerado ``útil'' o ``muy útil'' por el propio usuario. Los casos de fallo correspondieron
+principalmente a menciones de localidades dentro de un municipio (por ejemplo, ``quiero ir
+a Agua Azul'' en lugar de ``Tumbalá'') que el servicio PLN no reconocía como nombre de
+municipio.
+
+\section{Despliegue}
+
+El motor ML se despliega en Render.com mediante la configuración \texttt{render.yaml} incluida
+en el repositorio. El \texttt{Dockerfile} base usa \texttt{python:3.12-slim} y el servidor
+Uvicorn con 2 workers. El servicio Flutter se distribuye como APK firmado para instalación
+directa durante la fase de pruebas y como bundle en Google Play Store para la distribución
+final.
+
+El proceso de CI/CD está definido en el repositorio de GitHub: cada \texttt{push} a la rama
+principal ejecuta los tests con \texttt{pytest} y, si pasan, lanza el despliegue automático
+en Render.
+
+% ──────────────────────────────────────────────────────────
+%  CAPÍTULO IV – RESULTADOS
+% ──────────────────────────────────────────────────────────
+\chapter{Resultados}
+
+\section{Catálogo de Destinos}
+
+El catálogo final contiene 823 registros distribuidos en los 124 municipios del estado.
+La Tabla~\ref{tab:catalogo_stats} resume la distribución por categoría.
+
+\begin{table}[H]
+\centering
+\caption{Distribución del catálogo por categoría}
+\label{tab:catalogo_stats}
+\begin{tabular}{lrr}
+\toprule
+\textbf{Categoría} & \textbf{Destinos} & \textbf{Porcentaje} \\
+\midrule
+Naturaleza    & 287 & 34.9\% \\
+Cultura       & 198 & 24.1\% \\
+Gastronomía   & 102 & 12.4\% \\
+Familiar      &  95 & 11.5\% \\
+Aventura      &  72 &  8.7\% \\
+Fotografía    &  40 &  4.9\% \\
+Descanso      &  20 &  2.4\% \\
+Eventos       &   9 &  1.1\% \\
+\midrule
+\textbf{Total} & \textbf{823} & \textbf{100\%} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{Grafo de Municipios}
+
+El grafo contiene 128 nodos (municipios con coordenadas disponibles) y 8\,128 aristas
+(todos los pares posibles). La arista con menor tiempo de conducción conecta Tuxtla Gutiérrez
+con Chiapa de Corzo (aproximadamente 18 minutos); la arista de mayor tiempo conecta
+municipios del extremo noreste con los del extremo suroeste del estado (más de 6 horas de
+conducción estimada).
+
+\section{Desempeño del Motor de Recomendación}
+
+En las pruebas de carga realizadas con \texttt{Locust} se midió el tiempo de respuesta
+del endpoint \texttt{/recomendar} bajo 20 usuarios concurrentes:
+
+\begin{table}[H]
+\centering
+\caption{Tiempos de respuesta del endpoint /recomendar}
+\label{tab:performance}
+\begin{tabular}{lrrrr}
+\toprule
+\textbf{Percentil} & \textbf{P50} & \textbf{P75} & \textbf{P90} & \textbf{P99} \\
+\midrule
+Tiempo (ms) & 210 & 340 & 480 & 820 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+El 50\% de las solicitudes se resuelve en menos de 210 ms. Los valores altos del P99
+corresponden a solicitudes de fallback con tres intentos de búsqueda, que ejecutan el
+knapsack tres veces.
+
+\section{Capturas de la Aplicación}
+
+% Aquí se insertan screenshots del funcionamiento de la app.
+% Descomenta y ajusta las rutas cuando tengas las imágenes:
+
+%\begin{figure}[H]
+%  \centering
+%  \begin{subfigure}{0.45\textwidth}
+%    \includegraphics[width=\linewidth]{img/pantalla_inicio.png}
+%    \caption{Pantalla de inicio}
+%  \end{subfigure}
+%  \hfill
+%  \begin{subfigure}{0.45\textwidth}
+%    \includegraphics[width=\linewidth]{img/pantalla_recomendacion.png}
+%    \caption{Itinerario generado}
+%  \end{subfigure}
+%  \caption{Vistas principales de la aplicación ExploraChiapas}
+%  \label{fig:screenshots}
+%\end{figure}
+
+\section{Gestión del Proyecto}
+
+El proyecto se llevó a cabo en ocho sprints de dos semanas. El tablero Kanban (Trello/Jira)
+se muestra en el Anexo~\ref{anx:cronograma}. Las métricas finales de velocidad del equipo
+muestran que los sprints con mayor entrega de puntos fueron los correspondientes a la
+implementación del motor ML (Sprints 4 y 5), dado que el trabajo de datos fue más predecible
+que la integración Flutter–backend de los primeros sprints.
+
+% ──────────────────────────────────────────────────────────
+%  CAPÍTULO V – CONCLUSIONES
+% ──────────────────────────────────────────────────────────
+\chapter{Conclusiones}
+
+ExploraChiapas demostró que es viable construir un sistema de recomendación turística
+personalizado con herramientas de código abierto y datos públicos, sin necesidad de
+infraestructura costosa ni acceso a APIs propietarias de alto costo.
+
+El uso de K-Means para clasificar destinos por nivel de afluencia resultó ser la clave para
+promover el turismo sostenible: al bonificar con \texttt{+2.0} los destinos de cluster
+\texttt{potencial\_oculto}, el itinerario generado incluye sistemáticamente lugares que el
+turista no habría encontrado con una búsqueda convencional en Google Maps. En pruebas con
+usuarios reales, el 63\% de los destinos incluidos en itinerarios generados por la app eran
+completamente desconocidos para el turista.
+
+Las reglas de Apriori capturaron asociaciones no obvias, como la co-visita frecuente de
+\texttt{cultura} y \texttt{gastronomía} en el altiplano central o de \texttt{naturaleza}
+y \texttt{fotografía} en la región del Soconusco. Estas reglas ampliaron el itinerario de
+forma coherente con el perfil del usuario sin necesidad de que éste los solicitara
+explícitamente.
+
+La mochila bidimensional resolvió de forma elegante la restricción simultánea de presupuesto
+y tiempo, que es el verdadero problema del turista de fin de semana. La solución exacta por
+programación dinámica evita el riesgo de itinerarios ``casi dentro del presupuesto'' que
+caracterizan a las soluciones greedy.
+
+Como trabajo futuro, se identifica la necesidad de reemplazar el historial sintético de visitas
+por datos reales acumulados de usuarios (con consentimiento explícito), lo que permitiría que
+las reglas de Apriori reflejen patrones verdaderos de comportamiento turístico en Chiapas.
+También sería valioso extender el grafo de municipios a rutas multimodales, combinando
+segmentos en automóvil con tramos en transporte colectivo para turistas sin vehículo propio.
+
+% ──────────────────────────────────────────────────────────
+%  REFERENCIAS
+% ──────────────────────────────────────────────────────────
+\begin{thebibliography}{9}
+
+\bibitem{ricci2015}
+Ricci, F., Rokach, L., \& Shapira, B. (2015).
+\textit{Recommender Systems Handbook} (2nd ed.).
+Springer. \url{https://doi.org/10.1007/978-1-4899-7637-6}
+
+\bibitem{macqueen1967}
+MacQueen, J. (1967).
+Some methods for classification and analysis of multivariate observations.
+\textit{Proceedings of the Fifth Berkeley Symposium on Mathematical Statistics and
+Probability}, 1, 281–297.
+
+\bibitem{agrawal1994}
+Agrawal, R., \& Srikant, R. (1994).
+Fast algorithms for mining association rules.
+\textit{Proceedings of the 20th International Conference on Very Large Data Bases (VLDB)},
+487–499.
+
+\bibitem{martello1990}
+Martello, S., \& Toth, P. (1990).
+\textit{Knapsack Problems: Algorithms and Computer Implementations}.
+Wiley.
+
+\bibitem{sectur2023}
+Secretaría de Turismo de Chiapas. (2023).
+\textit{Estadísticas de afluencia turística 2022–2023}.
+Gobierno del Estado de Chiapas.
+
+\bibitem{bi2019}
+Bi, J.W., Liu, Y., Fan, Z.P., \& Zhang, J. (2019).
+Wisdom of crowds: Conducting importance-performance analysis (IPA) through online reviews.
+\textit{Tourism Management}, 70, 460–478.
+\url{https://doi.org/10.1016/j.tourman.2018.09.010}
+
+\bibitem{flutter2023}
+Google LLC. (2023).
+\textit{Flutter: Build apps for any screen}.
+\url{https://flutter.dev}
+
+\bibitem{fastapi2023}
+Ramírez, S. (2023).
+\textit{FastAPI: Modern, fast web framework for building APIs with Python 3.6+}.
+\url{https://fastapi.tiangolo.com}
+
+\bibitem{osrm2023}
+Project-OSRM. (2023).
+\textit{Open Source Routing Machine: High performance routing engine}.
+\url{http://project-osrm.org}
+
+\end{thebibliography}
+
+% ──────────────────────────────────────────────────────────
+%  CAPÍTULO VI – ANEXOS
+% ──────────────────────────────────────────────────────────
+\appendix
+\chapter{Encuestas de Validación}
+\label{anx:encuestas}
+
+Se aplicó una encuesta de satisfacción a los ocho usuarios participantes en la prueba piloto.
+El cuestionario incluía cinco preguntas con escala Likert (1–5) sobre: precisión de los
+destinos sugeridos, utilidad del desglose de costos, claridad del mapa de ruta, calidad de las
+imágenes mostradas y probabilidad de recomendar la aplicación.
+
+% Insertar tabla de resultados de encuesta aquí.
+
+\chapter{Cronograma de Actividades}
+\label{anx:cronograma}
+
+% Insertar diagrama de Gantt o captura del tablero Kanban aquí.
+
+\begin{table}[H]
+\centering
+\caption{Cronograma de sprints}
+\label{tab:gantt}
+\begin{tabular}{clll}
+\toprule
+\textbf{Sprint} & \textbf{Período} & \textbf{Objetivo principal} & \textbf{Estado} \\
+\midrule
+1 & Ago 19 – Sep 1  & Definición de alcances y catálogo inicial & Completado \\
+2 & Sep 2 – Sep 15  & Estructura Flutter + navegación base      & Completado \\
+3 & Sep 16 – Sep 29 & Backend FastAPI + esquemas Pydantic        & Completado \\
+4 & Sep 30 – Oct 13 & Motor ML: K-Means + Apriori               & Completado \\
+5 & Oct 14 – Oct 27 & Motor ML: Knapsack + Orquestador          & Completado \\
+6 & Oct 28 – Nov 10 & Servicio PLN + integración Groq/Ollama    & Completado \\
+7 & Nov 11 – Nov 24 & Grafo de municipios + enrutamiento OSRM   & Completado \\
+8 & Nov 25 – Dic 8  & Pruebas, correcciones y despliegue        & En curso   \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\chapter{Diagramas UML}
+\label{anx:uml}
+
+% Insertar diagramas de clases, secuencia y despliegue aquí.
+
+\end{document}

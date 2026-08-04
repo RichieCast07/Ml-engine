@@ -17,26 +17,34 @@ _CATEGORIAS_VALIDAS: set[str] = {
 class ParametrosViajeIn(BaseModel):
     """Misma forma que la salida de la Capa 1 (servicio NLP)."""
 
-    destino: Optional[str] = None
+    model_config = ConfigDict(
+        extra="forbid",            # rechaza campos desconocidos
+        str_strip_whitespace=True, # recorta espacios en strings
+    )
+
+    destino: Optional[str] = Field(default=None, max_length=150)
 
     # interes: campo legacy (una sola categoría). Se mantiene para retrocompat.
     # Si se envían ambos, `intereses` tiene prioridad y `interes` se ignora.
     interes: Optional[CategoriaInteres] = None
 
     # intereses: hasta 3 categorías que le gustan al usuario.
-    intereses: list[CategoriaInteres] = Field(default_factory=list)
+    intereses: list[CategoriaInteres] = Field(default_factory=list, max_length=3)
 
-    # categorias_excluidas: filtro duro — nunca aparecen en el resultado,
-    # ni siquiera en los fallbacks. El usuario declaró no querer estas categorías.
-    categorias_excluidas: list[CategoriaInteres] = Field(default_factory=list)
+    # categorias_excluidas: filtro duro — nunca aparecen en el resultado.
+    categorias_excluidas: list[CategoriaInteres] = Field(default_factory=list, max_length=8)
 
-    comida: Optional[str] = None
+    comida: Optional[str] = Field(default=None, max_length=100)
     personas: Optional[int] = Field(default=1, ge=1, le=50)
-    presupuesto: Optional[float] = Field(default=None, ge=0)
-    tiempo: Optional[str] = None
+    presupuesto: Optional[float] = Field(default=None, ge=0, le=10_000_000)
+    tiempo: Optional[str] = Field(default=None, max_length=100)
 
     @model_validator(mode="after")
     def unificar_intereses(self) -> "ParametrosViajeIn":
+        # Eliminar duplicados conservando el orden.
+        self.intereses = list(dict.fromkeys(self.intereses))
+        self.categorias_excluidas = list(dict.fromkeys(self.categorias_excluidas))
+
         # Si solo viene `interes` (retrocompat), lo promovemos a `intereses`.
         if self.interes and not self.intereses:
             self.intereses = [self.interes]
